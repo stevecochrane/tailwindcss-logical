@@ -2,7 +2,7 @@ module.exports = {
 	corePlugins: [],
 	plugins: [
 		function({ addUtilities, theme }) {
-			const spacing = Object.entries(theme('spacing', {}));
+			const spacing = Object.entries(theme('spacing'));
 
 			const newUtilities = spacing.map((value, key) => {
 				return {
