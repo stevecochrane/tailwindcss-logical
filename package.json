@@ -9,7 +9,7 @@
 		"url": "git+https://github.com/stevecochrane/tailwindcss-logical-properties.git"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "npx tailwind build test-input.css -o test-output.css"
 	},
 	"devDependencies": {
 		"tailwindcss": "1.1.4"
