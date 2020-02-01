@@ -4,7 +4,7 @@ module.exports = {
 		function({ addUtilities, theme }) {
 			const spacing = Object.entries(theme('spacing'));
 
-			const newUtilities = spacing.map(([key, value]) => {
+			const marginBlockStartUtilities = spacing.map(([key, value]) => {
 				return {
 					[`.mbs-${key}`]: {
 						marginBlockStart: value
@@ -12,7 +12,7 @@ module.exports = {
 				};
 			});
 
-			addUtilities(newUtilities);
+			addUtilities(marginBlockStartUtilities);
 		}
 	]
 }
