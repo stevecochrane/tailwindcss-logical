@@ -1,131 +1,94 @@
 .mbs-0 {
   -webkit-margin-before: 0;
-          margin-block-start: 0;
-  margin-block-start: 0
+          margin-block-start: 0
 }
 
 .mbs-1 {
-  -webkit-margin-before: 1;
-          margin-block-start: 1;
   -webkit-margin-before: 0.25rem;
           margin-block-start: 0.25rem
 }
 
 .mbs-2 {
-  -webkit-margin-before: 2;
-          margin-block-start: 2;
   -webkit-margin-before: 0.5rem;
           margin-block-start: 0.5rem
 }
 
 .mbs-3 {
-  -webkit-margin-before: 3;
-          margin-block-start: 3;
   -webkit-margin-before: 0.75rem;
           margin-block-start: 0.75rem
 }
 
 .mbs-4 {
-  -webkit-margin-before: 4;
-          margin-block-start: 4;
   -webkit-margin-before: 1rem;
           margin-block-start: 1rem
 }
 
 .mbs-5 {
-  -webkit-margin-before: 5;
-          margin-block-start: 5;
   -webkit-margin-before: 1.25rem;
           margin-block-start: 1.25rem
 }
 
 .mbs-6 {
-  -webkit-margin-before: 6;
-          margin-block-start: 6;
   -webkit-margin-before: 1.5rem;
           margin-block-start: 1.5rem
 }
 
-.mbs-7 {
-  -webkit-margin-before: 8;
-          margin-block-start: 8;
+.mbs-8 {
   -webkit-margin-before: 2rem;
           margin-block-start: 2rem
 }
 
-.mbs-8 {
-  -webkit-margin-before: 10;
-          margin-block-start: 10;
+.mbs-10 {
   -webkit-margin-before: 2.5rem;
           margin-block-start: 2.5rem
 }
 
-.mbs-9 {
-  -webkit-margin-before: 12;
-          margin-block-start: 12;
+.mbs-12 {
   -webkit-margin-before: 3rem;
           margin-block-start: 3rem
 }
 
-.mbs-10 {
-  -webkit-margin-before: 16;
-          margin-block-start: 16;
+.mbs-16 {
   -webkit-margin-before: 4rem;
           margin-block-start: 4rem
 }
 
-.mbs-11 {
-  -webkit-margin-before: 20;
-          margin-block-start: 20;
+.mbs-20 {
   -webkit-margin-before: 5rem;
           margin-block-start: 5rem
 }
 
-.mbs-12 {
-  -webkit-margin-before: 24;
-          margin-block-start: 24;
+.mbs-24 {
   -webkit-margin-before: 6rem;
           margin-block-start: 6rem
 }
 
-.mbs-13 {
-  -webkit-margin-before: 32;
-          margin-block-start: 32;
+.mbs-32 {
   -webkit-margin-before: 8rem;
           margin-block-start: 8rem
 }
 
-.mbs-14 {
-  -webkit-margin-before: 40;
-          margin-block-start: 40;
+.mbs-40 {
   -webkit-margin-before: 10rem;
           margin-block-start: 10rem
 }
 
-.mbs-15 {
-  -webkit-margin-before: 48;
-          margin-block-start: 48;
+.mbs-48 {
   -webkit-margin-before: 12rem;
           margin-block-start: 12rem
 }
 
-.mbs-16 {
-  -webkit-margin-before: 56;
-          margin-block-start: 56;
+.mbs-56 {
   -webkit-margin-before: 14rem;
           margin-block-start: 14rem
 }
 
-.mbs-17 {
-  -webkit-margin-before: 64;
-          margin-block-start: 64;
+.mbs-64 {
   -webkit-margin-before: 16rem;
           margin-block-start: 16rem
 }
 
-.mbs-18 {
-  -webkit-margin-before: px;
-          margin-block-start: px;
+.mbs-px {
   -webkit-margin-before: 1px;
           margin-block-start: 1px
 }
