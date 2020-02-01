@@ -1,0 +1,14 @@
+{
+	"name": "tailwindcss-logical-properties",
+	"version": "0.1.0",
+	"description": "CSS Logical Properties plugin for Tailwind CSS",
+	"author": "Steve Cochrane <steve@stevecochrane.com>",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/stevecochrane/tailwindcss-logical-properties.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	}
+}
