@@ -36,10 +36,47 @@ module.exports = {
 				}
 			));
 
+			const paddingBlockStartUtilities = spacing.map(([key, value]) => (
+				{
+					[`.pbs-${key}`]: {
+						paddingBlockStart: value
+					}
+				}
+			));
+
+			const paddingBlockEndUtilities = spacing.map(([key, value]) => (
+				{
+					[`.pbe-${key}`]: {
+						paddingBlockEnd: value
+					}
+				}
+			));
+
+			const paddingInlineStartUtilities = spacing.map(([key, value]) => (
+				{
+					[`.pis-${key}`]: {
+						paddingInlineStart: value
+					}
+				}
+			));
+
+			const paddingInlineEndUtilities = spacing.map(([key, value]) => (
+				{
+					[`.pie-${key}`]: {
+						paddingInlineEnd: value
+					}
+				}
+			));
+
 			addUtilities(marginBlockStartUtilities);
 			addUtilities(marginBlockEndUtilities);
 			addUtilities(marginInlineStartUtilities);
 			addUtilities(marginInlineEndUtilities);
+
+			addUtilities(paddingBlockStartUtilities);
+			addUtilities(paddingBlockEndUtilities);
+			addUtilities(paddingInlineStartUtilities);
+			addUtilities(paddingInlineEndUtilities);
 		}
 	]
 }

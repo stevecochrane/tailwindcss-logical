@@ -377,3 +377,383 @@
   -webkit-margin-end: 1px;
           margin-inline-end: 1px
 }
+
+.pbs-0 {
+  -webkit-padding-before: 0;
+          padding-block-start: 0
+}
+
+.pbs-1 {
+  -webkit-padding-before: 0.25rem;
+          padding-block-start: 0.25rem
+}
+
+.pbs-2 {
+  -webkit-padding-before: 0.5rem;
+          padding-block-start: 0.5rem
+}
+
+.pbs-3 {
+  -webkit-padding-before: 0.75rem;
+          padding-block-start: 0.75rem
+}
+
+.pbs-4 {
+  -webkit-padding-before: 1rem;
+          padding-block-start: 1rem
+}
+
+.pbs-5 {
+  -webkit-padding-before: 1.25rem;
+          padding-block-start: 1.25rem
+}
+
+.pbs-6 {
+  -webkit-padding-before: 1.5rem;
+          padding-block-start: 1.5rem
+}
+
+.pbs-8 {
+  -webkit-padding-before: 2rem;
+          padding-block-start: 2rem
+}
+
+.pbs-10 {
+  -webkit-padding-before: 2.5rem;
+          padding-block-start: 2.5rem
+}
+
+.pbs-12 {
+  -webkit-padding-before: 3rem;
+          padding-block-start: 3rem
+}
+
+.pbs-16 {
+  -webkit-padding-before: 4rem;
+          padding-block-start: 4rem
+}
+
+.pbs-20 {
+  -webkit-padding-before: 5rem;
+          padding-block-start: 5rem
+}
+
+.pbs-24 {
+  -webkit-padding-before: 6rem;
+          padding-block-start: 6rem
+}
+
+.pbs-32 {
+  -webkit-padding-before: 8rem;
+          padding-block-start: 8rem
+}
+
+.pbs-40 {
+  -webkit-padding-before: 10rem;
+          padding-block-start: 10rem
+}
+
+.pbs-48 {
+  -webkit-padding-before: 12rem;
+          padding-block-start: 12rem
+}
+
+.pbs-56 {
+  -webkit-padding-before: 14rem;
+          padding-block-start: 14rem
+}
+
+.pbs-64 {
+  -webkit-padding-before: 16rem;
+          padding-block-start: 16rem
+}
+
+.pbs-px {
+  -webkit-padding-before: 1px;
+          padding-block-start: 1px
+}
+
+.pbe-0 {
+  -webkit-padding-after: 0;
+          padding-block-end: 0
+}
+
+.pbe-1 {
+  -webkit-padding-after: 0.25rem;
+          padding-block-end: 0.25rem
+}
+
+.pbe-2 {
+  -webkit-padding-after: 0.5rem;
+          padding-block-end: 0.5rem
+}
+
+.pbe-3 {
+  -webkit-padding-after: 0.75rem;
+          padding-block-end: 0.75rem
+}
+
+.pbe-4 {
+  -webkit-padding-after: 1rem;
+          padding-block-end: 1rem
+}
+
+.pbe-5 {
+  -webkit-padding-after: 1.25rem;
+          padding-block-end: 1.25rem
+}
+
+.pbe-6 {
+  -webkit-padding-after: 1.5rem;
+          padding-block-end: 1.5rem
+}
+
+.pbe-8 {
+  -webkit-padding-after: 2rem;
+          padding-block-end: 2rem
+}
+
+.pbe-10 {
+  -webkit-padding-after: 2.5rem;
+          padding-block-end: 2.5rem
+}
+
+.pbe-12 {
+  -webkit-padding-after: 3rem;
+          padding-block-end: 3rem
+}
+
+.pbe-16 {
+  -webkit-padding-after: 4rem;
+          padding-block-end: 4rem
+}
+
+.pbe-20 {
+  -webkit-padding-after: 5rem;
+          padding-block-end: 5rem
+}
+
+.pbe-24 {
+  -webkit-padding-after: 6rem;
+          padding-block-end: 6rem
+}
+
+.pbe-32 {
+  -webkit-padding-after: 8rem;
+          padding-block-end: 8rem
+}
+
+.pbe-40 {
+  -webkit-padding-after: 10rem;
+          padding-block-end: 10rem
+}
+
+.pbe-48 {
+  -webkit-padding-after: 12rem;
+          padding-block-end: 12rem
+}
+
+.pbe-56 {
+  -webkit-padding-after: 14rem;
+          padding-block-end: 14rem
+}
+
+.pbe-64 {
+  -webkit-padding-after: 16rem;
+          padding-block-end: 16rem
+}
+
+.pbe-px {
+  -webkit-padding-after: 1px;
+          padding-block-end: 1px
+}
+
+.pis-0 {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0
+}
+
+.pis-1 {
+  -webkit-padding-start: 0.25rem;
+          padding-inline-start: 0.25rem
+}
+
+.pis-2 {
+  -webkit-padding-start: 0.5rem;
+          padding-inline-start: 0.5rem
+}
+
+.pis-3 {
+  -webkit-padding-start: 0.75rem;
+          padding-inline-start: 0.75rem
+}
+
+.pis-4 {
+  -webkit-padding-start: 1rem;
+          padding-inline-start: 1rem
+}
+
+.pis-5 {
+  -webkit-padding-start: 1.25rem;
+          padding-inline-start: 1.25rem
+}
+
+.pis-6 {
+  -webkit-padding-start: 1.5rem;
+          padding-inline-start: 1.5rem
+}
+
+.pis-8 {
+  -webkit-padding-start: 2rem;
+          padding-inline-start: 2rem
+}
+
+.pis-10 {
+  -webkit-padding-start: 2.5rem;
+          padding-inline-start: 2.5rem
+}
+
+.pis-12 {
+  -webkit-padding-start: 3rem;
+          padding-inline-start: 3rem
+}
+
+.pis-16 {
+  -webkit-padding-start: 4rem;
+          padding-inline-start: 4rem
+}
+
+.pis-20 {
+  -webkit-padding-start: 5rem;
+          padding-inline-start: 5rem
+}
+
+.pis-24 {
+  -webkit-padding-start: 6rem;
+          padding-inline-start: 6rem
+}
+
+.pis-32 {
+  -webkit-padding-start: 8rem;
+          padding-inline-start: 8rem
+}
+
+.pis-40 {
+  -webkit-padding-start: 10rem;
+          padding-inline-start: 10rem
+}
+
+.pis-48 {
+  -webkit-padding-start: 12rem;
+          padding-inline-start: 12rem
+}
+
+.pis-56 {
+  -webkit-padding-start: 14rem;
+          padding-inline-start: 14rem
+}
+
+.pis-64 {
+  -webkit-padding-start: 16rem;
+          padding-inline-start: 16rem
+}
+
+.pis-px {
+  -webkit-padding-start: 1px;
+          padding-inline-start: 1px
+}
+
+.pie-0 {
+  -webkit-padding-end: 0;
+          padding-inline-end: 0
+}
+
+.pie-1 {
+  -webkit-padding-end: 0.25rem;
+          padding-inline-end: 0.25rem
+}
+
+.pie-2 {
+  -webkit-padding-end: 0.5rem;
+          padding-inline-end: 0.5rem
+}
+
+.pie-3 {
+  -webkit-padding-end: 0.75rem;
+          padding-inline-end: 0.75rem
+}
+
+.pie-4 {
+  -webkit-padding-end: 1rem;
+          padding-inline-end: 1rem
+}
+
+.pie-5 {
+  -webkit-padding-end: 1.25rem;
+          padding-inline-end: 1.25rem
+}
+
+.pie-6 {
+  -webkit-padding-end: 1.5rem;
+          padding-inline-end: 1.5rem
+}
+
+.pie-8 {
+  -webkit-padding-end: 2rem;
+          padding-inline-end: 2rem
+}
+
+.pie-10 {
+  -webkit-padding-end: 2.5rem;
+          padding-inline-end: 2.5rem
+}
+
+.pie-12 {
+  -webkit-padding-end: 3rem;
+          padding-inline-end: 3rem
+}
+
+.pie-16 {
+  -webkit-padding-end: 4rem;
+          padding-inline-end: 4rem
+}
+
+.pie-20 {
+  -webkit-padding-end: 5rem;
+          padding-inline-end: 5rem
+}
+
+.pie-24 {
+  -webkit-padding-end: 6rem;
+          padding-inline-end: 6rem
+}
+
+.pie-32 {
+  -webkit-padding-end: 8rem;
+          padding-inline-end: 8rem
+}
+
+.pie-40 {
+  -webkit-padding-end: 10rem;
+          padding-inline-end: 10rem
+}
+
+.pie-48 {
+  -webkit-padding-end: 12rem;
+          padding-inline-end: 12rem
+}
+
+.pie-56 {
+  -webkit-padding-end: 14rem;
+          padding-inline-end: 14rem
+}
+
+.pie-64 {
+  -webkit-padding-end: 16rem;
+          padding-inline-end: 16rem
+}
+
+.pie-px {
+  -webkit-padding-end: 1px;
+          padding-inline-end: 1px
+}
