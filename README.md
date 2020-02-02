@@ -19,4 +19,4 @@ To do:
 - [ ] Ensure compatibility with custom color configs
 - [ ] Ensure compatibility with values that need to be escaped (e.g. '1/2')
 - [ ] Ensure compatibility with negative values
-- [ ] Allow customization of variants
+- [x] Allow customization of variants

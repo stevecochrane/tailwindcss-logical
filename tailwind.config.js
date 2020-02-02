@@ -1,7 +1,7 @@
 module.exports = {
 	corePlugins: [],
 	plugins: [
-		function({ addUtilities, theme, e }) {
+		function({ addUtilities, theme, variants, e }) {
 			const height = Object.entries(theme('height'));
 			const inset = Object.entries(theme('inset'));
 			const spacing = Object.entries(theme('spacing'));
@@ -119,23 +119,23 @@ module.exports = {
 				}
 			));
 
-			addUtilities(blockSizeUtilities);
-			addUtilities(inlineSizeUtilities);
+			addUtilities(blockSizeUtilities, variants('logicalProperties'));
+			addUtilities(inlineSizeUtilities, variants('logicalProperties'));
 
-			addUtilities(marginBlockStartUtilities);
-			addUtilities(marginBlockEndUtilities);
-			addUtilities(marginInlineStartUtilities);
-			addUtilities(marginInlineEndUtilities);
+			addUtilities(marginBlockStartUtilities, variants('logicalProperties'));
+			addUtilities(marginBlockEndUtilities, variants('logicalProperties'));
+			addUtilities(marginInlineStartUtilities, variants('logicalProperties'));
+			addUtilities(marginInlineEndUtilities, variants('logicalProperties'));
 
-			addUtilities(paddingBlockStartUtilities);
-			addUtilities(paddingBlockEndUtilities);
-			addUtilities(paddingInlineStartUtilities);
-			addUtilities(paddingInlineEndUtilities);
+			addUtilities(paddingBlockStartUtilities, variants('logicalProperties'));
+			addUtilities(paddingBlockEndUtilities, variants('logicalProperties'));
+			addUtilities(paddingInlineStartUtilities, variants('logicalProperties'));
+			addUtilities(paddingInlineEndUtilities, variants('logicalProperties'));
 
-			addUtilities(insetBlockStartUtilities);
-			addUtilities(insetBlockEndUtilities);
-			addUtilities(insetInlineStartUtilities);
-			addUtilities(insetInlineEndUtilities);
+			addUtilities(insetBlockStartUtilities, variants('logicalProperties'));
+			addUtilities(insetBlockEndUtilities, variants('logicalProperties'));
+			addUtilities(insetInlineStartUtilities, variants('logicalProperties'));
+			addUtilities(insetInlineEndUtilities, variants('logicalProperties'));
 		}
 	]
 }
