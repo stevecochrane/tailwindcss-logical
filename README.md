@@ -9,7 +9,7 @@ To do:
 - [ ] Add border style utilities
 - [ ] Add border color utilities
 - [ ] Add border radius utilities
-- [ ] Add logical height and logical width (block-size, inline-size) utilities
+- [x] Add logical height and logical width (block-size, inline-size) utilities
 - [ ] Add flow-relative values for caption-side
 - [ ] Add flow-relative values for float and clear
 - [ ] Add flow-relative values for text-align

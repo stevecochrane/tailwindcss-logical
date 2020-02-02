@@ -1,9 +1,27 @@
 module.exports = {
 	corePlugins: [],
 	plugins: [
-		function({ addUtilities, theme }) {
+		function({ addUtilities, theme, e }) {
+			const height = Object.entries(theme('height'));
 			const inset = Object.entries(theme('inset'));
 			const spacing = Object.entries(theme('spacing'));
+			const width = Object.entries(theme('width'));
+
+			const blockSizeUtilities = width.map(([key, value]) => (
+				{
+					[`.${e(`bs-${key}`)}`]: {
+						blockSize: value
+					}
+				}
+			));
+
+			const inlineSizeUtilities = height.map(([key, value]) => (
+				{
+					[`.${e(`is-${key}`)}`]: {
+						inlineSize: value
+					}
+				}
+			));
 
 			const marginBlockStartUtilities = spacing.map(([key, value]) => (
 				{
@@ -100,6 +118,9 @@ module.exports = {
 					}
 				}
 			));
+
+			addUtilities(blockSizeUtilities);
+			addUtilities(inlineSizeUtilities);
 
 			addUtilities(marginBlockStartUtilities);
 			addUtilities(marginBlockEndUtilities);

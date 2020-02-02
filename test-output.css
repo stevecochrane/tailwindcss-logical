@@ -758,34 +758,282 @@
           padding-inline-end: 1px
 }
 
-.inset-block-start-0 {
-  inset-block-start: 0
+.bs-0 {
+  block-size: 0
 }
 
-.inset-block-start-auto {
-  inset-block-start: auto
+.bs-1 {
+  block-size: 0.25rem
 }
 
-.inset-block-end-0 {
-  inset-block-end: 0
+.bs-2 {
+  block-size: 0.5rem
 }
 
-.inset-block-end-auto {
-  inset-block-end: auto
+.bs-3 {
+  block-size: 0.75rem
 }
 
-.inset-inline-start-0 {
-  inset-inline-start: 0
+.bs-4 {
+  block-size: 1rem
 }
 
-.inset-inline-start-auto {
-  inset-inline-start: auto
+.bs-5 {
+  block-size: 1.25rem
 }
 
-.inset-inline-end-0 {
-  inset-inline-end: 0
+.bs-6 {
+  block-size: 1.5rem
 }
 
-.inset-inline-end-auto {
-  inset-inline-end: auto
+.bs-8 {
+  block-size: 2rem
+}
+
+.bs-10 {
+  block-size: 2.5rem
+}
+
+.bs-12 {
+  block-size: 3rem
+}
+
+.bs-16 {
+  block-size: 4rem
+}
+
+.bs-20 {
+  block-size: 5rem
+}
+
+.bs-24 {
+  block-size: 6rem
+}
+
+.bs-32 {
+  block-size: 8rem
+}
+
+.bs-40 {
+  block-size: 10rem
+}
+
+.bs-48 {
+  block-size: 12rem
+}
+
+.bs-56 {
+  block-size: 14rem
+}
+
+.bs-64 {
+  block-size: 16rem
+}
+
+.bs-auto {
+  block-size: auto
+}
+
+.bs-px {
+  block-size: 1px
+}
+
+.bs-1\/2 {
+  block-size: 50%
+}
+
+.bs-1\/3 {
+  block-size: 33.333333%
+}
+
+.bs-2\/3 {
+  block-size: 66.666667%
+}
+
+.bs-1\/4 {
+  block-size: 25%
+}
+
+.bs-2\/4 {
+  block-size: 50%
+}
+
+.bs-3\/4 {
+  block-size: 75%
+}
+
+.bs-1\/5 {
+  block-size: 20%
+}
+
+.bs-2\/5 {
+  block-size: 40%
+}
+
+.bs-3\/5 {
+  block-size: 60%
+}
+
+.bs-4\/5 {
+  block-size: 80%
+}
+
+.bs-1\/6 {
+  block-size: 16.666667%
+}
+
+.bs-2\/6 {
+  block-size: 33.333333%
+}
+
+.bs-3\/6 {
+  block-size: 50%
+}
+
+.bs-4\/6 {
+  block-size: 66.666667%
+}
+
+.bs-5\/6 {
+  block-size: 83.333333%
+}
+
+.bs-1\/12 {
+  block-size: 8.333333%
+}
+
+.bs-2\/12 {
+  block-size: 16.666667%
+}
+
+.bs-3\/12 {
+  block-size: 25%
+}
+
+.bs-4\/12 {
+  block-size: 33.333333%
+}
+
+.bs-5\/12 {
+  block-size: 41.666667%
+}
+
+.bs-6\/12 {
+  block-size: 50%
+}
+
+.bs-7\/12 {
+  block-size: 58.333333%
+}
+
+.bs-8\/12 {
+  block-size: 66.666667%
+}
+
+.bs-9\/12 {
+  block-size: 75%
+}
+
+.bs-10\/12 {
+  block-size: 83.333333%
+}
+
+.bs-11\/12 {
+  block-size: 91.666667%
+}
+
+.bs-full {
+  block-size: 100%
+}
+
+.bs-screen {
+  block-size: 100vw
+}
+
+.is-0 {
+  inline-size: 0
+}
+
+.is-1 {
+  inline-size: 0.25rem
+}
+
+.is-2 {
+  inline-size: 0.5rem
+}
+
+.is-3 {
+  inline-size: 0.75rem
+}
+
+.is-4 {
+  inline-size: 1rem
+}
+
+.is-5 {
+  inline-size: 1.25rem
+}
+
+.is-6 {
+  inline-size: 1.5rem
+}
+
+.is-8 {
+  inline-size: 2rem
+}
+
+.is-10 {
+  inline-size: 2.5rem
+}
+
+.is-12 {
+  inline-size: 3rem
+}
+
+.is-16 {
+  inline-size: 4rem
+}
+
+.is-20 {
+  inline-size: 5rem
+}
+
+.is-24 {
+  inline-size: 6rem
+}
+
+.is-32 {
+  inline-size: 8rem
+}
+
+.is-40 {
+  inline-size: 10rem
+}
+
+.is-48 {
+  inline-size: 12rem
+}
+
+.is-56 {
+  inline-size: 14rem
+}
+
+.is-64 {
+  inline-size: 16rem
+}
+
+.is-auto {
+  inline-size: auto
+}
+
+.is-px {
+  inline-size: 1px
+}
+
+.is-full {
+  inline-size: 100%
+}
+
+.is-screen {
+  inline-size: 100vh
 }
