@@ -14,6 +14,7 @@ To do:
 - [ ] Add flow-relative values for float and clear
 - [ ] Add flow-relative values for text-align
 - [ ] Add flow-relative values for resize
+- [ ] Move from anonymous function in Tailwind config to external plugin
 - [ ] Ensure compatibility with custom spacing configs
 - [ ] Ensure compatibility with custom inset configs
 - [ ] Ensure compatibility with custom color configs
