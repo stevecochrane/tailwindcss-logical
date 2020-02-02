@@ -2,6 +2,7 @@ module.exports = {
 	corePlugins: [],
 	plugins: [
 		function({ addUtilities, theme }) {
+			const inset = Object.entries(theme('inset'));
 			const spacing = Object.entries(theme('spacing'));
 
 			const marginBlockStartUtilities = spacing.map(([key, value]) => (
@@ -68,6 +69,38 @@ module.exports = {
 				}
 			));
 
+			const insetBlockStartUtilities = inset.map(([key, value]) => (
+				{
+					[`.inset-block-start-${key}`]: {
+						insetBlockStart: value
+					}
+				}
+			));
+
+			const insetBlockEndUtilities = inset.map(([key, value]) => (
+				{
+					[`.inset-block-end-${key}`]: {
+						insetBlockEnd: value
+					}
+				}
+			));
+
+			const insetInlineStartUtilities = inset.map(([key, value]) => (
+				{
+					[`.inset-inline-start-${key}`]: {
+						insetInlineStart: value
+					}
+				}
+			));
+
+			const insetInlineEndUtilities = inset.map(([key, value]) => (
+				{
+					[`.inset-inline-end-${key}`]: {
+						insetInlineEnd: value
+					}
+				}
+			));
+
 			addUtilities(marginBlockStartUtilities);
 			addUtilities(marginBlockEndUtilities);
 			addUtilities(marginInlineStartUtilities);
@@ -77,6 +110,11 @@ module.exports = {
 			addUtilities(paddingBlockEndUtilities);
 			addUtilities(paddingInlineStartUtilities);
 			addUtilities(paddingInlineEndUtilities);
+
+			addUtilities(insetBlockStartUtilities);
+			addUtilities(insetBlockEndUtilities);
+			addUtilities(insetInlineStartUtilities);
+			addUtilities(insetInlineEndUtilities);
 		}
 	]
 }
