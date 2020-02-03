@@ -6,6 +6,14 @@
   text-align: end
 }
 
+.resize-block {
+  resize: block
+}
+
+.resize-inline {
+  resize: inline
+}
+
 .bs-0 {
   block-size: 0
 }

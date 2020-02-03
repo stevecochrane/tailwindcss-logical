@@ -12,6 +12,11 @@ module.exports = {
 				'.text-end': { textAlign: 'end' }
 			};
 
+			const resizeUtilities = {
+				'.resize-block': { resize: 'block' },
+				'.resize-inline': { resize: 'inline' }
+			};
+
 			const blockSizeUtilities = width.map(([key, value]) => (
 				{
 					[`.${e(`bs-${key}`)}`]: {
@@ -125,6 +130,7 @@ module.exports = {
 			));
 
 			addUtilities(textAlignUtilities, variants('logical'));
+			addUtilities(resizeUtilities, variants('logical'));
 
 			addUtilities(blockSizeUtilities, variants('logical'));
 			addUtilities(inlineSizeUtilities, variants('logical'));
