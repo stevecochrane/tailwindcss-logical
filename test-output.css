@@ -1,3 +1,11 @@
+.caption-side-is {
+  caption-side: inline-start
+}
+
+.caption-size-ie {
+  caption-side: inline-end
+}
+
 .text-start {
   text-align: start
 }

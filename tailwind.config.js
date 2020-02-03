@@ -7,6 +7,11 @@ module.exports = {
 			const spacing = Object.entries(theme('spacing'));
 			const width = Object.entries(theme('width'));
 
+			const captionSideUtilities = {
+				'.caption-side-is': { captionSide: 'inline-start' },
+				'.caption-size-ie': { captionSide: 'inline-end' }
+			};
+
 			const textAlignUtilities = {
 				'.text-start': { textAlign: 'start' },
 				'.text-end': { textAlign: 'end' }
@@ -129,6 +134,7 @@ module.exports = {
 				}
 			));
 
+			addUtilities(captionSideUtilities, variants('logical'));
 			addUtilities(textAlignUtilities, variants('logical'));
 			addUtilities(resizeUtilities, variants('logical'));
 

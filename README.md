@@ -13,7 +13,7 @@ To do:
 - [ ] Add border color utilities
 - [ ] Add border radius utilities
 - [x] Add logical height and logical width (block-size, inline-size) utilities
-- [ ] Add flow-relative values for caption-side
+- [x] Add flow-relative values for caption-side
 - [ ] Add flow-relative values for float and clear
 - [x] Add flow-relative values for text-align
 - [x] Add flow-relative values for resize
