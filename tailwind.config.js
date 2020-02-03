@@ -7,6 +7,11 @@ module.exports = {
 			const spacing = Object.entries(theme('spacing'));
 			const width = Object.entries(theme('width'));
 
+			const textAlignUtilities = {
+				'.text-start': { textAlign: 'start' },
+				'.text-end': { textAlign: 'end' }
+			};
+
 			const blockSizeUtilities = width.map(([key, value]) => (
 				{
 					[`.${e(`bs-${key}`)}`]: {
@@ -118,6 +123,8 @@ module.exports = {
 					}
 				}
 			));
+
+			addUtilities(textAlignUtilities, variants('logical'));
 
 			addUtilities(blockSizeUtilities, variants('logical'));
 			addUtilities(inlineSizeUtilities, variants('logical'));

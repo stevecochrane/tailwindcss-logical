@@ -1,3 +1,11 @@
+.text-start {
+  text-align: start
+}
+
+.text-end {
+  text-align: end
+}
+
 .bs-0 {
   block-size: 0
 }

@@ -15,7 +15,7 @@ To do:
 - [x] Add logical height and logical width (block-size, inline-size) utilities
 - [ ] Add flow-relative values for caption-side
 - [ ] Add flow-relative values for float and clear
-- [ ] Add flow-relative values for text-align
+- [x] Add flow-relative values for text-align
 - [ ] Add flow-relative values for resize
 - [ ] Move from anonymous function in Tailwind config to external plugin
 - [ ] Ensure compatibility with custom spacing configs
