@@ -1,4 +1,7 @@
-# tailwindcss-logical-properties
+# tailwindcss-logical
+
+[CSS Logical Properties and Values](https://www.w3.org/TR/css-logical-1/) plugin for
+[Tailwind CSS](https://tailwindcss.com).
 
 To do:
 

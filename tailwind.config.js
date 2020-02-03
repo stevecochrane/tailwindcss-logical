@@ -119,23 +119,23 @@ module.exports = {
 				}
 			));
 
-			addUtilities(blockSizeUtilities, variants('logicalProperties'));
-			addUtilities(inlineSizeUtilities, variants('logicalProperties'));
+			addUtilities(blockSizeUtilities, variants('logical'));
+			addUtilities(inlineSizeUtilities, variants('logical'));
 
-			addUtilities(marginBlockStartUtilities, variants('logicalProperties'));
-			addUtilities(marginBlockEndUtilities, variants('logicalProperties'));
-			addUtilities(marginInlineStartUtilities, variants('logicalProperties'));
-			addUtilities(marginInlineEndUtilities, variants('logicalProperties'));
+			addUtilities(marginBlockStartUtilities, variants('logical'));
+			addUtilities(marginBlockEndUtilities, variants('logical'));
+			addUtilities(marginInlineStartUtilities, variants('logical'));
+			addUtilities(marginInlineEndUtilities, variants('logical'));
 
-			addUtilities(paddingBlockStartUtilities, variants('logicalProperties'));
-			addUtilities(paddingBlockEndUtilities, variants('logicalProperties'));
-			addUtilities(paddingInlineStartUtilities, variants('logicalProperties'));
-			addUtilities(paddingInlineEndUtilities, variants('logicalProperties'));
+			addUtilities(paddingBlockStartUtilities, variants('logical'));
+			addUtilities(paddingBlockEndUtilities, variants('logical'));
+			addUtilities(paddingInlineStartUtilities, variants('logical'));
+			addUtilities(paddingInlineEndUtilities, variants('logical'));
 
-			addUtilities(insetBlockStartUtilities, variants('logicalProperties'));
-			addUtilities(insetBlockEndUtilities, variants('logicalProperties'));
-			addUtilities(insetInlineStartUtilities, variants('logicalProperties'));
-			addUtilities(insetInlineEndUtilities, variants('logicalProperties'));
+			addUtilities(insetBlockStartUtilities, variants('logical'));
+			addUtilities(insetBlockEndUtilities, variants('logical'));
+			addUtilities(insetInlineStartUtilities, variants('logical'));
+			addUtilities(insetInlineEndUtilities, variants('logical'));
 		}
 	]
 }
