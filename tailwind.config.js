@@ -12,6 +12,16 @@ module.exports = {
 				'.caption-size-ie': { captionSide: 'inline-end' }
 			};
 
+			const floatUtilities = {
+				'.float-is': { float: 'inline-start' },
+				'.float-ie': { float: 'inline-end' }
+			};
+
+			const clearUtilities = {
+				'.clear-is': { clear: 'inline-start' },
+				'.clear-ie': { clear: 'inline-end' }
+			};
+
 			const textAlignUtilities = {
 				'.text-start': { textAlign: 'start' },
 				'.text-end': { textAlign: 'end' }
@@ -135,6 +145,8 @@ module.exports = {
 			));
 
 			addUtilities(captionSideUtilities, variants('logical'));
+			addUtilities(floatUtilities, variants('logical'));
+			addUtilities(clearUtilities, variants('logical'));
 			addUtilities(textAlignUtilities, variants('logical'));
 			addUtilities(resizeUtilities, variants('logical'));
 

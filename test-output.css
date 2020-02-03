@@ -6,6 +6,22 @@
   caption-side: inline-end
 }
 
+.float-is {
+  float: inline-start
+}
+
+.float-ie {
+  float: inline-end
+}
+
+.clear-is {
+  clear: inline-start
+}
+
+.clear-ie {
+  clear: inline-end
+}
+
 .text-start {
   text-align: start
 }
