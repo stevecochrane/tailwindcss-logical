@@ -310,6 +310,10 @@
   inline-size: 1px
 }
 
+.is-1\/2 {
+  inline-size: 50%
+}
+
 .is-full {
   inline-size: 100%
 }
@@ -413,6 +417,11 @@
           margin-block-start: 1px
 }
 
+.mbs-1\/2 {
+  -webkit-margin-before: 50%;
+          margin-block-start: 50%
+}
+
 .mbe-0 {
   -webkit-margin-after: 0;
           margin-block-end: 0
@@ -506,6 +515,11 @@
 .mbe-px {
   -webkit-margin-after: 1px;
           margin-block-end: 1px
+}
+
+.mbe-1\/2 {
+  -webkit-margin-after: 50%;
+          margin-block-end: 50%
 }
 
 .mis-0 {
@@ -603,6 +617,11 @@
           margin-inline-start: 1px
 }
 
+.mis-1\/2 {
+  -webkit-margin-start: 50%;
+          margin-inline-start: 50%
+}
+
 .mie-0 {
   -webkit-margin-end: 0;
           margin-inline-end: 0
@@ -696,6 +715,11 @@
 .mie-px {
   -webkit-margin-end: 1px;
           margin-inline-end: 1px
+}
+
+.mie-1\/2 {
+  -webkit-margin-end: 50%;
+          margin-inline-end: 50%
 }
 
 .pbs-0 {
@@ -793,6 +817,11 @@
           padding-block-start: 1px
 }
 
+.pbs-1\/2 {
+  -webkit-padding-before: 50%;
+          padding-block-start: 50%
+}
+
 .pbe-0 {
   -webkit-padding-after: 0;
           padding-block-end: 0
@@ -886,6 +915,11 @@
 .pbe-px {
   -webkit-padding-after: 1px;
           padding-block-end: 1px
+}
+
+.pbe-1\/2 {
+  -webkit-padding-after: 50%;
+          padding-block-end: 50%
 }
 
 .pis-0 {
@@ -983,6 +1017,11 @@
           padding-inline-start: 1px
 }
 
+.pis-1\/2 {
+  -webkit-padding-start: 50%;
+          padding-inline-start: 50%
+}
+
 .pie-0 {
   -webkit-padding-end: 0;
           padding-inline-end: 0
@@ -1078,12 +1117,21 @@
           padding-inline-end: 1px
 }
 
+.pie-1\/2 {
+  -webkit-padding-end: 50%;
+          padding-inline-end: 50%
+}
+
 .inset-block-start-0 {
   inset-block-start: 0
 }
 
 .inset-block-start-auto {
   inset-block-start: auto
+}
+
+.inset-block-start-1\/2 {
+  inset-block-start: 50%
 }
 
 .inset-block-end-0 {
@@ -1094,6 +1142,10 @@
   inset-block-end: auto
 }
 
+.inset-block-end-1\/2 {
+  inset-block-end: 50%
+}
+
 .inset-inline-start-0 {
   inset-inline-start: 0
 }
@@ -1102,10 +1154,18 @@
   inset-inline-start: auto
 }
 
+.inset-inline-start-1\/2 {
+  inset-inline-start: 50%
+}
+
 .inset-inline-end-0 {
   inset-inline-end: 0
 }
 
 .inset-inline-end-auto {
   inset-inline-end: auto
+}
+
+.inset-inline-end-1\/2 {
+  inset-inline-end: 50%
 }

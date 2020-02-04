@@ -48,7 +48,7 @@ module.exports = function (variants) {
 
     const marginBlockStartUtilities = spacing.map(([key, value]) => (
       {
-        [`.mbs-${key}`]: {
+        [`.${e(`mbs-${key}`)}`]: {
           marginBlockStart: value
         }
       }
@@ -56,7 +56,7 @@ module.exports = function (variants) {
 
     const marginBlockEndUtilities = spacing.map(([key, value]) => (
       {
-        [`.mbe-${key}`]: {
+        [`.${e(`mbe-${key}`)}`]: {
           marginBlockEnd: value
         }
       }
@@ -64,7 +64,7 @@ module.exports = function (variants) {
 
     const marginInlineStartUtilities = spacing.map(([key, value]) => (
       {
-        [`.mis-${key}`]: {
+        [`.${e(`mis-${key}`)}`]: {
           marginInlineStart: value
         }
       }
@@ -72,7 +72,7 @@ module.exports = function (variants) {
 
     const marginInlineEndUtilities = spacing.map(([key, value]) => (
       {
-        [`.mie-${key}`]: {
+        [`.${e(`mie-${key}`)}`]: {
           marginInlineEnd: value
         }
       }
@@ -80,7 +80,7 @@ module.exports = function (variants) {
 
     const paddingBlockStartUtilities = spacing.map(([key, value]) => (
       {
-        [`.pbs-${key}`]: {
+        [`.${e(`pbs-${key}`)}`]: {
           paddingBlockStart: value
         }
       }
@@ -88,7 +88,7 @@ module.exports = function (variants) {
 
     const paddingBlockEndUtilities = spacing.map(([key, value]) => (
       {
-        [`.pbe-${key}`]: {
+        [`.${e(`pbe-${key}`)}`]: {
           paddingBlockEnd: value
         }
       }
@@ -96,7 +96,7 @@ module.exports = function (variants) {
 
     const paddingInlineStartUtilities = spacing.map(([key, value]) => (
       {
-        [`.pis-${key}`]: {
+        [`.${e(`pis-${key}`)}`]: {
           paddingInlineStart: value
         }
       }
@@ -104,7 +104,7 @@ module.exports = function (variants) {
 
     const paddingInlineEndUtilities = spacing.map(([key, value]) => (
       {
-        [`.pie-${key}`]: {
+        [`.${e(`pie-${key}`)}`]: {
           paddingInlineEnd: value
         }
       }
@@ -112,7 +112,7 @@ module.exports = function (variants) {
 
     const insetBlockStartUtilities = inset.map(([key, value]) => (
       {
-        [`.inset-block-start-${key}`]: {
+        [`.${e(`inset-block-start-${key}`)}`]: {
           insetBlockStart: value
         }
       }
@@ -120,7 +120,7 @@ module.exports = function (variants) {
 
     const insetBlockEndUtilities = inset.map(([key, value]) => (
       {
-        [`.inset-block-end-${key}`]: {
+        [`.${e(`inset-block-end-${key}`)}`]: {
           insetBlockEnd: value
         }
       }
@@ -128,7 +128,7 @@ module.exports = function (variants) {
 
     const insetInlineStartUtilities = inset.map(([key, value]) => (
       {
-        [`.inset-inline-start-${key}`]: {
+        [`.${e(`inset-inline-start-${key}`)}`]: {
           insetInlineStart: value
         }
       }
@@ -136,7 +136,7 @@ module.exports = function (variants) {
 
     const insetInlineEndUtilities = inset.map(([key, value]) => (
       {
-        [`.inset-inline-end-${key}`]: {
+        [`.${e(`inset-inline-end-${key}`)}`]: {
           insetInlineEnd: value
         }
       }
