@@ -7,7 +7,7 @@
   "homepage": "https://github.com/stevecochrane/tailwindcss-logical",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stevecochrane/tailwindcss-logical.git"
+    "url": "https://github.com/stevecochrane/tailwindcss-logical.git"
   },
   "main": "index.js",
   "scripts": {
