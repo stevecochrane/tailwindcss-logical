@@ -4,6 +4,7 @@
   "description": "CSS Logical Properties and Values plugin for Tailwind CSS",
   "author": "Steve Cochrane <steve@stevecochrane.com>",
   "license": "ISC",
+  "homepage": "https://github.com/stevecochrane/tailwindcss-logical",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stevecochrane/tailwindcss-logical.git"
