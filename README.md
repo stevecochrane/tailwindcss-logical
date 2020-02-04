@@ -24,3 +24,4 @@ To do:
 - [x] Ensure compatibility with values that need to be escaped (e.g. '1/2')
 - [ ] Ensure compatibility with negative values
 - [x] Allow customization of variants
+- [ ] Final pass on class naming for consistency and to avoid collisions
