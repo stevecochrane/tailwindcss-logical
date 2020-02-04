@@ -3,7 +3,9 @@
 [CSS Logical Properties and Values](https://www.w3.org/TR/css-logical-1/) plugin for
 [Tailwind CSS](https://tailwindcss.com).
 
-To do:
+Warning: still a work in progress, not yet production ready.
+
+To do for v1.0.0 (subject to change):
 
 - [x] Add margin utilities
 - [x] Add padding utilities
@@ -25,3 +27,5 @@ To do:
 - [ ] Ensure compatibility with negative values
 - [x] Allow customization of variants
 - [ ] Final pass on class naming for consistency and to avoid collisions
+- [ ] Documentation
+- [ ] Remove code repetition (make more DRY)
