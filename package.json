@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/stevecochrane/tailwindcss-logical.git"
   },
+  "main": "index.js",
   "scripts": {
     "test": "npx tailwind build test-input.css -o test-output.css"
   },
