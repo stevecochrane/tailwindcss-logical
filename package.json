@@ -2,11 +2,7 @@
   "name": "tailwindcss-logical",
   "version": "0.1.0",
   "description": "CSS Logical Properties and Values plugin for Tailwind CSS",
-  "author": {
-    "name": "Steve Cochrane",
-    "email": "steve@stevecochrane.com",
-    "url": "https://stevecochrane.com"
-  },
+  "author": "Steve Cochrane <steve@stevecochrane.com> (https://stevecochrane.com)",
   "license": "ISC",
   "homepage": "https://github.com/stevecochrane/tailwindcss-logical",
   "repository": {
