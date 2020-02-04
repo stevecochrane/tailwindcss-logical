@@ -1,17 +1,17 @@
 {
-	"name": "tailwindcss-logical",
-	"version": "0.1.0",
-	"description": "CSS Logical Properties and Values plugin for Tailwind CSS",
-	"author": "Steve Cochrane <steve@stevecochrane.com>",
-	"license": "ISC",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/stevecochrane/tailwindcss-logical.git"
-	},
-	"scripts": {
-		"test": "npx tailwind build test-input.css -o test-output.css"
-	},
-	"devDependencies": {
-		"tailwindcss": "1.1.4"
-	}
+  "name": "tailwindcss-logical",
+  "version": "0.1.0",
+  "description": "CSS Logical Properties and Values plugin for Tailwind CSS",
+  "author": "Steve Cochrane <steve@stevecochrane.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevecochrane/tailwindcss-logical.git"
+  },
+  "scripts": {
+    "test": "npx tailwind build test-input.css -o test-output.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "1.1.4"
+  }
 }
