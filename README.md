@@ -12,7 +12,7 @@ To do for v1.0.0 (subject to change):
 - [x] Add inset utilities
 - [ ] Add border width utilities
 - [ ] Add border style utilities
-- [ ] Add border color utilities
+- [x] ~~Add border color utilities~~
 - [ ] Add border radius utilities
 - [x] Add logical height and logical width (block-size, inline-size) utilities
 - [x] Add flow-relative values for caption-side
@@ -22,7 +22,7 @@ To do for v1.0.0 (subject to change):
 - [x] Move from anonymous function in Tailwind config to external plugin
 - [x] Ensure compatibility with custom spacing configs
 - [x] Ensure compatibility with custom inset configs
-- [ ] Ensure compatibility with custom color configs
+- [x] ~~Ensure compatibility with custom color configs~~
 - [x] Ensure compatibility with values that need to be escaped (e.g. '1/2')
 - [ ] Ensure compatibility with negative values
 - [x] Allow customization of variants
