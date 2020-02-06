@@ -1,5 +1,6 @@
 module.exports = function (variants) {
   return function ({ addUtilities, theme, variants, e }) {
+    const borderWidth = Object.entries(theme('borderWidth'));
     const height = Object.entries(theme('height'));
     const inset = Object.entries(theme('inset'));
     const spacing = Object.entries(theme('spacing'));
@@ -142,6 +143,24 @@ module.exports = function (variants) {
       }
     ));
 
+    const borderWidthUtilities = borderWidth.map(([key, value]) => {
+      const keyString = key === 'default' ? `` : `-${key}`;
+      return {
+        [`.${e(`border-bs${keyString}`)}`]: {
+          borderBlockStartWidth: value
+        },
+        [`.${e(`border-be${keyString}`)}`]: {
+          borderBlockEndWidth: value
+        },
+        [`.${e(`border-is${keyString}`)}`]: {
+          borderInlineStartWidth: value
+        },
+        [`.${e(`border-ie${keyString}`)}`]: {
+          borderInlineEndWidth: value
+        }
+      }
+    });
+
     addUtilities(captionSideUtilities, variants('logical'));
     addUtilities(floatUtilities, variants('logical'));
     addUtilities(clearUtilities, variants('logical'));
@@ -160,6 +179,8 @@ module.exports = function (variants) {
     addUtilities(paddingBlockEndUtilities, variants('logical'));
     addUtilities(paddingInlineStartUtilities, variants('logical'));
     addUtilities(paddingInlineEndUtilities, variants('logical'));
+
+    addUtilities(borderWidthUtilities, variants('logical'));
 
     addUtilities(insetBlockStartUtilities, variants('logical'));
     addUtilities(insetBlockEndUtilities, variants('logical'));

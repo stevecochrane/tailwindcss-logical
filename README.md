@@ -10,7 +10,7 @@ To do for v1.0.0 (subject to change):
 - [x] Add margin utilities
 - [x] Add padding utilities
 - [x] Add inset utilities
-- [ ] Add border width utilities
+- [x] Add border width utilities
 - [ ] Add border style utilities
 - [x] ~~Add border color utilities~~
 - [ ] Add border radius utilities
