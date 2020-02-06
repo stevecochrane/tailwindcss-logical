@@ -27,5 +27,6 @@ To do for v1.0.0 (subject to change):
 - [ ] Ensure compatibility with negative values
 - [x] Allow customization of variants
 - [ ] Final pass on class naming for consistency and to avoid collisions
+- [ ] Update for Tailwind v1.2.0 plugin improvements
 - [ ] Documentation
 - [ ] Remove code repetition (make more DRY)
