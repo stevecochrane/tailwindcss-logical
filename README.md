@@ -13,7 +13,7 @@ To do for v1.0.0 (subject to change):
 - [x] Add border width utilities
 - [x] ~~Add border style utilities~~
 - [x] ~~Add border color utilities~~
-- [ ] Add border radius utilities
+- [x] Add border radius utilities
 - [x] Add logical height and logical width (block-size, inline-size) utilities
 - [x] Add flow-relative values for caption-side
 - [x] Add flow-relative values for float and clear

@@ -1,6 +1,7 @@
 module.exports = function (variants) {
   return function ({ addUtilities, theme, variants, e }) {
     const borderWidth = Object.entries(theme('borderWidth'));
+    const borderRadius = Object.entries(theme('borderRadius'));
     const height = Object.entries(theme('height'));
     const inset = Object.entries(theme('inset'));
     const spacing = Object.entries(theme('spacing'));
@@ -158,6 +159,46 @@ module.exports = function (variants) {
         [`.${e(`border-ie${keyString}`)}`]: {
           borderInlineEndWidth: value
         }
+      };
+    });
+
+    const borderRadiusSideUtilities = borderRadius.map(([key, value]) => {
+      const keyString = key === 'default' ? `` : `-${key}`;
+      return {
+        [`.${e(`rounded-bs${keyString}`)}`]: {
+          borderStartStartRadius: value,
+          borderEndStartRadius: value
+        },
+        [`.${e(`rounded-be${keyString}`)}`]: {
+          borderEndEndRadius: value,
+          borderStartEndRadius: value
+        },
+        [`.${e(`rounded-is${keyString}`)}`]: {
+          borderStartEndRadius: value,
+          borderStartStartRadius: value
+        },
+        [`.${e(`rounded-ie${keyString}`)}`]: {
+          borderEndStartRadius: value,
+          borderEndEndRadius: value
+        }
+      };
+    });
+
+    const borderRadiusCornerUtilities = borderRadius.map(([key, value]) => {
+      const keyString = key === 'default' ? `` : `-${key}`;
+      return {
+        [`.${e(`rounded-ss${keyString}`)}`]: {
+          borderStartStartRadius: value
+        },
+        [`.${e(`rounded-es${keyString}`)}`]: {
+          borderEndStartRadius: value
+        },
+        [`.${e(`rounded-ee${keyString}`)}`]: {
+          borderEndEndRadius: value
+        },
+        [`.${e(`rounded-se${keyString}`)}`]: {
+          borderStartEndRadius: value
+        }
       }
     });
 
@@ -181,6 +222,8 @@ module.exports = function (variants) {
     addUtilities(paddingInlineEndUtilities, variants('logical'));
 
     addUtilities(borderWidthUtilities, variants('logical'));
+    addUtilities(borderRadiusSideUtilities, variants('logical'));
+    addUtilities(borderRadiusCornerUtilities, variants('logical'));
 
     addUtilities(insetBlockStartUtilities, variants('logical'));
     addUtilities(insetBlockEndUtilities, variants('logical'));
