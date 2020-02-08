@@ -1,4 +1,5 @@
 const plugin = require('tailwindcss/plugin');
+const prefixNegativeModifiers = require('tailwindcss/lib/util/prefixNegativeModifiers').default;
 
 module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   const borderWidth = Object.entries(theme('borderWidth'));
@@ -53,16 +54,16 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
 
   const marginUtilities = margin.map(([key, value]) => (
     {
-      [`.${e(`mbs-${key}`)}`]: {
+      [`.${e(prefixNegativeModifiers('mbs', key))}`]: {
         marginBlockStart: value
       },
-      [`.${e(`mbe-${key}`)}`]: {
+      [`.${e(prefixNegativeModifiers('mbe', key))}`]: {
         marginBlockEnd: value
       },
-      [`.${e(`mis-${key}`)}`]: {
+      [`.${e(prefixNegativeModifiers('mis', key))}`]: {
         marginInlineStart: value
       },
-      [`.${e(`mie-${key}`)}`]: {
+      [`.${e(prefixNegativeModifiers('mie', key))}`]: {
         marginInlineEnd: value
       }
     }
@@ -87,16 +88,16 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
 
   const insetUtilities = inset.map(([key, value]) => (
     {
-      [`.${e(`inset-block-start-${key}`)}`]: {
+      [`.${e(prefixNegativeModifiers('inset-block-start', key))}`]: {
         insetBlockStart: value
       },
-      [`.${e(`inset-block-end-${key}`)}`]: {
+      [`.${e(prefixNegativeModifiers('inset-block-end', key))}`]: {
         insetBlockEnd: value
       },
-      [`.${e(`inset-inline-start-${key}`)}`]: {
+      [`.${e(prefixNegativeModifiers('inset-inline-start', key))}`]: {
         insetInlineStart: value
       },
-      [`.${e(`inset-inline-end-${key}`)}`]: {
+      [`.${e(prefixNegativeModifiers('inset-inline-end', key))}`]: {
         insetInlineEnd: value
       }
     }

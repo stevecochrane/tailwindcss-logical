@@ -742,384 +742,404 @@
           margin-inline-end: 50%
 }
 
-.mbs--1 {
+.-mbs-1 {
   -webkit-margin-before: -0.25rem;
           margin-block-start: -0.25rem
 }
 
-.mbe--1 {
+.-mbe-1 {
   -webkit-margin-after: -0.25rem;
           margin-block-end: -0.25rem
 }
 
-.mis--1 {
+.-mis-1 {
   -webkit-margin-start: -0.25rem;
           margin-inline-start: -0.25rem
 }
 
-.mie--1 {
+.-mie-1 {
   -webkit-margin-end: -0.25rem;
           margin-inline-end: -0.25rem
 }
 
-.mbs--2 {
+.-mbs-2 {
   -webkit-margin-before: -0.5rem;
           margin-block-start: -0.5rem
 }
 
-.mbe--2 {
+.-mbe-2 {
   -webkit-margin-after: -0.5rem;
           margin-block-end: -0.5rem
 }
 
-.mis--2 {
+.-mis-2 {
   -webkit-margin-start: -0.5rem;
           margin-inline-start: -0.5rem
 }
 
-.mie--2 {
+.-mie-2 {
   -webkit-margin-end: -0.5rem;
           margin-inline-end: -0.5rem
 }
 
-.mbs--3 {
+.-mbs-3 {
   -webkit-margin-before: -0.75rem;
           margin-block-start: -0.75rem
 }
 
-.mbe--3 {
+.-mbe-3 {
   -webkit-margin-after: -0.75rem;
           margin-block-end: -0.75rem
 }
 
-.mis--3 {
+.-mis-3 {
   -webkit-margin-start: -0.75rem;
           margin-inline-start: -0.75rem
 }
 
-.mie--3 {
+.-mie-3 {
   -webkit-margin-end: -0.75rem;
           margin-inline-end: -0.75rem
 }
 
-.mbs--4 {
+.-mbs-4 {
   -webkit-margin-before: -1rem;
           margin-block-start: -1rem
 }
 
-.mbe--4 {
+.-mbe-4 {
   -webkit-margin-after: -1rem;
           margin-block-end: -1rem
 }
 
-.mis--4 {
+.-mis-4 {
   -webkit-margin-start: -1rem;
           margin-inline-start: -1rem
 }
 
-.mie--4 {
+.-mie-4 {
   -webkit-margin-end: -1rem;
           margin-inline-end: -1rem
 }
 
-.mbs--5 {
+.-mbs-5 {
   -webkit-margin-before: -1.25rem;
           margin-block-start: -1.25rem
 }
 
-.mbe--5 {
+.-mbe-5 {
   -webkit-margin-after: -1.25rem;
           margin-block-end: -1.25rem
 }
 
-.mis--5 {
+.-mis-5 {
   -webkit-margin-start: -1.25rem;
           margin-inline-start: -1.25rem
 }
 
-.mie--5 {
+.-mie-5 {
   -webkit-margin-end: -1.25rem;
           margin-inline-end: -1.25rem
 }
 
-.mbs--6 {
+.-mbs-6 {
   -webkit-margin-before: -1.5rem;
           margin-block-start: -1.5rem
 }
 
-.mbe--6 {
+.-mbe-6 {
   -webkit-margin-after: -1.5rem;
           margin-block-end: -1.5rem
 }
 
-.mis--6 {
+.-mis-6 {
   -webkit-margin-start: -1.5rem;
           margin-inline-start: -1.5rem
 }
 
-.mie--6 {
+.-mie-6 {
   -webkit-margin-end: -1.5rem;
           margin-inline-end: -1.5rem
 }
 
-.mbs--8 {
+.-mbs-8 {
   -webkit-margin-before: -2rem;
           margin-block-start: -2rem
 }
 
-.mbe--8 {
+.-mbe-8 {
   -webkit-margin-after: -2rem;
           margin-block-end: -2rem
 }
 
-.mis--8 {
+.-mis-8 {
   -webkit-margin-start: -2rem;
           margin-inline-start: -2rem
 }
 
-.mie--8 {
+.-mie-8 {
   -webkit-margin-end: -2rem;
           margin-inline-end: -2rem
 }
 
-.mbs--10 {
+.-mbs-10 {
   -webkit-margin-before: -2.5rem;
           margin-block-start: -2.5rem
 }
 
-.mbe--10 {
+.-mbe-10 {
   -webkit-margin-after: -2.5rem;
           margin-block-end: -2.5rem
 }
 
-.mis--10 {
+.-mis-10 {
   -webkit-margin-start: -2.5rem;
           margin-inline-start: -2.5rem
 }
 
-.mie--10 {
+.-mie-10 {
   -webkit-margin-end: -2.5rem;
           margin-inline-end: -2.5rem
 }
 
-.mbs--12 {
+.-mbs-12 {
   -webkit-margin-before: -3rem;
           margin-block-start: -3rem
 }
 
-.mbe--12 {
+.-mbe-12 {
   -webkit-margin-after: -3rem;
           margin-block-end: -3rem
 }
 
-.mis--12 {
+.-mis-12 {
   -webkit-margin-start: -3rem;
           margin-inline-start: -3rem
 }
 
-.mie--12 {
+.-mie-12 {
   -webkit-margin-end: -3rem;
           margin-inline-end: -3rem
 }
 
-.mbs--16 {
+.-mbs-16 {
   -webkit-margin-before: -4rem;
           margin-block-start: -4rem
 }
 
-.mbe--16 {
+.-mbe-16 {
   -webkit-margin-after: -4rem;
           margin-block-end: -4rem
 }
 
-.mis--16 {
+.-mis-16 {
   -webkit-margin-start: -4rem;
           margin-inline-start: -4rem
 }
 
-.mie--16 {
+.-mie-16 {
   -webkit-margin-end: -4rem;
           margin-inline-end: -4rem
 }
 
-.mbs--20 {
+.-mbs-20 {
   -webkit-margin-before: -5rem;
           margin-block-start: -5rem
 }
 
-.mbe--20 {
+.-mbe-20 {
   -webkit-margin-after: -5rem;
           margin-block-end: -5rem
 }
 
-.mis--20 {
+.-mis-20 {
   -webkit-margin-start: -5rem;
           margin-inline-start: -5rem
 }
 
-.mie--20 {
+.-mie-20 {
   -webkit-margin-end: -5rem;
           margin-inline-end: -5rem
 }
 
-.mbs--24 {
+.-mbs-24 {
   -webkit-margin-before: -6rem;
           margin-block-start: -6rem
 }
 
-.mbe--24 {
+.-mbe-24 {
   -webkit-margin-after: -6rem;
           margin-block-end: -6rem
 }
 
-.mis--24 {
+.-mis-24 {
   -webkit-margin-start: -6rem;
           margin-inline-start: -6rem
 }
 
-.mie--24 {
+.-mie-24 {
   -webkit-margin-end: -6rem;
           margin-inline-end: -6rem
 }
 
-.mbs--32 {
+.-mbs-32 {
   -webkit-margin-before: -8rem;
           margin-block-start: -8rem
 }
 
-.mbe--32 {
+.-mbe-32 {
   -webkit-margin-after: -8rem;
           margin-block-end: -8rem
 }
 
-.mis--32 {
+.-mis-32 {
   -webkit-margin-start: -8rem;
           margin-inline-start: -8rem
 }
 
-.mie--32 {
+.-mie-32 {
   -webkit-margin-end: -8rem;
           margin-inline-end: -8rem
 }
 
-.mbs--40 {
+.-mbs-40 {
   -webkit-margin-before: -10rem;
           margin-block-start: -10rem
 }
 
-.mbe--40 {
+.-mbe-40 {
   -webkit-margin-after: -10rem;
           margin-block-end: -10rem
 }
 
-.mis--40 {
+.-mis-40 {
   -webkit-margin-start: -10rem;
           margin-inline-start: -10rem
 }
 
-.mie--40 {
+.-mie-40 {
   -webkit-margin-end: -10rem;
           margin-inline-end: -10rem
 }
 
-.mbs--48 {
+.-mbs-48 {
   -webkit-margin-before: -12rem;
           margin-block-start: -12rem
 }
 
-.mbe--48 {
+.-mbe-48 {
   -webkit-margin-after: -12rem;
           margin-block-end: -12rem
 }
 
-.mis--48 {
+.-mis-48 {
   -webkit-margin-start: -12rem;
           margin-inline-start: -12rem
 }
 
-.mie--48 {
+.-mie-48 {
   -webkit-margin-end: -12rem;
           margin-inline-end: -12rem
 }
 
-.mbs--56 {
+.-mbs-56 {
   -webkit-margin-before: -14rem;
           margin-block-start: -14rem
 }
 
-.mbe--56 {
+.-mbe-56 {
   -webkit-margin-after: -14rem;
           margin-block-end: -14rem
 }
 
-.mis--56 {
+.-mis-56 {
   -webkit-margin-start: -14rem;
           margin-inline-start: -14rem
 }
 
-.mie--56 {
+.-mie-56 {
   -webkit-margin-end: -14rem;
           margin-inline-end: -14rem
 }
 
-.mbs--64 {
+.-mbs-64 {
   -webkit-margin-before: -16rem;
           margin-block-start: -16rem
 }
 
-.mbe--64 {
+.-mbe-64 {
   -webkit-margin-after: -16rem;
           margin-block-end: -16rem
 }
 
-.mis--64 {
+.-mis-64 {
   -webkit-margin-start: -16rem;
           margin-inline-start: -16rem
 }
 
-.mie--64 {
+.-mie-64 {
   -webkit-margin-end: -16rem;
           margin-inline-end: -16rem
 }
 
-.mbs--px {
+.-mbs-px {
   -webkit-margin-before: -1px;
           margin-block-start: -1px
 }
 
-.mbe--px {
+.-mbe-px {
   -webkit-margin-after: -1px;
           margin-block-end: -1px
 }
 
-.mis--px {
+.-mis-px {
   -webkit-margin-start: -1px;
           margin-inline-start: -1px
 }
 
-.mie--px {
+.-mie-px {
   -webkit-margin-end: -1px;
           margin-inline-end: -1px
 }
 
-.mbs--1\/2 {
+.-mbs-1\/2 {
   -webkit-margin-before: -50%;
           margin-block-start: -50%
 }
 
-.mbe--1\/2 {
+.-mbe-1\/2 {
   -webkit-margin-after: -50%;
           margin-block-end: -50%
 }
 
-.mis--1\/2 {
+.-mis-1\/2 {
   -webkit-margin-start: -50%;
           margin-inline-start: -50%
 }
 
-.mie--1\/2 {
+.-mie-1\/2 {
   -webkit-margin-end: -50%;
           margin-inline-end: -50%
+}
+
+.-mbs-72 {
+  -webkit-margin-before: -18rem;
+          margin-block-start: -18rem
+}
+
+.-mbe-72 {
+  -webkit-margin-after: -18rem;
+          margin-block-end: -18rem
+}
+
+.-mis-72 {
+  -webkit-margin-start: -18rem;
+          margin-inline-start: -18rem
+}
+
+.-mie-72 {
+  -webkit-margin-end: -18rem;
+          margin-inline-end: -18rem
 }
 
 .pbs-0 {
@@ -1552,6 +1572,22 @@
 
 .inset-inline-end-auto {
   inset-inline-end: auto
+}
+
+.-inset-block-start-16 {
+  inset-block-start: -4rem
+}
+
+.-inset-block-end-16 {
+  inset-block-end: -4rem
+}
+
+.-inset-inline-start-16 {
+  inset-inline-start: -4rem
+}
+
+.-inset-inline-end-16 {
+  inset-inline-end: -4rem
 }
 
 .inset-block-start-1\/2 {
