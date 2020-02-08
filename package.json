@@ -13,7 +13,7 @@
   "scripts": {
     "test": "npx tailwind build test-input.css -o test-output.css"
   },
-  "devDependencies": {
-    "tailwindcss": "1.1.4"
+  "dependencies": {
+    "tailwindcss": "1.2.0"
   }
 }
