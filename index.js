@@ -4,6 +4,8 @@ module.exports = function (variants) {
     const borderRadius = Object.entries(theme('borderRadius'));
     const height = Object.entries(theme('height'));
     const inset = Object.entries(theme('inset'));
+    const margin = Object.entries(theme('margin'));
+    const padding = Object.entries(theme('padding'));
     const spacing = Object.entries(theme('spacing'));
     const width = Object.entries(theme('width'));
 
@@ -48,7 +50,7 @@ module.exports = function (variants) {
       }
     ));
 
-    const marginUtilities = spacing.map(([key, value]) => (
+    const marginUtilities = margin.map(([key, value]) => (
       {
         [`.${e(`mbs-${key}`)}`]: {
           marginBlockStart: value
@@ -65,7 +67,7 @@ module.exports = function (variants) {
       }
     ));
 
-    const paddingUtilities = spacing.map(([key, value]) => (
+    const paddingUtilities = padding.map(([key, value]) => (
       {
         [`.${e(`pbs-${key}`)}`]: {
           paddingBlockStart: value
