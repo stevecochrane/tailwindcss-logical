@@ -1,5 +1,5 @@
 module.exports = {
-  corePlugins: [],
+  // corePlugins: [],
   theme: {
     extend: {
       inset: {
