@@ -1,6 +1,6 @@
 # tailwindcss-logical
 
-[CSS Logical Properties and Values](https://www.w3.org/TR/css-logical-1/) plugin for
+[CSS Logical Properties and Values](https://www.w3.org/TR/css-logical/) plugin for
 [Tailwind CSS](https://tailwindcss.com).
 
 Warning: still a work in progress, not yet production ready.
@@ -15,6 +15,7 @@ To do for v1.0.0 (subject to change):
 - [x] ~~Add border color utilities~~
 - [x] Add border radius utilities
 - [x] Add logical height and logical width (block-size, inline-size) utilities
+- [ ] Add min/max block-size/inline-size utilities
 - [x] Add flow-relative values for caption-side
 - [x] Add flow-relative values for float and clear
 - [x] Add flow-relative values for text-align
