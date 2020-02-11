@@ -9228,6 +9228,13 @@
   left: 0
 }
 
+.inset-4 {
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem
+}
+
 .inset-auto {
   top: auto;
   right: auto;
@@ -9257,6 +9264,16 @@
 .inset-x-0 {
   right: 0;
   left: 0
+}
+
+.inset-y-4 {
+  top: 1rem;
+  bottom: 1rem
+}
+
+.inset-x-4 {
+  right: 1rem;
+  left: 1rem
 }
 
 .inset-y-auto {
@@ -9303,6 +9320,22 @@
 
 .left-0 {
   left: 0
+}
+
+.top-4 {
+  top: 1rem
+}
+
+.right-4 {
+  right: 1rem
+}
+
+.bottom-4 {
+  bottom: 1rem
+}
+
+.left-4 {
+  left: 1rem
 }
 
 .top-auto {
@@ -15105,6 +15138,22 @@
 
 .inset-inline-end-0 {
   inset-inline-end: 0
+}
+
+.inset-block-start-4 {
+  inset-block-start: 1rem
+}
+
+.inset-block-end-4 {
+  inset-block-end: 1rem
+}
+
+.inset-inline-start-4 {
+  inset-inline-start: 1rem
+}
+
+.inset-inline-end-4 {
+  inset-inline-end: 1rem
 }
 
 .inset-block-start-auto {
@@ -24682,6 +24731,13 @@
     left: 0
   }
 
+  .sm\:inset-4 {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem
+  }
+
   .sm\:inset-auto {
     top: auto;
     right: auto;
@@ -24711,6 +24767,16 @@
   .sm\:inset-x-0 {
     right: 0;
     left: 0
+  }
+
+  .sm\:inset-y-4 {
+    top: 1rem;
+    bottom: 1rem
+  }
+
+  .sm\:inset-x-4 {
+    right: 1rem;
+    left: 1rem
   }
 
   .sm\:inset-y-auto {
@@ -24757,6 +24823,22 @@
 
   .sm\:left-0 {
     left: 0
+  }
+
+  .sm\:top-4 {
+    top: 1rem
+  }
+
+  .sm\:right-4 {
+    right: 1rem
+  }
+
+  .sm\:bottom-4 {
+    bottom: 1rem
+  }
+
+  .sm\:left-4 {
+    left: 1rem
   }
 
   .sm\:top-auto {
@@ -38233,6 +38315,13 @@
     left: 0
   }
 
+  .md\:inset-4 {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem
+  }
+
   .md\:inset-auto {
     top: auto;
     right: auto;
@@ -38262,6 +38351,16 @@
   .md\:inset-x-0 {
     right: 0;
     left: 0
+  }
+
+  .md\:inset-y-4 {
+    top: 1rem;
+    bottom: 1rem
+  }
+
+  .md\:inset-x-4 {
+    right: 1rem;
+    left: 1rem
   }
 
   .md\:inset-y-auto {
@@ -38308,6 +38407,22 @@
 
   .md\:left-0 {
     left: 0
+  }
+
+  .md\:top-4 {
+    top: 1rem
+  }
+
+  .md\:right-4 {
+    right: 1rem
+  }
+
+  .md\:bottom-4 {
+    bottom: 1rem
+  }
+
+  .md\:left-4 {
+    left: 1rem
   }
 
   .md\:top-auto {
@@ -51784,6 +51899,13 @@
     left: 0
   }
 
+  .lg\:inset-4 {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem
+  }
+
   .lg\:inset-auto {
     top: auto;
     right: auto;
@@ -51813,6 +51935,16 @@
   .lg\:inset-x-0 {
     right: 0;
     left: 0
+  }
+
+  .lg\:inset-y-4 {
+    top: 1rem;
+    bottom: 1rem
+  }
+
+  .lg\:inset-x-4 {
+    right: 1rem;
+    left: 1rem
   }
 
   .lg\:inset-y-auto {
@@ -51859,6 +51991,22 @@
 
   .lg\:left-0 {
     left: 0
+  }
+
+  .lg\:top-4 {
+    top: 1rem
+  }
+
+  .lg\:right-4 {
+    right: 1rem
+  }
+
+  .lg\:bottom-4 {
+    bottom: 1rem
+  }
+
+  .lg\:left-4 {
+    left: 1rem
   }
 
   .lg\:top-auto {
@@ -65335,6 +65483,13 @@
     left: 0
   }
 
+  .xl\:inset-4 {
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem
+  }
+
   .xl\:inset-auto {
     top: auto;
     right: auto;
@@ -65364,6 +65519,16 @@
   .xl\:inset-x-0 {
     right: 0;
     left: 0
+  }
+
+  .xl\:inset-y-4 {
+    top: 1rem;
+    bottom: 1rem
+  }
+
+  .xl\:inset-x-4 {
+    right: 1rem;
+    left: 1rem
   }
 
   .xl\:inset-y-auto {
@@ -65410,6 +65575,22 @@
 
   .xl\:left-0 {
     left: 0
+  }
+
+  .xl\:top-4 {
+    top: 1rem
+  }
+
+  .xl\:right-4 {
+    right: 1rem
+  }
+
+  .xl\:bottom-4 {
+    bottom: 1rem
+  }
+
+  .xl\:left-4 {
+    left: 1rem
   }
 
   .xl\:top-auto {
