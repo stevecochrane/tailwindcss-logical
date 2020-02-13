@@ -13704,112 +13704,12 @@
   block-size: 50%
 }
 
-.bs-1\/3 {
-  block-size: 33.333333%
-}
-
-.bs-2\/3 {
-  block-size: 66.666667%
-}
-
-.bs-1\/4 {
-  block-size: 25%
-}
-
-.bs-2\/4 {
-  block-size: 50%
-}
-
-.bs-3\/4 {
-  block-size: 75%
-}
-
-.bs-1\/5 {
-  block-size: 20%
-}
-
-.bs-2\/5 {
-  block-size: 40%
-}
-
-.bs-3\/5 {
-  block-size: 60%
-}
-
-.bs-4\/5 {
-  block-size: 80%
-}
-
-.bs-1\/6 {
-  block-size: 16.666667%
-}
-
-.bs-2\/6 {
-  block-size: 33.333333%
-}
-
-.bs-3\/6 {
-  block-size: 50%
-}
-
-.bs-4\/6 {
-  block-size: 66.666667%
-}
-
-.bs-5\/6 {
-  block-size: 83.333333%
-}
-
-.bs-1\/12 {
-  block-size: 8.333333%
-}
-
-.bs-2\/12 {
-  block-size: 16.666667%
-}
-
-.bs-3\/12 {
-  block-size: 25%
-}
-
-.bs-4\/12 {
-  block-size: 33.333333%
-}
-
-.bs-5\/12 {
-  block-size: 41.666667%
-}
-
-.bs-6\/12 {
-  block-size: 50%
-}
-
-.bs-7\/12 {
-  block-size: 58.333333%
-}
-
-.bs-8\/12 {
-  block-size: 66.666667%
-}
-
-.bs-9\/12 {
-  block-size: 75%
-}
-
-.bs-10\/12 {
-  block-size: 83.333333%
-}
-
-.bs-11\/12 {
-  block-size: 91.666667%
-}
-
 .bs-full {
   block-size: 100%
 }
 
 .bs-screen {
-  block-size: 100vw
+  block-size: 100vh
 }
 
 .min-bs-0 {
@@ -13820,68 +13720,16 @@
   min-block-size: 100%
 }
 
-.max-bs-none {
-  max-block-size: none
-}
-
-.max-bs-xs {
-  max-block-size: 20rem
-}
-
-.max-bs-sm {
-  max-block-size: 24rem
-}
-
-.max-bs-md {
-  max-block-size: 28rem
-}
-
-.max-bs-lg {
-  max-block-size: 32rem
-}
-
-.max-bs-xl {
-  max-block-size: 36rem
-}
-
-.max-bs-2xl {
-  max-block-size: 42rem
-}
-
-.max-bs-3xl {
-  max-block-size: 48rem
-}
-
-.max-bs-4xl {
-  max-block-size: 56rem
-}
-
-.max-bs-5xl {
-  max-block-size: 64rem
-}
-
-.max-bs-6xl {
-  max-block-size: 72rem
+.min-bs-screen {
+  min-block-size: 100vh
 }
 
 .max-bs-full {
   max-block-size: 100%
 }
 
-.max-bs-screen-sm {
-  max-block-size: 640px
-}
-
-.max-bs-screen-md {
-  max-block-size: 768px
-}
-
-.max-bs-screen-lg {
-  max-block-size: 1024px
-}
-
-.max-bs-screen-xl {
-  max-block-size: 1280px
+.max-bs-screen {
+  max-block-size: 100vh
 }
 
 .is-0 {
@@ -13968,12 +13816,112 @@
   inline-size: 50%
 }
 
+.is-1\/3 {
+  inline-size: 33.333333%
+}
+
+.is-2\/3 {
+  inline-size: 66.666667%
+}
+
+.is-1\/4 {
+  inline-size: 25%
+}
+
+.is-2\/4 {
+  inline-size: 50%
+}
+
+.is-3\/4 {
+  inline-size: 75%
+}
+
+.is-1\/5 {
+  inline-size: 20%
+}
+
+.is-2\/5 {
+  inline-size: 40%
+}
+
+.is-3\/5 {
+  inline-size: 60%
+}
+
+.is-4\/5 {
+  inline-size: 80%
+}
+
+.is-1\/6 {
+  inline-size: 16.666667%
+}
+
+.is-2\/6 {
+  inline-size: 33.333333%
+}
+
+.is-3\/6 {
+  inline-size: 50%
+}
+
+.is-4\/6 {
+  inline-size: 66.666667%
+}
+
+.is-5\/6 {
+  inline-size: 83.333333%
+}
+
+.is-1\/12 {
+  inline-size: 8.333333%
+}
+
+.is-2\/12 {
+  inline-size: 16.666667%
+}
+
+.is-3\/12 {
+  inline-size: 25%
+}
+
+.is-4\/12 {
+  inline-size: 33.333333%
+}
+
+.is-5\/12 {
+  inline-size: 41.666667%
+}
+
+.is-6\/12 {
+  inline-size: 50%
+}
+
+.is-7\/12 {
+  inline-size: 58.333333%
+}
+
+.is-8\/12 {
+  inline-size: 66.666667%
+}
+
+.is-9\/12 {
+  inline-size: 75%
+}
+
+.is-10\/12 {
+  inline-size: 83.333333%
+}
+
+.is-11\/12 {
+  inline-size: 91.666667%
+}
+
 .is-full {
   inline-size: 100%
 }
 
 .is-screen {
-  inline-size: 100vh
+  inline-size: 100vw
 }
 
 .min-is-0 {
@@ -13984,16 +13932,68 @@
   min-inline-size: 100%
 }
 
-.min-is-screen {
-  min-inline-size: 100vh
+.max-is-none {
+  max-inline-size: none
+}
+
+.max-is-xs {
+  max-inline-size: 20rem
+}
+
+.max-is-sm {
+  max-inline-size: 24rem
+}
+
+.max-is-md {
+  max-inline-size: 28rem
+}
+
+.max-is-lg {
+  max-inline-size: 32rem
+}
+
+.max-is-xl {
+  max-inline-size: 36rem
+}
+
+.max-is-2xl {
+  max-inline-size: 42rem
+}
+
+.max-is-3xl {
+  max-inline-size: 48rem
+}
+
+.max-is-4xl {
+  max-inline-size: 56rem
+}
+
+.max-is-5xl {
+  max-inline-size: 64rem
+}
+
+.max-is-6xl {
+  max-inline-size: 72rem
 }
 
 .max-is-full {
   max-inline-size: 100%
 }
 
-.max-is-screen {
-  max-inline-size: 100vh
+.max-is-screen-sm {
+  max-inline-size: 640px
+}
+
+.max-is-screen-md {
+  max-inline-size: 768px
+}
+
+.max-is-screen-lg {
+  max-inline-size: 1024px
+}
+
+.max-is-screen-xl {
+  max-inline-size: 1280px
 }
 
 .mbs-0 {

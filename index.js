@@ -40,7 +40,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     '.resize-inline': { resize: 'inline' }
   };
 
-  const blockSizeUtilities = width.map(([key, value]) => (
+  const blockSizeUtilities = height.map(([key, value]) => (
     {
       [`.${e(`bs-${key}`)}`]: {
         blockSize: value
@@ -48,7 +48,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
-  const minBlockSizeUtilities = minWidth.map(([key, value]) => (
+  const minBlockSizeUtilities = minHeight.map(([key, value]) => (
     {
       [`.${e(`min-bs-${key}`)}`]: {
         minBlockSize: value
@@ -56,7 +56,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
-  const maxBlockSizeUtilities = maxWidth.map(([key, value]) => (
+  const maxBlockSizeUtilities = maxHeight.map(([key, value]) => (
     {
       [`.${e(`max-bs-${key}`)}`]: {
         maxBlockSize: value
@@ -64,7 +64,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
-  const inlineSizeUtilities = height.map(([key, value]) => (
+  const inlineSizeUtilities = width.map(([key, value]) => (
     {
       [`.${e(`is-${key}`)}`]: {
         inlineSize: value
@@ -72,7 +72,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
-  const minInlineSizeUtilities = minHeight.map(([key, value]) => (
+  const minInlineSizeUtilities = minWidth.map(([key, value]) => (
     {
       [`.${e(`min-is-${key}`)}`]: {
         minInlineSize: value
@@ -80,7 +80,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
-  const maxInlineSizeUtilities = maxHeight.map(([key, value]) => (
+  const maxInlineSizeUtilities = maxWidth.map(([key, value]) => (
     {
       [`.${e(`max-is-${key}`)}`]: {
         maxInlineSize: value
