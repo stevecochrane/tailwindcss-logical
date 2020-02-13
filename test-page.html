@@ -37,21 +37,39 @@
 
     <h2>Block Size Utilities</h2>
     <p><a href="https://caniuse.com/#feat=mdn-css_properties_block-size">Can I use... CSS property: <code>block-size</code></a></p>
+    <p><a href="https://caniuse.com/#feat=mdn-css_properties_min-block-size">Can I use... CSS property: <code>min-block-size</code></a></p>
+    <p><a href="https://caniuse.com/#feat=mdn-css_properties_max-block-size">Can I use... CSS property: <code>max-block-size</code></a></p>
     <div class="flex bg-gray-200">
-      <div class="bg-gray-400 m-2 is-8 bs-8">bs-8</div>
-      <div class="bg-gray-400 m-2 is-8 bs-16">bs-16</div>
-      <div class="bg-gray-400 m-2 is-8 bs-32">bs-32</div>
+      <div class="bg-gray-400 mx-2 is-12 bs-8">bs-8</div>
+      <div class="bg-gray-400 mx-2 is-12 bs-16">bs-16</div>
+      <div class="bg-gray-400 mx-2 is-12 bs-32">bs-32</div>
+    </div>
+    <div class="flex mt-2 bs-48 bg-gray-200">
+      <div class="bg-gray-400 mx-2 bs-12 is-12 min-bs-0">min-bs-0</div>
+      <div class="bg-gray-400 mx-2 bs-12 is-12 min-bs-full">min-bs-full</div>
+    </div>
+    <div class="flex mt-2 bs-12 bg-gray-200">
+      <div class="bg-gray-400 mx-2 bs-24 max-bs-full">max-bs-full</div>
     </div>
 
     <h2>Inline Size Utilities</h2>
     <p><a href="https://caniuse.com/#feat=mdn-css_properties_inline-size">Can I use... CSS property: <code>inline-size</code></a></p>
+    <p><a href="https://caniuse.com/#feat=mdn-css_properties_min-inline-size">Can I use... CSS property: <code>min-inline-size</code></a></p>
+    <p><a href="https://caniuse.com/#feat=mdn-css_properties_max-inline-size">Can I use... CSS property: <code>max-inline-size</code></a></p>
     <div class="flex bg-gray-200">
-      <div class="bg-gray-400 m-2 bs-8 is-8">is-8</div>
-      <div class="bg-gray-400 m-2 bs-8 is-16">is-16</div>
-      <div class="bg-gray-400 m-2 bs-8 is-32">is-32</div>
+      <div class="bg-gray-400 m-2 ml-0 bs-8 is-8">is-8</div>
+      <div class="bg-gray-400 m-2 ml-0 bs-8 is-16">is-16</div>
+      <div class="bg-gray-400 m-2 ml-0 bs-8 is-32">is-32</div>
     </div>
-
-    <!-- TODO: Add min/max block-size/inline-size examples -->
+    <div class="clearfix mt-2 bg-gray-200">
+      <div class="bg-gray-400 float-left clear-left my-2 bs-8 min-is-0">min-is-0</div>
+      <div class="bg-gray-400 float-left clear-left my-2 bs-8 min-is-full">min-is-full</div>
+    </div>
+    <div class="clearfix mt-2 bg-gray-200">
+      <div class="bg-gray-400 float-left clear-left is-full my-2 is-32 max-is-sm">max-is-sm</div>
+      <div class="bg-gray-400 float-left clear-left is-full my-2 is-32 max-is-md">max-is-md</div>
+      <div class="bg-gray-400 float-left clear-left is-full my-2 is-32 max-is-lg">max-is-lg</div>
+    </div>
 
     <h2>Margin Utilities</h2>
     <p><a href="https://caniuse.com/#feat=mdn-css_properties_margin-block-start">Can I use... CSS property: <code>margin-block-start</code></a></p>
