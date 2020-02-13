@@ -15,11 +15,6 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   const spacing = Object.entries(theme('spacing'));
   const width = Object.entries(theme('width'));
 
-  const captionSideUtilities = {
-    '.caption-side-is': { captionSide: 'inline-start' },
-    '.caption-size-ie': { captionSide: 'inline-end' }
-  };
-
   const floatUtilities = {
     '.float-is': { float: 'inline-start' },
     '.float-ie': { float: 'inline-end' }
@@ -197,7 +192,6 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   });
 
-  addUtilities(captionSideUtilities, variants('logical'));
   addUtilities(floatUtilities, variants('logical'));
   addUtilities(clearUtilities, variants('logical'));
   addUtilities(textAlignUtilities, variants('logical'));

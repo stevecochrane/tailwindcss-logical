@@ -13580,14 +13580,6 @@
   transition-duration: 1000ms
 }
 
-.caption-side-is {
-  caption-side: inline-start
-}
-
-.caption-size-ie {
-  caption-side: inline-end
-}
-
 .float-is {
   float: inline-start
 }
