@@ -16,13 +16,13 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   const width = Object.entries(theme('width'));
 
   const floatUtilities = {
-    '.float-is': { float: 'inline-start' },
-    '.float-ie': { float: 'inline-end' }
+    '.float-start': { float: 'inline-start' },
+    '.float-end': { float: 'inline-end' }
   };
 
   const clearUtilities = {
-    '.clear-is': { clear: 'inline-start' },
-    '.clear-ie': { clear: 'inline-end' }
+    '.clear-start': { clear: 'inline-start' },
+    '.clear-end': { clear: 'inline-end' }
   };
 
   const textAlignUtilities = {
