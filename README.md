@@ -29,6 +29,7 @@ To do for v1.0.0 (subject to change):
 - [x] Allow customization of variants
 - [ ] Add test page demonstrating all new utility categories
 - [ ] Final pass on class naming for consistency and to avoid collisions
-- [ ] Update for Tailwind v1.2.0 plugin improvements
+- [x] Update for Tailwind v1.2.0 plugin improvements
+- [ ] Allow for custom options
 - [ ] Documentation
 - [ ] Remove code repetition (make more DRY)
