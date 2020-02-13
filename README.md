@@ -27,7 +27,7 @@ To do for v1.0.0 (subject to change):
 - [x] Ensure compatibility with values that need to be escaped (e.g. '1/2')
 - [x] Ensure compatibility with negative values
 - [x] Allow customization of variants
-- [ ] Add test page demonstrating all new utility categories
+- [x] Add test page demonstrating all new utility categories
 - [ ] Final pass on class naming for consistency and to avoid collisions
 - [x] Update for Tailwind v1.2.0 plugin improvements
 - [ ] Allow for custom options
