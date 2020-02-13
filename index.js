@@ -7,6 +7,10 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   const height = Object.entries(theme('height'));
   const inset = Object.entries(theme('inset'));
   const margin = Object.entries(theme('margin'));
+  const maxHeight = Object.entries(theme('maxHeight'));
+  const maxWidth = Object.entries(theme('maxWidth'));
+  const minHeight = Object.entries(theme('minHeight'));
+  const minWidth = Object.entries(theme('minWidth'));
   const padding = Object.entries(theme('padding'));
   const spacing = Object.entries(theme('spacing'));
   const width = Object.entries(theme('width'));
@@ -44,10 +48,42 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
+  const minBlockSizeUtilities = minWidth.map(([key, value]) => (
+    {
+      [`.${e(`min-bs-${key}`)}`]: {
+        minBlockSize: value
+      }
+    }
+  ));
+
+  const maxBlockSizeUtilities = maxWidth.map(([key, value]) => (
+    {
+      [`.${e(`max-bs-${key}`)}`]: {
+        maxBlockSize: value
+      }
+    }
+  ));
+
   const inlineSizeUtilities = height.map(([key, value]) => (
     {
       [`.${e(`is-${key}`)}`]: {
         inlineSize: value
+      }
+    }
+  ));
+
+  const minInlineSizeUtilities = minHeight.map(([key, value]) => (
+    {
+      [`.${e(`min-is-${key}`)}`]: {
+        minInlineSize: value
+      }
+    }
+  ));
+
+  const maxInlineSizeUtilities = maxHeight.map(([key, value]) => (
+    {
+      [`.${e(`max-is-${key}`)}`]: {
+        maxInlineSize: value
       }
     }
   ));
@@ -168,7 +204,12 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   addUtilities(resizeUtilities, variants('logical'));
 
   addUtilities(blockSizeUtilities, variants('logical'));
+  addUtilities(minBlockSizeUtilities, variants('logical'));
+  addUtilities(maxBlockSizeUtilities, variants('logical'));
   addUtilities(inlineSizeUtilities, variants('logical'));
+  addUtilities(minInlineSizeUtilities, variants('logical'));
+  addUtilities(maxInlineSizeUtilities, variants('logical'));
+
   addUtilities(marginUtilities, variants('logical'));
   addUtilities(paddingUtilities, variants('logical'));
   addUtilities(insetUtilities, variants('logical'));

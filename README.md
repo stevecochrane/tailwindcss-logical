@@ -15,7 +15,7 @@ To do for v1.0.0 (subject to change):
 - [x] ~~Add border color utilities~~
 - [x] Add border radius utilities
 - [x] Add logical height and logical width (block-size, inline-size) utilities
-- [ ] Add min/max block-size/inline-size utilities
+- [x] Add min/max block-size/inline-size utilities
 - [x] Add flow-relative values for caption-side
 - [x] Add flow-relative values for float and clear
 - [x] Add flow-relative values for text-align

@@ -13812,6 +13812,78 @@
   block-size: 100vw
 }
 
+.min-bs-0 {
+  min-block-size: 0
+}
+
+.min-bs-full {
+  min-block-size: 100%
+}
+
+.max-bs-none {
+  max-block-size: none
+}
+
+.max-bs-xs {
+  max-block-size: 20rem
+}
+
+.max-bs-sm {
+  max-block-size: 24rem
+}
+
+.max-bs-md {
+  max-block-size: 28rem
+}
+
+.max-bs-lg {
+  max-block-size: 32rem
+}
+
+.max-bs-xl {
+  max-block-size: 36rem
+}
+
+.max-bs-2xl {
+  max-block-size: 42rem
+}
+
+.max-bs-3xl {
+  max-block-size: 48rem
+}
+
+.max-bs-4xl {
+  max-block-size: 56rem
+}
+
+.max-bs-5xl {
+  max-block-size: 64rem
+}
+
+.max-bs-6xl {
+  max-block-size: 72rem
+}
+
+.max-bs-full {
+  max-block-size: 100%
+}
+
+.max-bs-screen-sm {
+  max-block-size: 640px
+}
+
+.max-bs-screen-md {
+  max-block-size: 768px
+}
+
+.max-bs-screen-lg {
+  max-block-size: 1024px
+}
+
+.max-bs-screen-xl {
+  max-block-size: 1280px
+}
+
 .is-0 {
   inline-size: 0
 }
@@ -13902,6 +13974,26 @@
 
 .is-screen {
   inline-size: 100vh
+}
+
+.min-is-0 {
+  min-inline-size: 0
+}
+
+.min-is-full {
+  min-inline-size: 100%
+}
+
+.min-is-screen {
+  min-inline-size: 100vh
+}
+
+.max-is-full {
+  max-inline-size: 100%
+}
+
+.max-is-screen {
+  max-inline-size: 100vh
 }
 
 .mbs-0 {
