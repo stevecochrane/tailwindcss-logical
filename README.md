@@ -14,7 +14,7 @@ as a dependency of your project:
 npm install tailwindcss-logical --save-dev
 ```
 
-Register the plugin in the `plugins` section of your Tailwind config file:
+Register tailwindcss-logical in the `plugins` section of your Tailwind config file:
 
 ```js
 // tailwind.config.js
