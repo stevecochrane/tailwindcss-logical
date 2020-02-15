@@ -203,6 +203,20 @@ Any logical properties and values not represented in the specification, such as 
 If there are any notable omissions that you think should belong in this plugin, please file an
 [issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
 
+## Browser Compatibility
+
+CSS Logical Properties and Values is a fairly new (and still evolving) specification, so browser support varies.
+None of the logical properties and values are currently supported in Internet Explorer 11 or Edge (including Edge
+Chromium as of February 2020), and some, such as Flow-relative Offsets, are currently only supported in Firefox.
+
+If some utilities don't seem to work correctly, be sure to check [Can I use...](https://caniuse.com/) to see if that
+property or value is supported by your browser. Relevant Can I use... links for each set of utilities are included in
+the [test page](https://github.com/stevecochrane/tailwindcss-logical/blob/master/test-page.html).
+
+If better browser support is desired, you may be able to utilize polyfills or post-processing to fill the gaps,
+such as running the resulting styles through [postcss-logical](https://github.com/csstools/postcss-logical). (This has
+not been tested yet but I will do so shortly.)
+
 ## Configuration
 
 tailwindcss-logical does not yet accept configuration options, but if you would like the ability to configure this
