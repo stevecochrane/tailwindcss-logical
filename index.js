@@ -83,6 +83,17 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
+  const marginShorthandUtilities = margin.map(([key, value]) => (
+    {
+      [`.${e(prefixNegativeModifiers('mb', key))}`]: {
+        marginBlock: value
+      },
+      [`.${e(prefixNegativeModifiers('mi', key))}`]: {
+        marginInline: value
+      }
+    }
+  ));
+
   const marginUtilities = margin.map(([key, value]) => (
     {
       [`.${e(prefixNegativeModifiers('mbs', key))}`]: {
@@ -100,6 +111,17 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
+  const paddingShorthandUtilities = padding.map(([key, value]) => (
+    {
+      [`.${e(`pb-${key}`)}`]: {
+        paddingBlock: value
+      },
+      [`.${e(`pi-${key}`)}`]: {
+        paddingInline: value
+      }
+    }
+  ));
+
   const paddingUtilities = padding.map(([key, value]) => (
     {
       [`.${e(`pbs-${key}`)}`]: {
@@ -113,6 +135,17 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
       },
       [`.${e(`pie-${key}`)}`]: {
         paddingInlineEnd: value
+      }
+    }
+  ));
+
+  const insetShorthandUtilities = inset.map(([key, value]) => (
+    {
+      [`.${e(prefixNegativeModifiers('inset-block', key))}`]: {
+        insetBlock: value
+      },
+      [`.${e(prefixNegativeModifiers('inset-inline', key))}`]: {
+        insetInline: value
       }
     }
   ));
@@ -204,8 +237,11 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   addUtilities(minInlineSizeUtilities, variants('logical'));
   addUtilities(maxInlineSizeUtilities, variants('logical'));
 
+  addUtilities(marginShorthandUtilities, variants('logical'));
   addUtilities(marginUtilities, variants('logical'));
+  addUtilities(paddingShorthandUtilities, variants('logical'));
   addUtilities(paddingUtilities, variants('logical'));
+  addUtilities(insetShorthandUtilities, variants('logical'));
   addUtilities(insetUtilities, variants('logical'));
 
   addUtilities(borderWidthUtilities, variants('logical'));
