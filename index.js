@@ -94,7 +94,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
-  const marginUtilities = margin.map(([key, value]) => (
+  const marginSingleSideUtilities = margin.map(([key, value]) => (
     {
       [`.${e(prefixNegativeModifiers('mbs', key))}`]: {
         marginBlockStart: value
@@ -122,7 +122,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
-  const paddingUtilities = padding.map(([key, value]) => (
+  const paddingSingleSideUtilities = padding.map(([key, value]) => (
     {
       [`.${e(`pbs-${key}`)}`]: {
         paddingBlockStart: value
@@ -150,7 +150,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
-  const insetUtilities = inset.map(([key, value]) => (
+  const insetSingleSideUtilities = inset.map(([key, value]) => (
     {
       [`.${e(prefixNegativeModifiers('inset-block-start', key))}`]: {
         insetBlockStart: value
@@ -238,11 +238,11 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   addUtilities(maxInlineSizeUtilities, variants('logical'));
 
   addUtilities(marginShorthandUtilities, variants('logical'));
-  addUtilities(marginUtilities, variants('logical'));
+  addUtilities(marginSingleSideUtilities, variants('logical'));
   addUtilities(paddingShorthandUtilities, variants('logical'));
-  addUtilities(paddingUtilities, variants('logical'));
+  addUtilities(paddingSingleSideUtilities, variants('logical'));
   addUtilities(insetShorthandUtilities, variants('logical'));
-  addUtilities(insetUtilities, variants('logical'));
+  addUtilities(insetSingleSideUtilities, variants('logical'));
 
   addUtilities(borderWidthUtilities, variants('logical'));
   addUtilities(borderRadiusSideUtilities, variants('logical'));
