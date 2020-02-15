@@ -24,6 +24,8 @@ module.exports = {
 }
 ```
 
+## What are CSS Logical Properties and Values?
+
 ## What's Included
 
 ### Flow-relative Values for `float` and `clear`
@@ -227,3 +229,7 @@ plugin further, please file an [issue](https://github.com/stevecochrane/tailwind
 * Test with postcss-logical
 * Allow for custom options to be passed to the plugin
 * Iterate on the test page
+
+## Contributing
+
+## Contact
