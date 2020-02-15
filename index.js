@@ -152,16 +152,16 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
 
   const insetSingleSideUtilities = inset.map(([key, value]) => (
     {
-      [`.${e(prefixNegativeModifiers('inset-block-start', key))}`]: {
+      [`.${e(prefixNegativeModifiers('block-start', key))}`]: {
         insetBlockStart: value
       },
-      [`.${e(prefixNegativeModifiers('inset-block-end', key))}`]: {
+      [`.${e(prefixNegativeModifiers('block-end', key))}`]: {
         insetBlockEnd: value
       },
-      [`.${e(prefixNegativeModifiers('inset-inline-start', key))}`]: {
+      [`.${e(prefixNegativeModifiers('inline-start', key))}`]: {
         insetInlineStart: value
       },
-      [`.${e(prefixNegativeModifiers('inset-inline-end', key))}`]: {
+      [`.${e(prefixNegativeModifiers('inline-end', key))}`]: {
         insetInlineEnd: value
       }
     }
