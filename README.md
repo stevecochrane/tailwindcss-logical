@@ -5,6 +5,34 @@
 
 Warning: still a work in progress, not yet production ready.
 
+## Usage
+
+Install [tailwindcss-logical](https://www.npmjs.com/package/tailwindcss-logical)
+as a dependency of your project:
+
+```bash
+npm install tailwindcss-logical --save-dev
+```
+
+Register the plugin in the `plugins` section of your Tailwind config file:
+
+```js
+// tailwind.config.js
+module.exports = {
+  plugins: [
+    require('tailwindcss-logical')
+  ]
+}
+```
+
+## Configuration
+
+tailwindcss-logical does not yet accept configuration options, but if you would
+like the ability to configure this plugin further, please file an
+[issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know!
+
+## Roadmap
+
 To do for v1.0.0 (subject to change):
 
 - [x] Add margin utilities
