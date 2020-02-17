@@ -26,6 +26,33 @@ module.exports = {
 
 ## What are CSS Logical Properties and Values?
 
+In short, CSS Logical Properties and Values extend CSS for easier development when working with non-LTR (left-to-right)
+languages. For example, let's say you want to add padding before the start of a paragraph of text. For English, which
+is LTR, you would do this:
+
+```css
+.lead-paragraph { padding-left: 1rem; }
+```
+
+However, for Farsi, which reads right-to-left, that would cause the padding to be at the end of the text rather than
+the beginning, so you would have to do something like this to cover both cases:
+
+```css
+.lead-paragraph { padding-left: 1rem; }
+html[dir="rtl"] .lead-paragraph { padding-left: 0; padding-right: 1rem; }
+```
+
+CSS Logical Properties and Values simplifies this by abstracting away the specific directions. The above example
+becomes this:
+
+```css
+.lead-paragraph { padding-inline-start: 1rem; }
+```
+
+With one style, the padding is applied as intended for either language. For more about CSS Logical Properties and
+Values, see [Building Multi-Directional Layouts](https://css-tricks.com/building-multi-directional-layouts/) by Ahmad
+El-Alfy.
+
 ## What's Included
 
 ### Flow-relative Values for `float` and `clear`
