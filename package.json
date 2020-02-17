@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "npx tailwind build test-input.css -o test-output.css"
+    "build-demo": "npx tailwind build demo/input.css -o demo/output.css -c demo/tailwind.config.js"
   },
   "dependencies": {
     "tailwindcss": "1.2.0"
