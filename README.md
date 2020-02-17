@@ -229,8 +229,8 @@ already represented in Tailwind's defaults, it is not represented in this plugin
 Any logical properties and values not represented in the specification, such as `overscroll-behavior-block` and
 `overscroll-behavior-inline`, are also not represented in this plugin.
 
-If there are any notable omissions that you think should belong in this plugin, please file an
-[issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
+If there are any notable omissions that you think should belong in this plugin, please
+[file an issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
 
 ## Browser Compatibility
 
@@ -253,7 +253,7 @@ config to configure the values for `inline-size`.) See the What's Included secti
 property.
 
 tailwindcss-logical does not yet accept configuration options, but if you would like the ability to configure this
-plugin further, please file an [issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
+plugin further, please [file an issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
 
 ## Roadmap
 
@@ -263,4 +263,15 @@ plugin further, please file an [issue](https://github.com/stevecochrane/tailwind
 
 ## Contributing
 
+If you would like to contribute, pull requests are totally welcome, though I recommend starting by
+[filing an issue](https://github.com/stevecochrane/tailwindcss-logical/issues).
+
+1. Fork the project
+2. Check out a feature branch (e.g. `git checkout -b feature-foo-bar`)
+3. Commit changes (e.g. `git commit -am 'Add foo bar'`)
+4. Push the branch (e.g. `git push origin feature-foo-bar`)
+5. Create a new Pull Request
+
 ## Contact
+
+Steve Cochrane (steve@stevecochrane.com)
