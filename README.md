@@ -221,6 +221,10 @@ not been tested yet but I will do so shortly.)
 
 ## Configuration
 
+To configure the generated values for a logical property, configure the non-logical equivalent. (e.g. use the `width`
+config to configure the values for `inline-size`.) See the What's Included section above for more details on each
+property.
+
 tailwindcss-logical does not yet accept configuration options, but if you would like the ability to configure this
 plugin further, please file an [issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
 
