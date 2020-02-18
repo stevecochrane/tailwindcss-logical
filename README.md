@@ -67,8 +67,8 @@ El-Alfy.
 ### Flow-relative Values for `text-align`
 
 ```css
-.text-start { text-align: inline-start; }
-.text-end { text-align: inline-end; }
+.text-start { text-align: start; }
+.text-end { text-align: end; }
 ```
 
 ### Flow-relative Values for `resize`
