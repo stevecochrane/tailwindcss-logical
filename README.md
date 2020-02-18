@@ -242,7 +242,7 @@ plugin further, please [file an issue](https://github.com/stevecochrane/tailwind
 
 ## Roadmap
 
-* Test with postcss-logical
+* Circulate for feedback
 * Allow for custom options to be passed to the plugin
 * Iterate on the test page
 
