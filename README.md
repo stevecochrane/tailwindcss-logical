@@ -187,12 +187,12 @@ shorthand utilities for rounding a side of an element. These match the values in
 ## What's Not Included
 
 This plugin does not generate utilities for everything in the
-[CSS Logical Properties and Values Level 1](https://drafts.csswg.org/css-logical/) specification. If something is not
-already represented in Tailwind's defaults, it is not represented in this plugin.
+[CSS Logical Properties and Values Level 1](https://drafts.csswg.org/css-logical/) specification. If something does not
+have a non-logical equivalent in Tailwind's defaults, it is not represented in this plugin.
 
 * Logical Values for the `caption-side` property: Tailwind does not have `caption-side` utilities.
 * Flow-relative Border Width shorthand properties `border-block-width` and `border-block-height`: Tailwind does not
-  have `border-width` controls for the X or Y axis.
+  have `border-width` shorthand utilities for the X or Y axis.
 * Flow-relative Border Styles: Tailwind only has `border-style` utilities for all sides of an element at once.
 * Flow-relative Border Colors: Same as for Border Styles.
 
