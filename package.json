@@ -11,9 +11,14 @@
   },
   "main": "index.js",
   "scripts": {
-    "build-demo": "npx tailwind build demo/input.css -o demo/output.css -c demo/tailwind.config.js"
+    "build-demo": "postcss demo/input.css -o demo/output.css --config demo/postcss.config.js"
   },
   "dependencies": {
     "tailwindcss": "1.2.0"
+  },
+  "devDependencies": {
+    "postcss-cli": "7.1.0",
+    "postcss-dir-pseudo-class": "5.0.0",
+    "postcss-logical": "4.0.2"
   }
 }
