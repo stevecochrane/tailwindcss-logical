@@ -58,8 +58,8 @@ El-Alfy.
 ### Flow-relative Values for `float` and `clear`
 
 ```css
-.float-block { float: block; }
-.float-inline { float: inline; }
+.float-start { float: inline-start; }
+.float-end { float: inline-end; }
 ```
 
 ### Flow-relative Values for `text-align`
