@@ -85,10 +85,10 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
 
   const marginShorthandUtilities = margin.map(([key, value]) => (
     {
-      [`.${e(prefixNegativeModifiers('mb', key))}`]: {
+      [`.${e(prefixNegativeModifiers('mlb', key))}`]: {
         marginBlock: value
       },
-      [`.${e(prefixNegativeModifiers('mi', key))}`]: {
+      [`.${e(prefixNegativeModifiers('mli', key))}`]: {
         marginInline: value
       }
     }
@@ -113,10 +113,10 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
 
   const paddingShorthandUtilities = padding.map(([key, value]) => (
     {
-      [`.${e(`pb-${key}`)}`]: {
+      [`.${e(`plb-${key}`)}`]: {
         paddingBlock: value
       },
-      [`.${e(`pi-${key}`)}`]: {
+      [`.${e(`pli-${key}`)}`]: {
         paddingInline: value
       }
     }

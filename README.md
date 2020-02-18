@@ -100,8 +100,8 @@ Utilities are generated for the `margin-block-start`, `margin-block-end`, `margi
 the values in your `margin` config object.
 
 ```css
-.mb-1 { margin-block: 0.25rem; }
-.mi-1 { margin-inline: 0.25rem; }
+.mlb-1 { margin-block: 0.25rem; }
+.mli-1 { margin-inline: 0.25rem; }
 .mbs-1 { margin-block-start: 0.25rem; }
 .mbe-1 { margin-block-end: 0.25rem; }
 .mis-1 { margin-inline-start: 0.25rem; }
@@ -115,8 +115,8 @@ Utilities are generated for the `padding-block-start`, `padding-block-end`, `pad
 the values in your `padding` config object.
 
 ```css
-.pb-1 { padding-block: 0.25rem; }
-.pi-1 { padding-inline: 0.25rem; }
+.plb-1 { padding-block: 0.25rem; }
+.pli-1 { padding-inline: 0.25rem; }
 .pbs-1 { padding-block-start: 0.25rem; }
 .pbe-1 { padding-block-end: 0.25rem; }
 .pis-1 { padding-inline-start: 0.25rem; }
