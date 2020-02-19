@@ -233,12 +233,24 @@ that is configured for PostCSS, check out the demo's
 
 ## Configuration
 
-To configure the generated values for a logical property, configure the non-logical equivalent. (e.g. use the `width`
-config to configure the values for `inline-size`.) See the What's Included section above for more details on each
-property.
+To configure the generated values for a logical property, you can configure the non-logical equivalent. (e.g. use the
+`width` config to configure the values for `inline-size`.) See the [What's Included](#whats-included) section above for
+more details on each property.
 
-tailwindcss-logical does not yet accept configuration options, but if you would like the ability to configure this
-plugin further, please [file an issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
+You can also configure the variants generated for each utility. Tailwind's default variants will be used by default,
+but if you would like to change this, you can set custom variants for `'logical'` in your Tailwind config file:
+
+```js
+// tailwind.config.js
+module.exports = {
+  variants: {
+    logical: ['responsive', 'hover']
+  }
+}
+```
+
+Otherwise, tailwindcss-logical has no other configuration options yet, but if you would like the ability to configure
+this further, please [file an issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
 
 ## Roadmap
 
