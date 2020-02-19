@@ -1,4 +1,6 @@
-@tailwind base;
+/* Temporarily disabling until I have more time to improve the demo.
+   I've only disabled this because I didn't want to apply so many style resets. */
+/* @tailwind base; */
 
 @tailwind components;
 
