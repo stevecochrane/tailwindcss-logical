@@ -160,28 +160,28 @@ shorthand utilities for rounding a side of an element. These match the values in
 ```css
 .rounded-bs-md {
   border-start-start-radius: 0.375rem;
-  border-end-start-radius: 0.375rem;
+  border-start-end-radius: 0.375rem;
 }
 
 .rounded-be-md {
+  border-end-start-radius: 0.375rem;
   border-end-end-radius: 0.375rem;
-  border-start-end-radius: 0.375rem;
 }
 
 .rounded-is-md {
-  border-start-end-radius: 0.375rem;
   border-start-start-radius: 0.375rem;
+  border-end-start-radius: 0.375rem;
 }
 
 .rounded-ie-md {
-  border-end-start-radius: 0.375rem;
+  border-start-end-radius: 0.375rem;
   border-end-end-radius: 0.375rem;
 }
 
 .rounded-ss-md { border-start-start-radius: 0.375rem; }
+.rounded-se-md { border-start-end-radius: 0.375rem; }
 .rounded-es-md { border-end-start-radius: 0.375rem; }
 .rounded-ee-md { border-end-end-radius: 0.375rem; }
-.rounded-se-md { border-start-end-radius: 0.375rem; }
 ```
 
 ## What's Not Included

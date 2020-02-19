@@ -190,18 +190,18 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     return {
       [`.${e(`rounded-bs${keyString}`)}`]: {
         borderStartStartRadius: value,
-        borderEndStartRadius: value
-      },
-      [`.${e(`rounded-be${keyString}`)}`]: {
-        borderEndEndRadius: value,
         borderStartEndRadius: value
       },
+      [`.${e(`rounded-be${keyString}`)}`]: {
+        borderEndStartRadius: value,
+        borderEndEndRadius: value
+      },
       [`.${e(`rounded-is${keyString}`)}`]: {
-        borderStartEndRadius: value,
-        borderStartStartRadius: value
+        borderStartStartRadius: value,
+        borderEndStartRadius: value
       },
       [`.${e(`rounded-ie${keyString}`)}`]: {
-        borderEndStartRadius: value,
+        borderStartEndRadius: value,
         borderEndEndRadius: value
       }
     };
@@ -213,14 +213,14 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
       [`.${e(`rounded-ss${keyString}`)}`]: {
         borderStartStartRadius: value
       },
+      [`.${e(`rounded-se${keyString}`)}`]: {
+        borderStartEndRadius: value
+      },
       [`.${e(`rounded-es${keyString}`)}`]: {
         borderEndStartRadius: value
       },
       [`.${e(`rounded-ee${keyString}`)}`]: {
         borderEndEndRadius: value
-      },
-      [`.${e(`rounded-se${keyString}`)}`]: {
-        borderStartEndRadius: value
       }
     }
   });
