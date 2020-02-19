@@ -210,7 +210,7 @@ Chromium as of February 2020), and some, such as Flow-relative Offsets, are curr
 
 If some utilities don't seem to work correctly, be sure to check [Can I use...](https://caniuse.com/) to see if that
 property or value is supported by your browser. Relevant Can I use... links for each set of utilities are included in
-the [demo page](https://github.com/stevecochrane/tailwindcss-logical/blob/master/demo/index.html).
+the [demo page](https://stevecochrane.github.io/tailwindcss-logical/).
 
 If better browser support is required, you can use [PostCSS](https://postcss.org) to improve compatibility. If you take
 your output styles from Tailwind and run them through [postcss-logical](https://github.com/csstools/postcss-logical)
@@ -227,9 +227,9 @@ and values will be converted to pseudo-selectors that any browser can understand
 ```
 
 This process is used for this project's
-[demo page](https://github.com/stevecochrane/tailwindcss-logical/blob/master/demo/index.html), and for a look at how
+[demo page](https://stevecochrane.github.io/tailwindcss-logical/), and for a look at how
 that is configured for PostCSS, check out the demo's
-[postcss.config.js](https://github.com/stevecochrane/tailwindcss-logical/blob/master/demo/postcss.config.js) file.
+[postcss.config.js](https://github.com/stevecochrane/tailwindcss-logical/blob/master/docs/postcss.config.js) file.
 
 ## Configuration
 
