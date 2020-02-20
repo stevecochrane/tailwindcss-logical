@@ -1,9 +1,7 @@
 # tailwindcss-logical
 
 [CSS Logical Properties and Values](https://drafts.csswg.org/css-logical/) plugin for
-[Tailwind CSS](https://tailwindcss.com).
-
-Warning: still a work in progress, not yet production ready.
+[Tailwind CSS](https://tailwindcss.com)
 
 ## Usage
 
