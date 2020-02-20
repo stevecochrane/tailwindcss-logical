@@ -237,8 +237,8 @@ To configure the generated values for a logical property, you can configure the 
 `width` config to configure the values for `inline-size`.) See the [What's Included](#whats-included) section above for
 more details on each property.
 
-You can also configure the variants generated for each utility. Tailwind's default variants will be used by default,
-but if you would like to change this, you can set custom variants for `'logical'` in your Tailwind config file:
+By default, logical utilities will be generated without variants, but you can configure this by providing an array of
+variants for `'variants.logical'` in your Tailwind config file:
 
 ```js
 // tailwind.config.js
