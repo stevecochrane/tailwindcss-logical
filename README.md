@@ -213,7 +213,7 @@ the [demo page](https://stevecochrane.github.io/tailwindcss-logical/).
 If better browser support is required, you can use [PostCSS](https://postcss.org) to improve compatibility. If you take
 your output styles from Tailwind and run them through [postcss-logical](https://github.com/csstools/postcss-logical)
 and then [postcss-dir-pseudo-class](https://github.com/jonathantneal/postcss-dir-pseudo-class), your logical properties
-and values will be converted to pseudo-selectors that any browser can understand.
+and values will be converted to attribute selectors that any browser can understand.
 
 ```css
 /* Default */
