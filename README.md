@@ -210,10 +210,15 @@ If some utilities don't seem to work correctly, be sure to check [Can I use...](
 property or value is supported by your browser. Relevant Can I use... links for each set of utilities are included in
 the [demo page](https://stevecochrane.github.io/tailwindcss-logical/).
 
-If better browser support is required, you can use [PostCSS](https://postcss.org) to improve compatibility. If you take
-your output styles from Tailwind and run them through [postcss-logical](https://github.com/csstools/postcss-logical)
-and then [postcss-dir-pseudo-class](https://github.com/jonathantneal/postcss-dir-pseudo-class), your logical properties
-and values will be converted to attribute selectors that any browser can understand.
+If better browser support is required, you can use [PostCSS](https://postcss.org) to improve compatibility. Here are
+two possible solutions:
+
+1. [postcss-preset-env](https://github.com/csstools/postcss-preset-env) set to `stage: 2` or lower
+2. [postcss-logical](https://github.com/csstools/postcss-logical) followed by
+[postcss-dir-pseudo-class](https://github.com/jonathantneal/postcss-dir-pseudo-class)
+
+If you take your output styles from Tailwind and run them through either of the above, your logical properties and
+values will be converted to attribute selectors that any browser can understand.
 
 ```css
 /* Default */
