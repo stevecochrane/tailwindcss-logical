@@ -224,7 +224,7 @@ values will be converted to attribute selectors that any browser can understand.
 /* Default */
 .float-start { float: inline-start; }
 
-/* With postcss-logical and postcss-dir-pseudo-class applied */
+/* With postcss-preset-env, or postcss-logical and postcss-dir-pseudo-class applied */
 [dir="ltr"] .float-start { float: left; }
 [dir="rtl"] .float-start { float: right; }
 ```
