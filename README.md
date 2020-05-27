@@ -1,5 +1,8 @@
 # tailwindcss-logical
 
+[![NPM](https://img.shields.io/npm/v/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/releases)
+[![License](https://img.shields.io/npm/l/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/blob/master/LICENSE.txt)
+
 A [CSS Logical Properties and Values](https://drafts.csswg.org/css-logical/) plugin for
 [Tailwind CSS](https://tailwindcss.com).
 
