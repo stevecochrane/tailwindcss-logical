@@ -1,6 +1,6 @@
 const postcss = require('postcss');
 const tailwindcss = require('tailwindcss');
-const plugin = require('./index.js');
+const plugin = require('../index.js');
 
 const generatePluginCss = () => {
   return postcss(tailwindcss({
