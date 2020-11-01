@@ -11,7 +11,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "build-demo": "postcss docs/input.css -o docs/output.css --config docs/postcss.config.js"
+    "build-demo": "postcss docs/input.css -o docs/output.css --config docs/postcss.config.js",
+    "test": "jest"
   },
   "dependencies": {
     "tailwindcss": "1.2.0"
