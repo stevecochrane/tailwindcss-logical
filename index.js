@@ -1,12 +1,7 @@
 const plugin = require('tailwindcss/plugin');
 const prefixNegativeModifiers = require('tailwindcss/lib/util/prefixNegativeModifiers').default;
 
-const addFloatUtilities = require('./modules/float');
-const addClearUtilities = require('./modules/clear');
-
-module.exports = plugin(function(pluginHelpers) {
-  const { addUtilities, theme, variants, e } = pluginHelpers;
-
+module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   const borderWidth = Object.entries(theme('borderWidth'));
   const borderRadius = Object.entries(theme('borderRadius'));
   const height = Object.entries(theme('height'));
@@ -19,6 +14,16 @@ module.exports = plugin(function(pluginHelpers) {
   const padding = Object.entries(theme('padding'));
   const spacing = Object.entries(theme('spacing'));
   const width = Object.entries(theme('width'));
+
+  const floatUtilities = {
+    '.float-start': { float: 'inline-start' },
+    '.float-end': { float: 'inline-end' }
+  };
+
+  const clearUtilities = {
+    '.clear-start': { clear: 'inline-start' },
+    '.clear-end': { clear: 'inline-end' }
+  };
 
   const textAlignUtilities = {
     '.text-start': { textAlign: 'start' },
@@ -220,8 +225,8 @@ module.exports = plugin(function(pluginHelpers) {
     }
   });
 
-  addFloatUtilities(pluginHelpers);
-  addClearUtilities(pluginHelpers);
+  addUtilities(floatUtilities, variants('logical'));
+  addUtilities(clearUtilities, variants('logical'));
   addUtilities(textAlignUtilities, variants('logical'));
   addUtilities(resizeUtilities, variants('logical'));
 
@@ -242,5 +247,4 @@ module.exports = plugin(function(pluginHelpers) {
   addUtilities(borderWidthUtilities, variants('logical'));
   addUtilities(borderRadiusSideUtilities, variants('logical'));
   addUtilities(borderRadiusCornerUtilities, variants('logical'));
-
 });
