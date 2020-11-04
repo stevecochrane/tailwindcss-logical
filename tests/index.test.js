@@ -219,3 +219,37 @@ test('min-block-size, with default minHeight config', () => {
       `);
     });
 });
+
+test('max-block-size, with default maxHeight config', () => {
+  return generatePluginCss({
+      corePlugins: false,
+      theme: {
+        borderRadius: {},
+        borderWidth: {},
+        height: {},
+        inset: {},
+        margin: {},
+        maxWidth: {},
+        minHeight: {},
+        minWidth: {},
+        padding: {},
+        spacing: {},
+        width: {}
+      },
+      plugins: [ plugin ],
+      variants: []
+    })
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+
+        .max-bs-full {
+          max-block-size: 100%
+        }
+
+        .max-bs-screen {
+          max-block-size: 100vh
+        }
+      `);
+    });
+});
