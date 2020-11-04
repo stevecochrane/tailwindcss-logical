@@ -2,8 +2,8 @@ const plugin = require('tailwindcss/plugin');
 const prefixNegativeModifiers = require('tailwindcss/lib/util/prefixNegativeModifiers').default;
 
 module.exports = plugin(function({ addUtilities, theme, variants, e }) {
-  const borderWidth = Object.entries(theme('borderWidth'));
   const borderRadius = Object.entries(theme('borderRadius'));
+  const borderWidth = Object.entries(theme('borderWidth'));
   const height = Object.entries(theme('height'));
   const inset = Object.entries(theme('inset'));
   const margin = Object.entries(theme('margin'));
