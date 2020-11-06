@@ -9,6 +9,7 @@ const maxBlockSizeStyles = require('./output/maxBlockSize');
 const inlineSizeStyles = require('./output/inlineSize');
 const minInlineSizeStyles = require('./output/minInlineSize');
 const maxInlineSizeStyles = require('./output/maxInlineSize');
+const marginStyles = require('./output/margin');
 
 const generatePluginCss = (options = {}) => {
   return postcss(tailwindcss(options))
@@ -199,6 +200,32 @@ test('max-inline-size, with default maxWidth config', () => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
         ${maxInlineSizeStyles}
+      `);
+    });
+});
+
+test('margin shorthand and single-side, with default margin and spacing configs', () => {
+  return generatePluginCss({
+      corePlugins: false,
+      theme: {
+        borderRadius: {},
+        borderWidth: {},
+        height: {},
+        inset: {},
+        maxHeight: {},
+        maxWidth: {},
+        minHeight: {},
+        minWidth: {},
+        padding: {},
+        width: {}
+      },
+      plugins: [ plugin ],
+      variants: []
+    })
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${marginStyles}
       `);
     });
 });
