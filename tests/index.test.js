@@ -11,6 +11,7 @@ const minInlineSizeStyles = require('./output/minInlineSize');
 const maxInlineSizeStyles = require('./output/maxInlineSize');
 const marginStyles = require('./output/margin');
 const paddingStyles = require('./output/padding');
+const insetStyles = require('./output/inset');
 
 const generatePluginCss = (options = {}) => {
   return postcss(tailwindcss(options))
@@ -253,6 +254,33 @@ test('padding shorthand and single-side, with default padding and spacing config
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
         ${paddingStyles}
+      `);
+    });
+});
+
+test('inset shorthand and single-side, with default inset config', () => {
+  return generatePluginCss({
+      corePlugins: false,
+      theme: {
+        borderRadius: {},
+        borderWidth: {},
+        height: {},
+        margin: {},
+        maxHeight: {},
+        maxWidth: {},
+        minHeight: {},
+        minWidth: {},
+        padding: {},
+        spacing: {},
+        width: {}
+      },
+      plugins: [ plugin ],
+      variants: []
+    })
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${insetStyles}
       `);
     });
 });
