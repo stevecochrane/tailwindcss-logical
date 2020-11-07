@@ -14,12 +14,24 @@
     "build-demo": "postcss docs/input.css -o docs/output.css --config docs/postcss.config.js",
     "test": "jest --coverage"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "jest --bail --coverage --findRelatedTests"
+    ]
+  },
   "dependencies": {
     "tailwindcss": "1.2.0"
   },
   "devDependencies": {
+    "husky": "4.3.0",
     "jest": "26.6.1",
     "jest-matcher-css": "1.1.0",
+    "lint-staged": "10.5.1",
     "postcss": "8.1.4",
     "postcss-cli": "7.1.0",
     "postcss-dir-pseudo-class": "5.0.0",
