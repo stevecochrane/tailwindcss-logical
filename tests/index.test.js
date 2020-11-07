@@ -12,6 +12,8 @@ const maxInlineSizeStyles = require('./output/maxInlineSize');
 const marginStyles = require('./output/margin');
 const paddingStyles = require('./output/padding');
 const insetStyles = require('./output/inset');
+const borderWidthStyles = require('./output/borderWidth');
+const borderRadiusStyles = require('./output/borderRadius');
 
 const generatePluginCss = (options = {}) => {
   return postcss(tailwindcss(options))
@@ -281,6 +283,60 @@ test('inset shorthand and single-side, with default inset config', () => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
         ${insetStyles}
+      `);
+    });
+});
+
+test('border-width, with default borderWidth config', () => {
+  return generatePluginCss({
+      corePlugins: false,
+      theme: {
+        borderRadius: {},
+        height: {},
+        inset: {},
+        margin: {},
+        maxHeight: {},
+        maxWidth: {},
+        minHeight: {},
+        minWidth: {},
+        padding: {},
+        spacing: {},
+        width: {}
+      },
+      plugins: [ plugin ],
+      variants: []
+    })
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${borderWidthStyles}
+      `);
+    });
+});
+
+test('border-radius side and corner, with default borderRadius config', () => {
+  return generatePluginCss({
+      corePlugins: false,
+      theme: {
+        borderWidth: {},
+        height: {},
+        inset: {},
+        margin: {},
+        maxHeight: {},
+        maxWidth: {},
+        minHeight: {},
+        minWidth: {},
+        padding: {},
+        spacing: {},
+        width: {}
+      },
+      plugins: [ plugin ],
+      variants: []
+    })
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${borderRadiusStyles}
       `);
     });
 });
