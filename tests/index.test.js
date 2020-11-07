@@ -1,19 +1,20 @@
 const postcss = require('postcss');
 const tailwindcss = require('tailwindcss');
+
 const plugin = require('../index.js');
 
-const nonconfigurableStyles = require('./output/nonconfigurable');
 const blockSizeStyles = require('./output/blockSize');
-const minBlockSizeStyles = require('./output/minBlockSize');
-const maxBlockSizeStyles = require('./output/maxBlockSize');
-const inlineSizeStyles = require('./output/inlineSize');
-const minInlineSizeStyles = require('./output/minInlineSize');
-const maxInlineSizeStyles = require('./output/maxInlineSize');
-const marginStyles = require('./output/margin');
-const paddingStyles = require('./output/padding');
-const insetStyles = require('./output/inset');
-const borderWidthStyles = require('./output/borderWidth');
 const borderRadiusStyles = require('./output/borderRadius');
+const borderWidthStyles = require('./output/borderWidth');
+const inlineSizeStyles = require('./output/inlineSize');
+const insetStyles = require('./output/inset');
+const marginStyles = require('./output/margin');
+const maxBlockSizeStyles = require('./output/maxBlockSize');
+const maxInlineSizeStyles = require('./output/maxInlineSize');
+const minBlockSizeStyles = require('./output/minBlockSize');
+const minInlineSizeStyles = require('./output/minInlineSize');
+const nonconfigurableStyles = require('./output/nonconfigurable');
+const paddingStyles = require('./output/padding');
 
 const generatePluginCss = (options = {}) => {
   return postcss(tailwindcss(options))
