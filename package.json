@@ -12,6 +12,7 @@
   "main": "index.js",
   "scripts": {
     "build-demo": "postcss docs/input.css -o docs/output.css --config docs/postcss.config.js",
+    "lint": "eslint --ignore-path .eslintignore --cache .",
     "test": "jest --coverage"
   },
   "husky": {
@@ -21,6 +22,7 @@
   },
   "lint-staged": {
     "*.js": [
+      "eslint",
       "jest --bail --coverage --findRelatedTests"
     ]
   },
@@ -28,6 +30,8 @@
     "tailwindcss": "1.2.0"
   },
   "devDependencies": {
+    "eslint": "7.13.0",
+    "eslint-plugin-jest": "24.1.0",
     "husky": "4.3.0",
     "jest": "26.6.1",
     "jest-matcher-css": "1.1.0",
