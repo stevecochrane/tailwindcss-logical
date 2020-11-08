@@ -43,7 +43,7 @@ const getBaseConfig = () => {
     },
     plugins: [ plugin ],
     variants: []
-  }
+  };
 };
 
 test('float, clear, text-align and resize', () => {
