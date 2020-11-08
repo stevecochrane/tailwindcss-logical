@@ -24,49 +24,41 @@ const generatePluginCss = (options = {}) => {
     .then(result => result.css);
 };
 
+const getBaseConfig = () => {
+  return {
+    corePlugins: false,
+    theme: {
+      borderRadius: {},
+      borderWidth: {},
+      height: {},
+      inset: {},
+      margin: {},
+      maxHeight: {},
+      maxWidth: {},
+      minHeight: {},
+      minWidth: {},
+      padding: {},
+      spacing: {},
+      width: {}
+    },
+    plugins: [ plugin ],
+    variants: []
+  }
+};
+
 test('float, clear, text-align and resize', () => {
-  return generatePluginCss({
-      corePlugins: false,
-      theme: {
-        borderRadius: {},
-        borderWidth: {},
-        height: {},
-        inset: {},
-        margin: {},
-        maxHeight: {},
-        maxWidth: {},
-        minHeight: {},
-        minWidth: {},
-        padding: {},
-        spacing: {},
-        width: {}
-      },
-      plugins: [ plugin ],
-      variants: []
-    })
+  return generatePluginCss(getBaseConfig())
     .then(css => {
       expect(css).toMatchCss(nonconfigurableStyles);
     });
 });
 
 test('block-size, with default height and spacing configs', () => {
-  return generatePluginCss({
-      corePlugins: false,
-      theme: {
-        borderRadius: {},
-        borderWidth: {},
-        inset: {},
-        margin: {},
-        maxHeight: {},
-        maxWidth: {},
-        minHeight: {},
-        minWidth: {},
-        padding: {},
-        width: {}
-      },
-      plugins: [ plugin ],
-      variants: []
-    })
+  let config = getBaseConfig();
+  delete config.theme.height;
+  delete config.theme.spacing;
+
+  return generatePluginCss(config)
     .then(css => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
@@ -76,24 +68,10 @@ test('block-size, with default height and spacing configs', () => {
 });
 
 test('min-block-size, with default minHeight config', () => {
-  return generatePluginCss({
-      corePlugins: false,
-      theme: {
-        borderRadius: {},
-        borderWidth: {},
-        height: {},
-        inset: {},
-        margin: {},
-        maxHeight: {},
-        maxWidth: {},
-        minWidth: {},
-        padding: {},
-        spacing: {},
-        width: {}
-      },
-      plugins: [ plugin ],
-      variants: []
-    })
+  let config = getBaseConfig();
+  delete config.theme.minHeight;
+
+  return generatePluginCss(config)
     .then(css => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
@@ -103,24 +81,10 @@ test('min-block-size, with default minHeight config', () => {
 });
 
 test('max-block-size, with default maxHeight config', () => {
-  return generatePluginCss({
-      corePlugins: false,
-      theme: {
-        borderRadius: {},
-        borderWidth: {},
-        height: {},
-        inset: {},
-        margin: {},
-        maxWidth: {},
-        minHeight: {},
-        minWidth: {},
-        padding: {},
-        spacing: {},
-        width: {}
-      },
-      plugins: [ plugin ],
-      variants: []
-    })
+  let config = getBaseConfig();
+  delete config.theme.maxHeight;
+
+  return generatePluginCss(config)
     .then(css => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
@@ -130,23 +94,11 @@ test('max-block-size, with default maxHeight config', () => {
 });
 
 test('inline-size, with default width and spacing configs', () => {
-  return generatePluginCss({
-      corePlugins: false,
-      theme: {
-        borderRadius: {},
-        borderWidth: {},
-        height: {},
-        inset: {},
-        margin: {},
-        maxHeight: {},
-        maxWidth: {},
-        minHeight: {},
-        minWidth: {},
-        padding: {}
-      },
-      plugins: [ plugin ],
-      variants: []
-    })
+  let config = getBaseConfig();
+  delete config.theme.spacing;
+  delete config.theme.width;
+
+  return generatePluginCss(config)
     .then(css => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
@@ -156,24 +108,10 @@ test('inline-size, with default width and spacing configs', () => {
 });
 
 test('min-inline-size, with default minWidth config', () => {
-  return generatePluginCss({
-      corePlugins: false,
-      theme: {
-        borderRadius: {},
-        borderWidth: {},
-        height: {},
-        inset: {},
-        margin: {},
-        maxHeight: {},
-        maxWidth: {},
-        minHeight: {},
-        padding: {},
-        spacing: {},
-        width: {}
-      },
-      plugins: [ plugin ],
-      variants: []
-    })
+  let config = getBaseConfig();
+  delete config.theme.minWidth;
+
+  return generatePluginCss(config)
     .then(css => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
@@ -183,24 +121,10 @@ test('min-inline-size, with default minWidth config', () => {
 });
 
 test('max-inline-size, with default maxWidth config', () => {
-  return generatePluginCss({
-      corePlugins: false,
-      theme: {
-        borderRadius: {},
-        borderWidth: {},
-        height: {},
-        inset: {},
-        margin: {},
-        maxHeight: {},
-        minHeight: {},
-        minWidth: {},
-        padding: {},
-        spacing: {},
-        width: {}
-      },
-      plugins: [ plugin ],
-      variants: []
-    })
+  let config = getBaseConfig();
+  delete config.theme.maxWidth;
+
+  return generatePluginCss(config)
     .then(css => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
@@ -210,23 +134,11 @@ test('max-inline-size, with default maxWidth config', () => {
 });
 
 test('margin shorthand and single-side, with default margin and spacing configs', () => {
-  return generatePluginCss({
-      corePlugins: false,
-      theme: {
-        borderRadius: {},
-        borderWidth: {},
-        height: {},
-        inset: {},
-        maxHeight: {},
-        maxWidth: {},
-        minHeight: {},
-        minWidth: {},
-        padding: {},
-        width: {}
-      },
-      plugins: [ plugin ],
-      variants: []
-    })
+  let config = getBaseConfig();
+  delete config.theme.margin;
+  delete config.theme.spacing;
+
+  return generatePluginCss(config)
     .then(css => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
@@ -236,23 +148,11 @@ test('margin shorthand and single-side, with default margin and spacing configs'
 });
 
 test('padding shorthand and single-side, with default padding and spacing configs', () => {
-  return generatePluginCss({
-      corePlugins: false,
-      theme: {
-        borderRadius: {},
-        borderWidth: {},
-        height: {},
-        inset: {},
-        margin: {},
-        maxHeight: {},
-        maxWidth: {},
-        minHeight: {},
-        minWidth: {},
-        width: {}
-      },
-      plugins: [ plugin ],
-      variants: []
-    })
+  let config = getBaseConfig();
+  delete config.theme.padding;
+  delete config.theme.spacing;
+
+  return generatePluginCss(config)
     .then(css => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
@@ -262,24 +162,10 @@ test('padding shorthand and single-side, with default padding and spacing config
 });
 
 test('inset shorthand and single-side, with default inset config', () => {
-  return generatePluginCss({
-      corePlugins: false,
-      theme: {
-        borderRadius: {},
-        borderWidth: {},
-        height: {},
-        margin: {},
-        maxHeight: {},
-        maxWidth: {},
-        minHeight: {},
-        minWidth: {},
-        padding: {},
-        spacing: {},
-        width: {}
-      },
-      plugins: [ plugin ],
-      variants: []
-    })
+  let config = getBaseConfig();
+  delete config.theme.inset;
+
+  return generatePluginCss(config)
     .then(css => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
@@ -289,24 +175,10 @@ test('inset shorthand and single-side, with default inset config', () => {
 });
 
 test('border-width, with default borderWidth config', () => {
-  return generatePluginCss({
-      corePlugins: false,
-      theme: {
-        borderRadius: {},
-        height: {},
-        inset: {},
-        margin: {},
-        maxHeight: {},
-        maxWidth: {},
-        minHeight: {},
-        minWidth: {},
-        padding: {},
-        spacing: {},
-        width: {}
-      },
-      plugins: [ plugin ],
-      variants: []
-    })
+  let config = getBaseConfig();
+  delete config.theme.borderWidth;
+
+  return generatePluginCss(config)
     .then(css => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
@@ -316,24 +188,10 @@ test('border-width, with default borderWidth config', () => {
 });
 
 test('border-radius side and corner, with default borderRadius config', () => {
-  return generatePluginCss({
-      corePlugins: false,
-      theme: {
-        borderWidth: {},
-        height: {},
-        inset: {},
-        margin: {},
-        maxHeight: {},
-        maxWidth: {},
-        minHeight: {},
-        minWidth: {},
-        padding: {},
-        spacing: {},
-        width: {}
-      },
-      plugins: [ plugin ],
-      variants: []
-    })
+  let config = getBaseConfig();
+  delete config.theme.borderRadius;
+
+  return generatePluginCss(config)
     .then(css => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
