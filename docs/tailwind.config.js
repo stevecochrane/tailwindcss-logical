@@ -1,5 +1,11 @@
 module.exports = {
-  // corePlugins: [],
+  future: {
+    purgeLayersByDefault: true
+  },
+  purge: {
+    content: ['./docs/*.html'],
+    enabled: true
+  },
   theme: {
     extend: {
       inset: {
