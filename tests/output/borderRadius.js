@@ -99,6 +99,66 @@ module.exports = `
     border-end-end-radius: 0.5rem
   }
 
+  .rounded-bs-xl {
+    border-start-start-radius: 0.75rem;
+    border-start-end-radius: 0.75rem
+  }
+
+  .rounded-be-xl {
+    border-end-start-radius: 0.75rem;
+    border-end-end-radius: 0.75rem
+  }
+
+  .rounded-is-xl {
+    border-start-start-radius: 0.75rem;
+    border-end-start-radius: 0.75rem
+  }
+
+  .rounded-ie-xl {
+    border-start-end-radius: 0.75rem;
+    border-end-end-radius: 0.75rem
+  }
+
+  .rounded-bs-2xl {
+    border-start-start-radius: 1rem;
+    border-start-end-radius: 1rem
+  }
+
+  .rounded-be-2xl {
+    border-end-start-radius: 1rem;
+    border-end-end-radius: 1rem
+  }
+
+  .rounded-is-2xl {
+    border-start-start-radius: 1rem;
+    border-end-start-radius: 1rem
+  }
+
+  .rounded-ie-2xl {
+    border-start-end-radius: 1rem;
+    border-end-end-radius: 1rem
+  }
+
+  .rounded-bs-3xl {
+    border-start-start-radius: 1.5rem;
+    border-start-end-radius: 1.5rem
+  }
+
+  .rounded-be-3xl {
+    border-end-start-radius: 1.5rem;
+    border-end-end-radius: 1.5rem
+  }
+
+  .rounded-is-3xl {
+    border-start-start-radius: 1.5rem;
+    border-end-start-radius: 1.5rem
+  }
+
+  .rounded-ie-3xl {
+    border-start-end-radius: 1.5rem;
+    border-end-end-radius: 1.5rem
+  }
+
   .rounded-bs-full {
     border-start-start-radius: 9999px;
     border-start-end-radius: 9999px
@@ -197,6 +257,54 @@ module.exports = `
 
   .rounded-ee-lg {
     border-end-end-radius: 0.5rem
+  }
+
+  .rounded-ss-xl {
+    border-start-start-radius: 0.75rem
+  }
+
+  .rounded-se-xl {
+    border-start-end-radius: 0.75rem
+  }
+
+  .rounded-es-xl {
+    border-end-start-radius: 0.75rem
+  }
+
+  .rounded-ee-xl {
+    border-end-end-radius: 0.75rem
+  }
+
+  .rounded-ss-2xl {
+    border-start-start-radius: 1rem
+  }
+
+  .rounded-se-2xl {
+    border-start-end-radius: 1rem
+  }
+
+  .rounded-es-2xl {
+    border-end-start-radius: 1rem
+  }
+
+  .rounded-ee-2xl {
+    border-end-end-radius: 1rem
+  }
+
+  .rounded-ss-3xl {
+    border-start-start-radius: 1.5rem
+  }
+
+  .rounded-se-3xl {
+    border-start-end-radius: 1.5rem
+  }
+
+  .rounded-es-3xl {
+    border-end-start-radius: 1.5rem
+  }
+
+  .rounded-ee-3xl {
+    border-end-end-radius: 1.5rem
   }
 
   .rounded-ss-full {
