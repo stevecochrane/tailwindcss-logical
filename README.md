@@ -1,5 +1,6 @@
 # tailwindcss-logical
 
+![build](https://github.com/stevecochrane/tailwindcss-logical/workflows/build/badge.svg)
 [![NPM](https://img.shields.io/npm/v/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/releases)
 [![Downloads](https://img.shields.io/npm/dt/tailwindcss-logical.svg)](https://www.npmjs.com/package/tailwindcss)
 [![License](https://img.shields.io/npm/l/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/blob/master/LICENSE.txt)
