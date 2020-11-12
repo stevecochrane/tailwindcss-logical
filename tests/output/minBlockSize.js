@@ -1,0 +1,13 @@
+module.exports = `
+  .min-bs-0 {
+    min-block-size: 0
+  }
+
+  .min-bs-full {
+    min-block-size: 100%
+  }
+
+  .min-bs-screen {
+    min-block-size: 100vh
+  }
+`;

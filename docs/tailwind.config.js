@@ -1,5 +1,11 @@
 module.exports = {
-  // corePlugins: [],
+  future: {
+    purgeLayersByDefault: true
+  },
+  purge: {
+    content: ['./docs/*.html'],
+    enabled: true
+  },
   theme: {
     extend: {
       inset: {
@@ -18,4 +24,4 @@ module.exports = {
   plugins: [
     require('../index.js')
   ]
-}
+};

@@ -2,8 +2,8 @@ const plugin = require('tailwindcss/plugin');
 const prefixNegativeModifiers = require('tailwindcss/lib/util/prefixNegativeModifiers').default;
 
 module.exports = plugin(function({ addUtilities, theme, variants, e }) {
-  const borderWidth = Object.entries(theme('borderWidth'));
   const borderRadius = Object.entries(theme('borderRadius'));
+  const borderWidth = Object.entries(theme('borderWidth'));
   const height = Object.entries(theme('height'));
   const inset = Object.entries(theme('inset'));
   const margin = Object.entries(theme('margin'));
@@ -12,7 +12,6 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   const minHeight = Object.entries(theme('minHeight'));
   const minWidth = Object.entries(theme('minWidth'));
   const padding = Object.entries(theme('padding'));
-  const spacing = Object.entries(theme('spacing'));
   const width = Object.entries(theme('width'));
 
   const floatUtilities = {
@@ -168,7 +167,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   ));
 
   const borderWidthUtilities = borderWidth.map(([key, value]) => {
-    const keyString = key === 'default' ? `` : `-${key}`;
+    const keyString = key === 'default' ? '' : `-${key}`;
     return {
       [`.${e(`border-bs${keyString}`)}`]: {
         borderBlockStartWidth: value
@@ -186,7 +185,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   });
 
   const borderRadiusSideUtilities = borderRadius.map(([key, value]) => {
-    const keyString = key === 'default' ? `` : `-${key}`;
+    const keyString = key === 'default' ? '' : `-${key}`;
     return {
       [`.${e(`rounded-bs${keyString}`)}`]: {
         borderStartStartRadius: value,
@@ -208,7 +207,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   });
 
   const borderRadiusCornerUtilities = borderRadius.map(([key, value]) => {
-    const keyString = key === 'default' ? `` : `-${key}`;
+    const keyString = key === 'default' ? '' : `-${key}`;
     return {
       [`.${e(`rounded-ss${keyString}`)}`]: {
         borderStartStartRadius: value
@@ -222,7 +221,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
       [`.${e(`rounded-ee${keyString}`)}`]: {
         borderEndEndRadius: value
       }
-    }
+    };
   });
 
   addUtilities(floatUtilities, variants('logical'));

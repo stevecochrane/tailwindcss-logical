@@ -1,2 +1,4 @@
-.DS_Store
+coverage/
 node_modules/
+.DS_Store
+.eslintcache
