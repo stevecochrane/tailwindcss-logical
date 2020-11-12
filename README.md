@@ -262,8 +262,8 @@ this further, please [file an issue](https://github.com/stevecochrane/tailwindcs
 ## Roadmap
 
 - [x] Circulate for feedback
-- [ ] Add Jest test suite
-- [ ] Update to latest version of Tailwind
+- [x] Add Jest test suite
+- [x] Update to latest version of Tailwind
 - [x] ~~Allow for custom options to be passed to the plugin~~
 - [ ] Iterate on the demo page
 
