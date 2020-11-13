@@ -190,9 +190,9 @@ shorthand utilities for rounding a side of an element. These match the values in
 
 ## What's Not Included
 
-This plugin does not generate utilities for everything in the
-[CSS Logical Properties and Values Level 1](https://drafts.csswg.org/css-logical/) specification. If something does not
-have a non-logical equivalent in Tailwind's defaults, it is not represented in this plugin.
+While everything in the [CSS Logical Properties and Values Level 1](https://drafts.csswg.org/css-logical/)
+specification has been evaluated and most features are supported, this plugin does not generate utilities for
+everything. If something does not have a non-logical equivalent in Tailwind's defaults, it is not supported.
 
 * Logical Values for the `caption-side` property: Tailwind does not have `caption-side` utilities.
 * Flow-relative Border Width shorthand properties `border-block-width` and `border-block-height`: Tailwind does not
@@ -201,9 +201,9 @@ have a non-logical equivalent in Tailwind's defaults, it is not represented in t
 * Flow-relative Border Colors: Same as for Border Styles.
 
 Any logical properties and values not represented in the specification, such as `overscroll-behavior-block` and
-`overscroll-behavior-inline`, are also not represented in this plugin.
+`overscroll-behavior-inline`, are also not supported by this plugin.
 
-If there are any notable omissions that you think should belong in this plugin, please
+If there are any notable omissions that you think should be supported, please
 [file an issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
 
 ## Browser Compatibility
