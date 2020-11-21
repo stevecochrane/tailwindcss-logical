@@ -4,21 +4,18 @@
 /* @tailwind base; */
 
 .bg-gray-200 {
-  --bg-opacity: 1;
-  background-color: #edf2f7;
-  background-color: rgba(237, 242, 247, var(--bg-opacity))
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity))
 }
 
 .bg-gray-400 {
-  --bg-opacity: 1;
-  background-color: #cbd5e0;
-  background-color: rgba(203, 213, 224, var(--bg-opacity))
+  --tw-bg-opacity: 1;
+  background-color: rgba(156, 163, 175, var(--tw-bg-opacity))
 }
 
 .border-blue-400 {
-  --border-opacity: 1;
-  border-color: #63b3ed;
-  border-color: rgba(99, 179, 237, var(--border-opacity))
+  --tw-border-opacity: 1;
+  border-color: rgba(96, 165, 250, var(--tw-border-opacity))
 }
 
 .border-solid {
@@ -26,7 +23,7 @@
 }
 
 .border-0 {
-  border-width: 0
+  border-width: 0px
 }
 
 .block {
@@ -47,12 +44,6 @@
 
 .float-left {
   float: left
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both
 }
 
 .clear-left {
@@ -82,7 +73,7 @@
 }
 
 .ml-0 {
-  margin-left: 0
+  margin-left: 0px
 }
 
 .mt-2 {
@@ -103,6 +94,19 @@
 
 .resize {
   resize: both
+}
+
+* {
+  --tw-shadow: 0 0 #0000
+}
+
+* {
+  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59, 130, 246, 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000
 }
 
 .text-center {
@@ -225,7 +229,7 @@
 }
 
 .min-bs-0 {
-  min-height: 0
+  min-height: 0px
 }
 
 .min-bs-full {
@@ -257,7 +261,7 @@
 }
 
 .min-is-0 {
-  min-width: 0
+  min-width: 0px
 }
 
 .min-is-full {
@@ -508,4 +512,7 @@
 }
 
 @media (min-width: 1280px) {
+}
+
+@media (min-width: 1536px) {
 }
