@@ -162,8 +162,9 @@ test('padding shorthand and single-side, with default padding and spacing config
     });
 });
 
-test('inset shorthand and single-side, with default inset config', () => {
+test('inset shorthand and single-side, with default inset and spacing configs', () => {
   let config = getBaseConfig();
+  delete config.theme.spacing;
   delete config.theme.inset;
 
   return generatePluginCss(config)
