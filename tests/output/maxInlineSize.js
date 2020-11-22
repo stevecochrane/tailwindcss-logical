@@ -1,4 +1,8 @@
 module.exports = `
+  .max-is-0 {
+    max-inline-size: 0rem
+  }
+
   .max-is-none {
     max-inline-size: none
   }
@@ -43,8 +47,24 @@ module.exports = `
     max-inline-size: 72rem
   }
 
+  .max-is-7xl {
+    max-inline-size: 80rem
+  }
+
   .max-is-full {
     max-inline-size: 100%
+  }
+
+  .max-is-min {
+    max-inline-size: min-content
+  }
+
+  .max-is-max {
+    max-inline-size: max-content
+  }
+
+  .max-is-prose {
+    max-inline-size: 65ch
   }
 
   .max-is-screen-sm {
@@ -61,5 +81,9 @@ module.exports = `
 
   .max-is-screen-xl {
     max-inline-size: 1280px
+  }
+
+  .max-is-screen-2xl {
+    max-inline-size: 1536px
   }
 `;

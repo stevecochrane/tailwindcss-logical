@@ -1,18 +1,18 @@
 module.exports = `
   .border-bs-0 {
-    border-block-start-width: 0
+    border-block-start-width: 0px
   }
 
   .border-be-0 {
-    border-block-end-width: 0
+    border-block-end-width: 0px
   }
 
   .border-is-0 {
-    border-inline-start-width: 0
+    border-inline-start-width: 0px
   }
 
   .border-ie-0 {
-    border-inline-end-width: 0
+    border-inline-end-width: 0px
   }
 
   .border-bs-2 {

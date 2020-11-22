@@ -1,22 +1,22 @@
 module.exports = `
   .rounded-bs-none {
-    border-start-start-radius: 0;
-    border-start-end-radius: 0
+    border-start-start-radius: 0px;
+    border-start-end-radius: 0px
   }
 
   .rounded-be-none {
-    border-end-start-radius: 0;
-    border-end-end-radius: 0
+    border-end-start-radius: 0px;
+    border-end-end-radius: 0px
   }
 
   .rounded-is-none {
-    border-start-start-radius: 0;
-    border-end-start-radius: 0
+    border-start-start-radius: 0px;
+    border-end-start-radius: 0px
   }
 
   .rounded-ie-none {
-    border-start-end-radius: 0;
-    border-end-end-radius: 0
+    border-start-end-radius: 0px;
+    border-end-end-radius: 0px
   }
 
   .rounded-bs-sm {
@@ -180,19 +180,19 @@ module.exports = `
   }
 
   .rounded-ss-none {
-    border-start-start-radius: 0
+    border-start-start-radius: 0px
   }
 
   .rounded-se-none {
-    border-start-end-radius: 0
+    border-start-end-radius: 0px
   }
 
   .rounded-es-none {
-    border-end-start-radius: 0
+    border-end-start-radius: 0px
   }
 
   .rounded-ee-none {
-    border-end-end-radius: 0
+    border-end-end-radius: 0px
   }
 
   .rounded-ss-sm {
