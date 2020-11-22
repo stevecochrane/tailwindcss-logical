@@ -55,8 +55,8 @@ test('float, clear, text-align and resize', () => {
 
 test('block-size, with default height and spacing configs', () => {
   let config = getBaseConfig();
-  delete config.theme.height;
   delete config.theme.spacing;
+  delete config.theme.height;
 
   return generatePluginCss(config)
     .then(css => {
@@ -80,8 +80,9 @@ test('min-block-size, with default minHeight config', () => {
     });
 });
 
-test('max-block-size, with default maxHeight config', () => {
+test('max-block-size, with default maxHeight and spacing configs', () => {
   let config = getBaseConfig();
+  delete config.theme.spacing;
   delete config.theme.maxHeight;
 
   return generatePluginCss(config)
@@ -135,8 +136,8 @@ test('max-inline-size, with default maxWidth config', () => {
 
 test('margin shorthand and single-side, with default margin and spacing configs', () => {
   let config = getBaseConfig();
-  delete config.theme.margin;
   delete config.theme.spacing;
+  delete config.theme.margin;
 
   return generatePluginCss(config)
     .then(css => {
@@ -149,8 +150,8 @@ test('margin shorthand and single-side, with default margin and spacing configs'
 
 test('padding shorthand and single-side, with default padding and spacing configs', () => {
   let config = getBaseConfig();
-  delete config.theme.padding;
   delete config.theme.spacing;
+  delete config.theme.padding;
 
   return generatePluginCss(config)
     .then(css => {
@@ -161,8 +162,9 @@ test('padding shorthand and single-side, with default padding and spacing config
     });
 });
 
-test('inset shorthand and single-side, with default inset config', () => {
+test('inset shorthand and single-side, with default inset and spacing configs', () => {
   let config = getBaseConfig();
+  delete config.theme.spacing;
   delete config.theme.inset;
 
   return generatePluginCss(config)

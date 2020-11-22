@@ -1,10 +1,10 @@
 module.exports = `
   .plb-0 {
-    padding-block: 0
+    padding-block: 0px
   }
 
   .pli-0 {
-    padding-inline: 0
+    padding-inline: 0px
   }
 
   .plb-1 {
@@ -55,12 +55,28 @@ module.exports = `
     padding-inline: 1.5rem
   }
 
+  .plb-7 {
+    padding-block: 1.75rem
+  }
+
+  .pli-7 {
+    padding-inline: 1.75rem
+  }
+
   .plb-8 {
     padding-block: 2rem
   }
 
   .pli-8 {
     padding-inline: 2rem
+  }
+
+  .plb-9 {
+    padding-block: 2.25rem
+  }
+
+  .pli-9 {
+    padding-inline: 2.25rem
   }
 
   .plb-10 {
@@ -71,12 +87,28 @@ module.exports = `
     padding-inline: 2.5rem
   }
 
+  .plb-11 {
+    padding-block: 2.75rem
+  }
+
+  .pli-11 {
+    padding-inline: 2.75rem
+  }
+
   .plb-12 {
     padding-block: 3rem
   }
 
   .pli-12 {
     padding-inline: 3rem
+  }
+
+  .plb-14 {
+    padding-block: 3.5rem
+  }
+
+  .pli-14 {
+    padding-inline: 3.5rem
   }
 
   .plb-16 {
@@ -103,12 +135,28 @@ module.exports = `
     padding-inline: 6rem
   }
 
+  .plb-28 {
+    padding-block: 7rem
+  }
+
+  .pli-28 {
+    padding-inline: 7rem
+  }
+
   .plb-32 {
     padding-block: 8rem
   }
 
   .pli-32 {
     padding-inline: 8rem
+  }
+
+  .plb-36 {
+    padding-block: 9rem
+  }
+
+  .pli-36 {
+    padding-inline: 9rem
   }
 
   .plb-40 {
@@ -119,12 +167,28 @@ module.exports = `
     padding-inline: 10rem
   }
 
+  .plb-44 {
+    padding-block: 11rem
+  }
+
+  .pli-44 {
+    padding-inline: 11rem
+  }
+
   .plb-48 {
     padding-block: 12rem
   }
 
   .pli-48 {
     padding-inline: 12rem
+  }
+
+  .plb-52 {
+    padding-block: 13rem
+  }
+
+  .pli-52 {
+    padding-inline: 13rem
   }
 
   .plb-56 {
@@ -135,12 +199,44 @@ module.exports = `
     padding-inline: 14rem
   }
 
+  .plb-60 {
+    padding-block: 15rem
+  }
+
+  .pli-60 {
+    padding-inline: 15rem
+  }
+
   .plb-64 {
     padding-block: 16rem
   }
 
   .pli-64 {
     padding-inline: 16rem
+  }
+
+  .plb-72 {
+    padding-block: 18rem
+  }
+
+  .pli-72 {
+    padding-inline: 18rem
+  }
+
+  .plb-80 {
+    padding-block: 20rem
+  }
+
+  .pli-80 {
+    padding-inline: 20rem
+  }
+
+  .plb-96 {
+    padding-block: 24rem
+  }
+
+  .pli-96 {
+    padding-inline: 24rem
   }
 
   .plb-px {
@@ -151,20 +247,52 @@ module.exports = `
     padding-inline: 1px
   }
 
+  .plb-0\\.5 {
+    padding-block: 0.125rem
+  }
+
+  .pli-0\\.5 {
+    padding-inline: 0.125rem
+  }
+
+  .plb-1\\.5 {
+    padding-block: 0.375rem
+  }
+
+  .pli-1\\.5 {
+    padding-inline: 0.375rem
+  }
+
+  .plb-2\\.5 {
+    padding-block: 0.625rem
+  }
+
+  .pli-2\\.5 {
+    padding-inline: 0.625rem
+  }
+
+  .plb-3\\.5 {
+    padding-block: 0.875rem
+  }
+
+  .pli-3\\.5 {
+    padding-inline: 0.875rem
+  }
+
   .pbs-0 {
-    padding-block-start: 0
+    padding-block-start: 0px
   }
 
   .pbe-0 {
-    padding-block-end: 0
+    padding-block-end: 0px
   }
 
   .pis-0 {
-    padding-inline-start: 0
+    padding-inline-start: 0px
   }
 
   .pie-0 {
-    padding-inline-end: 0
+    padding-inline-end: 0px
   }
 
   .pbs-1 {
@@ -263,6 +391,22 @@ module.exports = `
     padding-inline-end: 1.5rem
   }
 
+  .pbs-7 {
+    padding-block-start: 1.75rem
+  }
+
+  .pbe-7 {
+    padding-block-end: 1.75rem
+  }
+
+  .pis-7 {
+    padding-inline-start: 1.75rem
+  }
+
+  .pie-7 {
+    padding-inline-end: 1.75rem
+  }
+
   .pbs-8 {
     padding-block-start: 2rem
   }
@@ -277,6 +421,22 @@ module.exports = `
 
   .pie-8 {
     padding-inline-end: 2rem
+  }
+
+  .pbs-9 {
+    padding-block-start: 2.25rem
+  }
+
+  .pbe-9 {
+    padding-block-end: 2.25rem
+  }
+
+  .pis-9 {
+    padding-inline-start: 2.25rem
+  }
+
+  .pie-9 {
+    padding-inline-end: 2.25rem
   }
 
   .pbs-10 {
@@ -295,6 +455,22 @@ module.exports = `
     padding-inline-end: 2.5rem
   }
 
+  .pbs-11 {
+    padding-block-start: 2.75rem
+  }
+
+  .pbe-11 {
+    padding-block-end: 2.75rem
+  }
+
+  .pis-11 {
+    padding-inline-start: 2.75rem
+  }
+
+  .pie-11 {
+    padding-inline-end: 2.75rem
+  }
+
   .pbs-12 {
     padding-block-start: 3rem
   }
@@ -309,6 +485,22 @@ module.exports = `
 
   .pie-12 {
     padding-inline-end: 3rem
+  }
+
+  .pbs-14 {
+    padding-block-start: 3.5rem
+  }
+
+  .pbe-14 {
+    padding-block-end: 3.5rem
+  }
+
+  .pis-14 {
+    padding-inline-start: 3.5rem
+  }
+
+  .pie-14 {
+    padding-inline-end: 3.5rem
   }
 
   .pbs-16 {
@@ -359,6 +551,22 @@ module.exports = `
     padding-inline-end: 6rem
   }
 
+  .pbs-28 {
+    padding-block-start: 7rem
+  }
+
+  .pbe-28 {
+    padding-block-end: 7rem
+  }
+
+  .pis-28 {
+    padding-inline-start: 7rem
+  }
+
+  .pie-28 {
+    padding-inline-end: 7rem
+  }
+
   .pbs-32 {
     padding-block-start: 8rem
   }
@@ -373,6 +581,22 @@ module.exports = `
 
   .pie-32 {
     padding-inline-end: 8rem
+  }
+
+  .pbs-36 {
+    padding-block-start: 9rem
+  }
+
+  .pbe-36 {
+    padding-block-end: 9rem
+  }
+
+  .pis-36 {
+    padding-inline-start: 9rem
+  }
+
+  .pie-36 {
+    padding-inline-end: 9rem
   }
 
   .pbs-40 {
@@ -391,6 +615,22 @@ module.exports = `
     padding-inline-end: 10rem
   }
 
+  .pbs-44 {
+    padding-block-start: 11rem
+  }
+
+  .pbe-44 {
+    padding-block-end: 11rem
+  }
+
+  .pis-44 {
+    padding-inline-start: 11rem
+  }
+
+  .pie-44 {
+    padding-inline-end: 11rem
+  }
+
   .pbs-48 {
     padding-block-start: 12rem
   }
@@ -405,6 +645,22 @@ module.exports = `
 
   .pie-48 {
     padding-inline-end: 12rem
+  }
+
+  .pbs-52 {
+    padding-block-start: 13rem
+  }
+
+  .pbe-52 {
+    padding-block-end: 13rem
+  }
+
+  .pis-52 {
+    padding-inline-start: 13rem
+  }
+
+  .pie-52 {
+    padding-inline-end: 13rem
   }
 
   .pbs-56 {
@@ -423,6 +679,22 @@ module.exports = `
     padding-inline-end: 14rem
   }
 
+  .pbs-60 {
+    padding-block-start: 15rem
+  }
+
+  .pbe-60 {
+    padding-block-end: 15rem
+  }
+
+  .pis-60 {
+    padding-inline-start: 15rem
+  }
+
+  .pie-60 {
+    padding-inline-end: 15rem
+  }
+
   .pbs-64 {
     padding-block-start: 16rem
   }
@@ -439,6 +711,54 @@ module.exports = `
     padding-inline-end: 16rem
   }
 
+  .pbs-72 {
+    padding-block-start: 18rem
+  }
+
+  .pbe-72 {
+    padding-block-end: 18rem
+  }
+
+  .pis-72 {
+    padding-inline-start: 18rem
+  }
+
+  .pie-72 {
+    padding-inline-end: 18rem
+  }
+
+  .pbs-80 {
+    padding-block-start: 20rem
+  }
+
+  .pbe-80 {
+    padding-block-end: 20rem
+  }
+
+  .pis-80 {
+    padding-inline-start: 20rem
+  }
+
+  .pie-80 {
+    padding-inline-end: 20rem
+  }
+
+  .pbs-96 {
+    padding-block-start: 24rem
+  }
+
+  .pbe-96 {
+    padding-block-end: 24rem
+  }
+
+  .pis-96 {
+    padding-inline-start: 24rem
+  }
+
+  .pie-96 {
+    padding-inline-end: 24rem
+  }
+
   .pbs-px {
     padding-block-start: 1px
   }
@@ -453,5 +773,69 @@ module.exports = `
 
   .pie-px {
     padding-inline-end: 1px
+  }
+
+  .pbs-0\\.5 {
+    padding-block-start: 0.125rem
+  }
+
+  .pbe-0\\.5 {
+    padding-block-end: 0.125rem
+  }
+
+  .pis-0\\.5 {
+    padding-inline-start: 0.125rem
+  }
+
+  .pie-0\\.5 {
+    padding-inline-end: 0.125rem
+  }
+
+  .pbs-1\\.5 {
+    padding-block-start: 0.375rem
+  }
+
+  .pbe-1\\.5 {
+    padding-block-end: 0.375rem
+  }
+
+  .pis-1\\.5 {
+    padding-inline-start: 0.375rem
+  }
+
+  .pie-1\\.5 {
+    padding-inline-end: 0.375rem
+  }
+
+  .pbs-2\\.5 {
+    padding-block-start: 0.625rem
+  }
+
+  .pbe-2\\.5 {
+    padding-block-end: 0.625rem
+  }
+
+  .pis-2\\.5 {
+    padding-inline-start: 0.625rem
+  }
+
+  .pie-2\\.5 {
+    padding-inline-end: 0.625rem
+  }
+
+  .pbs-3\\.5 {
+    padding-block-start: 0.875rem
+  }
+
+  .pbe-3\\.5 {
+    padding-block-end: 0.875rem
+  }
+
+  .pis-3\\.5 {
+    padding-inline-start: 0.875rem
+  }
+
+  .pie-3\\.5 {
+    padding-inline-end: 0.875rem
   }
 `;

@@ -1,6 +1,6 @@
 module.exports = `
   .is-0 {
-    inline-size: 0
+    inline-size: 0px
   }
 
   .is-1 {
@@ -27,16 +27,32 @@ module.exports = `
     inline-size: 1.5rem
   }
 
+  .is-7 {
+    inline-size: 1.75rem
+  }
+
   .is-8 {
     inline-size: 2rem
+  }
+
+  .is-9 {
+    inline-size: 2.25rem
   }
 
   .is-10 {
     inline-size: 2.5rem
   }
 
+  .is-11 {
+    inline-size: 2.75rem
+  }
+
   .is-12 {
     inline-size: 3rem
+  }
+
+  .is-14 {
+    inline-size: 3.5rem
   }
 
   .is-16 {
@@ -51,24 +67,56 @@ module.exports = `
     inline-size: 6rem
   }
 
+  .is-28 {
+    inline-size: 7rem
+  }
+
   .is-32 {
     inline-size: 8rem
+  }
+
+  .is-36 {
+    inline-size: 9rem
   }
 
   .is-40 {
     inline-size: 10rem
   }
 
+  .is-44 {
+    inline-size: 11rem
+  }
+
   .is-48 {
     inline-size: 12rem
+  }
+
+  .is-52 {
+    inline-size: 13rem
   }
 
   .is-56 {
     inline-size: 14rem
   }
 
+  .is-60 {
+    inline-size: 15rem
+  }
+
   .is-64 {
     inline-size: 16rem
+  }
+
+  .is-72 {
+    inline-size: 18rem
+  }
+
+  .is-80 {
+    inline-size: 20rem
+  }
+
+  .is-96 {
+    inline-size: 24rem
   }
 
   .is-auto {
@@ -77,6 +125,22 @@ module.exports = `
 
   .is-px {
     inline-size: 1px
+  }
+
+  .is-0\\.5 {
+    inline-size: 0.125rem
+  }
+
+  .is-1\\.5 {
+    inline-size: 0.375rem
+  }
+
+  .is-2\\.5 {
+    inline-size: 0.625rem
+  }
+
+  .is-3\\.5 {
+    inline-size: 0.875rem
   }
 
   .is-1\\/2 {
@@ -189,5 +253,13 @@ module.exports = `
 
   .is-screen {
     inline-size: 100vw
+  }
+
+  .is-min {
+    inline-size: min-content
+  }
+
+  .is-max {
+    inline-size: max-content
   }
 `;

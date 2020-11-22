@@ -1,6 +1,6 @@
 module.exports = `
   .min-bs-0 {
-    min-block-size: 0
+    min-block-size: 0px
   }
 
   .min-bs-full {
