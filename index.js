@@ -167,7 +167,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   ));
 
   const borderWidthUtilities = borderWidth.map(([key, value]) => {
-    const keyString = key === 'default' ? '' : `-${key}`;
+    const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
     return {
       [`.${e(`border-bs${keyString}`)}`]: {
         borderBlockStartWidth: value
@@ -185,7 +185,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   });
 
   const borderRadiusSideUtilities = borderRadius.map(([key, value]) => {
-    const keyString = key === 'default' ? '' : `-${key}`;
+    const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
     return {
       [`.${e(`rounded-bs${keyString}`)}`]: {
         borderStartStartRadius: value,
@@ -207,7 +207,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   });
 
   const borderRadiusCornerUtilities = borderRadius.map(([key, value]) => {
-    const keyString = key === 'default' ? '' : `-${key}`;
+    const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
     return {
       [`.${e(`rounded-ss${keyString}`)}`]: {
         borderStartStartRadius: value
