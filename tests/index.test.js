@@ -80,8 +80,9 @@ test('min-block-size, with default minHeight config', () => {
     });
 });
 
-test('max-block-size, with default maxHeight config', () => {
+test('max-block-size, with default maxHeight and spacing configs', () => {
   let config = getBaseConfig();
+  delete config.theme.spacing;
   delete config.theme.maxHeight;
 
   return generatePluginCss(config)
