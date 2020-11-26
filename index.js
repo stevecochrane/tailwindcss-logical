@@ -45,6 +45,15 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     '.overflow-i-scroll': { overflowInline: 'scroll' }
   };
 
+  const overscrollBehaviorUtilities = {
+    '.overscroll-b-auto': { overscrollBehaviorBlock: 'auto' },
+    '.overscroll-b-contain': { overscrollBehaviorBlock: 'contain' },
+    '.overscroll-b-none': { overscrollBehaviorBlock: 'none' },
+    '.overscroll-i-auto': { overscrollBehaviorInline: 'auto' },
+    '.overscroll-i-contain': { overscrollBehaviorInline: 'contain'},
+    '.overscroll-i-none': { overscrollBehaviorInline: 'none' }
+  };
+
   const blockSizeUtilities = height.map(([key, value]) => (
     {
       [`.${e(`bs-${key}`)}`]: {
@@ -240,6 +249,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   addUtilities(textAlignUtilities, variants('logical'));
   addUtilities(resizeUtilities, variants('logical'));
   addUtilities(overflowUtilities, variants('logical'));
+  addUtilities(overscrollBehaviorUtilities, variants('logical'));
 
   addUtilities(blockSizeUtilities, variants('logical'));
   addUtilities(minBlockSizeUtilities, variants('logical'));
