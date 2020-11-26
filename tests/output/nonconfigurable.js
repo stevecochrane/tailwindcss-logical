@@ -30,4 +30,36 @@ module.exports = `
   .resize-inline {
     resize: inline
   }
+
+  .overflow-b-auto {
+    overflow-block: auto
+  }
+
+  .overflow-i-auto {
+    overflow-inline: auto
+  }
+
+  .overflow-b-hidden {
+    overflow-block: hidden
+  }
+
+  .overflow-i-hidden {
+    overflow-inline: hidden
+  }
+
+  .overflow-b-visible {
+    overflow-block: visible
+  }
+
+  .overflow-i-visible {
+    overflow-inline: visible
+  }
+
+  .overflow-b-scroll {
+    overflow-block: scroll
+  }
+
+  .overflow-i-scroll {
+    overflow-inline: scroll
+  }
 `;
