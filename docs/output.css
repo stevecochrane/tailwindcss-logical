@@ -42,6 +42,10 @@
   display: table
 }
 
+.flow-root {
+  display: flow-root
+}
+
 .float-left {
   float: left
 }
