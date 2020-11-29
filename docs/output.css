@@ -46,6 +46,10 @@
   display: flow-root
 }
 
+.flex-col {
+  flex-direction: column
+}
+
 .float-left {
   float: left
 }
@@ -84,6 +88,10 @@
   margin-top: 0.5rem
 }
 
+.overflow-auto {
+  overflow: auto
+}
+
 .p-2 {
   padding: 0.5rem
 }
@@ -115,6 +123,10 @@
 
 .text-center {
   text-align: center
+}
+
+.whitespace-nowrap {
+  white-space: nowrap
 }
 
 .w-16 {
@@ -208,6 +220,30 @@
   resize: horizontal
 }
 
+.overscroll-b-auto {
+  overscroll-behavior-block: auto
+}
+
+.overscroll-b-contain {
+  overscroll-behavior-block: contain
+}
+
+.overscroll-b-none {
+  overscroll-behavior-block: none
+}
+
+.overscroll-i-auto {
+  overscroll-behavior-inline: auto
+}
+
+.overscroll-i-contain {
+  overscroll-behavior-inline: contain
+}
+
+.overscroll-i-none {
+  overscroll-behavior-inline: none
+}
+
 .bs-8 {
   height: 2rem
 }
@@ -230,6 +266,10 @@
 
 .bs-48 {
   height: 12rem
+}
+
+.bs-96 {
+  height: 24rem
 }
 
 .min-bs-0 {
@@ -258,6 +298,10 @@
 
 .is-32 {
   width: 8rem
+}
+
+.is-64 {
+  width: 16rem
 }
 
 .is-full {
