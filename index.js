@@ -34,17 +34,6 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     '.resize-inline': { resize: 'inline' }
   };
 
-  const overflowUtilities = {
-    '.overflow-b-auto': { overflowBlock: 'auto' },
-    '.overflow-i-auto': { overflowInline: 'auto' },
-    '.overflow-b-hidden': { overflowBlock: 'hidden' },
-    '.overflow-i-hidden': { overflowInline: 'hidden' },
-    '.overflow-b-visible': { overflowBlock: 'visible' },
-    '.overflow-i-visible': { overflowInline: 'visible' },
-    '.overflow-b-scroll': { overflowBlock: 'scroll' },
-    '.overflow-i-scroll': { overflowInline: 'scroll' }
-  };
-
   const overscrollBehaviorUtilities = {
     '.overscroll-b-auto': { overscrollBehaviorBlock: 'auto' },
     '.overscroll-b-contain': { overscrollBehaviorBlock: 'contain' },
@@ -248,7 +237,6 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   addUtilities(clearUtilities, variants('logical'));
   addUtilities(textAlignUtilities, variants('logical'));
   addUtilities(resizeUtilities, variants('logical'));
-  addUtilities(overflowUtilities, variants('logical'));
   addUtilities(overscrollBehaviorUtilities, variants('logical'));
 
   addUtilities(blockSizeUtilities, variants('logical'));

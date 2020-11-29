@@ -58,10 +58,6 @@
   height: 4rem
 }
 
-.h-48 {
-  height: 12rem
-}
-
 .h-64 {
   height: 16rem
 }
@@ -90,10 +86,6 @@
 
 .p-2 {
   padding: 0.5rem
-}
-
-.pb-12 {
-  padding-bottom: 3rem
 }
 
 .absolute {
@@ -125,16 +117,8 @@
   text-align: center
 }
 
-.whitespace-nowrap {
-  white-space: nowrap
-}
-
 .w-16 {
   width: 4rem
-}
-
-.w-48 {
-  width: 12rem
 }
 
 @keyframes spin {
@@ -222,38 +206,6 @@
 
 .resize-inline {
   resize: horizontal
-}
-
-.overflow-b-auto {
-  overflow-block: auto
-}
-
-.overflow-i-auto {
-  overflow-inline: auto
-}
-
-.overflow-b-hidden {
-  overflow-block: hidden
-}
-
-.overflow-i-hidden {
-  overflow-inline: hidden
-}
-
-.overflow-b-visible {
-  overflow-block: visible
-}
-
-.overflow-i-visible {
-  overflow-inline: visible
-}
-
-.overflow-b-scroll {
-  overflow-block: scroll
-}
-
-.overflow-i-scroll {
-  overflow-inline: scroll
 }
 
 .bs-8 {
