@@ -200,8 +200,14 @@ everything. If something does not have a non-logical equivalent in Tailwind's de
 * Flow-relative Border Styles: Tailwind only has `border-style` utilities for all sides of an element at once.
 * Flow-relative Border Colors: Same as for Border Styles.
 
-Any logical properties and values not represented in the specification, such as `overscroll-behavior-block` and
-`overscroll-behavior-inline`, are also not supported by this plugin.
+As for other logical properties and values from outside of the main specification:
+
+* Flow-relative Overflow properties `overflow-block` and `overflow-inline`: while Tailwind does support `overflow`,
+  this plugin does not support `overflow-block` or `overflow-inline` yet, due to a lack of browser support and
+  polyfills. As of November 2020,
+  [only Firefox supports them](https://caniuse.com/mdn-css_properties_overflow-block), and as far as I can
+  tell there are no polyfills available. (Neither postcss-preset-env nor postcss-logical apply any transformations on
+  these properties.)
 
 If there are any notable omissions that you think should be supported, please
 [file an issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
