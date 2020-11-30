@@ -82,6 +82,17 @@ El-Alfy.
 .resize-inline { resize: inline; }
 ```
 
+### Flow-relative Longhands for `overscroll-behavior`
+
+```css
+.overscroll-b-auto { overscroll-behavior-block: auto; }
+.overscroll-b-contain { overscroll-behavior-block: contain; }
+.overscroll-b-none { overscroll-behavior-block: none; }
+.overscroll-i-auto { overscroll-behavior-inline: auto; }
+.overscroll-i-contain { overscroll-behavior-inline: contain; }
+.overscroll-i-none { overscroll-behavior-inline: none; }
+```
+
 ### Logical Height and Logical Width
 
 Utilities are generated for the `block-size`, `inline-size`, `min-block-size`, `min-inline-size`, `max-block-size`, and
