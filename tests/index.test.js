@@ -15,6 +15,7 @@ const minBlockSizeStyles = require('./output/minBlockSize');
 const minInlineSizeStyles = require('./output/minInlineSize');
 const nonconfigurableStyles = require('./output/nonconfigurable');
 const paddingStyles = require('./output/padding');
+const spaceBetweenStyles = require('./output/spaceBetween');
 
 const generatePluginCss = (options = {}) => {
   return postcss(tailwindcss(options))
@@ -38,6 +39,7 @@ const getBaseConfig = () => {
       minHeight: {},
       minWidth: {},
       padding: {},
+      space: {},
       spacing: {},
       width: {}
     },
@@ -158,6 +160,20 @@ test('padding shorthand and single-side, with default padding and spacing config
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
         ${paddingStyles}
+      `);
+    });
+});
+
+test('space between, with default space and spacing configs', () => {
+  let config = getBaseConfig();
+  delete config.theme.spacing;
+  delete config.theme.space;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${spaceBetweenStyles}
       `);
     });
 });

@@ -12,6 +12,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   const minHeight = Object.entries(theme('minHeight'));
   const minWidth = Object.entries(theme('minWidth'));
   const padding = Object.entries(theme('padding'));
+  const space = Object.entries(theme('space'));
   const width = Object.entries(theme('width'));
 
   const floatUtilities = {
@@ -147,6 +148,32 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
+  let spaceBetweenUtilities = space.map(([key, value]) => (
+    {
+      [`.${e(prefixNegativeModifiers('space-b', key))} > :not([hidden]) ~ :not([hidden])`]: {
+        '--tw-space-b-reverse': '0',
+        marginBlockStart: `calc(${value} * calc(1 - var(--tw-space-b-reverse)))`,
+        marginBlockEnd: `calc(${value} * var(--tw-space-b-reverse))`
+      },
+      [`.${e(prefixNegativeModifiers('space-i', key))} > :not([hidden]) ~ :not([hidden])`]: {
+        '--tw-space-i-reverse': '0',
+        marginInlineStart: `calc(${value} * calc(1 - var(--tw-space-i-reverse)))`,
+        marginInlineEnd: `calc(${value} * var(--tw-space-i-reverse))`
+      }
+    }
+  ));
+
+  if (spaceBetweenUtilities.length) {
+    spaceBetweenUtilities.push({
+      '.space-b-reverse > :not([hidden]) ~ :not([hidden])': {
+        '--tw-space-b-reverse': '1'
+      },
+      '.space-i-reverse > :not([hidden]) ~ :not([hidden])': {
+        '--tw-space-i-reverse': '1'
+      }
+    });
+  }
+
   const insetShorthandUtilities = inset.map(([key, value]) => (
     {
       [`.${e(prefixNegativeModifiers('inset-block', key))}`]: {
@@ -250,6 +277,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   addUtilities(marginSingleSideUtilities, variants('logical'));
   addUtilities(paddingShorthandUtilities, variants('logical'));
   addUtilities(paddingSingleSideUtilities, variants('logical'));
+  addUtilities(spaceBetweenUtilities, variants('logical'));
   addUtilities(insetShorthandUtilities, variants('logical'));
   addUtilities(insetSingleSideUtilities, variants('logical'));
 
