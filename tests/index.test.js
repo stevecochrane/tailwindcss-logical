@@ -48,7 +48,7 @@ const getBaseConfig = () => {
   };
 };
 
-test('float, clear, text-align and resize', () => {
+test('float, clear, text-align, resize, and overscroll-behavior', () => {
   return generatePluginCss(getBaseConfig())
     .then(css => {
       expect(css).toMatchCss(nonconfigurableStyles);
