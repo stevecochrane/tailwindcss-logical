@@ -6,6 +6,7 @@ const plugin = require('../index.js');
 const blockSizeStyles = require('./output/blockSize');
 const borderRadiusStyles = require('./output/borderRadius');
 const borderWidthStyles = require('./output/borderWidth');
+const divideWidthStyles = require('./output/divideWidth');
 const inlineSizeStyles = require('./output/inlineSize');
 const insetStyles = require('./output/inset');
 const marginStyles = require('./output/margin');
@@ -31,6 +32,7 @@ const getBaseConfig = () => {
     theme: {
       borderRadius: {},
       borderWidth: {},
+      divideWidth: {},
       height: {},
       inset: {},
       margin: {},
@@ -214,6 +216,21 @@ test('border-radius side and corner, with default borderRadius config', () => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
         ${borderRadiusStyles}
+      `);
+    });
+});
+
+test('divide width, with default divideWidth and borderWidth configs', () => {
+  let config = getBaseConfig();
+  delete config.theme.borderWidth;
+  delete config.theme.divideWidth;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${borderWidthStyles}
+        ${divideWidthStyles}
       `);
     });
 });

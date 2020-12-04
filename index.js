@@ -4,6 +4,7 @@ const prefixNegativeModifiers = require('tailwindcss/lib/util/prefixNegativeModi
 module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   const borderRadius = Object.entries(theme('borderRadius'));
   const borderWidth = Object.entries(theme('borderWidth'));
+  const divideWidth = Object.entries(theme('divideWidth'));
   const height = Object.entries(theme('height'));
   const inset = Object.entries(theme('inset'));
   const margin = Object.entries(theme('margin'));
@@ -260,6 +261,33 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     };
   });
 
+  let divideWidthUtilities = divideWidth.map(([key, value]) => {
+    const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
+    return {
+      [`.${e(`divide-b${keyString}`)} > :not([hidden]) ~ :not([hidden])`]: {
+        '--tw-divide-b-reverse': '0',
+        borderBlockStartWidth: `calc(${value} * calc(1 - var(--tw-divide-b-reverse)))`,
+        borderBlockEndWidth: `calc(${value} * var(--tw-divide-b-reverse))`
+      },
+      [`.${e(`divide-i${keyString}`)} > :not([hidden]) ~ :not([hidden])`]: {
+        '--tw-divide-i-reverse': '0',
+        borderInlineStartWidth: `calc(${value} * calc(1 - var(--tw-divide-i-reverse)))`,
+        borderInlineEndWidth: `calc(${value} * var(--tw-divide-i-reverse))`
+      }
+    };
+  });
+
+  if (divideWidthUtilities.length) {
+    divideWidthUtilities.push({
+      '.divide-b-reverse > :not([hidden]) ~ :not([hidden])': {
+        '--tw-divide-b-reverse': '1'
+      },
+      '.divide-i-reverse > :not([hidden]) ~ :not([hidden])': {
+        '--tw-divide-i-reverse': '1'
+      }
+    });
+  }
+
   addUtilities(floatUtilities, variants('logical'));
   addUtilities(clearUtilities, variants('logical'));
   addUtilities(textAlignUtilities, variants('logical'));
@@ -284,4 +312,5 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   addUtilities(borderWidthUtilities, variants('logical'));
   addUtilities(borderRadiusSideUtilities, variants('logical'));
   addUtilities(borderRadiusCornerUtilities, variants('logical'));
+  addUtilities(divideWidthUtilities, variants('logical'));
 });
