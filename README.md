@@ -138,6 +138,26 @@ the values in your `padding` config object.
 .pie-1 { padding-inline-end: 0.25rem; }
 ```
 
+### Flow-relative Space Between
+
+Flow-relative utilities are generated for the Tailwind-specific [Space Between](https://tailwindcss.com/docs/space).
+These match the values in your `space` config object. All of the usual positive and negative values plus
+`.space-b-reverse` and `.space-i-reverse` utilities are generated.
+
+```css
+.space-b-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-b-reverse: 0;
+  margin-block-start: calc(0.25rem * calc(1 - var(--tw-space-b-reverse)));
+  margin-block-end: calc(0.25rem * var(--tw-space-b-reverse))
+}
+
+.space-i-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-i-reverse: 0;
+  margin-inline-start: calc(0.25rem * calc(1 - var(--tw-space-i-reverse)));
+  margin-inline-end: calc(0.25rem * var(--tw-space-i-reverse))
+}
+```
+
 ### Flow-relative Offsets
 
 Utilities are generated for the `inset-block-start`, `inset-block-end`, `inset-inline-start`, and
@@ -164,6 +184,27 @@ config object.
 .border-be-2 { border-block-end-width: 2px; }
 .border-is-2 { border-inline-start-width: 2px; }
 .border-ie-2 { border-inline-end-width: 2px; }
+```
+
+### Flow-relative Divide Width
+
+Flow-relative utilities are generated for the Tailwind-specific
+[Divide Width](https://tailwindcss.com/docs/divide-width). These match the values in your `divideWidth` config object.
+All of the usual values plus `.divide-b`, `.divide-i`, `.divide-b-reverse` and `.divide-i-reverse` utilities are
+generated.
+
+```css
+.divide-b-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-b-reverse: 0;
+  border-block-start-width: calc(2px * calc(1 - var(--tw-divide-b-reverse)));
+  border-block-end-width: calc(2px * var(--tw-divide-b-reverse))
+}
+
+.divide-i-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-i-reverse: 0;
+  border-inline-start-width: calc(2px * calc(1 - var(--tw-divide-i-reverse)));
+  border-inline-end-width: calc(2px * var(--tw-divide-i-reverse))
+}
 ```
 
 ### Flow-relative Corner Rounding
