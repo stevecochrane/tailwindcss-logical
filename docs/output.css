@@ -46,8 +46,20 @@
   display: flow-root
 }
 
+.flex-row-reverse {
+  flex-direction: row-reverse
+}
+
 .flex-col {
   flex-direction: column
+}
+
+.flex-col-reverse {
+  flex-direction: column-reverse
+}
+
+.flex-1 {
+  flex: 1 1 0%
 }
 
 .float-left {
@@ -394,6 +406,66 @@
 
 [dir="rtl"] .pie-16 {
   padding-left: 4rem
+}
+
+.space-b-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-b-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-b-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-b-reverse))
+}
+
+[dir="ltr"] .space-i-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-i-reverse)))
+}
+
+[dir="rtl"] .space-i-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(0.5rem * calc(1 - var(--tw-space-i-reverse)))
+}
+
+[dir="ltr"] .space-i-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(0.5rem * var(--tw-space-i-reverse))
+}
+
+[dir="rtl"] .space-i-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: calc(0.5rem * var(--tw-space-i-reverse))
+}
+
+.space-i-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-i-reverse: 0
+}
+
+.space-b-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-b-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-b-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-b-reverse))
+}
+
+[dir="ltr"] .space-i-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: calc(2rem * calc(1 - var(--tw-space-i-reverse)))
+}
+
+[dir="rtl"] .space-i-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(2rem * calc(1 - var(--tw-space-i-reverse)))
+}
+
+[dir="ltr"] .space-i-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-right: calc(2rem * var(--tw-space-i-reverse))
+}
+
+[dir="rtl"] .space-i-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: calc(2rem * var(--tw-space-i-reverse))
+}
+
+.space-i-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-i-reverse: 0
+}
+
+.space-b-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-b-reverse: 1
+}
+
+.space-i-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-i-reverse: 1
 }
 
 .inset-block-1\/2 {
