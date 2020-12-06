@@ -13,6 +13,11 @@
   background-color: rgba(156, 163, 175, var(--tw-bg-opacity))
 }
 
+.border-yellow-400 {
+  --tw-border-opacity: 1;
+  border-color: rgba(251, 191, 36, var(--tw-border-opacity))
+}
+
 .border-blue-400 {
   --tw-border-opacity: 1;
   border-color: rgba(96, 165, 250, var(--tw-border-opacity))
@@ -620,6 +625,66 @@
 
 [dir="rtl"] .rounded-ee-lg {
   border-bottom-left-radius: 0.5rem
+}
+
+.divide-b-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-b-reverse: 0;
+  border-top-width: calc(4px * calc(1 - var(--tw-divide-b-reverse)));
+  border-bottom-width: calc(4px * var(--tw-divide-b-reverse))
+}
+
+[dir="ltr"] .divide-i-4 > :not([hidden]) ~ :not([hidden]) {
+  border-left-width: calc(4px * calc(1 - var(--tw-divide-i-reverse)))
+}
+
+[dir="rtl"] .divide-i-4 > :not([hidden]) ~ :not([hidden]) {
+  border-right-width: calc(4px * calc(1 - var(--tw-divide-i-reverse)))
+}
+
+[dir="ltr"] .divide-i-4 > :not([hidden]) ~ :not([hidden]) {
+  border-right-width: calc(4px * var(--tw-divide-i-reverse))
+}
+
+[dir="rtl"] .divide-i-4 > :not([hidden]) ~ :not([hidden]) {
+  border-left-width: calc(4px * var(--tw-divide-i-reverse))
+}
+
+.divide-i-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-i-reverse: 0
+}
+
+.divide-b > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-b-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-b-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-b-reverse))
+}
+
+[dir="ltr"] .divide-i > :not([hidden]) ~ :not([hidden]) {
+  border-left-width: calc(1px * calc(1 - var(--tw-divide-i-reverse)))
+}
+
+[dir="rtl"] .divide-i > :not([hidden]) ~ :not([hidden]) {
+  border-right-width: calc(1px * calc(1 - var(--tw-divide-i-reverse)))
+}
+
+[dir="ltr"] .divide-i > :not([hidden]) ~ :not([hidden]) {
+  border-right-width: calc(1px * var(--tw-divide-i-reverse))
+}
+
+[dir="rtl"] .divide-i > :not([hidden]) ~ :not([hidden]) {
+  border-left-width: calc(1px * var(--tw-divide-i-reverse))
+}
+
+.divide-i > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-i-reverse: 0
+}
+
+.divide-b-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-b-reverse: 1
+}
+
+.divide-i-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-i-reverse: 1
 }
 
 @media (min-width: 640px) {
