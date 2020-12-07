@@ -4,6 +4,7 @@ const prefixNegativeModifiers = require('tailwindcss/lib/util/prefixNegativeModi
 module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   const borderRadius = Object.entries(theme('borderRadius'));
   const borderWidth = Object.entries(theme('borderWidth'));
+  const divideWidth = Object.entries(theme('divideWidth'));
   const height = Object.entries(theme('height'));
   const inset = Object.entries(theme('inset'));
   const margin = Object.entries(theme('margin'));
@@ -12,6 +13,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   const minHeight = Object.entries(theme('minHeight'));
   const minWidth = Object.entries(theme('minWidth'));
   const padding = Object.entries(theme('padding'));
+  const space = Object.entries(theme('space'));
   const width = Object.entries(theme('width'));
 
   const floatUtilities = {
@@ -32,6 +34,15 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   const resizeUtilities = {
     '.resize-block': { resize: 'block' },
     '.resize-inline': { resize: 'inline' }
+  };
+
+  const overscrollBehaviorUtilities = {
+    '.overscroll-b-auto': { overscrollBehaviorBlock: 'auto' },
+    '.overscroll-b-contain': { overscrollBehaviorBlock: 'contain' },
+    '.overscroll-b-none': { overscrollBehaviorBlock: 'none' },
+    '.overscroll-i-auto': { overscrollBehaviorInline: 'auto' },
+    '.overscroll-i-contain': { overscrollBehaviorInline: 'contain'},
+    '.overscroll-i-none': { overscrollBehaviorInline: 'none' }
   };
 
   const blockSizeUtilities = height.map(([key, value]) => (
@@ -138,6 +149,32 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     }
   ));
 
+  let spaceBetweenUtilities = space.map(([key, value]) => (
+    {
+      [`.${e(prefixNegativeModifiers('space-b', key))} > :not([hidden]) ~ :not([hidden])`]: {
+        '--tw-space-b-reverse': '0',
+        marginBlockStart: `calc(${value} * calc(1 - var(--tw-space-b-reverse)))`,
+        marginBlockEnd: `calc(${value} * var(--tw-space-b-reverse))`
+      },
+      [`.${e(prefixNegativeModifiers('space-i', key))} > :not([hidden]) ~ :not([hidden])`]: {
+        '--tw-space-i-reverse': '0',
+        marginInlineStart: `calc(${value} * calc(1 - var(--tw-space-i-reverse)))`,
+        marginInlineEnd: `calc(${value} * var(--tw-space-i-reverse))`
+      }
+    }
+  ));
+
+  if (spaceBetweenUtilities.length) {
+    spaceBetweenUtilities.push({
+      '.space-b-reverse > :not([hidden]) ~ :not([hidden])': {
+        '--tw-space-b-reverse': '1'
+      },
+      '.space-i-reverse > :not([hidden]) ~ :not([hidden])': {
+        '--tw-space-i-reverse': '1'
+      }
+    });
+  }
+
   const insetShorthandUtilities = inset.map(([key, value]) => (
     {
       [`.${e(prefixNegativeModifiers('inset-block', key))}`]: {
@@ -224,10 +261,38 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     };
   });
 
+  let divideWidthUtilities = divideWidth.map(([key, value]) => {
+    const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
+    return {
+      [`.${e(`divide-b${keyString}`)} > :not([hidden]) ~ :not([hidden])`]: {
+        '--tw-divide-b-reverse': '0',
+        borderBlockStartWidth: `calc(${value} * calc(1 - var(--tw-divide-b-reverse)))`,
+        borderBlockEndWidth: `calc(${value} * var(--tw-divide-b-reverse))`
+      },
+      [`.${e(`divide-i${keyString}`)} > :not([hidden]) ~ :not([hidden])`]: {
+        '--tw-divide-i-reverse': '0',
+        borderInlineStartWidth: `calc(${value} * calc(1 - var(--tw-divide-i-reverse)))`,
+        borderInlineEndWidth: `calc(${value} * var(--tw-divide-i-reverse))`
+      }
+    };
+  });
+
+  if (divideWidthUtilities.length) {
+    divideWidthUtilities.push({
+      '.divide-b-reverse > :not([hidden]) ~ :not([hidden])': {
+        '--tw-divide-b-reverse': '1'
+      },
+      '.divide-i-reverse > :not([hidden]) ~ :not([hidden])': {
+        '--tw-divide-i-reverse': '1'
+      }
+    });
+  }
+
   addUtilities(floatUtilities, variants('logical'));
   addUtilities(clearUtilities, variants('logical'));
   addUtilities(textAlignUtilities, variants('logical'));
   addUtilities(resizeUtilities, variants('logical'));
+  addUtilities(overscrollBehaviorUtilities, variants('logical'));
 
   addUtilities(blockSizeUtilities, variants('logical'));
   addUtilities(minBlockSizeUtilities, variants('logical'));
@@ -240,10 +305,12 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   addUtilities(marginSingleSideUtilities, variants('logical'));
   addUtilities(paddingShorthandUtilities, variants('logical'));
   addUtilities(paddingSingleSideUtilities, variants('logical'));
+  addUtilities(spaceBetweenUtilities, variants('logical'));
   addUtilities(insetShorthandUtilities, variants('logical'));
   addUtilities(insetSingleSideUtilities, variants('logical'));
 
   addUtilities(borderWidthUtilities, variants('logical'));
   addUtilities(borderRadiusSideUtilities, variants('logical'));
   addUtilities(borderRadiusCornerUtilities, variants('logical'));
+  addUtilities(divideWidthUtilities, variants('logical'));
 });

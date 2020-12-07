@@ -6,6 +6,7 @@ const plugin = require('../index.js');
 const blockSizeStyles = require('./output/blockSize');
 const borderRadiusStyles = require('./output/borderRadius');
 const borderWidthStyles = require('./output/borderWidth');
+const divideWidthStyles = require('./output/divideWidth');
 const inlineSizeStyles = require('./output/inlineSize');
 const insetStyles = require('./output/inset');
 const marginStyles = require('./output/margin');
@@ -15,6 +16,7 @@ const minBlockSizeStyles = require('./output/minBlockSize');
 const minInlineSizeStyles = require('./output/minInlineSize');
 const nonconfigurableStyles = require('./output/nonconfigurable');
 const paddingStyles = require('./output/padding');
+const spaceBetweenStyles = require('./output/spaceBetween');
 
 const generatePluginCss = (options = {}) => {
   return postcss(tailwindcss(options))
@@ -30,6 +32,7 @@ const getBaseConfig = () => {
     theme: {
       borderRadius: {},
       borderWidth: {},
+      divideWidth: {},
       height: {},
       inset: {},
       margin: {},
@@ -38,6 +41,7 @@ const getBaseConfig = () => {
       minHeight: {},
       minWidth: {},
       padding: {},
+      space: {},
       spacing: {},
       width: {}
     },
@@ -46,7 +50,7 @@ const getBaseConfig = () => {
   };
 };
 
-test('float, clear, text-align and resize', () => {
+test('float, clear, text-align, resize, and overscroll-behavior', () => {
   return generatePluginCss(getBaseConfig())
     .then(css => {
       expect(css).toMatchCss(nonconfigurableStyles);
@@ -162,6 +166,20 @@ test('padding shorthand and single-side, with default padding and spacing config
     });
 });
 
+test('space between, with default space and spacing configs', () => {
+  let config = getBaseConfig();
+  delete config.theme.spacing;
+  delete config.theme.space;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${spaceBetweenStyles}
+      `);
+    });
+});
+
 test('inset shorthand and single-side, with default inset and spacing configs', () => {
   let config = getBaseConfig();
   delete config.theme.spacing;
@@ -198,6 +216,21 @@ test('border-radius side and corner, with default borderRadius config', () => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
         ${borderRadiusStyles}
+      `);
+    });
+});
+
+test('divide width, with default divideWidth and borderWidth configs', () => {
+  let config = getBaseConfig();
+  delete config.theme.borderWidth;
+  delete config.theme.divideWidth;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${borderWidthStyles}
+        ${divideWidthStyles}
       `);
     });
 });

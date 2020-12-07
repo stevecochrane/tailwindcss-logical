@@ -82,6 +82,17 @@ El-Alfy.
 .resize-inline { resize: inline; }
 ```
 
+### Flow-relative Longhands for `overscroll-behavior`
+
+```css
+.overscroll-b-auto { overscroll-behavior-block: auto; }
+.overscroll-b-contain { overscroll-behavior-block: contain; }
+.overscroll-b-none { overscroll-behavior-block: none; }
+.overscroll-i-auto { overscroll-behavior-inline: auto; }
+.overscroll-i-contain { overscroll-behavior-inline: contain; }
+.overscroll-i-none { overscroll-behavior-inline: none; }
+```
+
 ### Logical Height and Logical Width
 
 Utilities are generated for the `block-size`, `inline-size`, `min-block-size`, `min-inline-size`, `max-block-size`, and
@@ -127,6 +138,26 @@ the values in your `padding` config object.
 .pie-1 { padding-inline-end: 0.25rem; }
 ```
 
+### Flow-relative Space Between
+
+Flow-relative utilities are generated for the Tailwind-specific [Space Between](https://tailwindcss.com/docs/space).
+These match the values in your `space` config object. All of the usual positive and negative values plus
+`.space-b-reverse` and `.space-i-reverse` utilities are generated.
+
+```css
+.space-b-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-b-reverse: 0;
+  margin-block-start: calc(0.25rem * calc(1 - var(--tw-space-b-reverse)));
+  margin-block-end: calc(0.25rem * var(--tw-space-b-reverse))
+}
+
+.space-i-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-i-reverse: 0;
+  margin-inline-start: calc(0.25rem * calc(1 - var(--tw-space-i-reverse)));
+  margin-inline-end: calc(0.25rem * var(--tw-space-i-reverse))
+}
+```
+
 ### Flow-relative Offsets
 
 Utilities are generated for the `inset-block-start`, `inset-block-end`, `inset-inline-start`, and
@@ -153,6 +184,27 @@ config object.
 .border-be-2 { border-block-end-width: 2px; }
 .border-is-2 { border-inline-start-width: 2px; }
 .border-ie-2 { border-inline-end-width: 2px; }
+```
+
+### Flow-relative Divide Width
+
+Flow-relative utilities are generated for the Tailwind-specific
+[Divide Width](https://tailwindcss.com/docs/divide-width). These match the values in your `divideWidth` config object.
+All of the usual values plus `.divide-b`, `.divide-i`, `.divide-b-reverse` and `.divide-i-reverse` utilities are
+generated.
+
+```css
+.divide-b-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-b-reverse: 0;
+  border-block-start-width: calc(2px * calc(1 - var(--tw-divide-b-reverse)));
+  border-block-end-width: calc(2px * var(--tw-divide-b-reverse))
+}
+
+.divide-i-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-i-reverse: 0;
+  border-inline-start-width: calc(2px * calc(1 - var(--tw-divide-i-reverse)));
+  border-inline-end-width: calc(2px * var(--tw-divide-i-reverse))
+}
 ```
 
 ### Flow-relative Corner Rounding
@@ -200,8 +252,14 @@ everything. If something does not have a non-logical equivalent in Tailwind's de
 * Flow-relative Border Styles: Tailwind only has `border-style` utilities for all sides of an element at once.
 * Flow-relative Border Colors: Same as for Border Styles.
 
-Any logical properties and values not represented in the specification, such as `overscroll-behavior-block` and
-`overscroll-behavior-inline`, are also not supported by this plugin.
+As for other logical properties and values from outside of the main specification:
+
+* Flow-relative Overflow properties `overflow-block` and `overflow-inline`: while Tailwind does support `overflow`,
+  this plugin does not support `overflow-block` or `overflow-inline` yet, due to a lack of browser support and
+  polyfills. As of November 2020,
+  [only Firefox supports them](https://caniuse.com/mdn-css_properties_overflow-block), and as far as I can
+  tell there are no polyfills available. (Neither postcss-preset-env nor postcss-logical apply any transformations on
+  these properties.)
 
 If there are any notable omissions that you think should be supported, please
 [file an issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
