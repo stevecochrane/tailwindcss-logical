@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "build-demo": "postcss docs/input.css -o docs/output.css --config docs/postcss.config.js",
+    "build:demo": "postcss demo/input.css -o demo/output.css --config demo/postcss.config.js",
     "lint": "eslint --ignore-path .eslintignore --cache .",
     "test": "jest --coverage"
   },
