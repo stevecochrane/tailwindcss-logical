@@ -818,6 +818,10 @@ video {
   width: 16rem;
 }
 
+.is-1\/4 {
+  width: 25%;
+}
+
 .is-full {
   width: 100%;
 }
