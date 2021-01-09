@@ -1,7 +1,4 @@
 module.exports = {
-  future: {
-    purgeLayersByDefault: true
-  },
   purge: {
     content: ['./docs/*.html'],
     enabled: true
