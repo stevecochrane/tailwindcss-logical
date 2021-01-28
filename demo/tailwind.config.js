@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   purge: {
     content: ['./demo/*.html'],
@@ -5,6 +7,11 @@ module.exports = {
   },
   theme: {
     extend: {
+      colors: {
+        cyan: colors.cyan,
+        lightBlue: colors.lightBlue,
+        teal: colors.teal
+      },
       inset: {
         '-16': '-4rem',
         '4': '1rem',
