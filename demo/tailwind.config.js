@@ -12,6 +12,9 @@ module.exports = {
         lightBlue: colors.lightBlue,
         teal: colors.teal
       },
+      fontSize: {
+        rhythmLead: ['1.25rem', '1.6']
+      },
       inset: {
         '-16': '-4rem',
         '4': '1rem',
