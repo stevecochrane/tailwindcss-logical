@@ -989,6 +989,10 @@ video {
   width: 16rem;
 }
 
+.is-1\/3 {
+  width: 33.333333%;
+}
+
 .is-1\/4 {
   width: 25%;
 }
@@ -1267,14 +1271,14 @@ video {
   --tw-space-i-reverse: 1;
 }
 
-.inset-block-1\/2 {
-  top: 50%;
-  bottom: 50%;
+.inset-block-4 {
+  top: 1rem;
+  bottom: 1rem;
 }
 
-.inset-inline-1\/2 {
-  left: 50%;
-  right: 50%;
+.inset-inline-4 {
+  left: 1rem;
+  right: 1rem;
 }
 
 .block-start-4 {

@@ -14,9 +14,6 @@ module.exports = {
       },
       fontSize: {
         rhythmLead: ['1.25rem', '1.6']
-      },
-      inset: {
-        '1/2': '50%'
       }
     }
   },
