@@ -629,14 +629,6 @@ video {
   flex: 1 1 0%;
 }
 
-.float-left {
-  float: left;
-}
-
-.clear-left {
-  clear: left;
-}
-
 .font-light {
   font-weight: 300;
 }
