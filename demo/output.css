@@ -646,6 +646,11 @@ video {
   line-height: 1rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1484,6 +1489,11 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .md\:pli-8 {
     padding-left: 2rem;
     padding-right: 2rem;
