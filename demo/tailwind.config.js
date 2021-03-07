@@ -19,5 +19,8 @@ module.exports = {
   },
   plugins: [
     require('../index.js')
-  ]
+  ],
+  variants: {
+    logical: ['responsive']
+  }
 };

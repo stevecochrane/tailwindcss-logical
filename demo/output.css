@@ -790,10 +790,6 @@ video {
   gap: 1rem;
 }
 
-.gap-12 {
-  gap: 3rem;
-}
-
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1103,11 +1099,6 @@ video {
 .pli-4 {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.pli-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 
 .plb-16 {
@@ -1493,12 +1484,39 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:pli-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:grid {
+    display: grid;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:pbe-16 {
+    padding-bottom: 4rem;
+  }
 }
 
 @media (min-width: 1280px) {
+  .xl\:gap-12 {
+    gap: 3rem;
+  }
+
+  .xl\:pli-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 @media (min-width: 1536px) {
