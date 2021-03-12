@@ -609,6 +609,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .flex-row-reverse {
   flex-direction: row-reverse;
 }
@@ -1137,12 +1141,12 @@ video {
   padding-left: 0.5rem;
 }
 
-.pbs-8 {
-  padding-top: 2rem;
+.pbs-4 {
+  padding-top: 1rem;
 }
 
-.pbs-12 {
-  padding-top: 3rem;
+.pbs-8 {
+  padding-top: 2rem;
 }
 
 .pbs-16 {
@@ -1501,6 +1505,10 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:grid {
     display: grid;
   }
@@ -1511,6 +1519,10 @@ video {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:pbs-12 {
+    padding-top: 3rem;
   }
 
   .lg\:pbe-16 {
