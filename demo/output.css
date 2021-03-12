@@ -629,6 +629,10 @@ video {
   flex-wrap: wrap;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1490,6 +1494,14 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:flex-none {
+    flex: none;
+  }
+
+  .sm\:pli-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1513,12 +1525,21 @@ video {
     display: grid;
   }
 
+  .lg\:flex-1 {
+    flex: 1 1 0%;
+  }
+
   .lg\:gap-8 {
     gap: 2rem;
   }
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:pli-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pbs-12 {
