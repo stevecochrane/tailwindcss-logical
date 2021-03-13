@@ -28,6 +28,18 @@ module.exports = {
 }
 ```
 
+To enable [variants](https://tailwindcss.com/docs/configuring-variants) (breakpoint-specific styles, hover styles, and
+more), add `'variants.logical'` to your Tailwind config file:
+
+```js
+// tailwind.config.js
+module.exports = {
+  variants: {
+    logical: ['responsive', 'hover']
+  }
+}
+```
+
 ## What are CSS Logical Properties and Values?
 
 In short, CSS Logical Properties and Values extend CSS for easier development when working with non-LTR (left-to-right)
@@ -297,27 +309,6 @@ This process is used for this project's
 [demo page](https://stevecochrane.github.io/tailwindcss-logical/), and for a look at how
 that is configured for PostCSS, check out the demo's
 [postcss.config.js](https://github.com/stevecochrane/tailwindcss-logical/blob/master/demo/postcss.config.js) file.
-
-## Configuration
-
-To configure the generated values for a logical property, you can configure the non-logical equivalent. (e.g. use the
-`width` config to configure the values for `inline-size`.) See the [What's Included](#whats-included) section above for
-more details on each property.
-
-By default, logical utilities will be generated without variants, but you can configure this by providing an array of
-variants for `'variants.logical'` in your Tailwind config file:
-
-```js
-// tailwind.config.js
-module.exports = {
-  variants: {
-    logical: ['responsive', 'hover']
-  }
-}
-```
-
-Otherwise, tailwindcss-logical has no other configuration options yet, but if you would like the ability to configure
-this further, please [file an issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
 
 ## Roadmap
 
