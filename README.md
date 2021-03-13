@@ -312,11 +312,8 @@ that is configured for PostCSS, check out the demo's
 
 ## Roadmap
 
-- [x] Circulate for feedback
-- [x] Add Jest test suite
-- [x] Update to latest version of Tailwind
-- [x] ~~Allow for custom options to be passed to the plugin~~
-- [ ] Iterate on the demo page
+At this point I consider this plugin feature complete, but I will continue to monitor official specifications, as well
+as Tailwind itself, and update this plugin accordingly.
 
 ## Contributing
 
