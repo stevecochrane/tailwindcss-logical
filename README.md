@@ -268,7 +268,7 @@ As for other logical properties and values from outside of the main specificatio
 
 * Flow-relative Overflow properties `overflow-block` and `overflow-inline`: while Tailwind does support `overflow`,
   this plugin does not support `overflow-block` or `overflow-inline` yet, due to a lack of browser support and
-  polyfills. As of November 2020,
+  polyfills. As of March 2021,
   [only Firefox supports them](https://caniuse.com/mdn-css_properties_overflow-block), and as far as I can
   tell there are no polyfills available. (Neither postcss-preset-env nor postcss-logical apply any transformations on
   these properties.)
@@ -279,8 +279,8 @@ If there are any notable omissions that you think should be supported, please
 ## Browser Compatibility
 
 CSS Logical Properties and Values is a fairly new (and still evolving) specification, so browser support varies.
-None of the logical properties and values are currently supported in Internet Explorer 11 or Edge (including Edge
-Chromium as of February 2020), and some, such as Flow-relative Offsets, are currently only supported in Firefox.
+None of the logical properties and values are supported in Internet Explorer 11, and some, such as Flow-relative
+Offsets and Corner Rounding, are currently only supported in Firefox and Chrome as of March 2021.
 
 If some utilities don't seem to work correctly, be sure to check [Can I use...](https://caniuse.com/) to see if that
 property or value is supported by your browser. Relevant Can I use... links for each set of utilities are included in
@@ -313,7 +313,7 @@ that is configured for PostCSS, check out the demo's
 ## Roadmap
 
 At this point I consider this plugin feature complete, but I will continue to monitor official specifications, as well
-as Tailwind itself, and update this plugin accordingly.
+as Tailwind itself, and update this plugin accordingly when anything changes.
 
 ## Contributing
 
