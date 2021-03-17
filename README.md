@@ -170,7 +170,7 @@ These match the values in your `space` config object. All of the usual positive 
 }
 ```
 
-### Flow-relative Offsets
+### Flow-relative Offsets (`top` / `right` / `bottom` / `left`)
 
 Utilities are generated for the `inset-block-start`, `inset-block-end`, `inset-inline-start`, and
 `inset-inline-end` properties, as well as for the shorthand properties `inset-block` and `inset-inline`. These match
@@ -219,7 +219,7 @@ generated.
 }
 ```
 
-### Flow-relative Corner Rounding
+### Flow-relative Corner Rounding (`border-radius`)
 
 Utility classes are generated for the `border-start-start-radius`, `border-start-end-radius`,
 `border-end-start-radius`, and `border-end-end-radius` properties for rounding individual corners. There are also
