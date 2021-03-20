@@ -7,7 +7,8 @@
 [![License](https://img.shields.io/npm/l/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/blob/master/LICENSE.txt)
 
 A [CSS Logical Properties and Values](https://drafts.csswg.org/css-logical/) plugin for
-[Tailwind CSS](https://tailwindcss.com). Compatible with Tailwind v1.2.0+ and updated for Tailwind v2.
+[Tailwind CSS](https://tailwindcss.com). Compatible with Tailwind v1.2.0+ and updated for Tailwind v2. View the
+[demo page](https://stevecochrane.github.io/tailwindcss-logical/) for a visual walkthrough, or read on to get started.
 
 ## Usage
 
@@ -25,6 +26,18 @@ module.exports = {
   plugins: [
     require('tailwindcss-logical')
   ]
+}
+```
+
+To enable [variants](https://tailwindcss.com/docs/configuring-variants) (breakpoint-specific styles, hover styles, and
+more), add `'variants.logical'` to your Tailwind config file:
+
+```js
+// tailwind.config.js
+module.exports = {
+  variants: {
+    logical: ['responsive', 'hover']
+  }
 }
 ```
 
@@ -158,7 +171,7 @@ These match the values in your `space` config object. All of the usual positive 
 }
 ```
 
-### Flow-relative Offsets
+### Flow-relative Offsets (`top` / `right` / `bottom` / `left`)
 
 Utilities are generated for the `inset-block-start`, `inset-block-end`, `inset-inline-start`, and
 `inset-inline-end` properties, as well as for the shorthand properties `inset-block` and `inset-inline`. These match
@@ -207,7 +220,7 @@ generated.
 }
 ```
 
-### Flow-relative Corner Rounding
+### Flow-relative Corner Rounding (`border-radius`)
 
 Utility classes are generated for the `border-start-start-radius`, `border-start-end-radius`,
 `border-end-start-radius`, and `border-end-end-radius` properties for rounding individual corners. There are also
@@ -256,7 +269,7 @@ As for other logical properties and values from outside of the main specificatio
 
 * Flow-relative Overflow properties `overflow-block` and `overflow-inline`: while Tailwind does support `overflow`,
   this plugin does not support `overflow-block` or `overflow-inline` yet, due to a lack of browser support and
-  polyfills. As of November 2020,
+  polyfills. As of March 2021,
   [only Firefox supports them](https://caniuse.com/mdn-css_properties_overflow-block), and as far as I can
   tell there are no polyfills available. (Neither postcss-preset-env nor postcss-logical apply any transformations on
   these properties.)
@@ -267,8 +280,8 @@ If there are any notable omissions that you think should be supported, please
 ## Browser Compatibility
 
 CSS Logical Properties and Values is a fairly new (and still evolving) specification, so browser support varies.
-None of the logical properties and values are currently supported in Internet Explorer 11 or Edge (including Edge
-Chromium as of February 2020), and some, such as Flow-relative Offsets, are currently only supported in Firefox.
+None of the logical properties and values are supported in Internet Explorer 11, and some, such as Flow-relative
+Offsets and Corner Rounding, are currently only supported in Firefox and Chrome as of March 2021.
 
 If some utilities don't seem to work correctly, be sure to check [Can I use...](https://caniuse.com/) to see if that
 property or value is supported by your browser. Relevant Can I use... links for each set of utilities are included in
@@ -296,36 +309,12 @@ values will be converted to attribute selectors that any browser can understand.
 This process is used for this project's
 [demo page](https://stevecochrane.github.io/tailwindcss-logical/), and for a look at how
 that is configured for PostCSS, check out the demo's
-[postcss.config.js](https://github.com/stevecochrane/tailwindcss-logical/blob/master/docs/postcss.config.js) file.
-
-## Configuration
-
-To configure the generated values for a logical property, you can configure the non-logical equivalent. (e.g. use the
-`width` config to configure the values for `inline-size`.) See the [What's Included](#whats-included) section above for
-more details on each property.
-
-By default, logical utilities will be generated without variants, but you can configure this by providing an array of
-variants for `'variants.logical'` in your Tailwind config file:
-
-```js
-// tailwind.config.js
-module.exports = {
-  variants: {
-    logical: ['responsive', 'hover']
-  }
-}
-```
-
-Otherwise, tailwindcss-logical has no other configuration options yet, but if you would like the ability to configure
-this further, please [file an issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
+[postcss.config.js](https://github.com/stevecochrane/tailwindcss-logical/blob/master/demo/postcss.config.js) file.
 
 ## Roadmap
 
-- [x] Circulate for feedback
-- [x] Add Jest test suite
-- [x] Update to latest version of Tailwind
-- [x] ~~Allow for custom options to be passed to the plugin~~
-- [ ] Iterate on the demo page
+At this point I consider this plugin feature complete, but I will continue to monitor official specifications, as well
+as Tailwind itself, and update this plugin accordingly when anything changes.
 
 ## Contributing
 
