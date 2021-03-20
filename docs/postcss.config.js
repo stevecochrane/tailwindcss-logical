@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    require('tailwindcss')({ config: './demo/tailwind.config.js' }),
+    require('tailwindcss')({ config: './docs/tailwind.config.js' }),
     require('postcss-logical'),
     require('postcss-dir-pseudo-class')
   ]
@@ -11,7 +11,7 @@ module.exports = {
 
   module.exports = {
     plugins: [
-      require('tailwindcss')({ config: './demo/tailwind.config.js' }),
+      require('tailwindcss')({ config: './docs/tailwind.config.js' }),
       require('postcss-preset-env')
     ]
   };

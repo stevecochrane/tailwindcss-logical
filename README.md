@@ -309,7 +309,7 @@ values will be converted to attribute selectors that any browser can understand.
 This process is used for this project's
 [demo page](https://stevecochrane.github.io/tailwindcss-logical/), and for a look at how
 that is configured for PostCSS, check out the demo's
-[postcss.config.js](https://github.com/stevecochrane/tailwindcss-logical/blob/master/demo/postcss.config.js) file.
+[postcss.config.js](https://github.com/stevecochrane/tailwindcss-logical/blob/master/docs/postcss.config.js) file.
 
 ## Roadmap
 
