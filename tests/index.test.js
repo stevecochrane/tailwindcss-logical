@@ -88,6 +88,20 @@ test('block-size, with default height and spacing configs', () => {
     });
 });
 
+test('(JIT) block-size, with default height and spacing configs', () => {
+  let config = getBaseJitConfig();
+  delete config.theme.spacing;
+  delete config.theme.height;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${blockSizeStyles}
+      `);
+    });
+});
+
 test('min-block-size, with default minHeight config', () => {
   let config = getBaseConfig();
   delete config.theme.minHeight;
