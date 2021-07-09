@@ -50,8 +50,25 @@ const getBaseConfig = () => {
   };
 };
 
+const getBaseJitConfig = () => {
+  const config = getBaseConfig();
+  config.mode = 'jit';
+  config.purge = {
+    content: ['./tests/templates/*.html'],
+    enabled: true
+  };
+  return config;
+};
+
 test('float, clear, text-align, resize, and overscroll-behavior', () => {
   return generatePluginCss(getBaseConfig())
+    .then(css => {
+      expect(css).toMatchCss(nonconfigurableStyles);
+    });
+});
+
+test('(JIT) float, clear, text-align, resize, and overscroll-behavior', () => {
+  return generatePluginCss(getBaseJitConfig())
     .then(css => {
       expect(css).toMatchCss(nonconfigurableStyles);
     });
