@@ -198,8 +198,34 @@ test('min-inline-size, with default minWidth config', () => {
     });
 });
 
+test('(JIT) min-inline-size, with default minWidth config', () => {
+  let config = getBaseJitConfig();
+  delete config.theme.minWidth;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${minInlineSizeStyles}
+      `);
+    });
+});
+
 test('max-inline-size, with default maxWidth config', () => {
   let config = getBaseConfig();
+  delete config.theme.maxWidth;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${maxInlineSizeStyles}
+      `);
+    });
+});
+
+test('(JIT) max-inline-size, with default maxWidth config', () => {
+  let config = getBaseJitConfig();
   delete config.theme.maxWidth;
 
   return generatePluginCss(config)
