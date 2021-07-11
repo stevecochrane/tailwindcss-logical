@@ -57,6 +57,7 @@ const getBaseJitConfig = () => {
     content: ['./tests/templates/*.html'],
     enabled: true
   };
+  delete config.variants;
   return config;
 };
 
