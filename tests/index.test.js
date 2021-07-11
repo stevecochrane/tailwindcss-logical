@@ -171,6 +171,20 @@ test('inline-size, with default width and spacing configs', () => {
     });
 });
 
+test('(JIT) inline-size, with default width and spacing configs', () => {
+  let config = getBaseJitConfig();
+  delete config.theme.spacing;
+  delete config.theme.width;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${inlineSizeStyles}
+      `);
+    });
+});
+
 test('min-inline-size, with default minWidth config', () => {
   let config = getBaseConfig();
   delete config.theme.minWidth;
