@@ -143,6 +143,20 @@ test('max-block-size, with default maxHeight and spacing configs', () => {
     });
 });
 
+test('(JIT) max-block-size, with default maxHeight and spacing configs', () => {
+  let config = getBaseJitConfig();
+  delete config.theme.spacing;
+  delete config.theme.maxHeight;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${maxBlockSizeStyles}
+      `);
+    });
+});
+
 test('inline-size, with default width and spacing configs', () => {
   let config = getBaseConfig();
   delete config.theme.spacing;
