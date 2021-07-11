@@ -116,6 +116,19 @@ test('min-block-size, with default minHeight config', () => {
     });
 });
 
+test('(JIT) min-block-size, with default minHeight config', () => {
+  let config = getBaseJitConfig();
+  delete config.theme.minHeight;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${minBlockSizeStyles}
+      `);
+    });
+});
+
 test('max-block-size, with default maxHeight and spacing configs', () => {
   let config = getBaseConfig();
   delete config.theme.spacing;
