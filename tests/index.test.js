@@ -306,8 +306,34 @@ test('border-width, with default borderWidth config', () => {
     });
 });
 
+test('(JIT) border-width, with default borderWidth config', () => {
+  let config = getBaseJitConfig();
+  delete config.theme.borderWidth;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${borderWidthStyles}
+      `);
+    });
+});
+
 test('border-radius side and corner, with default borderRadius config', () => {
   let config = getBaseConfig();
+  delete config.theme.borderRadius;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${borderRadiusStyles}
+      `);
+    });
+});
+
+test('(JIT) border-radius side and corner, with default borderRadius config', () => {
+  let config = getBaseJitConfig();
   delete config.theme.borderRadius;
 
   return generatePluginCss(config)
