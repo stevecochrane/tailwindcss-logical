@@ -279,6 +279,20 @@ test('padding shorthand and single-side, with default padding and spacing config
     });
 });
 
+test('(JIT) padding shorthand and single-side, with default padding and spacing configs', () => {
+  let config = getBaseJitConfig();
+  delete config.theme.spacing;
+  delete config.theme.padding;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${paddingStyles}
+      `);
+    });
+});
+
 test('space between, with default space and spacing configs', () => {
   let config = getBaseConfig();
   delete config.theme.spacing;
