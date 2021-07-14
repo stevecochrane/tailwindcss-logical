@@ -251,6 +251,20 @@ test('margin shorthand and single-side, with default margin and spacing configs'
     });
 });
 
+test('(JIT) margin shorthand and single-side, with default margin and spacing configs', () => {
+  let config = getBaseJitConfig();
+  delete config.theme.spacing;
+  delete config.theme.margin;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${marginStyles}
+      `);
+    });
+});
+
 test('padding shorthand and single-side, with default padding and spacing configs', () => {
   let config = getBaseConfig();
   delete config.theme.spacing;
