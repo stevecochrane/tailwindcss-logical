@@ -307,6 +307,20 @@ test('space between, with default space and spacing configs', () => {
     });
 });
 
+test('(JIT) space between, with default space and spacing configs', () => {
+  let config = getBaseJitConfig();
+  delete config.theme.spacing;
+  delete config.theme.space;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${spaceBetweenStyles}
+      `);
+    });
+});
+
 test('inset shorthand and single-side, with default inset and spacing configs', () => {
   let config = getBaseConfig();
   delete config.theme.spacing;
@@ -375,6 +389,21 @@ test('(JIT) border-radius side and corner, with default borderRadius config', ()
 
 test('divide width, with default divideWidth and borderWidth configs', () => {
   let config = getBaseConfig();
+  delete config.theme.borderWidth;
+  delete config.theme.divideWidth;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${borderWidthStyles}
+        ${divideWidthStyles}
+      `);
+    });
+});
+
+test('(JIT) divide width, with default divideWidth and borderWidth configs', () => {
+  let config = getBaseJitConfig();
   delete config.theme.borderWidth;
   delete config.theme.divideWidth;
 
