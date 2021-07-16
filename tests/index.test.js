@@ -335,6 +335,20 @@ test('inset shorthand and single-side, with default inset and spacing configs', 
     });
 });
 
+test('(JIT) inset shorthand and single-side, with default inset and spacing configs', () => {
+  let config = getBaseJitConfig();
+  delete config.theme.spacing;
+  delete config.theme.inset;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${insetStyles}
+      `);
+    });
+});
+
 test('border-width, with default borderWidth config', () => {
   let config = getBaseConfig();
   delete config.theme.borderWidth;
