@@ -378,6 +378,19 @@ test('(JIT) border-width, with default borderWidth config', () => {
     });
 });
 
+test('border-color, with default borderColor config', () => {
+  let config = getBaseConfig();
+  delete config.theme.color;
+  delete config.theme.borderColor;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+      `);
+    });
+});
+
 test('(JIT) border-color, with default borderColor config', () => {
   let config = getBaseJitConfig();
   delete config.theme.color;
