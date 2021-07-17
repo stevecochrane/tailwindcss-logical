@@ -1,7 +1,9 @@
 const plugin = require('tailwindcss/plugin');
+const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').default;
 const prefixNegativeModifiers = require('tailwindcss/lib/util/prefixNegativeModifiers').default;
 
 module.exports = plugin(function({ addUtilities, theme, variants, e }) {
+  const borderColor = Object.entries(flattenColorPalette(theme('borderColor')));
   const borderRadius = Object.entries(theme('borderRadius'));
   const borderWidth = Object.entries(theme('borderWidth'));
   const divideWidth = Object.entries(theme('divideWidth'));
@@ -221,6 +223,24 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
     };
   });
 
+  const borderColorUtilities = borderColor.map(([key, value]) => {
+    const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
+    return {
+      [`.${e(`border-bs${keyString}`)}`]: {
+        borderBlockStartColor: value
+      },
+      [`.${e(`border-be${keyString}`)}`]: {
+        borderBlockEndColor: value
+      },
+      [`.${e(`border-is${keyString}`)}`]: {
+        borderInlineStartColor: value
+      },
+      [`.${e(`border-ie${keyString}`)}`]: {
+        borderInlineEndColor: value
+      }
+    };
+  });
+
   const borderRadiusSideUtilities = borderRadius.map(([key, value]) => {
     const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
     return {
@@ -310,6 +330,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   addUtilities(insetSingleSideUtilities, variants('logical'));
 
   addUtilities(borderWidthUtilities, variants('logical'));
+  addUtilities(borderColorUtilities, variants('logical'));
   addUtilities(borderRadiusSideUtilities, variants('logical'));
   addUtilities(borderRadiusCornerUtilities, variants('logical'));
   addUtilities(divideWidthUtilities, variants('logical'));

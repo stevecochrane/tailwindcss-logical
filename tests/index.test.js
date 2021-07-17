@@ -4,6 +4,7 @@ const tailwindcss = require('tailwindcss');
 const plugin = require('../index.js');
 
 const blockSizeStyles = require('./output/blockSize');
+const borderColorStyles = require('./output/borderColor');
 const borderRadiusStyles = require('./output/borderRadius');
 const borderWidthStyles = require('./output/borderWidth');
 const divideWidthStyles = require('./output/divideWidth');
@@ -30,8 +31,10 @@ const getBaseConfig = () => {
   return {
     corePlugins: false,
     theme: {
+      borderColor: {},
       borderRadius: {},
       borderWidth: {},
+      color: {},
       divideWidth: {},
       height: {},
       inset: {},
@@ -371,6 +374,20 @@ test('(JIT) border-width, with default borderWidth config', () => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
         ${borderWidthStyles}
+      `);
+    });
+});
+
+test('(JIT) border-color, with default borderColor config', () => {
+  let config = getBaseJitConfig();
+  delete config.theme.color;
+  delete config.theme.borderColor;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${borderColorStyles}
       `);
     });
 });
