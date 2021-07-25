@@ -15,6 +15,7 @@ module.exports = {
     'jest'
   ],
   'rules': {
+    'no-unused-vars': ['error', { 'args': 'all', 'argsIgnorePattern': '^_' }],
     'quotes': ['error', 'single'],
     'semi': ['error', 'always']
   }

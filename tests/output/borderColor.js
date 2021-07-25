@@ -1342,20 +1342,4 @@ module.exports = `
   .border-ie-pink-900 {
       border-inline-end-color: #831843
   }
-
-  .border-bs {
-      border-block-start-color: #e5e7eb
-  }
-
-  .border-be {
-      border-block-end-color: #e5e7eb
-  }
-
-  .border-is {
-      border-inline-start-color: #e5e7eb
-  }
-
-  .border-ie {
-      border-inline-end-color: #e5e7eb
-  }
 `;

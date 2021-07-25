@@ -1,9 +1,9 @@
 const plugin = require('tailwindcss/plugin');
 const flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').default;
 const prefixNegativeModifiers = require('tailwindcss/lib/util/prefixNegativeModifiers').default;
+const withAlphaVariable = require('tailwindcss/lib/util/withAlphaVariable').default;
 
-module.exports = plugin(function({ addUtilities, config, theme, variants, e }) {
-  const borderColor = Object.entries(flattenColorPalette(theme('borderColor')));
+module.exports = plugin(function({ addUtilities, config, corePlugins, e, matchUtilities, theme, variants }) {
   const borderRadius = Object.entries(theme('borderRadius'));
   const borderWidth = Object.entries(theme('borderWidth'));
   const divideWidth = Object.entries(theme('divideWidth'));
@@ -223,25 +223,6 @@ module.exports = plugin(function({ addUtilities, config, theme, variants, e }) {
     };
   });
 
-  const borderColorUtilities = borderColor.map(([key, value]) => {
-    if (config('mode') !== 'jit') return {};
-    const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
-    return {
-      [`.${e(`border-bs${keyString}`)}`]: {
-        borderBlockStartColor: value
-      },
-      [`.${e(`border-be${keyString}`)}`]: {
-        borderBlockEndColor: value
-      },
-      [`.${e(`border-is${keyString}`)}`]: {
-        borderInlineStartColor: value
-      },
-      [`.${e(`border-ie${keyString}`)}`]: {
-        borderInlineEndColor: value
-      }
-    };
-  });
-
   const borderRadiusSideUtilities = borderRadius.map(([key, value]) => {
     const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
     return {
@@ -331,7 +312,73 @@ module.exports = plugin(function({ addUtilities, config, theme, variants, e }) {
   addUtilities(insetSingleSideUtilities, variants('logical'));
 
   addUtilities(borderWidthUtilities, variants('logical'));
-  addUtilities(borderColorUtilities, variants('logical'));
+
+  if (config('mode') === 'jit') {
+    matchUtilities(
+      {
+        'border-bs': (value) => {
+          if (!corePlugins('borderOpacity')) {
+            return {
+              'border-block-start-color': value,
+            };
+          }
+
+          return withAlphaVariable({
+            color: value,
+            property: 'border-block-start-color',
+            variable: '--tw-border-opacity',
+          });
+        },
+        'border-be': (value) => {
+          if (!corePlugins('borderOpacity')) {
+            return {
+              'border-block-end-color': value,
+            };
+          }
+
+          return withAlphaVariable({
+            color: value,
+            property: 'border-block-end-color',
+            variable: '--tw-border-opacity',
+          });
+        },
+        'border-is': (value) => {
+          if (!corePlugins('borderOpacity')) {
+            return {
+              'border-inline-start-color': value,
+            };
+          }
+
+          return withAlphaVariable({
+            color: value,
+            property: 'border-inline-start-color',
+            variable: '--tw-border-opacity',
+          });
+        },
+        'border-ie': (value) => {
+          if (!corePlugins('borderOpacity')) {
+            return {
+              'border-inline-end-color': value,
+            };
+          }
+
+          return withAlphaVariable({
+            color: value,
+            property: 'border-inline-end-color',
+            variable: '--tw-border-opacity',
+          });
+        },
+      },
+      {
+        values: (({ DEFAULT: _, ...colors }) => colors)(
+          flattenColorPalette(theme('borderColor'))
+        ),
+        variants: variants('borderColor'),
+        type: 'color',
+      }
+    );
+  }
+
   addUtilities(borderRadiusSideUtilities, variants('logical'));
   addUtilities(borderRadiusCornerUtilities, variants('logical'));
   addUtilities(divideWidthUtilities, variants('logical'));
