@@ -1354,4 +1354,10 @@ module.exports = `
   .disabled\\:border-bs-black:disabled {
       border-block-start-color: #000
   }
+
+  @media (min-width: 768px) {
+      .md\\:disabled\\:focus\\:hover\\:border-bs-black:disabled:focus:hover {
+          border-block-start-color: #000
+      }
+  }
 `;
