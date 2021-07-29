@@ -1342,4 +1342,8 @@ module.exports = `
   .border-ie-pink-900 {
       border-inline-end-color: #831843
   }
+
+  .\\!border-bs-black {
+      border-block-start-color: #000 !important
+  }
 `;
