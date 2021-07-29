@@ -1351,6 +1351,11 @@ module.exports = `
       border-block-start-color: rgba(0, 0, 0, 0.25)
   }
 
+  .before\\:border-bs-black::before {
+      content: "";
+      border-block-start-color: #000
+  }
+
   .disabled\\:border-bs-black:disabled {
       border-block-start-color: #000
   }
