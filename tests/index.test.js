@@ -5,6 +5,7 @@ const plugin = require('../index.js');
 
 const blockSizeStyles = require('./output/blockSize');
 const borderColorStyles = require('./output/borderColor');
+const borderColorDarkModeStyles = require('./output/borderColor-darkMode');
 const borderRadiusStyles = require('./output/borderRadius');
 const borderWidthStyles = require('./output/borderWidth');
 const divideWidthStyles = require('./output/divideWidth');
@@ -401,6 +402,21 @@ test('(JIT) border-color, with default borderColor config', () => {
       expect(css).toMatchCss(`
         ${nonconfigurableStyles}
         ${borderColorStyles}
+      `);
+    });
+});
+
+test('(JIT, Dark Mode) border-color, with default borderColor config', () => {
+  let config = getBaseJitConfig();
+  config.darkMode = 'media';
+  delete config.theme.color;
+  delete config.theme.borderColor;
+
+  return generatePluginCss(config)
+    .then(css => {
+      expect(css).toMatchCss(`
+        ${nonconfigurableStyles}
+        ${borderColorDarkModeStyles}
       `);
     });
 });
