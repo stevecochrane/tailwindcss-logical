@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
+  mode: 'jit',
   purge: {
     content: ['./docs/*.html'],
     enabled: true
@@ -19,8 +20,5 @@ module.exports = {
   },
   plugins: [
     require('../index.js')
-  ],
-  variants: {
-    logical: ['responsive']
-  }
+  ]
 };
