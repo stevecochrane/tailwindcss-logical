@@ -1356,6 +1356,10 @@ module.exports = `
       border-block-start-color: #000
   }
 
+  .only\\:border-bs-black:only-child {
+      border-block-start-color: #000
+  }
+
   .disabled\\:border-bs-black:disabled {
       border-block-start-color: #000
   }
