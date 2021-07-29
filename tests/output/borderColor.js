@@ -1350,4 +1350,8 @@ module.exports = `
   .border-bs-black\\/25 {
       border-block-start-color: rgba(0, 0, 0, 0.25)
   }
+
+  .disabled\\:border-bs-black:disabled {
+      border-block-start-color: #000
+  }
 `;
