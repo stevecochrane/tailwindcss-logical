@@ -1364,6 +1364,10 @@ module.exports = `
       border-block-start-color: #000
   }
 
+  .peer:checked ~ .peer-checked\\:border-bs-black {
+    border-block-start-color: #000
+  }
+
   @media (prefers-color-scheme: dark) {
       .dark\\:border-bs-black {
           border-block-start-color: #000

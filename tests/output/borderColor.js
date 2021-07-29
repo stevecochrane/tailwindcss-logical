@@ -1364,6 +1364,10 @@ module.exports = `
       border-block-start-color: #000
   }
 
+  .peer:checked ~ .peer-checked\\:border-bs-black {
+    border-block-start-color: #000
+  }
+
   @media (min-width: 768px) {
       .md\\:disabled\\:focus\\:hover\\:border-bs-black:disabled:focus:hover {
           border-block-start-color: #000
