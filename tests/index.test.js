@@ -66,429 +66,459 @@ const getBaseJitConfig = () => {
   return config;
 };
 
-test('float, clear, text-align, resize, and overscroll-behavior', () => {
-  return generatePluginCss(getBaseConfig())
-    .then(css => {
-      expect(css).toMatchCss(nonconfigurableStyles);
-    });
+describe('float, clear, text-align, resize, and overscroll-behavior', () => {
+  test('default mode', () => {
+    return generatePluginCss(getBaseConfig())
+      .then(css => {
+        expect(css).toMatchCss(nonconfigurableStyles);
+      });
+  });
+
+  test('JIT mode', () => {
+    return generatePluginCss(getBaseJitConfig())
+      .then(css => {
+        expect(css).toMatchCss(nonconfigurableStyles);
+      });
+  });
 });
 
-test('(JIT) float, clear, text-align, resize, and overscroll-behavior', () => {
-  return generatePluginCss(getBaseJitConfig())
-    .then(css => {
-      expect(css).toMatchCss(nonconfigurableStyles);
-    });
+describe('block-size, with default height and spacing configs', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.spacing;
+    delete config.theme.height;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${blockSizeStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.spacing;
+    delete config.theme.height;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${blockSizeStyles}
+        `);
+      });
+  });
 });
 
-test('block-size, with default height and spacing configs', () => {
-  let config = getBaseConfig();
-  delete config.theme.spacing;
-  delete config.theme.height;
+describe('min-block-size, with default minHeight config', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.minHeight;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${blockSizeStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${minBlockSizeStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.minHeight;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${minBlockSizeStyles}
+        `);
+      });
+  });
 });
 
-test('(JIT) block-size, with default height and spacing configs', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.spacing;
-  delete config.theme.height;
+describe('max-block-size, with default maxHeight and spacing configs', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.spacing;
+    delete config.theme.maxHeight;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${blockSizeStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${maxBlockSizeStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.spacing;
+    delete config.theme.maxHeight;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${maxBlockSizeStyles}
+        `);
+      });
+  });
 });
 
-test('min-block-size, with default minHeight config', () => {
-  let config = getBaseConfig();
-  delete config.theme.minHeight;
+describe('inline-size, with default width and spacing configs', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.spacing;
+    delete config.theme.width;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${minBlockSizeStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${inlineSizeStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.spacing;
+    delete config.theme.width;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${inlineSizeStyles}
+        `);
+      });
+  });
 });
 
-test('(JIT) min-block-size, with default minHeight config', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.minHeight;
+describe('min-inline-size, with default minWidth config', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.minWidth;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${minBlockSizeStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${minInlineSizeStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.minWidth;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${minInlineSizeStyles}
+        `);
+      });
+  });
 });
 
-test('max-block-size, with default maxHeight and spacing configs', () => {
-  let config = getBaseConfig();
-  delete config.theme.spacing;
-  delete config.theme.maxHeight;
+describe('max-inline-size, with default maxWidth config', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.maxWidth;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${maxBlockSizeStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${maxInlineSizeStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.maxWidth;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${maxInlineSizeStyles}
+        `);
+      });
+  });
 });
 
-test('(JIT) max-block-size, with default maxHeight and spacing configs', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.spacing;
-  delete config.theme.maxHeight;
+describe('margin shorthand and single-side, with default margin and spacing configs', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.spacing;
+    delete config.theme.margin;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${maxBlockSizeStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${marginStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.spacing;
+    delete config.theme.margin;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${marginStyles}
+        `);
+      });
+  });
 });
 
-test('inline-size, with default width and spacing configs', () => {
-  let config = getBaseConfig();
-  delete config.theme.spacing;
-  delete config.theme.width;
+describe('padding shorthand and single-side, with default padding and spacing configs', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.spacing;
+    delete config.theme.padding;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${inlineSizeStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${paddingStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.spacing;
+    delete config.theme.padding;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${paddingStyles}
+        `);
+      });
+  });
 });
 
-test('(JIT) inline-size, with default width and spacing configs', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.spacing;
-  delete config.theme.width;
+describe('space between, with default space and spacing configs', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.spacing;
+    delete config.theme.space;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${inlineSizeStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${spaceBetweenStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.spacing;
+    delete config.theme.space;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${spaceBetweenStyles}
+        `);
+      });
+  });
 });
 
-test('min-inline-size, with default minWidth config', () => {
-  let config = getBaseConfig();
-  delete config.theme.minWidth;
+describe('inset shorthand and single-side, with default inset and spacing configs', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.spacing;
+    delete config.theme.inset;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${minInlineSizeStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${insetStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.spacing;
+    delete config.theme.inset;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${insetStyles}
+        `);
+      });
+  });
 });
 
-test('(JIT) min-inline-size, with default minWidth config', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.minWidth;
+describe('border-width, with default borderWidth config', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.borderWidth;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${minInlineSizeStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${borderWidthStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.borderWidth;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${borderWidthStyles}
+        `);
+      });
+  });
 });
 
-test('max-inline-size, with default maxWidth config', () => {
-  let config = getBaseConfig();
-  delete config.theme.maxWidth;
+describe('border-color, with default borderColor config', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.color;
+    delete config.theme.borderColor;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${maxInlineSizeStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.color;
+    delete config.theme.borderColor;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${borderColorStyles}
+        `);
+      });
+  });
+
+  test('JIT mode with dark mode enabled', () => {
+    let config = getBaseJitConfig();
+    config.darkMode = 'media';
+    delete config.theme.color;
+    delete config.theme.borderColor;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${borderColorDarkModeStyles}
+        `);
+      });
+  });
+
+  test('JIT mode with borderOpacity core plugin enabled', () => {
+    let config = getBaseJitConfig();
+    config.corePlugins = ['borderOpacity'];
+    delete config.theme.color;
+    delete config.theme.borderColor;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${borderColorWithBorderOpacityStyles}
+        `);
+      });
+  });
 });
 
-test('(JIT) max-inline-size, with default maxWidth config', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.maxWidth;
+describe('border-radius side and corner, with default borderRadius config', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.borderRadius;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${maxInlineSizeStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${borderRadiusStyles}
+        `);
+      });
+  });
+
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.borderRadius;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${borderRadiusStyles}
+        `);
+      });
+  });
 });
 
-test('margin shorthand and single-side, with default margin and spacing configs', () => {
-  let config = getBaseConfig();
-  delete config.theme.spacing;
-  delete config.theme.margin;
+describe('divide width, with default divideWidth and borderWidth configs', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.borderWidth;
+    delete config.theme.divideWidth;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${marginStyles}
-      `);
-    });
-});
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${borderWidthStyles}
+          ${divideWidthStyles}
+        `);
+      });
+  });
 
-test('(JIT) margin shorthand and single-side, with default margin and spacing configs', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.spacing;
-  delete config.theme.margin;
+  test('JIT mode', () => {
+    let config = getBaseJitConfig();
+    delete config.theme.borderWidth;
+    delete config.theme.divideWidth;
 
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${marginStyles}
-      `);
-    });
-});
-
-test('padding shorthand and single-side, with default padding and spacing configs', () => {
-  let config = getBaseConfig();
-  delete config.theme.spacing;
-  delete config.theme.padding;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${paddingStyles}
-      `);
-    });
-});
-
-test('(JIT) padding shorthand and single-side, with default padding and spacing configs', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.spacing;
-  delete config.theme.padding;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${paddingStyles}
-      `);
-    });
-});
-
-test('space between, with default space and spacing configs', () => {
-  let config = getBaseConfig();
-  delete config.theme.spacing;
-  delete config.theme.space;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${spaceBetweenStyles}
-      `);
-    });
-});
-
-test('(JIT) space between, with default space and spacing configs', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.spacing;
-  delete config.theme.space;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${spaceBetweenStyles}
-      `);
-    });
-});
-
-test('inset shorthand and single-side, with default inset and spacing configs', () => {
-  let config = getBaseConfig();
-  delete config.theme.spacing;
-  delete config.theme.inset;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${insetStyles}
-      `);
-    });
-});
-
-test('(JIT) inset shorthand and single-side, with default inset and spacing configs', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.spacing;
-  delete config.theme.inset;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${insetStyles}
-      `);
-    });
-});
-
-test('border-width, with default borderWidth config', () => {
-  let config = getBaseConfig();
-  delete config.theme.borderWidth;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${borderWidthStyles}
-      `);
-    });
-});
-
-test('(JIT) border-width, with default borderWidth config', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.borderWidth;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${borderWidthStyles}
-      `);
-    });
-});
-
-test('border-color, with default borderColor config', () => {
-  let config = getBaseConfig();
-  delete config.theme.color;
-  delete config.theme.borderColor;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-      `);
-    });
-});
-
-test('(JIT) border-color, with default borderColor config', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.color;
-  delete config.theme.borderColor;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${borderColorStyles}
-      `);
-    });
-});
-
-test('(JIT, Dark Mode) border-color, with default borderColor config', () => {
-  let config = getBaseJitConfig();
-  config.darkMode = 'media';
-  delete config.theme.color;
-  delete config.theme.borderColor;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${borderColorDarkModeStyles}
-      `);
-    });
-});
-
-test('(JIT) border-color, with default borderColor config and borderOpacity enabled', () => {
-  let config = getBaseJitConfig();
-  config.corePlugins = ['borderOpacity'];
-  delete config.theme.color;
-  delete config.theme.borderColor;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${borderColorWithBorderOpacityStyles}
-      `);
-    });
-});
-
-test('border-radius side and corner, with default borderRadius config', () => {
-  let config = getBaseConfig();
-  delete config.theme.borderRadius;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${borderRadiusStyles}
-      `);
-    });
-});
-
-test('(JIT) border-radius side and corner, with default borderRadius config', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.borderRadius;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${borderRadiusStyles}
-      `);
-    });
-});
-
-test('divide width, with default divideWidth and borderWidth configs', () => {
-  let config = getBaseConfig();
-  delete config.theme.borderWidth;
-  delete config.theme.divideWidth;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${borderWidthStyles}
-        ${divideWidthStyles}
-      `);
-    });
-});
-
-test('(JIT) divide width, with default divideWidth and borderWidth configs', () => {
-  let config = getBaseJitConfig();
-  delete config.theme.borderWidth;
-  delete config.theme.divideWidth;
-
-  return generatePluginCss(config)
-    .then(css => {
-      expect(css).toMatchCss(`
-        ${nonconfigurableStyles}
-        ${borderWidthStyles}
-        ${divideWidthStyles}
-      `);
-    });
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${borderWidthStyles}
+          ${divideWidthStyles}
+        `);
+      });
+  });
 });
