@@ -58,10 +58,7 @@ const getBaseConfig = () => {
 const getBaseJitConfig = () => {
   const config = getBaseConfig();
   config.mode = 'jit';
-  config.purge = {
-    content: ['./tests/templates/*.html'],
-    enabled: true
-  };
+  config.purge = ['./tests/templates/*.html'];
   delete config.variants;
   return config;
 };
