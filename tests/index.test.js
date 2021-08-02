@@ -80,7 +80,7 @@ describe('float, clear, text-align, resize, and overscroll-behavior', () => {
 });
 
 describe('block-size, with default height and spacing configs', () => {
-  const blockSizeTest = (config) => {
+  const testBlockSize = (config) => {
     delete config.theme.spacing;
     delete config.theme.height;
 
@@ -94,16 +94,16 @@ describe('block-size, with default height and spacing configs', () => {
   };
 
   test('default mode', () => {
-    blockSizeTest(getBaseConfig());
+    testBlockSize(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    blockSizeTest(getBaseJitConfig());
+    testBlockSize(getBaseJitConfig());
   });
 });
 
 describe('min-block-size, with default minHeight config', () => {
-  const minBlockSizeTest = (config) => {
+  const testMinBlockSize = (config) => {
     delete config.theme.minHeight;
 
     return generatePluginCss(config)
@@ -116,16 +116,16 @@ describe('min-block-size, with default minHeight config', () => {
   };
 
   test('default mode', () => {
-    minBlockSizeTest(getBaseConfig());
+    testMinBlockSize(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    minBlockSizeTest(getBaseJitConfig());
+    testMinBlockSize(getBaseJitConfig());
   });
 });
 
 describe('max-block-size, with default maxHeight and spacing configs', () => {
-  const maxBlockSizeTest = (config) => {
+  const testMaxBlockSize = (config) => {
     delete config.theme.spacing;
     delete config.theme.maxHeight;
 
@@ -139,16 +139,16 @@ describe('max-block-size, with default maxHeight and spacing configs', () => {
   };
 
   test('default mode', () => {
-    maxBlockSizeTest(getBaseConfig());
+    testMaxBlockSize(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    maxBlockSizeTest(getBaseJitConfig());
+    testMaxBlockSize(getBaseJitConfig());
   });
 });
 
 describe('inline-size, with default width and spacing configs', () => {
-  const inlineSizeTest = (config) => {
+  const testInlineSize = (config) => {
     delete config.theme.spacing;
     delete config.theme.width;
 
@@ -162,16 +162,16 @@ describe('inline-size, with default width and spacing configs', () => {
   };
 
   test('default mode', () => {
-    inlineSizeTest(getBaseConfig());
+    testInlineSize(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    inlineSizeTest(getBaseJitConfig());
+    testInlineSize(getBaseJitConfig());
   });
 });
 
 describe('min-inline-size, with default minWidth config', () => {
-  const minInlineSizeTest = (config) => {
+  const testMinInlineSize = (config) => {
     delete config.theme.minWidth;
 
     return generatePluginCss(config)
@@ -184,16 +184,16 @@ describe('min-inline-size, with default minWidth config', () => {
   };
 
   test('default mode', () => {
-    minInlineSizeTest(getBaseConfig());
+    testMinInlineSize(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    minInlineSizeTest(getBaseJitConfig());
+    testMinInlineSize(getBaseJitConfig());
   });
 });
 
 describe('max-inline-size, with default maxWidth config', () => {
-  const maxInlineSizeTest = (config) => {
+  const testMaxInlineSize = (config) => {
     delete config.theme.maxWidth;
 
     return generatePluginCss(config)
@@ -206,11 +206,11 @@ describe('max-inline-size, with default maxWidth config', () => {
   };
 
   test('default mode', () => {
-    maxInlineSizeTest(getBaseConfig());
+    testMaxInlineSize(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    maxInlineSizeTest(getBaseJitConfig());
+    testMaxInlineSize(getBaseJitConfig());
   });
 });
 
