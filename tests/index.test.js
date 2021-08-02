@@ -215,8 +215,7 @@ describe('max-inline-size, with default maxWidth config', () => {
 });
 
 describe('margin shorthand and single-side, with default margin and spacing configs', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const testMargin = (config) => {
     delete config.theme.spacing;
     delete config.theme.margin;
 
@@ -227,26 +226,19 @@ describe('margin shorthand and single-side, with default margin and spacing conf
           ${marginStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    testMargin(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.spacing;
-    delete config.theme.margin;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${marginStyles}
-        `);
-      });
+    testMargin(getBaseJitConfig());
   });
 });
 
 describe('padding shorthand and single-side, with default padding and spacing configs', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const testPadding = (config) => {
     delete config.theme.spacing;
     delete config.theme.padding;
 
@@ -257,26 +249,19 @@ describe('padding shorthand and single-side, with default padding and spacing co
           ${paddingStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    testPadding(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.spacing;
-    delete config.theme.padding;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${paddingStyles}
-        `);
-      });
+    testPadding(getBaseJitConfig());
   });
 });
 
 describe('space between, with default space and spacing configs', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const testSpaceBetween = (config) => {
     delete config.theme.spacing;
     delete config.theme.space;
 
@@ -287,26 +272,19 @@ describe('space between, with default space and spacing configs', () => {
           ${spaceBetweenStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    testSpaceBetween(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.spacing;
-    delete config.theme.space;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${spaceBetweenStyles}
-        `);
-      });
+    testSpaceBetween(getBaseJitConfig());
   });
 });
 
 describe('inset shorthand and single-side, with default inset and spacing configs', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const testInset = (config) => {
     delete config.theme.spacing;
     delete config.theme.inset;
 
@@ -317,26 +295,19 @@ describe('inset shorthand and single-side, with default inset and spacing config
           ${insetStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    testInset(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.spacing;
-    delete config.theme.inset;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${insetStyles}
-        `);
-      });
+    testInset(getBaseJitConfig());
   });
 });
 
 describe('border-width, with default borderWidth config', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const testBorderWidth = (config) => {
     delete config.theme.borderWidth;
 
     return generatePluginCss(config)
@@ -346,19 +317,14 @@ describe('border-width, with default borderWidth config', () => {
           ${borderWidthStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    testBorderWidth(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.borderWidth;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${borderWidthStyles}
-        `);
-      });
+    testBorderWidth(getBaseJitConfig());
   });
 });
 
@@ -422,8 +388,7 @@ describe('border-color, with default borderColor config', () => {
 });
 
 describe('border-radius side and corner, with default borderRadius config', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const testBorderRadius = (config) => {
     delete config.theme.borderRadius;
 
     return generatePluginCss(config)
@@ -433,25 +398,19 @@ describe('border-radius side and corner, with default borderRadius config', () =
           ${borderRadiusStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    testBorderRadius(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.borderRadius;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${borderRadiusStyles}
-        `);
-      });
+    testBorderRadius(getBaseJitConfig());
   });
 });
 
 describe('divide width, with default divideWidth and borderWidth configs', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const testDivideWidth = (config) => {
     delete config.theme.borderWidth;
     delete config.theme.divideWidth;
 
@@ -463,20 +422,13 @@ describe('divide width, with default divideWidth and borderWidth configs', () =>
           ${divideWidthStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    testDivideWidth(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.borderWidth;
-    delete config.theme.divideWidth;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${borderWidthStyles}
-          ${divideWidthStyles}
-        `);
-      });
+    testDivideWidth(getBaseJitConfig());
   });
 });
