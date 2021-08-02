@@ -148,8 +148,7 @@ describe('max-block-size, with default maxHeight and spacing configs', () => {
 });
 
 describe('inline-size, with default width and spacing configs', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const inlineSizeTest = (config) => {
     delete config.theme.spacing;
     delete config.theme.width;
 
@@ -160,26 +159,19 @@ describe('inline-size, with default width and spacing configs', () => {
           ${inlineSizeStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    inlineSizeTest(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.spacing;
-    delete config.theme.width;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${inlineSizeStyles}
-        `);
-      });
+    inlineSizeTest(getBaseJitConfig());
   });
 });
 
 describe('min-inline-size, with default minWidth config', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const minInlineSizeTest = (config) => {
     delete config.theme.minWidth;
 
     return generatePluginCss(config)
@@ -189,25 +181,19 @@ describe('min-inline-size, with default minWidth config', () => {
           ${minInlineSizeStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    minInlineSizeTest(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.minWidth;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${minInlineSizeStyles}
-        `);
-      });
+    minInlineSizeTest(getBaseJitConfig());
   });
 });
 
 describe('max-inline-size, with default maxWidth config', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const maxInlineSizeTest = (config) => {
     delete config.theme.maxWidth;
 
     return generatePluginCss(config)
@@ -217,19 +203,14 @@ describe('max-inline-size, with default maxWidth config', () => {
           ${maxInlineSizeStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    maxInlineSizeTest(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.maxWidth;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${maxInlineSizeStyles}
-        `);
-      });
+    maxInlineSizeTest(getBaseJitConfig());
   });
 });
 
