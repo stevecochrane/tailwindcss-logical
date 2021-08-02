@@ -80,8 +80,7 @@ describe('float, clear, text-align, resize, and overscroll-behavior', () => {
 });
 
 describe('block-size, with default height and spacing configs', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const blockSizeTest = (config) => {
     delete config.theme.spacing;
     delete config.theme.height;
 
@@ -92,26 +91,19 @@ describe('block-size, with default height and spacing configs', () => {
           ${blockSizeStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    blockSizeTest(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.spacing;
-    delete config.theme.height;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${blockSizeStyles}
-        `);
-      });
+    blockSizeTest(getBaseJitConfig());
   });
 });
 
 describe('min-block-size, with default minHeight config', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const minBlockSizeTest = (config) => {
     delete config.theme.minHeight;
 
     return generatePluginCss(config)
@@ -121,25 +113,19 @@ describe('min-block-size, with default minHeight config', () => {
           ${minBlockSizeStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    minBlockSizeTest(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.minHeight;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${minBlockSizeStyles}
-        `);
-      });
+    minBlockSizeTest(getBaseJitConfig());
   });
 });
 
 describe('max-block-size, with default maxHeight and spacing configs', () => {
-  test('default mode', () => {
-    let config = getBaseConfig();
+  const maxBlockSizeTest = (config) => {
     delete config.theme.spacing;
     delete config.theme.maxHeight;
 
@@ -150,20 +136,14 @@ describe('max-block-size, with default maxHeight and spacing configs', () => {
           ${maxBlockSizeStyles}
         `);
       });
+  };
+
+  test('default mode', () => {
+    maxBlockSizeTest(getBaseConfig());
   });
 
   test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.spacing;
-    delete config.theme.maxHeight;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${maxBlockSizeStyles}
-        `);
-      });
+    maxBlockSizeTest(getBaseJitConfig());
   });
 });
 
