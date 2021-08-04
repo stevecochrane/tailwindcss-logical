@@ -93,13 +93,8 @@ describe('block-size, with default height and spacing configs', () => {
       });
   };
 
-  test('default mode', () => {
-    testBlockSize(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testBlockSize(getBaseJitConfig());
-  });
+  test('default mode', () => testBlockSize(getBaseConfig()));
+  test('JIT mode', () => testBlockSize(getBaseJitConfig()));
 });
 
 describe('min-block-size, with default minHeight config', () => {
@@ -115,13 +110,8 @@ describe('min-block-size, with default minHeight config', () => {
       });
   };
 
-  test('default mode', () => {
-    testMinBlockSize(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testMinBlockSize(getBaseJitConfig());
-  });
+  test('default mode', () => testMinBlockSize(getBaseConfig()));
+  test('JIT mode', () => testMinBlockSize(getBaseJitConfig()));
 });
 
 describe('max-block-size, with default maxHeight and spacing configs', () => {
@@ -138,13 +128,8 @@ describe('max-block-size, with default maxHeight and spacing configs', () => {
       });
   };
 
-  test('default mode', () => {
-    testMaxBlockSize(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testMaxBlockSize(getBaseJitConfig());
-  });
+  test('default mode', () => testMaxBlockSize(getBaseConfig()));
+  test('JIT mode', () => testMaxBlockSize(getBaseJitConfig()));
 });
 
 describe('inline-size, with default width and spacing configs', () => {
@@ -161,13 +146,8 @@ describe('inline-size, with default width and spacing configs', () => {
       });
   };
 
-  test('default mode', () => {
-    testInlineSize(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testInlineSize(getBaseJitConfig());
-  });
+  test('default mode', () => testInlineSize(getBaseConfig()));
+  test('JIT mode', () => testInlineSize(getBaseJitConfig()));
 });
 
 describe('min-inline-size, with default minWidth config', () => {
@@ -183,13 +163,8 @@ describe('min-inline-size, with default minWidth config', () => {
       });
   };
 
-  test('default mode', () => {
-    testMinInlineSize(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testMinInlineSize(getBaseJitConfig());
-  });
+  test('default mode', () => testMinInlineSize(getBaseConfig()));
+  test('JIT mode', () => testMinInlineSize(getBaseJitConfig()));
 });
 
 describe('max-inline-size, with default maxWidth config', () => {
@@ -205,13 +180,8 @@ describe('max-inline-size, with default maxWidth config', () => {
       });
   };
 
-  test('default mode', () => {
-    testMaxInlineSize(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testMaxInlineSize(getBaseJitConfig());
-  });
+  test('default mode', () => testMaxInlineSize(getBaseConfig()));
+  test('JIT mode', () => testMaxInlineSize(getBaseJitConfig()));
 });
 
 describe('margin shorthand and single-side, with default margin and spacing configs', () => {
@@ -228,13 +198,8 @@ describe('margin shorthand and single-side, with default margin and spacing conf
       });
   };
 
-  test('default mode', () => {
-    testMargin(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testMargin(getBaseJitConfig());
-  });
+  test('default mode', () => testMargin(getBaseConfig()));
+  test('JIT mode', () => testMargin(getBaseJitConfig()));
 });
 
 describe('padding shorthand and single-side, with default padding and spacing configs', () => {
@@ -251,13 +216,8 @@ describe('padding shorthand and single-side, with default padding and spacing co
       });
   };
 
-  test('default mode', () => {
-    testPadding(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testPadding(getBaseJitConfig());
-  });
+  test('default mode', () => testPadding(getBaseConfig()));
+  test('JIT mode', () => testPadding(getBaseJitConfig()));
 });
 
 describe('space between, with default space and spacing configs', () => {
@@ -274,13 +234,8 @@ describe('space between, with default space and spacing configs', () => {
       });
   };
 
-  test('default mode', () => {
-    testSpaceBetween(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testSpaceBetween(getBaseJitConfig());
-  });
+  test('default mode', () => testSpaceBetween(getBaseConfig()));
+  test('JIT mode', () => testSpaceBetween(getBaseJitConfig()));
 });
 
 describe('inset shorthand and single-side, with default inset and spacing configs', () => {
@@ -297,13 +252,8 @@ describe('inset shorthand and single-side, with default inset and spacing config
       });
   };
 
-  test('default mode', () => {
-    testInset(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testInset(getBaseJitConfig());
-  });
+  test('default mode', () => testInset(getBaseConfig()));
+  test('JIT mode', () => testInset(getBaseJitConfig()));
 });
 
 describe('border-width, with default borderWidth config', () => {
@@ -319,13 +269,8 @@ describe('border-width, with default borderWidth config', () => {
       });
   };
 
-  test('default mode', () => {
-    testBorderWidth(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testBorderWidth(getBaseJitConfig());
-  });
+  test('default mode', () => testBorderWidth(getBaseConfig()));
+  test('JIT mode', () => testBorderWidth(getBaseJitConfig()));
 });
 
 describe('border-color, with default borderColor config', () => {
@@ -400,13 +345,8 @@ describe('border-radius side and corner, with default borderRadius config', () =
       });
   };
 
-  test('default mode', () => {
-    testBorderRadius(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testBorderRadius(getBaseJitConfig());
-  });
+  test('default mode', () => testBorderRadius(getBaseConfig()));
+  test('JIT mode', () => testBorderRadius(getBaseJitConfig()));
 });
 
 describe('divide width, with default divideWidth and borderWidth configs', () => {
@@ -424,11 +364,6 @@ describe('divide width, with default divideWidth and borderWidth configs', () =>
       });
   };
 
-  test('default mode', () => {
-    testDivideWidth(getBaseConfig());
-  });
-
-  test('JIT mode', () => {
-    testDivideWidth(getBaseJitConfig());
-  });
+  test('default mode', () => testDivideWidth(getBaseConfig()));
+  test('JIT mode', () => testDivideWidth(getBaseJitConfig()));
 });
