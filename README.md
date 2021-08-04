@@ -7,8 +7,10 @@
 [![License](https://img.shields.io/npm/l/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/blob/master/LICENSE.txt)
 
 A [CSS Logical Properties and Values](https://drafts.csswg.org/css-logical/) plugin for
-[Tailwind CSS](https://tailwindcss.com). Compatible with Tailwind v1.2.0+ and updated for Tailwind v2. View the
-[demo page](https://stevecochrane.github.io/tailwindcss-logical/) for a visual walkthrough, or read on to get started.
+[Tailwind CSS](https://tailwindcss.com). Compatible with Tailwind v1.2.0+ and updated for Tailwind v2, with support for
+JIT Mode (including all [new features](https://tailwindcss.com/docs/just-in-time-mode#new-features) except arbitrary
+value support) and Dark Mode. View the [demo page](https://stevecochrane.github.io/tailwindcss-logical/) for a visual
+walkthrough, or read on to get started.
 
 ## Usage
 
@@ -202,8 +204,8 @@ config object.
 ### Flow-relative Border Colors (JIT Mode)
 
 Because Tailwind's [Per-side Border Colors](https://tailwindcss.com/docs/just-in-time-mode#per-side-border-colors)
-utilities are only generated when JIT mode is enabled, tailwindcss-logical also only generates the following when JIT
-mode is enabled.
+utilities are only generated when JIT Mode is enabled, tailwindcss-logical also only generates the following when JIT
+Mode is enabled.
 
 Utilities are generated for the `border-block-start-color`, `border-block-end-color`,
 `border-inline-start-color`, and `border-inline-end-color` properties. These match the values in your `borderColor`
