@@ -64,19 +64,15 @@ const getBaseJitConfig = () => {
 };
 
 describe('float, clear, text-align, resize, and overscroll-behavior', () => {
-  test('default mode', () => {
-    return generatePluginCss(getBaseConfig())
+  const testNonconfigurableStyles = (config) => {
+    return generatePluginCss(config)
       .then(css => {
         expect(css).toMatchCss(nonconfigurableStyles);
       });
-  });
+  };
 
-  test('JIT mode', () => {
-    return generatePluginCss(getBaseJitConfig())
-      .then(css => {
-        expect(css).toMatchCss(nonconfigurableStyles);
-      });
-  });
+  test('default mode', () => testNonconfigurableStyles(getBaseConfig()));
+  test('JIT mode', () => testNonconfigurableStyles(getBaseJitConfig()));
 });
 
 describe('block-size, with default height and spacing configs', () => {
