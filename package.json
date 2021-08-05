@@ -27,7 +27,7 @@
     ]
   },
   "dependencies": {
-    "tailwindcss": "2.0.1"
+    "tailwindcss": "2.2.4"
   },
   "devDependencies": {
     "autoprefixer": "10.0.2",

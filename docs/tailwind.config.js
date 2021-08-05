@@ -1,15 +1,13 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: {
-    content: ['./docs/*.html'],
-    enabled: true
-  },
+  mode: 'jit',
+  purge: ['./docs/*.html'],
   theme: {
     extend: {
       colors: {
         cyan: colors.cyan,
-        lightBlue: colors.lightBlue,
+        sky: colors.sky,
         teal: colors.teal
       },
       fontSize: {
@@ -19,8 +17,5 @@ module.exports = {
   },
   plugins: [
     require('../index.js')
-  ],
-  variants: {
-    logical: ['responsive']
-  }
+  ]
 };

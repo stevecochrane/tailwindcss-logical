@@ -1,7 +1,10 @@
 const plugin = require('tailwindcss/plugin');
 const prefixNegativeModifiers = require('tailwindcss/lib/util/prefixNegativeModifiers').default;
+const borderColorPlugin = require('./plugins/borderColor');
 
-module.exports = plugin(function({ addUtilities, theme, variants, e }) {
+module.exports = plugin(function(helpers) {
+  const { addUtilities, e, theme, variants } = helpers;
+
   const borderRadius = Object.entries(theme('borderRadius'));
   const borderWidth = Object.entries(theme('borderWidth'));
   const divideWidth = Object.entries(theme('divideWidth'));
@@ -310,6 +313,7 @@ module.exports = plugin(function({ addUtilities, theme, variants, e }) {
   addUtilities(insetSingleSideUtilities, variants('logical'));
 
   addUtilities(borderWidthUtilities, variants('logical'));
+  borderColorPlugin(helpers);
   addUtilities(borderRadiusSideUtilities, variants('logical'));
   addUtilities(borderRadiusCornerUtilities, variants('logical'));
   addUtilities(divideWidthUtilities, variants('logical'));

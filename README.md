@@ -7,8 +7,10 @@
 [![License](https://img.shields.io/npm/l/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/blob/master/LICENSE.txt)
 
 A [CSS Logical Properties and Values](https://drafts.csswg.org/css-logical/) plugin for
-[Tailwind CSS](https://tailwindcss.com). Compatible with Tailwind v1.2.0+ and updated for Tailwind v2. View the
-[demo page](https://stevecochrane.github.io/tailwindcss-logical/) for a visual walkthrough, or read on to get started.
+[Tailwind CSS](https://tailwindcss.com). Compatible with Tailwind v1.2.0+ and updated for Tailwind v2, with support for
+JIT Mode (including all [new features](https://tailwindcss.com/docs/just-in-time-mode#new-features) except arbitrary
+value support) and Dark Mode. View the [demo page](https://stevecochrane.github.io/tailwindcss-logical/) for a visual
+walkthrough, or read on to get started.
 
 ## Usage
 
@@ -199,6 +201,23 @@ config object.
 .border-ie-2 { border-inline-end-width: 2px; }
 ```
 
+### Flow-relative Border Colors (JIT Mode)
+
+Because Tailwind's [Per-side Border Colors](https://tailwindcss.com/docs/just-in-time-mode#per-side-border-colors)
+utilities are only generated when JIT Mode is enabled, tailwindcss-logical also only generates the following when JIT
+Mode is enabled.
+
+Utilities are generated for the `border-block-start-color`, `border-block-end-color`,
+`border-inline-start-color`, and `border-inline-end-color` properties. These match the values in your `borderColor`
+config object.
+
+```css
+.border-bs-black { border-block-start-color: #000; }
+.border-be-black { border-block-end-color: #000; }
+.border-is-black { border-inline-start-color: #000; }
+.border-ie-black { border-inline-end-color: #000; }
+```
+
 ### Flow-relative Divide Width
 
 Flow-relative utilities are generated for the Tailwind-specific
@@ -263,7 +282,6 @@ everything. If something does not have a non-logical equivalent in Tailwind's de
 * Flow-relative Border Width shorthand properties `border-block-width` and `border-block-height`: Tailwind does not
   have `border-width` shorthand utilities for the X or Y axis.
 * Flow-relative Border Styles: Tailwind only has `border-style` utilities for all sides of an element at once.
-* Flow-relative Border Colors: Same as for Border Styles.
 
 As for other logical properties and values from outside of the main specification:
 
