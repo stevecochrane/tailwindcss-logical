@@ -9,8 +9,12 @@
 A [CSS Logical Properties and Values](https://drafts.csswg.org/css-logical/) plugin for
 [Tailwind CSS](https://tailwindcss.com). Compatible with Tailwind v1.2.0+ and updated for Tailwind v2, with support for
 JIT Mode (including all [new features](https://tailwindcss.com/docs/just-in-time-mode#new-features) except arbitrary
-value support) and Dark Mode. View the [demo page](https://stevecochrane.github.io/tailwindcss-logical/) for a visual
-walkthrough, or read on to get started.
+value support) and Dark Mode.
+
+## Demo
+
+View the [demo page](https://stevecochrane.github.io/tailwindcss-logical/) for a visual walkthrough, or read on to get
+started.
 
 ## Usage
 
