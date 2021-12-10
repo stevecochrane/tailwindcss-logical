@@ -82,42 +82,40 @@ describe('block-size, with default height and spacing configs', () => {
 
   test('default mode', () => testBlockSize(getBaseConfig()));
 });
-//
-// describe('min-block-size, with default minHeight config', () => {
-//   const testMinBlockSize = (config) => {
-//     delete config.theme.minHeight;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${minBlockSizeStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testMinBlockSize(getBaseConfig()));
-//   test('JIT mode', () => testMinBlockSize(getBaseJitConfig()));
-// });
-//
-// describe('max-block-size, with default maxHeight and spacing configs', () => {
-//   const testMaxBlockSize = (config) => {
-//     delete config.theme.spacing;
-//     delete config.theme.maxHeight;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${maxBlockSizeStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testMaxBlockSize(getBaseConfig()));
-//   test('JIT mode', () => testMaxBlockSize(getBaseJitConfig()));
-// });
-//
+
+describe('min-block-size, with default minHeight config', () => {
+  const testMinBlockSize = (config) => {
+    delete config.theme.minHeight;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${minBlockSizeStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testMinBlockSize(getBaseConfig()));
+});
+
+describe('max-block-size, with default maxHeight and spacing configs', () => {
+  const testMaxBlockSize = (config) => {
+    delete config.theme.spacing;
+    delete config.theme.maxHeight;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${maxBlockSizeStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testMaxBlockSize(getBaseConfig()));
+});
+
 // describe('inline-size, with default width and spacing configs', () => {
 //   const testInlineSize = (config) => {
 //     delete config.theme.spacing;
