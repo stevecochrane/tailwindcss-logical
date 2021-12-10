@@ -64,26 +64,24 @@ describe('float, clear, text-align, resize, and overscroll-behavior', () => {
   };
 
   test('default mode', () => testNonconfigurableStyles(getBaseConfig()));
-  // test('JIT mode', () => testNonconfigurableStyles(getBaseJitConfig()));
 });
 
-// describe('block-size, with default height and spacing configs', () => {
-//   const testBlockSize = (config) => {
-//     delete config.theme.spacing;
-//     delete config.theme.height;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${blockSizeStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testBlockSize(getBaseConfig()));
-//   test('JIT mode', () => testBlockSize(getBaseJitConfig()));
-// });
+describe('block-size, with default height and spacing configs', () => {
+  const testBlockSize = (config) => {
+    delete config.theme.spacing;
+    delete config.theme.height;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${blockSizeStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testBlockSize(getBaseConfig()));
+});
 //
 // describe('min-block-size, with default minHeight config', () => {
 //   const testMinBlockSize = (config) => {
