@@ -1,5 +1,4 @@
 const plugin = require('tailwindcss/plugin');
-const prefixNegativeModifiers = require('tailwindcss/lib/util/prefixNegativeModifiers').default;
 const borderColorPlugin = require('./plugins/borderColor');
 
 module.exports = plugin(function(helpers) {
@@ -98,10 +97,10 @@ module.exports = plugin(function(helpers) {
 
   const marginShorthandUtilities = margin.map(([key, value]) => (
     {
-      [`.${e(prefixNegativeModifiers('mlb', key))}`]: {
+      [`.${e(`mlb-${key}`)}`]: {
         marginBlock: value
       },
-      [`.${e(prefixNegativeModifiers('mli', key))}`]: {
+      [`.${e(`mli-${key}`)}`]: {
         marginInline: value
       }
     }
@@ -109,16 +108,16 @@ module.exports = plugin(function(helpers) {
 
   const marginSingleSideUtilities = margin.map(([key, value]) => (
     {
-      [`.${e(prefixNegativeModifiers('mbs', key))}`]: {
+      [`.${e(`mbs-${key}`)}`]: {
         marginBlockStart: value
       },
-      [`.${e(prefixNegativeModifiers('mbe', key))}`]: {
+      [`.${e(`mbe-${key}`)}`]: {
         marginBlockEnd: value
       },
-      [`.${e(prefixNegativeModifiers('mis', key))}`]: {
+      [`.${e(`mis-${key}`)}`]: {
         marginInlineStart: value
       },
-      [`.${e(prefixNegativeModifiers('mie', key))}`]: {
+      [`.${e(`mie-${key}`)}`]: {
         marginInlineEnd: value
       }
     }
@@ -154,12 +153,12 @@ module.exports = plugin(function(helpers) {
 
   let spaceBetweenUtilities = space.map(([key, value]) => (
     {
-      [`.${e(prefixNegativeModifiers('space-b', key))} > :not([hidden]) ~ :not([hidden])`]: {
+      [`.${e(`space-b-${key}`)} > :not([hidden]) ~ :not([hidden])`]: {
         '--tw-space-b-reverse': '0',
         marginBlockStart: `calc(${value} * calc(1 - var(--tw-space-b-reverse)))`,
         marginBlockEnd: `calc(${value} * var(--tw-space-b-reverse))`
       },
-      [`.${e(prefixNegativeModifiers('space-i', key))} > :not([hidden]) ~ :not([hidden])`]: {
+      [`.${e(`space-i-${key}`)} > :not([hidden]) ~ :not([hidden])`]: {
         '--tw-space-i-reverse': '0',
         marginInlineStart: `calc(${value} * calc(1 - var(--tw-space-i-reverse)))`,
         marginInlineEnd: `calc(${value} * var(--tw-space-i-reverse))`
@@ -180,10 +179,10 @@ module.exports = plugin(function(helpers) {
 
   const insetShorthandUtilities = inset.map(([key, value]) => (
     {
-      [`.${e(prefixNegativeModifiers('inset-block', key))}`]: {
+      [`.${e(`inset-block-${key}`)}`]: {
         insetBlock: value
       },
-      [`.${e(prefixNegativeModifiers('inset-inline', key))}`]: {
+      [`.${e(`inset-inline-${key}`)}`]: {
         insetInline: value
       }
     }
@@ -191,16 +190,16 @@ module.exports = plugin(function(helpers) {
 
   const insetSingleSideUtilities = inset.map(([key, value]) => (
     {
-      [`.${e(prefixNegativeModifiers('block-start', key))}`]: {
+      [`.${e(`block-start-${key}`)}`]: {
         insetBlockStart: value
       },
-      [`.${e(prefixNegativeModifiers('block-end', key))}`]: {
+      [`.${e(`block-end-${key}`)}`]: {
         insetBlockEnd: value
       },
-      [`.${e(prefixNegativeModifiers('inline-start', key))}`]: {
+      [`.${e(`inline-start-${key}`)}`]: {
         insetInlineStart: value
       },
-      [`.${e(prefixNegativeModifiers('inline-end', key))}`]: {
+      [`.${e(`inline-end-${key}`)}`]: {
         insetInlineEnd: value
       }
     }
