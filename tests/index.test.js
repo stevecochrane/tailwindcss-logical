@@ -116,58 +116,55 @@ describe('max-block-size, with default maxHeight and spacing configs', () => {
   test('default mode', () => testMaxBlockSize(getBaseConfig()));
 });
 
-// describe('inline-size, with default width and spacing configs', () => {
-//   const testInlineSize = (config) => {
-//     delete config.theme.spacing;
-//     delete config.theme.width;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${inlineSizeStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testInlineSize(getBaseConfig()));
-//   test('JIT mode', () => testInlineSize(getBaseJitConfig()));
-// });
-//
-// describe('min-inline-size, with default minWidth config', () => {
-//   const testMinInlineSize = (config) => {
-//     delete config.theme.minWidth;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${minInlineSizeStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testMinInlineSize(getBaseConfig()));
-//   test('JIT mode', () => testMinInlineSize(getBaseJitConfig()));
-// });
-//
-// describe('max-inline-size, with default maxWidth config', () => {
-//   const testMaxInlineSize = (config) => {
-//     delete config.theme.maxWidth;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${maxInlineSizeStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testMaxInlineSize(getBaseConfig()));
-//   test('JIT mode', () => testMaxInlineSize(getBaseJitConfig()));
-// });
-//
+describe('inline-size, with default width and spacing configs', () => {
+  const testInlineSize = (config) => {
+    delete config.theme.spacing;
+    delete config.theme.width;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${inlineSizeStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testInlineSize(getBaseConfig()));
+});
+
+describe('min-inline-size, with default minWidth config', () => {
+  const testMinInlineSize = (config) => {
+    delete config.theme.minWidth;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${minInlineSizeStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testMinInlineSize(getBaseConfig()));
+});
+
+describe('max-inline-size, with default maxWidth config', () => {
+  const testMaxInlineSize = (config) => {
+    delete config.theme.maxWidth;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${maxInlineSizeStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testMaxInlineSize(getBaseConfig()));
+});
+
 // describe('margin shorthand and single-side, with default margin and spacing configs', () => {
 //   const testMargin = (config) => {
 //     delete config.theme.spacing;
