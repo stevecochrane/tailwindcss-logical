@@ -421,14 +421,14 @@ module.exports = `
 
   .-space-b-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-b-reverse: 0;
-    margin-block-start: calc(0px * calc(1 - var(--tw-space-b-reverse)));
-    margin-block-end: calc(0px * var(--tw-space-b-reverse))
+    margin-block-start: calc(-0px * calc(1 - var(--tw-space-b-reverse)));
+    margin-block-end: calc(-0px * var(--tw-space-b-reverse))
   }
 
   .-space-i-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-i-reverse: 0;
-    margin-inline-start: calc(0px * calc(1 - var(--tw-space-i-reverse)));
-    margin-inline-end: calc(0px * var(--tw-space-i-reverse))
+    margin-inline-start: calc(-0px * calc(1 - var(--tw-space-i-reverse)));
+    margin-inline-end: calc(-0px * var(--tw-space-i-reverse))
   }
 
   .-space-b-1 > :not([hidden]) ~ :not([hidden]) {
@@ -837,13 +837,5 @@ module.exports = `
     --tw-space-i-reverse: 0;
     margin-inline-start: calc(-0.875rem * calc(1 - var(--tw-space-i-reverse)));
     margin-inline-end: calc(-0.875rem * var(--tw-space-i-reverse))
-  }
-
-  .space-b-reverse > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-b-reverse: 1
-  }
-
-  .space-i-reverse > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-i-reverse: 1
   }
 `;

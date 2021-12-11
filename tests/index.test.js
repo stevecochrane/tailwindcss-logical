@@ -20,6 +20,7 @@ const minInlineSizeStyles = require('./output/minInlineSize');
 const nonconfigurableStyles = require('./output/nonconfigurable');
 const paddingStyles = require('./output/padding');
 const spaceBetweenStyles = require('./output/spaceBetween');
+const spaceBetweenReverseStyles = require('./output/spaceBetween-reverse');
 
 const generatePluginCss = (options = {}) => {
   return postcss(tailwindcss(options))
@@ -59,7 +60,10 @@ describe('float, clear, text-align, resize, and overscroll-behavior', () => {
   const testNonconfigurableStyles = (config) => {
     return generatePluginCss(config)
       .then(css => {
-        expect(css).toMatchCss(nonconfigurableStyles);
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
+        `);
       });
   };
 
@@ -76,6 +80,7 @@ describe('block-size, with default height and spacing configs', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${blockSizeStyles}
+          ${spaceBetweenReverseStyles}
         `);
       });
   };
@@ -92,6 +97,7 @@ describe('min-block-size, with default minHeight config', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${minBlockSizeStyles}
+          ${spaceBetweenReverseStyles}
         `);
       });
   };
@@ -109,6 +115,7 @@ describe('max-block-size, with default maxHeight and spacing configs', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${maxBlockSizeStyles}
+          ${spaceBetweenReverseStyles}
         `);
       });
   };
@@ -126,6 +133,7 @@ describe('inline-size, with default width and spacing configs', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${inlineSizeStyles}
+          ${spaceBetweenReverseStyles}
         `);
       });
   };
@@ -142,6 +150,7 @@ describe('min-inline-size, with default minWidth config', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${minInlineSizeStyles}
+          ${spaceBetweenReverseStyles}
         `);
       });
   };
@@ -158,6 +167,7 @@ describe('max-inline-size, with default maxWidth config', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${maxInlineSizeStyles}
+          ${spaceBetweenReverseStyles}
         `);
       });
   };
@@ -175,6 +185,7 @@ describe('margin shorthand and single-side, with default margin and spacing conf
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${marginStyles}
+          ${spaceBetweenReverseStyles}
         `);
       });
   };
@@ -192,6 +203,7 @@ describe('padding shorthand and single-side, with default padding and spacing co
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${paddingStyles}
+          ${spaceBetweenReverseStyles}
         `);
       });
   };
@@ -199,24 +211,24 @@ describe('padding shorthand and single-side, with default padding and spacing co
   test('default mode', () => testPadding(getBaseConfig()));
 });
 
-// describe('space between, with default space and spacing configs', () => {
-//   const testSpaceBetween = (config) => {
-//     delete config.theme.spacing;
-//     delete config.theme.space;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${spaceBetweenStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testSpaceBetween(getBaseConfig()));
-//   test('JIT mode', () => testSpaceBetween(getBaseJitConfig()));
-// });
-//
+describe('space between, with default space and spacing configs', () => {
+  const testSpaceBetween = (config) => {
+    delete config.theme.spacing;
+    delete config.theme.space;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${spaceBetweenStyles}
+          ${spaceBetweenReverseStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testSpaceBetween(getBaseConfig()));
+});
+
 // describe('inset shorthand and single-side, with default inset and spacing configs', () => {
 //   const testInset = (config) => {
 //     delete config.theme.spacing;

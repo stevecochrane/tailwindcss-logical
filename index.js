@@ -8,7 +8,6 @@ module.exports = plugin(function(helpers) {
   const borderWidth = Object.entries(theme('borderWidth'));
   const divideWidth = Object.entries(theme('divideWidth'));
   const inset = Object.entries(theme('inset'));
-  const space = Object.entries(theme('space'));
 
   addUtilities({
     '.float-start': { float: 'inline-start' },
@@ -159,31 +158,43 @@ module.exports = plugin(function(helpers) {
     { values: theme('padding') }
   );
 
-  let spaceBetweenUtilities = space.map(([key, value]) => (
+  matchUtilities(
     {
-      [`.${e(`space-b-${key}`)} > :not([hidden]) ~ :not([hidden])`]: {
-        '--tw-space-b-reverse': '0',
-        marginBlockStart: `calc(${value} * calc(1 - var(--tw-space-b-reverse)))`,
-        marginBlockEnd: `calc(${value} * var(--tw-space-b-reverse))`
+      'space-b': (value) => {
+        value = value === '0' ? '0px' : value;
+        return {
+          '& > :not([hidden]) ~ :not([hidden])': {
+            '--tw-space-b-reverse': '0',
+            'margin-block-start': `calc(${value} * calc(1 - var(--tw-space-b-reverse)))`,
+            'margin-block-end': `calc(${value} * var(--tw-space-b-reverse))`
+          }
+        };
       },
-      [`.${e(`space-i-${key}`)} > :not([hidden]) ~ :not([hidden])`]: {
-        '--tw-space-i-reverse': '0',
-        marginInlineStart: `calc(${value} * calc(1 - var(--tw-space-i-reverse)))`,
-        marginInlineEnd: `calc(${value} * var(--tw-space-i-reverse))`
+      'space-i': (value) => {
+        value = value === '0' ? '0px' : value;
+        return {
+          '& > :not([hidden]) ~ :not([hidden])': {
+            '--tw-space-i-reverse': '0',
+            'margin-inline-start': `calc(${value} * calc(1 - var(--tw-space-i-reverse)))`,
+            'margin-inline-end': `calc(${value} * var(--tw-space-i-reverse))`
+          }
+        };
       }
+    },
+    {
+      supportsNegativeValues: true,
+      values: theme('space')
     }
-  ));
+  );
 
-  if (spaceBetweenUtilities.length) {
-    spaceBetweenUtilities.push({
-      '.space-b-reverse > :not([hidden]) ~ :not([hidden])': {
-        '--tw-space-b-reverse': '1'
-      },
-      '.space-i-reverse > :not([hidden]) ~ :not([hidden])': {
-        '--tw-space-i-reverse': '1'
-      }
-    });
-  }
+  addUtilities({
+    '.space-b-reverse > :not([hidden]) ~ :not([hidden])': {
+      '--tw-space-b-reverse': '1'
+    },
+    '.space-i-reverse > :not([hidden]) ~ :not([hidden])': {
+      '--tw-space-i-reverse': '1'
+    }
+  });
 
   const insetShorthandUtilities = inset.map(([key, value]) => (
     {
@@ -298,7 +309,6 @@ module.exports = plugin(function(helpers) {
     });
   }
 
-  addUtilities(spaceBetweenUtilities, variants('logical'));
   addUtilities(insetShorthandUtilities, variants('logical'));
   addUtilities(insetSingleSideUtilities, variants('logical'));
 
