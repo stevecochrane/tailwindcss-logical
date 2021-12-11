@@ -2,74 +2,74 @@ const plugin = require('tailwindcss/plugin');
 const borderColorPlugin = require('./plugins/borderColor');
 
 module.exports = plugin(function(helpers) {
-  const { addUtilities, e, theme, variants } = helpers;
+  const { addUtilities, e, matchUtilities, theme, variants } = helpers;
 
   const borderRadius = Object.entries(theme('borderRadius'));
   const borderWidth = Object.entries(theme('borderWidth'));
   const divideWidth = Object.entries(theme('divideWidth'));
-  const height = Object.entries(theme('height'));
   const inset = Object.entries(theme('inset'));
   const margin = Object.entries(theme('margin'));
-  const maxHeight = Object.entries(theme('maxHeight'));
   const maxWidth = Object.entries(theme('maxWidth'));
-  const minHeight = Object.entries(theme('minHeight'));
   const minWidth = Object.entries(theme('minWidth'));
   const padding = Object.entries(theme('padding'));
   const space = Object.entries(theme('space'));
   const width = Object.entries(theme('width'));
 
-  const floatUtilities = {
+  addUtilities({
     '.float-start': { float: 'inline-start' },
     '.float-end': { float: 'inline-end' }
-  };
+  });
 
-  const clearUtilities = {
+  addUtilities({
     '.clear-start': { clear: 'inline-start' },
     '.clear-end': { clear: 'inline-end' }
-  };
+  });
 
-  const textAlignUtilities = {
+  addUtilities({
     '.text-start': { textAlign: 'start' },
     '.text-end': { textAlign: 'end' }
-  };
+  });
 
-  const resizeUtilities = {
+  addUtilities({
     '.resize-block': { resize: 'block' },
     '.resize-inline': { resize: 'inline' }
-  };
+  });
 
-  const overscrollBehaviorUtilities = {
+  addUtilities({
     '.overscroll-b-auto': { overscrollBehaviorBlock: 'auto' },
     '.overscroll-b-contain': { overscrollBehaviorBlock: 'contain' },
     '.overscroll-b-none': { overscrollBehaviorBlock: 'none' },
     '.overscroll-i-auto': { overscrollBehaviorInline: 'auto' },
     '.overscroll-i-contain': { overscrollBehaviorInline: 'contain'},
     '.overscroll-i-none': { overscrollBehaviorInline: 'none' }
-  };
+  });
 
-  const blockSizeUtilities = height.map(([key, value]) => (
+  matchUtilities(
     {
-      [`.${e(`bs-${key}`)}`]: {
+      'bs': (value) => ({
         blockSize: value
-      }
-    }
-  ));
+      })
+    },
+    { values: theme('height') }
+  );
 
-  const minBlockSizeUtilities = minHeight.map(([key, value]) => (
+  matchUtilities(
     {
-      [`.${e(`min-bs-${key}`)}`]: {
+      'min-bs': (value) => ({
         minBlockSize: value
-      }
-    }
-  ));
+      })
+    },
+    { values: theme('minHeight') }
+  );
 
-  const maxBlockSizeUtilities = maxHeight.map(([key, value]) => (
+  matchUtilities(
     {
-      [`.${e(`max-bs-${key}`)}`]: {
+      'max-bs': (value) => ({
         maxBlockSize: value
-      }
-    }
-  ));
+      })
+    },
+    { values: theme('maxHeight') }
+  );
 
   const inlineSizeUtilities = width.map(([key, value]) => (
     {
@@ -290,15 +290,6 @@ module.exports = plugin(function(helpers) {
     });
   }
 
-  addUtilities(floatUtilities, variants('logical'));
-  addUtilities(clearUtilities, variants('logical'));
-  addUtilities(textAlignUtilities, variants('logical'));
-  addUtilities(resizeUtilities, variants('logical'));
-  addUtilities(overscrollBehaviorUtilities, variants('logical'));
-
-  addUtilities(blockSizeUtilities, variants('logical'));
-  addUtilities(minBlockSizeUtilities, variants('logical'));
-  addUtilities(maxBlockSizeUtilities, variants('logical'));
   addUtilities(inlineSizeUtilities, variants('logical'));
   addUtilities(minInlineSizeUtilities, variants('logical'));
   addUtilities(maxInlineSizeUtilities, variants('logical'));
