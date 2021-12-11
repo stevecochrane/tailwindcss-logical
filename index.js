@@ -9,11 +9,8 @@ module.exports = plugin(function(helpers) {
   const divideWidth = Object.entries(theme('divideWidth'));
   const inset = Object.entries(theme('inset'));
   const margin = Object.entries(theme('margin'));
-  const maxWidth = Object.entries(theme('maxWidth'));
-  const minWidth = Object.entries(theme('minWidth'));
   const padding = Object.entries(theme('padding'));
   const space = Object.entries(theme('space'));
-  const width = Object.entries(theme('width'));
 
   addUtilities({
     '.float-start': { float: 'inline-start' },
@@ -71,29 +68,32 @@ module.exports = plugin(function(helpers) {
     { values: theme('maxHeight') }
   );
 
-  const inlineSizeUtilities = width.map(([key, value]) => (
+  matchUtilities(
     {
-      [`.${e(`is-${key}`)}`]: {
+      'is': (value) => ({
         inlineSize: value
-      }
-    }
-  ));
+      })
+    },
+    { values: theme('width') }
+  );
 
-  const minInlineSizeUtilities = minWidth.map(([key, value]) => (
+  matchUtilities(
     {
-      [`.${e(`min-is-${key}`)}`]: {
+      'min-is': (value) => ({
         minInlineSize: value
-      }
-    }
-  ));
+      })
+    },
+    { values: theme('minWidth') }
+  );
 
-  const maxInlineSizeUtilities = maxWidth.map(([key, value]) => (
+  matchUtilities(
     {
-      [`.${e(`max-is-${key}`)}`]: {
+      'max-is': (value) => ({
         maxInlineSize: value
-      }
-    }
-  ));
+      })
+    },
+    { values: theme('maxWidth') }
+  );
 
   const marginShorthandUtilities = margin.map(([key, value]) => (
     {
@@ -289,10 +289,6 @@ module.exports = plugin(function(helpers) {
       }
     });
   }
-
-  addUtilities(inlineSizeUtilities, variants('logical'));
-  addUtilities(minInlineSizeUtilities, variants('logical'));
-  addUtilities(maxInlineSizeUtilities, variants('logical'));
 
   addUtilities(marginShorthandUtilities, variants('logical'));
   addUtilities(marginSingleSideUtilities, variants('logical'));
