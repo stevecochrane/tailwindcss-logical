@@ -182,24 +182,23 @@ describe('margin shorthand and single-side, with default margin and spacing conf
   test('default mode', () => testMargin(getBaseConfig()));
 });
 
-// describe('padding shorthand and single-side, with default padding and spacing configs', () => {
-//   const testPadding = (config) => {
-//     delete config.theme.spacing;
-//     delete config.theme.padding;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${paddingStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testPadding(getBaseConfig()));
-//   test('JIT mode', () => testPadding(getBaseJitConfig()));
-// });
-//
+describe('padding shorthand and single-side, with default padding and spacing configs', () => {
+  const testPadding = (config) => {
+    delete config.theme.spacing;
+    delete config.theme.padding;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${paddingStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testPadding(getBaseConfig()));
+});
+
 // describe('space between, with default space and spacing configs', () => {
 //   const testSpaceBetween = (config) => {
 //     delete config.theme.spacing;

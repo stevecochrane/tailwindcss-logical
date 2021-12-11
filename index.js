@@ -8,7 +8,6 @@ module.exports = plugin(function(helpers) {
   const borderWidth = Object.entries(theme('borderWidth'));
   const divideWidth = Object.entries(theme('divideWidth'));
   const inset = Object.entries(theme('inset'));
-  const padding = Object.entries(theme('padding'));
   const space = Object.entries(theme('space'));
 
   addUtilities({
@@ -130,33 +129,35 @@ module.exports = plugin(function(helpers) {
     }
   );
 
-  const paddingShorthandUtilities = padding.map(([key, value]) => (
+  matchUtilities(
     {
-      [`.${e(`plb-${key}`)}`]: {
+      'plb': (value) => ({
         paddingBlock: value
-      },
-      [`.${e(`pli-${key}`)}`]: {
+      }),
+      'pli': (value) => ({
         paddingInline: value
-      }
-    }
-  ));
+      })
+    },
+    { values: theme('padding') }
+  );
 
-  const paddingSingleSideUtilities = padding.map(([key, value]) => (
+  matchUtilities(
     {
-      [`.${e(`pbs-${key}`)}`]: {
+      'pbs': (value) => ({
         paddingBlockStart: value
-      },
-      [`.${e(`pbe-${key}`)}`]: {
+      }),
+      'pbe': (value) => ({
         paddingBlockEnd: value
-      },
-      [`.${e(`pis-${key}`)}`]: {
+      }),
+      'pis': (value) => ({
         paddingInlineStart: value
-      },
-      [`.${e(`pie-${key}`)}`]: {
+      }),
+      'pie': (value) => ({
         paddingInlineEnd: value
-      }
-    }
-  ));
+      })
+    },
+    { values: theme('padding') }
+  );
 
   let spaceBetweenUtilities = space.map(([key, value]) => (
     {
@@ -297,8 +298,6 @@ module.exports = plugin(function(helpers) {
     });
   }
 
-  addUtilities(paddingShorthandUtilities, variants('logical'));
-  addUtilities(paddingSingleSideUtilities, variants('logical'));
   addUtilities(spaceBetweenUtilities, variants('logical'));
   addUtilities(insetShorthandUtilities, variants('logical'));
   addUtilities(insetSingleSideUtilities, variants('logical'));
