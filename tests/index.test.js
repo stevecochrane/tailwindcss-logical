@@ -165,24 +165,23 @@ describe('max-inline-size, with default maxWidth config', () => {
   test('default mode', () => testMaxInlineSize(getBaseConfig()));
 });
 
-// describe('margin shorthand and single-side, with default margin and spacing configs', () => {
-//   const testMargin = (config) => {
-//     delete config.theme.spacing;
-//     delete config.theme.margin;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${marginStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testMargin(getBaseConfig()));
-//   test('JIT mode', () => testMargin(getBaseJitConfig()));
-// });
-//
+describe('margin shorthand and single-side, with default margin and spacing configs', () => {
+  const testMargin = (config) => {
+    delete config.theme.spacing;
+    delete config.theme.margin;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${marginStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testMargin(getBaseConfig()));
+});
+
 // describe('padding shorthand and single-side, with default padding and spacing configs', () => {
 //   const testPadding = (config) => {
 //     delete config.theme.spacing;

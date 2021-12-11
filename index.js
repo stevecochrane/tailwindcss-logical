@@ -8,7 +8,6 @@ module.exports = plugin(function(helpers) {
   const borderWidth = Object.entries(theme('borderWidth'));
   const divideWidth = Object.entries(theme('divideWidth'));
   const inset = Object.entries(theme('inset'));
-  const margin = Object.entries(theme('margin'));
   const padding = Object.entries(theme('padding'));
   const space = Object.entries(theme('space'));
 
@@ -95,33 +94,41 @@ module.exports = plugin(function(helpers) {
     { values: theme('maxWidth') }
   );
 
-  const marginShorthandUtilities = margin.map(([key, value]) => (
+  matchUtilities(
     {
-      [`.${e(`mlb-${key}`)}`]: {
+      'mlb': (value) => ({
         marginBlock: value
-      },
-      [`.${e(`mli-${key}`)}`]: {
+      }),
+      'mli': (value) => ({
         marginInline: value
-      }
-    }
-  ));
-
-  const marginSingleSideUtilities = margin.map(([key, value]) => (
+      })
+    },
     {
-      [`.${e(`mbs-${key}`)}`]: {
-        marginBlockStart: value
-      },
-      [`.${e(`mbe-${key}`)}`]: {
-        marginBlockEnd: value
-      },
-      [`.${e(`mis-${key}`)}`]: {
-        marginInlineStart: value
-      },
-      [`.${e(`mie-${key}`)}`]: {
-        marginInlineEnd: value
-      }
+      supportsNegativeValues: true,
+      values: theme('margin')
     }
-  ));
+  );
+
+  matchUtilities(
+    {
+      'mbs': (value) => ({
+        marginBlockStart: value
+      }),
+      'mbe': (value) => ({
+        marginBlockEnd: value
+      }),
+      'mis': (value) => ({
+        marginInlineStart: value
+      }),
+      'mie': (value) => ({
+        marginInlineEnd: value
+      })
+    },
+    {
+      supportsNegativeValues: true,
+      values: theme('margin')
+    }
+  );
 
   const paddingShorthandUtilities = padding.map(([key, value]) => (
     {
@@ -290,8 +297,6 @@ module.exports = plugin(function(helpers) {
     });
   }
 
-  addUtilities(marginShorthandUtilities, variants('logical'));
-  addUtilities(marginSingleSideUtilities, variants('logical'));
   addUtilities(paddingShorthandUtilities, variants('logical'));
   addUtilities(paddingSingleSideUtilities, variants('logical'));
   addUtilities(spaceBetweenUtilities, variants('logical'));
