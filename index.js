@@ -7,7 +7,6 @@ module.exports = plugin(function(helpers) {
   const borderRadius = Object.entries(theme('borderRadius'));
   const borderWidth = Object.entries(theme('borderWidth'));
   const divideWidth = Object.entries(theme('divideWidth'));
-  const inset = Object.entries(theme('inset'));
 
   addUtilities({
     '.float-start': { float: 'inline-start' },
@@ -196,33 +195,41 @@ module.exports = plugin(function(helpers) {
     }
   });
 
-  const insetShorthandUtilities = inset.map(([key, value]) => (
+  matchUtilities(
     {
-      [`.${e(`inset-block-${key}`)}`]: {
+      'inset-block': (value) => ({
         insetBlock: value
-      },
-      [`.${e(`inset-inline-${key}`)}`]: {
+      }),
+      'inset-inline': (value) => ({
         insetInline: value
-      }
-    }
-  ));
-
-  const insetSingleSideUtilities = inset.map(([key, value]) => (
+      })
+    },
     {
-      [`.${e(`block-start-${key}`)}`]: {
-        insetBlockStart: value
-      },
-      [`.${e(`block-end-${key}`)}`]: {
-        insetBlockEnd: value
-      },
-      [`.${e(`inline-start-${key}`)}`]: {
-        insetInlineStart: value
-      },
-      [`.${e(`inline-end-${key}`)}`]: {
-        insetInlineEnd: value
-      }
+      supportsNegativeValues: true,
+      values: theme('inset')
     }
-  ));
+  );
+
+  matchUtilities(
+    {
+      'block-start': (value) => ({
+        insetBlockStart: value
+      }),
+      'block-end': (value) => ({
+        insetBlockEnd: value
+      }),
+      'inline-start': (value) => ({
+        insetInlineStart: value
+      }),
+      'inline-end': (value) => ({
+        insetInlineEnd: value
+      })
+    },
+    {
+      supportsNegativeValues: true,
+      values: theme('inset')
+    }
+  );
 
   const borderWidthUtilities = borderWidth.map(([key, value]) => {
     const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
@@ -308,9 +315,6 @@ module.exports = plugin(function(helpers) {
       }
     });
   }
-
-  addUtilities(insetShorthandUtilities, variants('logical'));
-  addUtilities(insetSingleSideUtilities, variants('logical'));
 
   addUtilities(borderWidthUtilities, variants('logical'));
   borderColorPlugin(helpers);

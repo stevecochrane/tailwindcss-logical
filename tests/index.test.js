@@ -229,24 +229,24 @@ describe('space between, with default space and spacing configs', () => {
   test('default mode', () => testSpaceBetween(getBaseConfig()));
 });
 
-// describe('inset shorthand and single-side, with default inset and spacing configs', () => {
-//   const testInset = (config) => {
-//     delete config.theme.spacing;
-//     delete config.theme.inset;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${insetStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testInset(getBaseConfig()));
-//   test('JIT mode', () => testInset(getBaseJitConfig()));
-// });
-//
+describe('inset shorthand and single-side, with default inset and spacing configs', () => {
+  const testInset = (config) => {
+    delete config.theme.spacing;
+    delete config.theme.inset;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
+          ${insetStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testInset(getBaseConfig()));
+});
+
 // describe('border-width, with default borderWidth config', () => {
 //   const testBorderWidth = (config) => {
 //     delete config.theme.borderWidth;
