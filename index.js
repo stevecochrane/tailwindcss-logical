@@ -4,7 +4,6 @@ const borderColorPlugin = require('./plugins/borderColor');
 module.exports = plugin(function(helpers) {
   const { addUtilities, e, matchUtilities, theme, variants } = helpers;
 
-  const borderRadius = Object.entries(theme('borderRadius'));
   const divideWidth = Object.entries(theme('divideWidth'));
 
   addUtilities({
@@ -248,45 +247,47 @@ module.exports = plugin(function(helpers) {
     { values: theme('borderWidth') }
   );
 
-  const borderRadiusSideUtilities = borderRadius.map(([key, value]) => {
-    const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
-    return {
-      [`.${e(`rounded-bs${keyString}`)}`]: {
+  borderColorPlugin(helpers);
+
+  matchUtilities(
+    {
+      'rounded-bs': (value) => ({
         borderStartStartRadius: value,
         borderStartEndRadius: value
-      },
-      [`.${e(`rounded-be${keyString}`)}`]: {
+      }),
+      'rounded-be': (value) => ({
         borderEndStartRadius: value,
         borderEndEndRadius: value
-      },
-      [`.${e(`rounded-is${keyString}`)}`]: {
+      }),
+      'rounded-is': (value) => ({
         borderStartStartRadius: value,
         borderEndStartRadius: value
-      },
-      [`.${e(`rounded-ie${keyString}`)}`]: {
+      }),
+      'rounded-ie': (value) => ({
         borderStartEndRadius: value,
         borderEndEndRadius: value
-      }
-    };
-  });
+      })
+    },
+    { values: theme('borderRadius') }
+  );
 
-  const borderRadiusCornerUtilities = borderRadius.map(([key, value]) => {
-    const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
-    return {
-      [`.${e(`rounded-ss${keyString}`)}`]: {
+  matchUtilities(
+    {
+      'rounded-ss': (value) => ({
         borderStartStartRadius: value
-      },
-      [`.${e(`rounded-se${keyString}`)}`]: {
+      }),
+      'rounded-se': (value) => ({
         borderStartEndRadius: value
-      },
-      [`.${e(`rounded-es${keyString}`)}`]: {
+      }),
+      'rounded-es': (value) => ({
         borderEndStartRadius: value
-      },
-      [`.${e(`rounded-ee${keyString}`)}`]: {
+      }),
+      'rounded-ee': (value) => ({
         borderEndEndRadius: value
-      }
-    };
-  });
+      })
+    },
+    { values: theme('borderRadius') }
+  );
 
   let divideWidthUtilities = divideWidth.map(([key, value]) => {
     const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
@@ -315,8 +316,5 @@ module.exports = plugin(function(helpers) {
     });
   }
 
-  borderColorPlugin(helpers);
-  addUtilities(borderRadiusSideUtilities, variants('logical'));
-  addUtilities(borderRadiusCornerUtilities, variants('logical'));
   addUtilities(divideWidthUtilities, variants('logical'));
 });

@@ -295,23 +295,23 @@ describe('border-color, with default borderColor config', () => {
   // });
 });
 
-// describe('border-radius side and corner, with default borderRadius config', () => {
-//   const testBorderRadius = (config) => {
-//     delete config.theme.borderRadius;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${borderRadiusStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testBorderRadius(getBaseConfig()));
-//   test('JIT mode', () => testBorderRadius(getBaseJitConfig()));
-// });
-//
+describe('border-radius side and corner, with default borderRadius config', () => {
+  const testBorderRadius = (config) => {
+    delete config.theme.borderRadius;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
+          ${borderRadiusStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testBorderRadius(getBaseConfig()));
+});
+
 // describe('divide width, with default divideWidth and borderWidth configs', () => {
 //   const testDivideWidth = (config) => {
 //     delete config.theme.borderWidth;
