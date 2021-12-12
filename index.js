@@ -1,20 +1,20 @@
 const plugin = require('tailwindcss/plugin');
 
-const borderColorPlugin = require('./plugins/borderColor');
-const clearPlugin = require('./plugins/clear');
-const floatPlugin = require('./plugins/float');
-const overscrollBehaviorPlugin = require('./plugins/overscrollBehavior');
-const resizePlugin = require('./plugins/resize');
-const textAlignPlugin = require('./plugins/textAlign');
+const borderColor = require('./plugins/borderColor');
+const clear = require('./plugins/clear');
+const float = require('./plugins/float');
+const overscrollBehavior = require('./plugins/overscrollBehavior');
+const resize = require('./plugins/resize');
+const textAlign = require('./plugins/textAlign');
 
 module.exports = plugin(function(helpers) {
   const { addUtilities, matchUtilities, theme } = helpers;
 
-  floatPlugin(helpers);
-  clearPlugin(helpers);
-  textAlignPlugin(helpers);
-  resizePlugin(helpers);
-  overscrollBehaviorPlugin(helpers);
+  float(helpers);
+  clear(helpers);
+  textAlign(helpers);
+  resize(helpers);
+  overscrollBehavior(helpers);
 
   matchUtilities(
     {
@@ -228,7 +228,7 @@ module.exports = plugin(function(helpers) {
     { values: theme('borderWidth') }
   );
 
-  borderColorPlugin(helpers);
+  borderColor(helpers);
 
   matchUtilities(
     {
