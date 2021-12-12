@@ -7,6 +7,7 @@ const blockSizeStyles = require('./output/blockSize');
 const borderColorStyles = require('./output/borderColor');
 const borderColorPseudoSelectorStyles = require('./output/borderColor-pseudoSelectors');
 const borderColorWithBorderOpacityStyles = require('./output/borderColor-borderOpacity');
+const borderColorWithBorderOpacityPseudoSelectorStyles = require('./output/borderColor-borderOpacity-pseudoSelectors');
 const borderRadiusStyles = require('./output/borderRadius');
 const borderWidthStyles = require('./output/borderWidth');
 const divideWidthStyles = require('./output/divideWidth');
@@ -295,20 +296,23 @@ describe('border-color, with default borderColor config', () => {
       });
   });
 
-  // test('JIT mode with borderOpacity core plugin enabled', () => {
-  //   let config = getBaseJitConfig();
-  //   config.corePlugins = ['borderOpacity'];
-  //   delete config.theme.color;
-  //   delete config.theme.borderColor;
-  //
-  //   return generatePluginCss(config)
-  //     .then(css => {
-  //       expect(css).toMatchCss(`
-  //         ${nonconfigurableStyles}
-  //         ${borderColorWithBorderOpacityStyles}
-  //       `);
-  //     });
-  // });
+  test('With borderOpacity core plugin enabled', () => {
+    let config = getBaseConfig();
+    config.corePlugins = ['borderOpacity'];
+    delete config.theme.color;
+    delete config.theme.borderColor;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
+          ${borderColorWithBorderOpacityStyles}
+          ${divideWidthReverseStyles}
+          ${borderColorWithBorderOpacityPseudoSelectorStyles}
+        `);
+      });
+  });
 });
 
 describe('border-radius side and corner, with default borderRadius config', () => {
