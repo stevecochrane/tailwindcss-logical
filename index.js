@@ -1,36 +1,20 @@
 const plugin = require('tailwindcss/plugin');
 
 const borderColorPlugin = require('./plugins/borderColor');
+const clearPlugin = require('./plugins/clear');
 const floatPlugin = require('./plugins/float');
+const overscrollBehaviorPlugin = require('./plugins/overscrollBehavior');
+const resizePlugin = require('./plugins/resize');
+const textAlignPlugin = require('./plugins/textAlign');
 
 module.exports = plugin(function(helpers) {
   const { addUtilities, matchUtilities, theme } = helpers;
 
   floatPlugin(helpers);
-
-  addUtilities({
-    '.clear-start': { clear: 'inline-start' },
-    '.clear-end': { clear: 'inline-end' }
-  });
-
-  addUtilities({
-    '.text-start': { textAlign: 'start' },
-    '.text-end': { textAlign: 'end' }
-  });
-
-  addUtilities({
-    '.resize-block': { resize: 'block' },
-    '.resize-inline': { resize: 'inline' }
-  });
-
-  addUtilities({
-    '.overscroll-b-auto': { overscrollBehaviorBlock: 'auto' },
-    '.overscroll-b-contain': { overscrollBehaviorBlock: 'contain' },
-    '.overscroll-b-none': { overscrollBehaviorBlock: 'none' },
-    '.overscroll-i-auto': { overscrollBehaviorInline: 'auto' },
-    '.overscroll-i-contain': { overscrollBehaviorInline: 'contain'},
-    '.overscroll-i-none': { overscrollBehaviorInline: 'none' }
-  });
+  clearPlugin(helpers);
+  textAlignPlugin(helpers);
+  resizePlugin(helpers);
+  overscrollBehaviorPlugin(helpers);
 
   matchUtilities(
     {
