@@ -4,8 +4,11 @@ const blockSize = require('./plugins/blockSize');
 const borderColor = require('./plugins/borderColor');
 const clear = require('./plugins/clear');
 const float = require('./plugins/float');
+const inlineSize = require('./plugins/inlineSize');
 const maxBlockSize = require('./plugins/maxBlockSize');
+const maxInlineSize = require('./plugins/maxInlineSize');
 const minBlockSize = require('./plugins/minBlockSize');
+const minInlineSize = require('./plugins/minInlineSize');
 const overscrollBehavior = require('./plugins/overscrollBehavior');
 const resize = require('./plugins/resize');
 const textAlign = require('./plugins/textAlign');
@@ -23,32 +26,9 @@ module.exports = plugin(function(helpers) {
   minBlockSize(helpers);
   maxBlockSize(helpers);
 
-  matchUtilities(
-    {
-      'is': (value) => ({
-        inlineSize: value
-      })
-    },
-    { values: theme('width') }
-  );
-
-  matchUtilities(
-    {
-      'min-is': (value) => ({
-        minInlineSize: value
-      })
-    },
-    { values: theme('minWidth') }
-  );
-
-  matchUtilities(
-    {
-      'max-is': (value) => ({
-        maxInlineSize: value
-      })
-    },
-    { values: theme('maxWidth') }
-  );
+  inlineSize(helpers);
+  minInlineSize(helpers);
+  maxInlineSize(helpers);
 
   matchUtilities(
     {
