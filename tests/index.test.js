@@ -6,7 +6,6 @@ const plugin = require('../index.js');
 const blockSizeStyles = require('./output/blockSize');
 const borderColorStyles = require('./output/borderColor');
 const borderColorWithBorderOpacityStyles = require('./output/borderColor-borderOpacity');
-const borderColorDarkModeStyles = require('./output/borderColor-darkMode');
 const borderRadiusStyles = require('./output/borderRadius');
 const borderWidthStyles = require('./output/borderWidth');
 const divideWidthStyles = require('./output/divideWidth');
@@ -264,65 +263,38 @@ describe('border-width, with default borderWidth config', () => {
   test('default mode', () => testBorderWidth(getBaseConfig()));
 });
 
-// describe('border-color, with default borderColor config', () => {
-//   test('default mode', () => {
-//     let config = getBaseConfig();
-//     delete config.theme.color;
-//     delete config.theme.borderColor;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//         `);
-//       });
-//   });
-//
-//   test('JIT mode', () => {
-//     let config = getBaseJitConfig();
-//     delete config.theme.color;
-//     delete config.theme.borderColor;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${borderColorStyles}
-//         `);
-//       });
-//   });
-//
-//   test('JIT mode with dark mode enabled', () => {
-//     let config = getBaseJitConfig();
-//     config.darkMode = 'media';
-//     delete config.theme.color;
-//     delete config.theme.borderColor;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${borderColorDarkModeStyles}
-//         `);
-//       });
-//   });
-//
-//   test('JIT mode with borderOpacity core plugin enabled', () => {
-//     let config = getBaseJitConfig();
-//     config.corePlugins = ['borderOpacity'];
-//     delete config.theme.color;
-//     delete config.theme.borderColor;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${borderColorWithBorderOpacityStyles}
-//         `);
-//       });
-//   });
-// });
-//
+describe('border-color, with default borderColor config', () => {
+  test('default mode', () => {
+    let config = getBaseConfig();
+    delete config.theme.color;
+    delete config.theme.borderColor;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
+          ${borderColorStyles}
+        `);
+      });
+  });
+
+  // test('JIT mode with borderOpacity core plugin enabled', () => {
+  //   let config = getBaseJitConfig();
+  //   config.corePlugins = ['borderOpacity'];
+  //   delete config.theme.color;
+  //   delete config.theme.borderColor;
+  //
+  //   return generatePluginCss(config)
+  //     .then(css => {
+  //       expect(css).toMatchCss(`
+  //         ${nonconfigurableStyles}
+  //         ${borderColorWithBorderOpacityStyles}
+  //       `);
+  //     });
+  // });
+});
+
 // describe('border-radius side and corner, with default borderRadius config', () => {
 //   const testBorderRadius = (config) => {
 //     delete config.theme.borderRadius;
