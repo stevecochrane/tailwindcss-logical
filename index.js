@@ -5,11 +5,13 @@ const borderColor = require('./plugins/borderColor');
 const clear = require('./plugins/clear');
 const float = require('./plugins/float');
 const inlineSize = require('./plugins/inlineSize');
+const margin = require('./plugins/margin');
 const maxBlockSize = require('./plugins/maxBlockSize');
 const maxInlineSize = require('./plugins/maxInlineSize');
 const minBlockSize = require('./plugins/minBlockSize');
 const minInlineSize = require('./plugins/minInlineSize');
 const overscrollBehavior = require('./plugins/overscrollBehavior');
+const padding = require('./plugins/padding');
 const resize = require('./plugins/resize');
 const textAlign = require('./plugins/textAlign');
 
@@ -30,71 +32,8 @@ module.exports = plugin(function(helpers) {
   minInlineSize(helpers);
   maxInlineSize(helpers);
 
-  matchUtilities(
-    {
-      'mlb': (value) => ({
-        marginBlock: value
-      }),
-      'mli': (value) => ({
-        marginInline: value
-      })
-    },
-    {
-      supportsNegativeValues: true,
-      values: theme('margin')
-    }
-  );
-
-  matchUtilities(
-    {
-      'mbs': (value) => ({
-        marginBlockStart: value
-      }),
-      'mbe': (value) => ({
-        marginBlockEnd: value
-      }),
-      'mis': (value) => ({
-        marginInlineStart: value
-      }),
-      'mie': (value) => ({
-        marginInlineEnd: value
-      })
-    },
-    {
-      supportsNegativeValues: true,
-      values: theme('margin')
-    }
-  );
-
-  matchUtilities(
-    {
-      'plb': (value) => ({
-        paddingBlock: value
-      }),
-      'pli': (value) => ({
-        paddingInline: value
-      })
-    },
-    { values: theme('padding') }
-  );
-
-  matchUtilities(
-    {
-      'pbs': (value) => ({
-        paddingBlockStart: value
-      }),
-      'pbe': (value) => ({
-        paddingBlockEnd: value
-      }),
-      'pis': (value) => ({
-        paddingInlineStart: value
-      }),
-      'pie': (value) => ({
-        paddingInlineEnd: value
-      })
-    },
-    { values: theme('padding') }
-  );
+  margin(helpers);
+  padding(helpers);
 
   matchUtilities(
     {
