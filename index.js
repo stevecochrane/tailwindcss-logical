@@ -1,13 +1,12 @@
 const plugin = require('tailwindcss/plugin');
+
 const borderColorPlugin = require('./plugins/borderColor');
+const floatPlugin = require('./plugins/float');
 
 module.exports = plugin(function(helpers) {
   const { addUtilities, matchUtilities, theme } = helpers;
 
-  addUtilities({
-    '.float-start': { float: 'inline-start' },
-    '.float-end': { float: 'inline-end' }
-  });
+  floatPlugin(helpers);
 
   addUtilities({
     '.clear-start': { clear: 'inline-start' },
