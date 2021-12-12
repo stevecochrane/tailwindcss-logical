@@ -5,7 +5,6 @@ module.exports = plugin(function(helpers) {
   const { addUtilities, e, matchUtilities, theme, variants } = helpers;
 
   const borderRadius = Object.entries(theme('borderRadius'));
-  const borderWidth = Object.entries(theme('borderWidth'));
   const divideWidth = Object.entries(theme('divideWidth'));
 
   addUtilities({
@@ -231,23 +230,23 @@ module.exports = plugin(function(helpers) {
     }
   );
 
-  const borderWidthUtilities = borderWidth.map(([key, value]) => {
-    const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
-    return {
-      [`.${e(`border-bs${keyString}`)}`]: {
+  matchUtilities(
+    {
+      'border-bs': (value) => ({
         borderBlockStartWidth: value
-      },
-      [`.${e(`border-be${keyString}`)}`]: {
+      }),
+      'border-be': (value) => ({
         borderBlockEndWidth: value
-      },
-      [`.${e(`border-is${keyString}`)}`]: {
+      }),
+      'border-is': (value) => ({
         borderInlineStartWidth: value
-      },
-      [`.${e(`border-ie${keyString}`)}`]: {
+      }),
+      'border-ie': (value) => ({
         borderInlineEndWidth: value
-      }
-    };
-  });
+      })
+    },
+    { values: theme('borderWidth') }
+  );
 
   const borderRadiusSideUtilities = borderRadius.map(([key, value]) => {
     const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
@@ -316,7 +315,6 @@ module.exports = plugin(function(helpers) {
     });
   }
 
-  addUtilities(borderWidthUtilities, variants('logical'));
   borderColorPlugin(helpers);
   addUtilities(borderRadiusSideUtilities, variants('logical'));
   addUtilities(borderRadiusCornerUtilities, variants('logical'));

@@ -247,23 +247,23 @@ describe('inset shorthand and single-side, with default inset and spacing config
   test('default mode', () => testInset(getBaseConfig()));
 });
 
-// describe('border-width, with default borderWidth config', () => {
-//   const testBorderWidth = (config) => {
-//     delete config.theme.borderWidth;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${borderWidthStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testBorderWidth(getBaseConfig()));
-//   test('JIT mode', () => testBorderWidth(getBaseJitConfig()));
-// });
-//
+describe('border-width, with default borderWidth config', () => {
+  const testBorderWidth = (config) => {
+    delete config.theme.borderWidth;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
+          ${borderWidthStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testBorderWidth(getBaseConfig()));
+});
+
 // describe('border-color, with default borderColor config', () => {
 //   test('default mode', () => {
 //     let config = getBaseConfig();
