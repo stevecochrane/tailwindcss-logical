@@ -310,10 +310,7 @@ module.exports = plugin(function(helpers) {
         };
       }
     },
-    {
-      supportsNegativeValues: true,
-      values: theme('divideWidth')
-    }
+    { values: theme('divideWidth') }
   );
 
   addUtilities({
