@@ -1,8 +1,11 @@
 const plugin = require('tailwindcss/plugin');
 
+const blockSize = require('./plugins/blockSize');
 const borderColor = require('./plugins/borderColor');
 const clear = require('./plugins/clear');
 const float = require('./plugins/float');
+const maxBlockSize = require('./plugins/maxBlockSize');
+const minBlockSize = require('./plugins/minBlockSize');
 const overscrollBehavior = require('./plugins/overscrollBehavior');
 const resize = require('./plugins/resize');
 const textAlign = require('./plugins/textAlign');
@@ -16,32 +19,9 @@ module.exports = plugin(function(helpers) {
   resize(helpers);
   overscrollBehavior(helpers);
 
-  matchUtilities(
-    {
-      'bs': (value) => ({
-        blockSize: value
-      })
-    },
-    { values: theme('height') }
-  );
-
-  matchUtilities(
-    {
-      'min-bs': (value) => ({
-        minBlockSize: value
-      })
-    },
-    { values: theme('minHeight') }
-  );
-
-  matchUtilities(
-    {
-      'max-bs': (value) => ({
-        maxBlockSize: value
-      })
-    },
-    { values: theme('maxHeight') }
-  );
+  blockSize(helpers);
+  minBlockSize(helpers);
+  maxBlockSize(helpers);
 
   matchUtilities(
     {
