@@ -5,10 +5,12 @@ const plugin = require('../index.js');
 
 const blockSizeStyles = require('./output/blockSize');
 const borderColorStyles = require('./output/borderColor');
+const borderColorPseudoSelectorStyles = require('./output/borderColor-pseudoSelectors');
 const borderColorWithBorderOpacityStyles = require('./output/borderColor-borderOpacity');
 const borderRadiusStyles = require('./output/borderRadius');
 const borderWidthStyles = require('./output/borderWidth');
 const divideWidthStyles = require('./output/divideWidth');
+const divideWidthReverseStyles = require('./output/divideWidth-reverse');
 const inlineSizeStyles = require('./output/inlineSize');
 const insetStyles = require('./output/inset');
 const marginStyles = require('./output/margin');
@@ -62,6 +64,7 @@ describe('float, clear, text-align, resize, and overscroll-behavior', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -80,6 +83,7 @@ describe('block-size, with default height and spacing configs', () => {
           ${nonconfigurableStyles}
           ${blockSizeStyles}
           ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -97,6 +101,7 @@ describe('min-block-size, with default minHeight config', () => {
           ${nonconfigurableStyles}
           ${minBlockSizeStyles}
           ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -115,6 +120,7 @@ describe('max-block-size, with default maxHeight and spacing configs', () => {
           ${nonconfigurableStyles}
           ${maxBlockSizeStyles}
           ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -133,6 +139,7 @@ describe('inline-size, with default width and spacing configs', () => {
           ${nonconfigurableStyles}
           ${inlineSizeStyles}
           ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -150,6 +157,7 @@ describe('min-inline-size, with default minWidth config', () => {
           ${nonconfigurableStyles}
           ${minInlineSizeStyles}
           ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -167,6 +175,7 @@ describe('max-inline-size, with default maxWidth config', () => {
           ${nonconfigurableStyles}
           ${maxInlineSizeStyles}
           ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -185,6 +194,7 @@ describe('margin shorthand and single-side, with default margin and spacing conf
           ${nonconfigurableStyles}
           ${marginStyles}
           ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -203,6 +213,7 @@ describe('padding shorthand and single-side, with default padding and spacing co
           ${nonconfigurableStyles}
           ${paddingStyles}
           ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -221,6 +232,7 @@ describe('space between, with default space and spacing configs', () => {
           ${nonconfigurableStyles}
           ${spaceBetweenStyles}
           ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -239,6 +251,7 @@ describe('inset shorthand and single-side, with default inset and spacing config
           ${nonconfigurableStyles}
           ${spaceBetweenReverseStyles}
           ${insetStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -256,6 +269,7 @@ describe('border-width, with default borderWidth config', () => {
           ${nonconfigurableStyles}
           ${spaceBetweenReverseStyles}
           ${borderWidthStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -275,6 +289,8 @@ describe('border-color, with default borderColor config', () => {
           ${nonconfigurableStyles}
           ${spaceBetweenReverseStyles}
           ${borderColorStyles}
+          ${divideWidthReverseStyles}
+          ${borderColorPseudoSelectorStyles}
         `);
       });
   });
@@ -305,6 +321,7 @@ describe('border-radius side and corner, with default borderRadius config', () =
           ${nonconfigurableStyles}
           ${spaceBetweenReverseStyles}
           ${borderRadiusStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
@@ -312,21 +329,22 @@ describe('border-radius side and corner, with default borderRadius config', () =
   test('default mode', () => testBorderRadius(getBaseConfig()));
 });
 
-// describe('divide width, with default divideWidth and borderWidth configs', () => {
-//   const testDivideWidth = (config) => {
-//     delete config.theme.borderWidth;
-//     delete config.theme.divideWidth;
-//
-//     return generatePluginCss(config)
-//       .then(css => {
-//         expect(css).toMatchCss(`
-//           ${nonconfigurableStyles}
-//           ${borderWidthStyles}
-//           ${divideWidthStyles}
-//         `);
-//       });
-//   };
-//
-//   test('default mode', () => testDivideWidth(getBaseConfig()));
-//   test('JIT mode', () => testDivideWidth(getBaseJitConfig()));
-// });
+describe('divide width, with default divideWidth and borderWidth configs', () => {
+  const testDivideWidth = (config) => {
+    delete config.theme.borderWidth;
+    delete config.theme.divideWidth;
+
+    return generatePluginCss(config)
+      .then(css => {
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
+          ${borderWidthStyles}
+          ${divideWidthStyles}
+          ${divideWidthReverseStyles}
+        `);
+      });
+  };
+
+  test('default mode', () => testDivideWidth(getBaseConfig()));
+});

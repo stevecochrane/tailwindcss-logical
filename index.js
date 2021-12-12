@@ -4,8 +4,6 @@ const borderColorPlugin = require('./plugins/borderColor');
 module.exports = plugin(function(helpers) {
   const { addUtilities, e, matchUtilities, theme, variants } = helpers;
 
-  const divideWidth = Object.entries(theme('divideWidth'));
-
   addUtilities({
     '.float-start': { float: 'inline-start' },
     '.float-end': { float: 'inline-end' }
@@ -289,32 +287,41 @@ module.exports = plugin(function(helpers) {
     { values: theme('borderRadius') }
   );
 
-  let divideWidthUtilities = divideWidth.map(([key, value]) => {
-    const keyString = key.toLowerCase() === 'default' ? '' : `-${key}`;
-    return {
-      [`.${e(`divide-b${keyString}`)} > :not([hidden]) ~ :not([hidden])`]: {
-        '--tw-divide-b-reverse': '0',
-        borderBlockStartWidth: `calc(${value} * calc(1 - var(--tw-divide-b-reverse)))`,
-        borderBlockEndWidth: `calc(${value} * var(--tw-divide-b-reverse))`
+  matchUtilities(
+    {
+      'divide-b': (value) => {
+        value = value === '0' ? '0px' : value;
+        return {
+          '& > :not([hidden]) ~ :not([hidden])': {
+            '--tw-divide-b-reverse': '0',
+            'border-block-start-width': `calc(${value} * calc(1 - var(--tw-divide-b-reverse)))`,
+            'border-block-end-width': `calc(${value} * var(--tw-divide-b-reverse))`
+          }
+        };
       },
-      [`.${e(`divide-i${keyString}`)} > :not([hidden]) ~ :not([hidden])`]: {
-        '--tw-divide-i-reverse': '0',
-        borderInlineStartWidth: `calc(${value} * calc(1 - var(--tw-divide-i-reverse)))`,
-        borderInlineEndWidth: `calc(${value} * var(--tw-divide-i-reverse))`
+      'divide-i': (value) => {
+        value = value === '0' ? '0px' : value;
+        return {
+          '& > :not([hidden]) ~ :not([hidden])': {
+            '--tw-divide-i-reverse': '0',
+            'border-inline-start-width': `calc(${value} * calc(1 - var(--tw-divide-i-reverse)))`,
+            'border-inline-end-width': `calc(${value} * var(--tw-divide-i-reverse))`
+          }
+        };
       }
-    };
+    },
+    {
+      supportsNegativeValues: true,
+      values: theme('divideWidth')
+    }
+  );
+
+  addUtilities({
+    '.divide-b-reverse > :not([hidden]) ~ :not([hidden])': {
+      '--tw-divide-b-reverse': '1'
+    },
+    '.divide-i-reverse > :not([hidden]) ~ :not([hidden])': {
+      '--tw-divide-i-reverse': '1'
+    }
   });
-
-  if (divideWidthUtilities.length) {
-    divideWidthUtilities.push({
-      '.divide-b-reverse > :not([hidden]) ~ :not([hidden])': {
-        '--tw-divide-b-reverse': '1'
-      },
-      '.divide-i-reverse > :not([hidden]) ~ :not([hidden])': {
-        '--tw-divide-i-reverse': '1'
-      }
-    });
-  }
-
-  addUtilities(divideWidthUtilities, variants('logical'));
 });
