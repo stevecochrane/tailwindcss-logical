@@ -2,7 +2,7 @@ const plugin = require('tailwindcss/plugin');
 const borderColorPlugin = require('./plugins/borderColor');
 
 module.exports = plugin(function(helpers) {
-  const { addUtilities, e, matchUtilities, theme, variants } = helpers;
+  const { addUtilities, matchUtilities, theme } = helpers;
 
   addUtilities({
     '.float-start': { float: 'inline-start' },
