@@ -269,8 +269,8 @@ describe('border-width, with default borderWidth config', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${spaceBetweenReverseStyles}
-          ${borderWidthStyles}
           ${divideWidthReverseStyles}
+          ${borderWidthStyles}
         `);
       });
   };
@@ -289,8 +289,8 @@ describe('border-color, with default borderColor config', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${spaceBetweenReverseStyles}
-          ${borderColorStyles}
           ${divideWidthReverseStyles}
+          ${borderColorStyles}
           ${borderColorPseudoSelectorStyles}
         `);
       });
@@ -307,8 +307,8 @@ describe('border-color, with default borderColor config', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${spaceBetweenReverseStyles}
-          ${borderColorWithBorderOpacityStyles}
           ${divideWidthReverseStyles}
+          ${borderColorWithBorderOpacityStyles}
           ${borderColorWithBorderOpacityPseudoSelectorStyles}
         `);
       });
@@ -324,8 +324,8 @@ describe('border-radius side and corner, with default borderRadius config', () =
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${spaceBetweenReverseStyles}
-          ${borderRadiusStyles}
           ${divideWidthReverseStyles}
+          ${borderRadiusStyles}
         `);
       });
   };
@@ -343,9 +343,9 @@ describe('divide width, with default divideWidth and borderWidth configs', () =>
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${spaceBetweenReverseStyles}
-          ${borderWidthStyles}
           ${divideWidthStyles}
           ${divideWidthReverseStyles}
+          ${borderWidthStyles}
         `);
       });
   };

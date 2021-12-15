@@ -37,14 +37,12 @@ module.exports = plugin(function(helpers) {
 
   margin(helpers);
   padding(helpers);
-
   spaceBetween(helpers);
 
   inset(helpers);
 
+  divideWidth(helpers);
   borderWidth(helpers);
   borderColor(helpers);
   borderRadius(helpers);
-
-  divideWidth(helpers);
 });
