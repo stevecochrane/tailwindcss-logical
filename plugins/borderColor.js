@@ -5,6 +5,44 @@ const withAlphaVariable = require('tailwindcss/lib/util/withAlphaVariable').defa
 module.exports = function({ corePlugins, matchUtilities, theme }) {
   matchUtilities(
     {
+      'border-b': (value) => {
+        if (!corePlugins('borderOpacity')) {
+          return {
+            'border-block-start-color': toColorValue(value),
+            'border-block-end-color': toColorValue(value)
+          };
+        }
+
+        return withAlphaVariable({
+          color: value,
+          property: ['border-block-start-color', 'border-block-end-color'],
+          variable: '--tw-border-opacity',
+        });
+      },
+      'border-i': (value) => {
+        if (!corePlugins('borderOpacity')) {
+          return {
+            'border-inline-start-color': toColorValue(value),
+            'border-inline-end-color': toColorValue(value)
+          };
+        }
+
+        return withAlphaVariable({
+          color: value,
+          property: ['border-inline-start-color', 'border-inline-end-color'],
+          variable: '--tw-border-opacity',
+        });
+      }
+    },
+    {
+      values: (({ DEFAULT: _, ...colors }) => colors)(
+        flattenColorPalette(theme('borderColor'))
+      ),
+      type: 'color'
+    }
+  );
+  matchUtilities(
+    {
       'border-bs': (value) => {
         if (!corePlugins('borderOpacity')) {
           return {
@@ -56,7 +94,7 @@ module.exports = function({ corePlugins, matchUtilities, theme }) {
           property: 'border-inline-end-color',
           variable: '--tw-border-opacity',
         });
-      },
+      }
     },
     {
       values: (({ DEFAULT: _, ...colors }) => colors)(
