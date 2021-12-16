@@ -1,4 +1,54 @@
 module.exports = `
+  .border-b-0 {
+    border-block-start-width: 0px;
+    border-block-end-width: 0px
+  }
+
+  .border-i-0 {
+    border-inline-start-width: 0px;
+    border-inline-end-width: 0px
+  }
+
+  .border-b-2 {
+    border-block-start-width: 2px;
+    border-block-end-width: 2px
+  }
+
+  .border-i-2 {
+    border-inline-start-width: 2px;
+    border-inline-end-width: 2px
+  }
+
+  .border-b-4 {
+    border-block-start-width: 4px;
+    border-block-end-width: 4px
+  }
+
+  .border-i-4 {
+    border-inline-start-width: 4px;
+    border-inline-end-width: 4px
+  }
+
+  .border-b-8 {
+    border-block-start-width: 8px;
+    border-block-end-width: 8px
+  }
+
+  .border-i-8 {
+    border-inline-start-width: 8px;
+    border-inline-end-width: 8px
+  }
+
+  .border-b {
+    border-block-start-width: 1px;
+    border-block-end-width: 1px
+  }
+
+  .border-i {
+    border-inline-start-width: 1px;
+    border-inline-end-width: 1px
+  }
+
   .border-bs-0 {
     border-block-start-width: 0px
   }
