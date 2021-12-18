@@ -287,15 +287,13 @@ specification has been evaluated and most features are supported, this plugin do
 everything. If something does not have a non-logical equivalent in Tailwind's defaults, it is not supported.
 
 * Logical Values for the `caption-side` property: Tailwind does not have `caption-side` utilities.
-* Flow-relative Border Width shorthand properties `border-block-width` and `border-block-height`: Tailwind does not
-  have `border-width` shorthand utilities for the X or Y axis.
 * Flow-relative Border Styles: Tailwind only has `border-style` utilities for all sides of an element at once.
 
 As for other logical properties and values from outside of the main specification:
 
 * Flow-relative Overflow properties `overflow-block` and `overflow-inline`: while Tailwind does support `overflow`,
   this plugin does not support `overflow-block` or `overflow-inline` yet, due to a lack of browser support and
-  polyfills. As of March 2021,
+  polyfills. As of December 2021,
   [only Firefox supports them](https://caniuse.com/mdn-css_properties_overflow-block), and as far as I can
   tell there are no polyfills available. (Neither postcss-preset-env nor postcss-logical apply any transformations on
   these properties.)
