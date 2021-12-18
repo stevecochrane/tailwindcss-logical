@@ -5,7 +5,7 @@ const withAlphaVariable = require('tailwindcss/lib/util/withAlphaVariable').defa
 module.exports = function({ corePlugins, matchUtilities, theme }) {
   matchUtilities(
     {
-      'border-b': (value) => {
+      'border-lb': (value) => {
         if (!corePlugins('borderOpacity')) {
           return {
             'border-block-start-color': toColorValue(value),
@@ -19,7 +19,7 @@ module.exports = function({ corePlugins, matchUtilities, theme }) {
           variable: '--tw-border-opacity',
         });
       },
-      'border-i': (value) => {
+      'border-li': (value) => {
         if (!corePlugins('borderOpacity')) {
           return {
             'border-inline-start-color': toColorValue(value),

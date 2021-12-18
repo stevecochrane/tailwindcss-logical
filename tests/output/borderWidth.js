@@ -1,50 +1,50 @@
 module.exports = `
-  .border-b-0 {
+  .border-lb-0 {
     border-block-start-width: 0px;
     border-block-end-width: 0px
   }
 
-  .border-i-0 {
+  .border-li-0 {
     border-inline-start-width: 0px;
     border-inline-end-width: 0px
   }
 
-  .border-b-2 {
+  .border-lb-2 {
     border-block-start-width: 2px;
     border-block-end-width: 2px
   }
 
-  .border-i-2 {
+  .border-li-2 {
     border-inline-start-width: 2px;
     border-inline-end-width: 2px
   }
 
-  .border-b-4 {
+  .border-lb-4 {
     border-block-start-width: 4px;
     border-block-end-width: 4px
   }
 
-  .border-i-4 {
+  .border-li-4 {
     border-inline-start-width: 4px;
     border-inline-end-width: 4px
   }
 
-  .border-b-8 {
+  .border-lb-8 {
     border-block-start-width: 8px;
     border-block-end-width: 8px
   }
 
-  .border-i-8 {
+  .border-li-8 {
     border-inline-start-width: 8px;
     border-inline-end-width: 8px
   }
 
-  .border-b {
+  .border-lb {
     border-block-start-width: 1px;
     border-block-end-width: 1px
   }
 
-  .border-i {
+  .border-li {
     border-inline-start-width: 1px;
     border-inline-end-width: 1px
   }

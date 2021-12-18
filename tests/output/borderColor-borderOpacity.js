@@ -1,163 +1,163 @@
 module.exports = `
-  .border-b-transparent {
+  .border-lb-transparent {
     border-block-start-color: transparent;
     border-block-end-color: transparent
   }
 
-  .border-i-transparent {
+  .border-li-transparent {
     border-inline-start-color: transparent;
     border-inline-end-color: transparent
   }
 
-  .border-b-current {
+  .border-lb-current {
     border-block-start-color: currentColor;
     border-block-end-color: currentColor
   }
 
-  .border-i-current {
+  .border-li-current {
     border-inline-start-color: currentColor;
     border-inline-end-color: currentColor
   }
 
-  .border-b-black {
+  .border-lb-black {
     --tw-border-opacity: 1;
     border-block-start-color: rgb(0 0 0 / var(--tw-border-opacity));
     border-block-end-color: rgb(0 0 0 / var(--tw-border-opacity))
   }
 
-  .border-i-black {
+  .border-li-black {
     --tw-border-opacity: 1;
     border-inline-start-color: rgb(0 0 0 / var(--tw-border-opacity));
     border-inline-end-color: rgb(0 0 0 / var(--tw-border-opacity))
   }
 
-  .border-b-white {
+  .border-lb-white {
     --tw-border-opacity: 1;
     border-block-start-color: rgb(255 255 255 / var(--tw-border-opacity));
     border-block-end-color: rgb(255 255 255 / var(--tw-border-opacity))
   }
 
-  .border-i-white {
+  .border-li-white {
     --tw-border-opacity: 1;
     border-inline-start-color: rgb(255 255 255 / var(--tw-border-opacity));
     border-inline-end-color: rgb(255 255 255 / var(--tw-border-opacity))
   }
 
-  .border-b-gray-50 {
+  .border-lb-gray-50 {
     --tw-border-opacity: 1;
     border-block-start-color: rgb(249 250 251 / var(--tw-border-opacity));
     border-block-end-color: rgb(249 250 251 / var(--tw-border-opacity))
   }
 
-  .border-i-gray-50 {
+  .border-li-gray-50 {
     --tw-border-opacity: 1;
     border-inline-start-color: rgb(249 250 251 / var(--tw-border-opacity));
     border-inline-end-color: rgb(249 250 251 / var(--tw-border-opacity))
   }
 
-  .border-b-gray-100 {
+  .border-lb-gray-100 {
     --tw-border-opacity: 1;
     border-block-start-color: rgb(243 244 246 / var(--tw-border-opacity));
     border-block-end-color: rgb(243 244 246 / var(--tw-border-opacity))
   }
 
-  .border-i-gray-100 {
+  .border-li-gray-100 {
     --tw-border-opacity: 1;
     border-inline-start-color: rgb(243 244 246 / var(--tw-border-opacity));
     border-inline-end-color: rgb(243 244 246 / var(--tw-border-opacity))
   }
 
-  .border-b-gray-200 {
+  .border-lb-gray-200 {
     --tw-border-opacity: 1;
     border-block-start-color: rgb(229 231 235 / var(--tw-border-opacity));
     border-block-end-color: rgb(229 231 235 / var(--tw-border-opacity))
   }
 
-  .border-i-gray-200 {
+  .border-li-gray-200 {
     --tw-border-opacity: 1;
     border-inline-start-color: rgb(229 231 235 / var(--tw-border-opacity));
     border-inline-end-color: rgb(229 231 235 / var(--tw-border-opacity))
   }
 
-  .border-b-gray-300 {
+  .border-lb-gray-300 {
     --tw-border-opacity: 1;
     border-block-start-color: rgb(209 213 219 / var(--tw-border-opacity));
     border-block-end-color: rgb(209 213 219 / var(--tw-border-opacity))
   }
 
-  .border-i-gray-300 {
+  .border-li-gray-300 {
     --tw-border-opacity: 1;
     border-inline-start-color: rgb(209 213 219 / var(--tw-border-opacity));
     border-inline-end-color: rgb(209 213 219 / var(--tw-border-opacity))
   }
 
-  .border-b-gray-400 {
+  .border-lb-gray-400 {
     --tw-border-opacity: 1;
     border-block-start-color: rgb(156 163 175 / var(--tw-border-opacity));
     border-block-end-color: rgb(156 163 175 / var(--tw-border-opacity))
   }
 
-  .border-i-gray-400 {
+  .border-li-gray-400 {
     --tw-border-opacity: 1;
     border-inline-start-color: rgb(156 163 175 / var(--tw-border-opacity));
     border-inline-end-color: rgb(156 163 175 / var(--tw-border-opacity))
   }
 
-  .border-b-gray-500 {
+  .border-lb-gray-500 {
     --tw-border-opacity: 1;
     border-block-start-color: rgb(107 114 128 / var(--tw-border-opacity));
     border-block-end-color: rgb(107 114 128 / var(--tw-border-opacity))
   }
 
-  .border-i-gray-500 {
+  .border-li-gray-500 {
     --tw-border-opacity: 1;
     border-inline-start-color: rgb(107 114 128 / var(--tw-border-opacity));
     border-inline-end-color: rgb(107 114 128 / var(--tw-border-opacity))
   }
 
-  .border-b-gray-600 {
+  .border-lb-gray-600 {
     --tw-border-opacity: 1;
     border-block-start-color: rgb(75 85 99 / var(--tw-border-opacity));
     border-block-end-color: rgb(75 85 99 / var(--tw-border-opacity))
   }
 
-  .border-i-gray-600 {
+  .border-li-gray-600 {
     --tw-border-opacity: 1;
     border-inline-start-color: rgb(75 85 99 / var(--tw-border-opacity));
     border-inline-end-color: rgb(75 85 99 / var(--tw-border-opacity))
   }
 
-  .border-b-gray-700 {
+  .border-lb-gray-700 {
     --tw-border-opacity: 1;
     border-block-start-color: rgb(55 65 81 / var(--tw-border-opacity));
     border-block-end-color: rgb(55 65 81 / var(--tw-border-opacity))
   }
 
-  .border-i-gray-700 {
+  .border-li-gray-700 {
     --tw-border-opacity: 1;
     border-inline-start-color: rgb(55 65 81 / var(--tw-border-opacity));
     border-inline-end-color: rgb(55 65 81 / var(--tw-border-opacity))
   }
 
-  .border-b-gray-800 {
+  .border-lb-gray-800 {
     --tw-border-opacity: 1;
     border-block-start-color: rgb(31 41 55 / var(--tw-border-opacity));
     border-block-end-color: rgb(31 41 55 / var(--tw-border-opacity))
   }
 
-  .border-i-gray-800 {
+  .border-li-gray-800 {
     --tw-border-opacity: 1;
     border-inline-start-color: rgb(31 41 55 / var(--tw-border-opacity));
     border-inline-end-color: rgb(31 41 55 / var(--tw-border-opacity))
   }
 
-  .border-b-gray-900 {
+  .border-lb-gray-900 {
     --tw-border-opacity: 1;
     border-block-start-color: rgb(17 24 39 / var(--tw-border-opacity));
     border-block-end-color: rgb(17 24 39 / var(--tw-border-opacity))
   }
 
-  .border-i-gray-900 {
+  .border-li-gray-900 {
     --tw-border-opacity: 1;
     border-inline-start-color: rgb(17 24 39 / var(--tw-border-opacity));
     border-inline-end-color: rgb(17 24 39 / var(--tw-border-opacity))

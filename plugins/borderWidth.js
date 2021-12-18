@@ -1,11 +1,11 @@
 module.exports = function({ matchUtilities, theme }) {
   matchUtilities(
     {
-      'border-b': (value) => ({
+      'border-lb': (value) => ({
         borderBlockStartWidth: value,
         borderBlockEndWidth: value
       }),
-      'border-i': (value) => ({
+      'border-li': (value) => ({
         borderInlineStartWidth: value,
         borderInlineEndWidth: value
       })
