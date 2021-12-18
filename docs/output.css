@@ -465,6 +465,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-0 {
   border-width: 0px;
 }
+.border-b-8 {
+  border-bottom-width: 8px;
+}
 .border-solid {
   border-style: solid;
 }
@@ -1015,6 +1018,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .divide-i-reverse > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-i-reverse: 1;
+}
+.border-b-8 {
+  border-top-width: 8px;
+  border-bottom-width: 8px;
+}
+[dir="ltr"] .border-i-8 {
+  border-left-width: 8px;
+}
+[dir="rtl"] .border-i-8 {
+  border-right-width: 8px;
+}
+[dir="ltr"] .border-i-8 {
+  border-right-width: 8px;
+}
+[dir="rtl"] .border-i-8 {
+  border-left-width: 8px;
 }
 .border-bs-8 {
   border-top-width: 8px;
