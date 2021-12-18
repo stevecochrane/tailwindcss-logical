@@ -484,6 +484,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
+.border-b-blue-400 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1032,6 +1036,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .border-bs {
   border-top-width: 1px;
+}
+.border-b-blue-400 {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(96 165 250 / var(--tw-border-opacity));
+  border-bottom-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
+[dir="ltr"] .border-i-blue-400 {
+  border-left-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
+[dir="rtl"] .border-i-blue-400 {
+  border-right-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
+[dir="ltr"] .border-i-blue-400 {
+  border-right-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
+[dir="rtl"] .border-i-blue-400 {
+  border-left-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
+.border-i-blue-400 {
+  --tw-border-opacity: 1;
 }
 .border-bs-blue-400 {
   --tw-border-opacity: 1;
