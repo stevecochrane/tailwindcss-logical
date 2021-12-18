@@ -198,28 +198,28 @@ the values in your `inset` config object.
 
 ### Flow-relative Border Widths
 
-Utilities are generated for the `border-block-start-width`, `border-block-end-width`,
-`border-inline-start-width`, and `border-inline-end-width` properties. These match the values in your `borderWidth`
-config object.
+Utilities are generated for the `border-block-width`, `border-inline-width`, `border-block-start-width`,
+`border-block-end-width`, `border-inline-start-width`, and `border-inline-end-width` properties. These match the values
+in your `borderWidth` config object.
 
 ```css
+.border-lb-2 { border-block-width: 2px; }
+.border-li-2 { border-inline-width: 2px; }
 .border-bs-2 { border-block-start-width: 2px; }
 .border-be-2 { border-block-end-width: 2px; }
 .border-is-2 { border-inline-start-width: 2px; }
 .border-ie-2 { border-inline-end-width: 2px; }
 ```
 
-### Flow-relative Border Colors (JIT Mode)
+### Flow-relative Border Colors
 
-Because Tailwind's [Per-side Border Colors](https://tailwindcss.com/docs/just-in-time-mode#per-side-border-colors)
-utilities are only generated when JIT Mode is enabled, tailwindcss-logical also only generates the following when JIT
-Mode is enabled.
-
-Utilities are generated for the `border-block-start-color`, `border-block-end-color`,
-`border-inline-start-color`, and `border-inline-end-color` properties. These match the values in your `borderColor`
-config object.
+Utilities are generated for the `border-block-color`, `border-inline-color`, `border-block-start-color`,
+`border-block-end-color`, `border-inline-start-color`, and `border-inline-end-color` properties. These match the values
+in your `borderColor` config object.
 
 ```css
+.border-lb-black { border-block-color: #000; }
+.border-li-black { border-inline-color: #000; }
 .border-bs-black { border-block-start-color: #000; }
 .border-be-black { border-block-end-color: #000; }
 .border-is-black { border-inline-start-color: #000; }
