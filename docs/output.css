@@ -465,9 +465,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-0 {
   border-width: 0px;
 }
-.border-b-8 {
-  border-bottom-width: 8px;
-}
 .border-solid {
   border-style: solid;
 }
@@ -486,10 +483,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
-}
-.border-b-blue-400 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -1019,20 +1012,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .divide-i-reverse > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-i-reverse: 1;
 }
-.border-b-8 {
+.border-lb-8 {
   border-top-width: 8px;
   border-bottom-width: 8px;
 }
-[dir="ltr"] .border-i-8 {
+[dir="ltr"] .border-li-8 {
   border-left-width: 8px;
 }
-[dir="rtl"] .border-i-8 {
+[dir="rtl"] .border-li-8 {
   border-right-width: 8px;
 }
-[dir="ltr"] .border-i-8 {
+[dir="ltr"] .border-li-8 {
   border-right-width: 8px;
 }
-[dir="rtl"] .border-i-8 {
+[dir="rtl"] .border-li-8 {
   border-left-width: 8px;
 }
 .border-bs-8 {
@@ -1056,24 +1049,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-bs {
   border-top-width: 1px;
 }
-.border-b-blue-400 {
+.border-lb-blue-400 {
   --tw-border-opacity: 1;
   border-top-color: rgb(96 165 250 / var(--tw-border-opacity));
   border-bottom-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
-[dir="ltr"] .border-i-blue-400 {
+[dir="ltr"] .border-li-blue-400 {
   border-left-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
-[dir="rtl"] .border-i-blue-400 {
+[dir="rtl"] .border-li-blue-400 {
   border-right-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
-[dir="ltr"] .border-i-blue-400 {
+[dir="ltr"] .border-li-blue-400 {
   border-right-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
-[dir="rtl"] .border-i-blue-400 {
+[dir="rtl"] .border-li-blue-400 {
   border-left-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
-.border-i-blue-400 {
+.border-li-blue-400 {
   --tw-border-opacity: 1;
 }
 .border-bs-blue-400 {
