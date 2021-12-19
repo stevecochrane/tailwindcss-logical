@@ -34,7 +34,7 @@ module.exports = {
 }
 ```
 
-Before Tailwind v3 it was necessary to add the variants you needed for tailwindcss-logical to `'variants.logical'` in
+Before Tailwind v3 it was necessary to add the variants you needed for tailwindcss-logical to `variants.logical` in
 your Tailwind config file, but now this is no longer necessary.
 
 ## What are CSS Logical Properties and Values?
@@ -291,8 +291,11 @@ If there are any notable omissions that you think should be supported, please
 
 Browser support for CSS Logical Properties and Values has come a long way in 2021. Nearly all of the utilities provided
 with this plugin now have widespread support across major browsers: Edge, Firefox, Chrome, Safari, Safari for iOS, and
-Chrome for Android included. Some exceptions are flow-relative `resize`, flow-relative `float`, and flow-relative
-`overscroll-behavior`, and none of the logical properties and values are supported in Internet Explorer 11.
+Chrome for Android included. Some exceptions are
+[flow-relative `resize`](https://caniuse.com/mdn-css_properties_resize_flow_relative_support),
+[flow-relative `float`](https://caniuse.com/mdn-css_properties_float_flow_relative_values), and
+[flow-relative `overscroll-behavior`](https://caniuse.com/mdn-css_properties_overscroll-behavior-block), and none of
+the logical properties and values are supported in Internet Explorer 11.
 
 If some utilities don't seem to work correctly, be sure to check [Can I use...](https://caniuse.com/) to see if that
 property or value is supported by your browser. Relevant Can I use... links for each set of utilities are included in
