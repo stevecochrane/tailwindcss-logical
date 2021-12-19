@@ -5,11 +5,13 @@ const plugin = require('../index.js');
 
 const blockSizeStyles = require('./output/blockSize');
 const borderColorStyles = require('./output/borderColor');
+const borderColorPseudoSelectorStyles = require('./output/borderColor-pseudoSelectors');
 const borderColorWithBorderOpacityStyles = require('./output/borderColor-borderOpacity');
-const borderColorDarkModeStyles = require('./output/borderColor-darkMode');
+const borderColorWithBorderOpacityPseudoSelectorStyles = require('./output/borderColor-borderOpacity-pseudoSelectors');
 const borderRadiusStyles = require('./output/borderRadius');
 const borderWidthStyles = require('./output/borderWidth');
 const divideWidthStyles = require('./output/divideWidth');
+const divideWidthReverseStyles = require('./output/divideWidth-reverse');
 const inlineSizeStyles = require('./output/inlineSize');
 const insetStyles = require('./output/inset');
 const marginStyles = require('./output/margin');
@@ -20,6 +22,7 @@ const minInlineSizeStyles = require('./output/minInlineSize');
 const nonconfigurableStyles = require('./output/nonconfigurable');
 const paddingStyles = require('./output/padding');
 const spaceBetweenStyles = require('./output/spaceBetween');
+const spaceBetweenReverseStyles = require('./output/spaceBetween-reverse');
 
 const generatePluginCss = (options = {}) => {
   return postcss(tailwindcss(options))
@@ -31,7 +34,9 @@ const generatePluginCss = (options = {}) => {
 
 const getBaseConfig = () => {
   return {
+    content: ['./tests/templates/*.html'],
     corePlugins: false,
+    plugins: [ plugin ],
     theme: {
       borderColor: {},
       borderRadius: {},
@@ -49,30 +54,23 @@ const getBaseConfig = () => {
       space: {},
       spacing: {},
       width: {}
-    },
-    plugins: [ plugin ],
-    variants: []
+    }
   };
-};
-
-const getBaseJitConfig = () => {
-  const config = getBaseConfig();
-  config.mode = 'jit';
-  config.purge = ['./tests/templates/*.html'];
-  delete config.variants;
-  return config;
 };
 
 describe('float, clear, text-align, resize, and overscroll-behavior', () => {
   const testNonconfigurableStyles = (config) => {
     return generatePluginCss(config)
       .then(css => {
-        expect(css).toMatchCss(nonconfigurableStyles);
+        expect(css).toMatchCss(`
+          ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
+        `);
       });
   };
 
   test('default mode', () => testNonconfigurableStyles(getBaseConfig()));
-  test('JIT mode', () => testNonconfigurableStyles(getBaseJitConfig()));
 });
 
 describe('block-size, with default height and spacing configs', () => {
@@ -85,12 +83,13 @@ describe('block-size, with default height and spacing configs', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${blockSizeStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
 
   test('default mode', () => testBlockSize(getBaseConfig()));
-  test('JIT mode', () => testBlockSize(getBaseJitConfig()));
 });
 
 describe('min-block-size, with default minHeight config', () => {
@@ -102,12 +101,13 @@ describe('min-block-size, with default minHeight config', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${minBlockSizeStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
 
   test('default mode', () => testMinBlockSize(getBaseConfig()));
-  test('JIT mode', () => testMinBlockSize(getBaseJitConfig()));
 });
 
 describe('max-block-size, with default maxHeight and spacing configs', () => {
@@ -120,12 +120,13 @@ describe('max-block-size, with default maxHeight and spacing configs', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${maxBlockSizeStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
 
   test('default mode', () => testMaxBlockSize(getBaseConfig()));
-  test('JIT mode', () => testMaxBlockSize(getBaseJitConfig()));
 });
 
 describe('inline-size, with default width and spacing configs', () => {
@@ -138,12 +139,13 @@ describe('inline-size, with default width and spacing configs', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${inlineSizeStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
 
   test('default mode', () => testInlineSize(getBaseConfig()));
-  test('JIT mode', () => testInlineSize(getBaseJitConfig()));
 });
 
 describe('min-inline-size, with default minWidth config', () => {
@@ -155,12 +157,13 @@ describe('min-inline-size, with default minWidth config', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${minInlineSizeStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
 
   test('default mode', () => testMinInlineSize(getBaseConfig()));
-  test('JIT mode', () => testMinInlineSize(getBaseJitConfig()));
 });
 
 describe('max-inline-size, with default maxWidth config', () => {
@@ -172,12 +175,13 @@ describe('max-inline-size, with default maxWidth config', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${maxInlineSizeStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
 
   test('default mode', () => testMaxInlineSize(getBaseConfig()));
-  test('JIT mode', () => testMaxInlineSize(getBaseJitConfig()));
 });
 
 describe('margin shorthand and single-side, with default margin and spacing configs', () => {
@@ -190,12 +194,13 @@ describe('margin shorthand and single-side, with default margin and spacing conf
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${marginStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
 
   test('default mode', () => testMargin(getBaseConfig()));
-  test('JIT mode', () => testMargin(getBaseJitConfig()));
 });
 
 describe('padding shorthand and single-side, with default padding and spacing configs', () => {
@@ -208,12 +213,13 @@ describe('padding shorthand and single-side, with default padding and spacing co
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${paddingStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
 
   test('default mode', () => testPadding(getBaseConfig()));
-  test('JIT mode', () => testPadding(getBaseJitConfig()));
 });
 
 describe('space between, with default space and spacing configs', () => {
@@ -226,12 +232,13 @@ describe('space between, with default space and spacing configs', () => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
           ${spaceBetweenStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
 
   test('default mode', () => testSpaceBetween(getBaseConfig()));
-  test('JIT mode', () => testSpaceBetween(getBaseJitConfig()));
 });
 
 describe('inset shorthand and single-side, with default inset and spacing configs', () => {
@@ -243,13 +250,14 @@ describe('inset shorthand and single-side, with default inset and spacing config
       .then(css => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
           ${insetStyles}
+          ${divideWidthReverseStyles}
         `);
       });
   };
 
   test('default mode', () => testInset(getBaseConfig()));
-  test('JIT mode', () => testInset(getBaseJitConfig()));
 });
 
 describe('border-width, with default borderWidth config', () => {
@@ -260,13 +268,14 @@ describe('border-width, with default borderWidth config', () => {
       .then(css => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
           ${borderWidthStyles}
         `);
       });
   };
 
   test('default mode', () => testBorderWidth(getBaseConfig()));
-  test('JIT mode', () => testBorderWidth(getBaseJitConfig()));
 });
 
 describe('border-color, with default borderColor config', () => {
@@ -279,41 +288,16 @@ describe('border-color, with default borderColor config', () => {
       .then(css => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
-        `);
-      });
-  });
-
-  test('JIT mode', () => {
-    let config = getBaseJitConfig();
-    delete config.theme.color;
-    delete config.theme.borderColor;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
           ${borderColorStyles}
+          ${borderColorPseudoSelectorStyles}
         `);
       });
   });
 
-  test('JIT mode with dark mode enabled', () => {
-    let config = getBaseJitConfig();
-    config.darkMode = 'media';
-    delete config.theme.color;
-    delete config.theme.borderColor;
-
-    return generatePluginCss(config)
-      .then(css => {
-        expect(css).toMatchCss(`
-          ${nonconfigurableStyles}
-          ${borderColorDarkModeStyles}
-        `);
-      });
-  });
-
-  test('JIT mode with borderOpacity core plugin enabled', () => {
-    let config = getBaseJitConfig();
+  test('With borderOpacity core plugin enabled', () => {
+    let config = getBaseConfig();
     config.corePlugins = ['borderOpacity'];
     delete config.theme.color;
     delete config.theme.borderColor;
@@ -322,7 +306,10 @@ describe('border-color, with default borderColor config', () => {
       .then(css => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
           ${borderColorWithBorderOpacityStyles}
+          ${borderColorWithBorderOpacityPseudoSelectorStyles}
         `);
       });
   });
@@ -336,13 +323,14 @@ describe('border-radius side and corner, with default borderRadius config', () =
       .then(css => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
+          ${spaceBetweenReverseStyles}
+          ${divideWidthReverseStyles}
           ${borderRadiusStyles}
         `);
       });
   };
 
   test('default mode', () => testBorderRadius(getBaseConfig()));
-  test('JIT mode', () => testBorderRadius(getBaseJitConfig()));
 });
 
 describe('divide width, with default divideWidth and borderWidth configs', () => {
@@ -354,12 +342,13 @@ describe('divide width, with default divideWidth and borderWidth configs', () =>
       .then(css => {
         expect(css).toMatchCss(`
           ${nonconfigurableStyles}
-          ${borderWidthStyles}
+          ${spaceBetweenReverseStyles}
           ${divideWidthStyles}
+          ${divideWidthReverseStyles}
+          ${borderWidthStyles}
         `);
       });
   };
 
   test('default mode', () => testDivideWidth(getBaseConfig()));
-  test('JIT mode', () => testDivideWidth(getBaseJitConfig()));
 });

@@ -288,11 +288,11 @@ module.exports = `
   }
 
   .-mlb-0 {
-    margin-block: 0px
+    margin-block: -0px
   }
 
   .-mli-0 {
-    margin-inline: 0px
+    margin-inline: -0px
   }
 
   .-mlb-1 {
@@ -1144,19 +1144,19 @@ module.exports = `
   }
 
   .-mbs-0 {
-    margin-block-start: 0px
+    margin-block-start: -0px
   }
 
   .-mbe-0 {
-    margin-block-end: 0px
+    margin-block-end: -0px
   }
 
   .-mis-0 {
-    margin-inline-start: 0px
+    margin-inline-start: -0px
   }
 
   .-mie-0 {
-    margin-inline-end: 0px
+    margin-inline-end: -0px
   }
 
   .-mbs-1 {

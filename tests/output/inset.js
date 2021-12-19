@@ -288,11 +288,11 @@ module.exports = `
   }
 
   .-inset-block-0 {
-    inset-block: 0px
+    inset-block: -0px
   }
 
   .-inset-inline-0 {
-    inset-inline: 0px
+    inset-inline: -0px
   }
 
   .-inset-block-1 {
@@ -1256,19 +1256,19 @@ module.exports = `
   }
 
   .-block-start-0 {
-    inset-block-start: 0px
+    inset-block-start: -0px
   }
 
   .-block-end-0 {
-    inset-block-end: 0px
+    inset-block-end: -0px
   }
 
   .-inline-start-0 {
-    inset-inline-start: 0px
+    inset-inline-start: -0px
   }
 
   .-inline-end-0 {
-    inset-inline-end: 0px
+    inset-inline-end: -0px
   }
 
   .-block-start-1 {

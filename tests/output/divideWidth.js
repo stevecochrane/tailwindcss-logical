@@ -58,12 +58,4 @@ module.exports = `
     border-inline-start-width: calc(1px * calc(1 - var(--tw-divide-i-reverse)));
     border-inline-end-width: calc(1px * var(--tw-divide-i-reverse))
   }
-
-  .divide-b-reverse > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-b-reverse: 1
-  }
-
-  .divide-i-reverse > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-i-reverse: 1
-  }
 `;

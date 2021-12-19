@@ -6,14 +6,9 @@
 [![codecov](https://codecov.io/gh/stevecochrane/tailwindcss-logical/branch/master/graph/badge.svg)](https://codecov.io/gh/stevecochrane/tailwindcss-logical)
 [![License](https://img.shields.io/npm/l/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/blob/master/LICENSE.txt)
 
-A [CSS Logical Properties and Values](https://drafts.csswg.org/css-logical/) plugin for
-[Tailwind CSS](https://tailwindcss.com). Compatible with Tailwind v1.2.0+ and updated for Tailwind v2, with support for
-JIT Mode (including all [new features](https://tailwindcss.com/docs/just-in-time-mode#new-features) except arbitrary
-value support) and Dark Mode.
-
-*Update for December 9, 2021: Tailwind v3 was released today, and this plugin has not been fully tested with it yet.
-Work is being done now and this will be updated for Tailwind v3 compatibility as soon as possible, but for the time
-being, it's best to assume that this isn't compatible yet.*
+A [CSS Logical Properties and Values](https://www.w3.org/TR/css-logical-1/) plugin for
+[Tailwind CSS](https://tailwindcss.com), compatible with Tailwind v3. For compatibility with Tailwind v2 and v1.2.0+,
+please use version v2.0.0 of this plugin.
 
 ## Demo
 
@@ -39,17 +34,8 @@ module.exports = {
 }
 ```
 
-To enable [variants](https://tailwindcss.com/docs/configuring-variants) (breakpoint-specific styles, hover styles, and
-more), add `'variants.logical'` to your Tailwind config file:
-
-```js
-// tailwind.config.js
-module.exports = {
-  variants: {
-    logical: ['responsive', 'hover']
-  }
-}
-```
+Before Tailwind v3 it was necessary to add the variants you needed for tailwindcss-logical to `variants.logical` in
+your Tailwind config file, but now this is no longer necessary.
 
 ## What are CSS Logical Properties and Values?
 
@@ -198,28 +184,28 @@ the values in your `inset` config object.
 
 ### Flow-relative Border Widths
 
-Utilities are generated for the `border-block-start-width`, `border-block-end-width`,
-`border-inline-start-width`, and `border-inline-end-width` properties. These match the values in your `borderWidth`
-config object.
+Utilities are generated for the `border-block-width`, `border-inline-width`, `border-block-start-width`,
+`border-block-end-width`, `border-inline-start-width`, and `border-inline-end-width` properties. These match the values
+in your `borderWidth` config object.
 
 ```css
+.border-lb-2 { border-block-width: 2px; }
+.border-li-2 { border-inline-width: 2px; }
 .border-bs-2 { border-block-start-width: 2px; }
 .border-be-2 { border-block-end-width: 2px; }
 .border-is-2 { border-inline-start-width: 2px; }
 .border-ie-2 { border-inline-end-width: 2px; }
 ```
 
-### Flow-relative Border Colors (JIT Mode)
+### Flow-relative Border Colors
 
-Because Tailwind's [Per-side Border Colors](https://tailwindcss.com/docs/just-in-time-mode#per-side-border-colors)
-utilities are only generated when JIT Mode is enabled, tailwindcss-logical also only generates the following when JIT
-Mode is enabled.
-
-Utilities are generated for the `border-block-start-color`, `border-block-end-color`,
-`border-inline-start-color`, and `border-inline-end-color` properties. These match the values in your `borderColor`
-config object.
+Utilities are generated for the `border-block-color`, `border-inline-color`, `border-block-start-color`,
+`border-block-end-color`, `border-inline-start-color`, and `border-inline-end-color` properties. These match the values
+in your `borderColor` config object.
 
 ```css
+.border-lb-black { border-block-color: #000; }
+.border-li-black { border-inline-color: #000; }
 .border-bs-black { border-block-start-color: #000; }
 .border-be-black { border-block-end-color: #000; }
 .border-is-black { border-inline-start-color: #000; }
@@ -282,20 +268,18 @@ shorthand utilities for rounding a side of an element. These match the values in
 
 ## What's Not Included
 
-While everything in the [CSS Logical Properties and Values Level 1](https://drafts.csswg.org/css-logical/)
+While everything in the [CSS Logical Properties and Values Level 1](https://www.w3.org/TR/css-logical-1/)
 specification has been evaluated and most features are supported, this plugin does not generate utilities for
 everything. If something does not have a non-logical equivalent in Tailwind's defaults, it is not supported.
 
 * Logical Values for the `caption-side` property: Tailwind does not have `caption-side` utilities.
-* Flow-relative Border Width shorthand properties `border-block-width` and `border-block-height`: Tailwind does not
-  have `border-width` shorthand utilities for the X or Y axis.
 * Flow-relative Border Styles: Tailwind only has `border-style` utilities for all sides of an element at once.
 
 As for other logical properties and values from outside of the main specification:
 
 * Flow-relative Overflow properties `overflow-block` and `overflow-inline`: while Tailwind does support `overflow`,
   this plugin does not support `overflow-block` or `overflow-inline` yet, due to a lack of browser support and
-  polyfills. As of March 2021,
+  polyfills. As of December 2021,
   [only Firefox supports them](https://caniuse.com/mdn-css_properties_overflow-block), and as far as I can
   tell there are no polyfills available. (Neither postcss-preset-env nor postcss-logical apply any transformations on
   these properties.)
@@ -305,9 +289,13 @@ If there are any notable omissions that you think should be supported, please
 
 ## Browser Compatibility
 
-CSS Logical Properties and Values is a fairly new (and still evolving) specification, so browser support varies.
-None of the logical properties and values are supported in Internet Explorer 11, and some, such as Flow-relative
-Offsets and Corner Rounding, are currently only supported in Firefox and Chrome as of March 2021.
+Browser support for CSS Logical Properties and Values has come a long way in 2021. Nearly all of the utilities provided
+with this plugin now have widespread support across major browsers: Edge, Firefox, Chrome, Safari, Safari for iOS, and
+Chrome for Android included. Some exceptions are
+[flow-relative `resize`](https://caniuse.com/mdn-css_properties_resize_flow_relative_support),
+[flow-relative `float`](https://caniuse.com/mdn-css_properties_float_flow_relative_values), and
+[flow-relative `overscroll-behavior`](https://caniuse.com/mdn-css_properties_overscroll-behavior-block), and none of
+the logical properties and values are supported in Internet Explorer 11.
 
 If some utilities don't seem to work correctly, be sure to check [Can I use...](https://caniuse.com/) to see if that
 property or value is supported by your browser. Relevant Can I use... links for each set of utilities are included in
