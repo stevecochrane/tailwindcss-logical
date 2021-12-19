@@ -11,10 +11,6 @@ A [CSS Logical Properties and Values](https://drafts.csswg.org/css-logical/) plu
 JIT Mode (including all [new features](https://tailwindcss.com/docs/just-in-time-mode#new-features) except arbitrary
 value support) and Dark Mode.
 
-*Update for December 9, 2021: Tailwind v3 was released today, and this plugin has not been fully tested with it yet.
-Work is being done now and this will be updated for Tailwind v3 compatibility as soon as possible, but for the time
-being, it's best to assume that this isn't compatible yet.*
-
 ## Demo
 
 View the [demo page](https://stevecochrane.github.io/tailwindcss-logical/) for a visual walkthrough, or read on to get
@@ -39,17 +35,8 @@ module.exports = {
 }
 ```
 
-To enable [variants](https://tailwindcss.com/docs/configuring-variants) (breakpoint-specific styles, hover styles, and
-more), add `'variants.logical'` to your Tailwind config file:
-
-```js
-// tailwind.config.js
-module.exports = {
-  variants: {
-    logical: ['responsive', 'hover']
-  }
-}
-```
+Before Tailwind v3 it was necessary to add the variants you needed for tailwindcss-logical to `'variants.logical'` in
+your Tailwind config file, but now this is no longer necessary.
 
 ## What are CSS Logical Properties and Values?
 
