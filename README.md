@@ -6,7 +6,7 @@
 [![codecov](https://codecov.io/gh/stevecochrane/tailwindcss-logical/branch/master/graph/badge.svg)](https://codecov.io/gh/stevecochrane/tailwindcss-logical)
 [![License](https://img.shields.io/npm/l/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/blob/master/LICENSE.txt)
 
-A [CSS Logical Properties and Values](https://drafts.csswg.org/css-logical/) plugin for
+A [CSS Logical Properties and Values](https://www.w3.org/TR/css-logical-1/) plugin for
 [Tailwind CSS](https://tailwindcss.com). Compatible with Tailwind v1.2.0+ and updated for Tailwind v2, with support for
 JIT Mode (including all [new features](https://tailwindcss.com/docs/just-in-time-mode#new-features) except arbitrary
 value support) and Dark Mode.
@@ -269,7 +269,7 @@ shorthand utilities for rounding a side of an element. These match the values in
 
 ## What's Not Included
 
-While everything in the [CSS Logical Properties and Values Level 1](https://drafts.csswg.org/css-logical/)
+While everything in the [CSS Logical Properties and Values Level 1](https://www.w3.org/TR/css-logical-1/)
 specification has been evaluated and most features are supported, this plugin does not generate utilities for
 everything. If something does not have a non-logical equivalent in Tailwind's defaults, it is not supported.
 
