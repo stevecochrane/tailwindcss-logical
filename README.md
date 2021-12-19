@@ -289,9 +289,10 @@ If there are any notable omissions that you think should be supported, please
 
 ## Browser Compatibility
 
-CSS Logical Properties and Values is a fairly new (and still evolving) specification, so browser support varies.
-None of the logical properties and values are supported in Internet Explorer 11, and some, such as Flow-relative
-Offsets and Corner Rounding, are currently only supported in Firefox and Chrome as of March 2021.
+Browser support for CSS Logical Properties and Values has come a long way in 2021. Nearly all of the utilities provided
+with this plugin now have widespread support across major browsers: Edge, Firefox, Chrome, Safari, Safari for iOS, and
+Chrome for Android included. Some exceptions are flow-relative `resize`, flow-relative `float`, and flow-relative
+`overscroll-behavior`, and none of the logical properties and values are supported in Internet Explorer 11.
 
 If some utilities don't seem to work correctly, be sure to check [Can I use...](https://caniuse.com/) to see if that
 property or value is supported by your browser. Relevant Can I use... links for each set of utilities are included in
