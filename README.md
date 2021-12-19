@@ -7,9 +7,8 @@
 [![License](https://img.shields.io/npm/l/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/blob/master/LICENSE.txt)
 
 A [CSS Logical Properties and Values](https://www.w3.org/TR/css-logical-1/) plugin for
-[Tailwind CSS](https://tailwindcss.com). Compatible with Tailwind v1.2.0+ and updated for Tailwind v2, with support for
-JIT Mode (including all [new features](https://tailwindcss.com/docs/just-in-time-mode#new-features) except arbitrary
-value support) and Dark Mode.
+[Tailwind CSS](https://tailwindcss.com), compatible with Tailwind v3. For compatibility with Tailwind v2 and v1.2.0+,
+please use version v2.0.0 of this plugin.
 
 ## Demo
 
