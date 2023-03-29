@@ -10,6 +10,9 @@ A [CSS Logical Properties and Values](https://www.w3.org/TR/css-logical-1/) plug
 [Tailwind CSS](https://tailwindcss.com), compatible with Tailwind v3. For compatibility with Tailwind v2 and v1.2.0+,
 please use version v2.0.0 of this plugin.
 
+*Note: [Tailwind CSS added official support for Logical Properties in v3.3 on March 28, 2023.](https://tailwindcss.com/blog/tailwindcss-v3-3#simplified-rtl-support-with-logical-properties)
+It is recommended to try the update and see if that is sufficient for your needs before using this plugin.*
+
 ## Demo
 
 View the [demo page](https://stevecochrane.github.io/tailwindcss-logical/) for a visual walkthrough, or read on to get
