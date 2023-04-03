@@ -3,8 +3,8 @@
 ![build](https://github.com/stevecochrane/tailwindcss-logical/workflows/build/badge.svg)
 [![NPM](https://img.shields.io/npm/v/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/releases)
 [![Downloads](https://img.shields.io/npm/dt/tailwindcss-logical.svg)](https://www.npmjs.com/package/tailwindcss)
-[![codecov](https://codecov.io/gh/stevecochrane/tailwindcss-logical/branch/master/graph/badge.svg)](https://codecov.io/gh/stevecochrane/tailwindcss-logical)
-[![License](https://img.shields.io/npm/l/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/blob/master/LICENSE.txt)
+[![codecov](https://codecov.io/gh/stevecochrane/tailwindcss-logical/branch/main/graph/badge.svg)](https://codecov.io/gh/stevecochrane/tailwindcss-logical)
+[![License](https://img.shields.io/npm/l/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/blob/main/LICENSE.txt)
 
 A [CSS Logical Properties and Values](https://www.w3.org/TR/css-logical-1/) plugin for
 [Tailwind CSS](https://tailwindcss.com), compatible with Tailwind v3. For compatibility with Tailwind v2 and v1.2.0+,
@@ -326,7 +326,7 @@ values will be converted to attribute selectors that any browser can understand.
 This process is used for this project's
 [demo page](https://stevecochrane.github.io/tailwindcss-logical/), and for a look at how
 that is configured for PostCSS, check out the demo's
-[postcss.config.js](https://github.com/stevecochrane/tailwindcss-logical/blob/master/docs/postcss.config.js) file.
+[postcss.config.js](https://github.com/stevecochrane/tailwindcss-logical/blob/main/docs/postcss.config.js) file.
 
 ## Roadmap
 
