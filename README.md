@@ -282,7 +282,7 @@ As for other logical properties and values from outside of the main specificatio
 
 * Flow-relative Overflow properties `overflow-block` and `overflow-inline`: while Tailwind does support `overflow`,
   this plugin does not support `overflow-block` or `overflow-inline` yet, due to a lack of browser support and
-  polyfills. As of December 2021,
+  polyfills. As of June 2024,
   [only Firefox supports them](https://caniuse.com/mdn-css_properties_overflow-block), and as far as I can
   tell there are no polyfills available. (Neither postcss-preset-env nor postcss-logical apply any transformations on
   these properties.)
@@ -292,20 +292,16 @@ If there are any notable omissions that you think should be supported, please
 
 ## Browser Compatibility
 
-Browser support for CSS Logical Properties and Values has come a long way in 2021. Nearly all of the utilities provided
-with this plugin now have widespread support across major browsers: Edge, Firefox, Chrome, Safari, Safari for iOS, and
-Chrome for Android included. Some exceptions are
-[flow-relative `resize`](https://caniuse.com/mdn-css_properties_resize_flow_relative_support),
-[flow-relative `float`](https://caniuse.com/mdn-css_properties_float_flow_relative_values), and
-[flow-relative `overscroll-behavior`](https://caniuse.com/mdn-css_properties_overscroll-behavior-block), and none of
-the logical properties and values are supported in Internet Explorer 11.
+Browser support for CSS Logical Properties and Values has come a long way. As of June 2024, all of the utilities
+provided with this plugin are supported in at least the last two major versions of all of the following browsers: Edge,
+Firefox, Chrome, Safari, Safari for iOS, Chrome for Android, and more.
 
-If some utilities don't seem to work correctly, be sure to check [Can I use...](https://caniuse.com/) to see if that
+If some utilities don't seem to work correctly, you can refer to [Can I use...](https://caniuse.com/) to see if that
 property or value is supported by your browser. Relevant Can I use... links for each set of utilities are included in
 the [demo page](https://stevecochrane.github.io/tailwindcss-logical/).
 
-If better browser support is required, you can use [PostCSS](https://postcss.org) to improve compatibility. Here are
-two possible solutions:
+If better browser support for legacy browsers is required, you can use [PostCSS](https://postcss.org) to improve
+compatibility. Here are two possible solutions:
 
 1. [postcss-preset-env](https://github.com/csstools/postcss-preset-env) set to `stage: 2` or lower
 2. [postcss-logical](https://github.com/csstools/postcss-logical) followed by
@@ -323,10 +319,27 @@ values will be converted to attribute selectors that any browser can understand.
 [dir="rtl"] .float-start { float: right; }
 ```
 
-This process is used for this project's
-[demo page](https://stevecochrane.github.io/tailwindcss-logical/), and for a look at how
-that is configured for PostCSS, check out the demo's
-[postcss.config.js](https://github.com/stevecochrane/tailwindcss-logical/blob/main/docs/postcss.config.js) file.
+Here is how both approaches can be configured in your postcss.config.js file:
+```js
+// Using postcss-logical plus postcss-dir-pseudo-class:
+module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    require('postcss-logical'),
+    require('postcss-dir-pseudo-class')
+  ]
+};
+```
+
+```js
+// Using postcss-preset-env:
+module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    require('postcss-preset-env')
+  ]
+};
+```
 
 ## Roadmap
 
