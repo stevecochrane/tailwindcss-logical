@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "build:demo": "postcss docs/input.css -o docs/output.css --config docs/postcss.config.js",
+    "build:demo": "tailwindcss -i docs/input.css -o docs/output.css --config docs/tailwind.config.js",
     "lint": "eslint --ignore-path .eslintignore --cache .",
     "test": "jest --coverage"
   },
@@ -30,16 +30,11 @@
     "tailwindcss": "3.3.1"
   },
   "devDependencies": {
-    "autoprefixer": "10.0.2",
     "eslint": "7.13.0",
     "eslint-plugin-jest": "24.1.0",
     "husky": "4.3.0",
     "jest": "26.6.1",
     "jest-matcher-css": "1.1.0",
-    "lint-staged": "10.5.1",
-    "postcss": "8.4.31",
-    "postcss-cli": "8.3.0",
-    "postcss-dir-pseudo-class": "5.0.0",
-    "postcss-logical": "4.0.2"
+    "lint-staged": "10.5.1"
   }
 }
