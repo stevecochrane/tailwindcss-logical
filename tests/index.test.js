@@ -7,6 +7,7 @@ const blockSizeStyles = require("./output/blockSize");
 const borderColorStyles = require("./output/borderColor");
 const borderRadiusStyles = require("./output/borderRadius");
 const borderWidthStyles = require("./output/borderWidth");
+const divideWidthStyles = require("./output/divideWidth");
 const inlineSizeStyles = require("./output/inlineSize");
 const insetStyles = require("./output/inset");
 const marginStyles = require("./output/margin");
@@ -200,5 +201,15 @@ describe("individual plugin tests", () => {
     };
 
     test("default mode", () => testBorderRadius());
+  });
+
+  describe.skip("divide width", () => {
+    const testDivideWidth = () => {
+      return generatePluginCss("divideWidth").then((css) => {
+        expect(css).toMatchCss(divideWidthStyles);
+      });
+    };
+
+    test("default mode", () => testDivideWidth());
   });
 });
