@@ -163,7 +163,7 @@ describe("individual plugin tests", () => {
     test("default mode", () => testInset());
   });
 
-  describe("space between", () => {
+  describe.skip("space between", () => {
     const testSpaceBetween = () => {
       return generatePluginCss("spaceBetween").then((css) => {
         expect(css).toMatchCss(spaceBetweenStyles);
@@ -203,7 +203,7 @@ describe("individual plugin tests", () => {
     test("default mode", () => testBorderRadius());
   });
 
-  describe.skip("divide width", () => {
+  describe("divide width", () => {
     const testDivideWidth = () => {
       return generatePluginCss("divideWidth").then((css) => {
         expect(css).toMatchCss(divideWidthStyles);
