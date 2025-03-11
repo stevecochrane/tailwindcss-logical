@@ -153,7 +153,7 @@ describe("individual plugin tests", () => {
     test("default mode", () => testPadding());
   });
 
-  describe.skip("inset shorthand and single-side", () => {
+  describe("inset shorthand and single-side", () => {
     const testInset = () => {
       return generatePluginCss("inset").then((css) => {
         expect(css).toMatchCss(insetStyles);
@@ -203,7 +203,7 @@ describe("individual plugin tests", () => {
     test("default mode", () => testBorderRadius());
   });
 
-  describe("divide width", () => {
+  describe.skip("divide width", () => {
     const testDivideWidth = () => {
       return generatePluginCss("divideWidth").then((css) => {
         expect(css).toMatchCss(divideWidthStyles);

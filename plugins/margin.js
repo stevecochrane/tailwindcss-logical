@@ -1,4 +1,16 @@
 module.exports = function ({ matchUtilities, theme }) {
+  const calculatedValues = {};
+
+  for (const property in theme("margin")) {
+    if (property === "px") {
+      calculatedValues[property] = "1px";
+    } else if (property === "auto") {
+      calculatedValues[property] = "auto";
+    } else {
+      calculatedValues[property] = `calc(var(--spacing) * ${property})`;
+    }
+  }
+
   matchUtilities(
     {
       mlb: (value) => ({
@@ -10,7 +22,7 @@ module.exports = function ({ matchUtilities, theme }) {
     },
     {
       supportsNegativeValues: true,
-      values: theme("margin"),
+      values: calculatedValues,
     },
   );
   matchUtilities(
@@ -30,7 +42,7 @@ module.exports = function ({ matchUtilities, theme }) {
     },
     {
       supportsNegativeValues: true,
-      values: theme("margin"),
+      values: calculatedValues,
     },
   );
 };

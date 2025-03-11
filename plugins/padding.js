@@ -1,4 +1,14 @@
 module.exports = function ({ matchUtilities, theme }) {
+  const calculatedValues = {};
+
+  for (const property in theme("padding")) {
+    if (property === "px") {
+      calculatedValues[property] = "1px";
+    } else {
+      calculatedValues[property] = `calc(var(--spacing) * ${property})`;
+    }
+  }
+
   matchUtilities(
     {
       plb: (value) => ({
@@ -8,7 +18,7 @@ module.exports = function ({ matchUtilities, theme }) {
         paddingInline: value,
       }),
     },
-    { values: theme("padding") },
+    { values: calculatedValues },
   );
   matchUtilities(
     {
@@ -25,6 +35,6 @@ module.exports = function ({ matchUtilities, theme }) {
         paddingInlineEnd: value,
       }),
     },
-    { values: theme("padding") },
+    { values: calculatedValues },
   );
 };

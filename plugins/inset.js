@@ -1,4 +1,18 @@
 module.exports = function ({ matchUtilities, theme }) {
+  const calculatedValues = {};
+
+  for (const property in theme("inset")) {
+    if (property === "px") {
+      calculatedValues[property] = "1px";
+    } else if (property === "full") {
+      calculatedValues[property] = "100%";
+    } else if (property === "auto") {
+      calculatedValues[property] = "auto";
+    } else {
+      calculatedValues[property] = `calc(var(--spacing) * ${property})`;
+    }
+  }
+
   matchUtilities(
     {
       "inset-block": (value) => ({
@@ -10,7 +24,7 @@ module.exports = function ({ matchUtilities, theme }) {
     },
     {
       supportsNegativeValues: true,
-      values: theme("inset"),
+      values: calculatedValues,
     },
   );
   matchUtilities(
@@ -30,7 +44,7 @@ module.exports = function ({ matchUtilities, theme }) {
     },
     {
       supportsNegativeValues: true,
-      values: theme("inset"),
+      values: calculatedValues,
     },
   );
 };
