@@ -7,6 +7,18 @@ module.exports = `
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         "Liberation Mono", "Courier New", monospace;
+      --spacing: 0.25rem;
+      --container-xs: 20rem;
+      --container-sm: 24rem;
+      --container-md: 28rem;
+      --container-lg: 32rem;
+      --container-xl: 36rem;
+      --container-2xl: 42rem;
+      --container-3xl: 48rem;
+      --container-4xl: 56rem;
+      --container-5xl: 64rem;
+      --container-6xl: 72rem;
+      --container-7xl: 80rem;
       --default-font-family: var(--font-sans);
       --default-font-feature-settings: var(--font-sans--font-feature-settings);
       --default-font-variation-settings: var(
@@ -232,26 +244,122 @@ module.exports = `
     }
   }
   @layer utilities {
-    .max-is-0 {
-      max-inline-size: 0px;
+    .max-is-0\\.5 {
+      max-inline-size: calc(var(--spacing) * 0.5);
+    }
+    .max-is-1 {
+      max-inline-size: calc(var(--spacing) * 1);
+    }
+    .max-is-1\\.5 {
+      max-inline-size: calc(var(--spacing) * 1.5);
+    }
+    .max-is-2 {
+      max-inline-size: calc(var(--spacing) * 2);
+    }
+    .max-is-2\\.5 {
+      max-inline-size: calc(var(--spacing) * 2.5);
     }
     .max-is-2xl {
-      max-inline-size: 42rem;
+      max-inline-size: var(--container-2xl);
+    }
+    .max-is-3 {
+      max-inline-size: calc(var(--spacing) * 3);
+    }
+    .max-is-3\\.5 {
+      max-inline-size: calc(var(--spacing) * 3.5);
     }
     .max-is-3xl {
-      max-inline-size: 48rem;
+      max-inline-size: var(--container-3xl);
+    }
+    .max-is-4 {
+      max-inline-size: calc(var(--spacing) * 4);
     }
     .max-is-4xl {
-      max-inline-size: 56rem;
+      max-inline-size: var(--container-4xl);
+    }
+    .max-is-5 {
+      max-inline-size: calc(var(--spacing) * 5);
     }
     .max-is-5xl {
-      max-inline-size: 64rem;
+      max-inline-size: var(--container-5xl);
+    }
+    .max-is-6 {
+      max-inline-size: calc(var(--spacing) * 6);
     }
     .max-is-6xl {
-      max-inline-size: 72rem;
+      max-inline-size: var(--container-6xl);
+    }
+    .max-is-7 {
+      max-inline-size: calc(var(--spacing) * 7);
     }
     .max-is-7xl {
-      max-inline-size: 80rem;
+      max-inline-size: var(--container-7xl);
+    }
+    .max-is-8 {
+      max-inline-size: calc(var(--spacing) * 8);
+    }
+    .max-is-9 {
+      max-inline-size: calc(var(--spacing) * 9);
+    }
+    .max-is-10 {
+      max-inline-size: calc(var(--spacing) * 10);
+    }
+    .max-is-11 {
+      max-inline-size: calc(var(--spacing) * 11);
+    }
+    .max-is-12 {
+      max-inline-size: calc(var(--spacing) * 12);
+    }
+    .max-is-14 {
+      max-inline-size: calc(var(--spacing) * 14);
+    }
+    .max-is-16 {
+      max-inline-size: calc(var(--spacing) * 16);
+    }
+    .max-is-20 {
+      max-inline-size: calc(var(--spacing) * 20);
+    }
+    .max-is-24 {
+      max-inline-size: calc(var(--spacing) * 24);
+    }
+    .max-is-28 {
+      max-inline-size: calc(var(--spacing) * 28);
+    }
+    .max-is-32 {
+      max-inline-size: calc(var(--spacing) * 32);
+    }
+    .max-is-36 {
+      max-inline-size: calc(var(--spacing) * 36);
+    }
+    .max-is-40 {
+      max-inline-size: calc(var(--spacing) * 40);
+    }
+    .max-is-44 {
+      max-inline-size: calc(var(--spacing) * 44);
+    }
+    .max-is-48 {
+      max-inline-size: calc(var(--spacing) * 48);
+    }
+    .max-is-52 {
+      max-inline-size: calc(var(--spacing) * 52);
+    }
+    .max-is-56 {
+      max-inline-size: calc(var(--spacing) * 56);
+    }
+    .max-is-60 {
+      max-inline-size: calc(var(--spacing) * 60);
+    }
+    .max-is-64 {
+      max-inline-size: calc(var(--spacing) * 64);
+    }
+    .max-is-72 {
+      max-inline-size: calc(var(--spacing) * 72);
+    }
+    .max-is-80 {
+      max-inline-size: calc(var(--spacing) * 80);
+    }
+    .max-is-96 {
+      max-inline-size: calc(var(--spacing) * 96);
     }
     .max-is-fit {
       max-inline-size: fit-content;
@@ -260,13 +368,13 @@ module.exports = `
       max-inline-size: 100%;
     }
     .max-is-lg {
-      max-inline-size: 32rem;
+      max-inline-size: var(--container-lg);
     }
     .max-is-max {
       max-inline-size: max-content;
     }
     .max-is-md {
-      max-inline-size: 28rem;
+      max-inline-size: var(--container-md);
     }
     .max-is-min {
       max-inline-size: min-content;
@@ -278,13 +386,13 @@ module.exports = `
       max-inline-size: 1px;
     }
     .max-is-sm {
-      max-inline-size: 24rem;
+      max-inline-size: var(--container-sm);
     }
     .max-is-xl {
-      max-inline-size: 36rem;
+      max-inline-size: var(--container-xl);
     }
     .max-is-xs {
-      max-inline-size: 20rem;
+      max-inline-size: var(--container-xs);
     }
   }
 `;
