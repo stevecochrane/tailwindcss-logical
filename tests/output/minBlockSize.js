@@ -7,6 +7,7 @@ module.exports = `
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         "Liberation Mono", "Courier New", monospace;
+      --spacing: 0.25rem;
       --default-font-family: var(--font-sans);
       --default-font-feature-settings: var(--font-sans--font-feature-settings);
       --default-font-variation-settings: var(
@@ -233,19 +234,19 @@ module.exports = `
   }
   @layer utilities {
     .min-bs-0 {
-      min-block-size: 0px;
+      min-block-size: calc(var(--spacing) * 0);
     }
     .min-bs-0\\.5 {
-      min-block-size: 0.125rem;
+      min-block-size: calc(var(--spacing) * 0.5);
     }
     .min-bs-1\\.5 {
-      min-block-size: 0.375rem;
+      min-block-size: calc(var(--spacing) * 1.5);
     }
     .min-bs-2\\.5 {
-      min-block-size: 0.625rem;
+      min-block-size: calc(var(--spacing) * 2.5);
     }
     .min-bs-3\\.5 {
-      min-block-size: 0.875rem;
+      min-block-size: calc(var(--spacing) * 3.5);
     }
     .min-bs-dvh {
       min-block-size: 100dvh;
