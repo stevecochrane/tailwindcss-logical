@@ -871,6 +871,9 @@
   .max-is-7xl {
     max-inline-size: var(--container-7xl);
   }
+  .max-is-\[65ch\] {
+    max-inline-size: 65ch;
+  }
   .max-is-lg {
     max-inline-size: var(--container-lg);
   }
