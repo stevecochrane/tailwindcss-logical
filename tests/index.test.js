@@ -116,7 +116,7 @@ describe("individual plugin tests", () => {
     test("default mode", () => testInlineSize());
   });
 
-  describe.skip("min-inline-size", () => {
+  describe("min-inline-size", () => {
     const testMinInlineSize = () => {
       return generatePluginCss("minInlineSize").then((css) => {
         expect(css).toMatchCss(minInlineSizeStyles);
@@ -126,7 +126,7 @@ describe("individual plugin tests", () => {
     test("default mode", () => testMinInlineSize());
   });
 
-  describe("max-inline-size", () => {
+  describe.skip("max-inline-size", () => {
     const testMaxInlineSize = () => {
       return generatePluginCss("maxInlineSize").then((css) => {
         expect(css).toMatchCss(maxInlineSizeStyles);
