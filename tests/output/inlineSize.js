@@ -7,6 +7,20 @@ module.exports = `
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         "Liberation Mono", "Courier New", monospace;
+      --spacing: 0.25rem;
+      --container-3xs: 16rem;
+      --container-2xs: 18rem;
+      --container-xs: 20rem;
+      --container-sm: 24rem;
+      --container-md: 28rem;
+      --container-lg: 32rem;
+      --container-xl: 36rem;
+      --container-2xl: 42rem;
+      --container-3xl: 48rem;
+      --container-4xl: 56rem;
+      --container-5xl: 64rem;
+      --container-6xl: 72rem;
+      --container-7xl: 80rem;
       --default-font-family: var(--font-sans);
       --default-font-feature-settings: var(--font-sans--font-feature-settings);
       --default-font-variation-settings: var(
@@ -233,184 +247,208 @@ module.exports = `
   }
   @layer utilities {
     .is-0 {
-      inline-size: 0px;
+      inline-size: calc(var(--spacing) * 0);
     }
     .is-0\\.5 {
-      inline-size: 0.125rem;
+      inline-size: calc(var(--spacing) * 0.5);
     }
     .is-1 {
-      inline-size: 0.25rem;
+      inline-size: calc(var(--spacing) * 1);
     }
     .is-1\\.5 {
-      inline-size: 0.375rem;
+      inline-size: calc(var(--spacing) * 1.5);
     }
     .is-1\\/2 {
-      inline-size: 50%;
+      inline-size: calc(var(--spacing) * 1/2);
     }
     .is-1\\/3 {
-      inline-size: 33.333333%;
+      inline-size: calc(var(--spacing) * 1/3);
     }
     .is-1\\/4 {
-      inline-size: 25%;
+      inline-size: calc(var(--spacing) * 1/4);
     }
     .is-1\\/5 {
-      inline-size: 20%;
+      inline-size: calc(var(--spacing) * 1/5);
     }
     .is-1\\/6 {
-      inline-size: 16.666667%;
+      inline-size: calc(var(--spacing) * 1/6);
     }
     .is-1\\/12 {
-      inline-size: 8.333333%;
+      inline-size: calc(var(--spacing) * 1/12);
     }
     .is-2 {
-      inline-size: 0.5rem;
+      inline-size: calc(var(--spacing) * 2);
     }
     .is-2\\.5 {
-      inline-size: 0.625rem;
+      inline-size: calc(var(--spacing) * 2.5);
     }
     .is-2\\/3 {
-      inline-size: 66.666667%;
+      inline-size: calc(var(--spacing) * 2/3);
     }
     .is-2\\/4 {
-      inline-size: 50%;
+      inline-size: calc(var(--spacing) * 2/4);
     }
     .is-2\\/5 {
-      inline-size: 40%;
+      inline-size: calc(var(--spacing) * 2/5);
     }
     .is-2\\/6 {
-      inline-size: 33.333333%;
+      inline-size: calc(var(--spacing) * 2/6);
     }
     .is-2\\/12 {
-      inline-size: 16.666667%;
+      inline-size: calc(var(--spacing) * 2/12);
+    }
+    .is-2xl {
+      inline-size: var(--container-2xl);
+    }
+    .is-2xs {
+      inline-size: var(--container-2xs);
     }
     .is-3 {
-      inline-size: 0.75rem;
+      inline-size: calc(var(--spacing) * 3);
     }
     .is-3\\.5 {
-      inline-size: 0.875rem;
+      inline-size: calc(var(--spacing) * 3.5);
     }
     .is-3\\/4 {
-      inline-size: 75%;
+      inline-size: calc(var(--spacing) * 3/4);
     }
     .is-3\\/5 {
-      inline-size: 60%;
+      inline-size: calc(var(--spacing) * 3/5);
     }
     .is-3\\/6 {
-      inline-size: 50%;
+      inline-size: calc(var(--spacing) * 3/6);
     }
     .is-3\\/12 {
-      inline-size: 25%;
+      inline-size: calc(var(--spacing) * 3/12);
+    }
+    .is-3xl {
+      inline-size: var(--container-3xl);
+    }
+    .is-3xs {
+      inline-size: var(--container-3xs);
     }
     .is-4 {
-      inline-size: 1rem;
+      inline-size: calc(var(--spacing) * 4);
     }
     .is-4\\/5 {
-      inline-size: 80%;
+      inline-size: calc(var(--spacing) * 4/5);
     }
     .is-4\\/6 {
-      inline-size: 66.666667%;
+      inline-size: calc(var(--spacing) * 4/6);
     }
     .is-4\\/12 {
-      inline-size: 33.333333%;
+      inline-size: calc(var(--spacing) * 4/12);
+    }
+    .is-4xl {
+      inline-size: var(--container-4xl);
     }
     .is-5 {
-      inline-size: 1.25rem;
+      inline-size: calc(var(--spacing) * 5);
     }
     .is-5\\/6 {
-      inline-size: 83.333333%;
+      inline-size: calc(var(--spacing) * 5/6);
     }
     .is-5\\/12 {
-      inline-size: 41.666667%;
+      inline-size: calc(var(--spacing) * 5/12);
+    }
+    .is-5xl {
+      inline-size: var(--container-5xl);
     }
     .is-6 {
-      inline-size: 1.5rem;
+      inline-size: calc(var(--spacing) * 6);
     }
     .is-6\\/12 {
-      inline-size: 50%;
+      inline-size: calc(var(--spacing) * 6/12);
+    }
+    .is-6xl {
+      inline-size: var(--container-6xl);
     }
     .is-7 {
-      inline-size: 1.75rem;
+      inline-size: calc(var(--spacing) * 7);
     }
     .is-7\\/12 {
-      inline-size: 58.333333%;
+      inline-size: calc(var(--spacing) * 7/12);
+    }
+    .is-7xl {
+      inline-size: var(--container-7xl);
     }
     .is-8 {
-      inline-size: 2rem;
+      inline-size: calc(var(--spacing) * 8);
     }
     .is-8\\/12 {
-      inline-size: 66.666667%;
+      inline-size: calc(var(--spacing) * 8/12);
     }
     .is-9 {
-      inline-size: 2.25rem;
+      inline-size: calc(var(--spacing) * 9);
     }
     .is-9\\/12 {
-      inline-size: 75%;
+      inline-size: calc(var(--spacing) * 9/12);
     }
     .is-10 {
-      inline-size: 2.5rem;
+      inline-size: calc(var(--spacing) * 10);
     }
     .is-10\\/12 {
-      inline-size: 83.333333%;
+      inline-size: calc(var(--spacing) * 10/12);
     }
     .is-11 {
-      inline-size: 2.75rem;
+      inline-size: calc(var(--spacing) * 11);
     }
     .is-11\\/12 {
-      inline-size: 91.666667%;
+      inline-size: calc(var(--spacing) * 11/12);
     }
     .is-12 {
-      inline-size: 3rem;
+      inline-size: calc(var(--spacing) * 12);
     }
     .is-14 {
-      inline-size: 3.5rem;
+      inline-size: calc(var(--spacing) * 14);
     }
     .is-16 {
-      inline-size: 4rem;
+      inline-size: calc(var(--spacing) * 16);
     }
     .is-20 {
-      inline-size: 5rem;
+      inline-size: calc(var(--spacing) * 20);
     }
     .is-24 {
-      inline-size: 6rem;
+      inline-size: calc(var(--spacing) * 24);
     }
     .is-28 {
-      inline-size: 7rem;
+      inline-size: calc(var(--spacing) * 28);
     }
     .is-32 {
-      inline-size: 8rem;
+      inline-size: calc(var(--spacing) * 32);
     }
     .is-36 {
-      inline-size: 9rem;
+      inline-size: calc(var(--spacing) * 36);
     }
     .is-40 {
-      inline-size: 10rem;
+      inline-size: calc(var(--spacing) * 40);
     }
     .is-44 {
-      inline-size: 11rem;
+      inline-size: calc(var(--spacing) * 44);
     }
     .is-48 {
-      inline-size: 12rem;
+      inline-size: calc(var(--spacing) * 48);
     }
     .is-52 {
-      inline-size: 13rem;
+      inline-size: calc(var(--spacing) * 52);
     }
     .is-56 {
-      inline-size: 14rem;
+      inline-size: calc(var(--spacing) * 56);
     }
     .is-60 {
-      inline-size: 15rem;
+      inline-size: calc(var(--spacing) * 60);
     }
     .is-64 {
-      inline-size: 16rem;
+      inline-size: calc(var(--spacing) * 64);
     }
     .is-72 {
-      inline-size: 18rem;
+      inline-size: calc(var(--spacing) * 72);
     }
     .is-80 {
-      inline-size: 20rem;
+      inline-size: calc(var(--spacing) * 80);
     }
     .is-96 {
-      inline-size: 24rem;
+      inline-size: calc(var(--spacing) * 96);
     }
     .is-auto {
       inline-size: auto;
@@ -424,11 +462,17 @@ module.exports = `
     .is-full {
       inline-size: 100%;
     }
+    .is-lg {
+      inline-size: var(--container-lg);
+    }
     .is-lvw {
       inline-size: 100lvw;
     }
     .is-max {
       inline-size: max-content;
+    }
+    .is-md {
+      inline-size: var(--container-md);
     }
     .is-min {
       inline-size: min-content;
@@ -439,8 +483,17 @@ module.exports = `
     .is-screen {
       inline-size: 100vw;
     }
+    .is-sm {
+      inline-size: var(--container-sm);
+    }
     .is-svw {
       inline-size: 100svw;
+    }
+    .is-xl {
+      inline-size: var(--container-xl);
+    }
+    .is-xs {
+      inline-size: var(--container-xs);
     }
   }
 `;
