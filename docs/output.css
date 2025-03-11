@@ -28,6 +28,10 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-sm: 24rem;
+    --container-md: 28rem;
+    --container-lg: 32rem;
+    --container-7xl: 80rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
@@ -807,28 +811,28 @@
     border-block-start-color: var(--color-blue-400);
   }
   .bs-12 {
-    block-size: 3rem;
+    block-size: calc(var(--spacing) * 12);
   }
   .bs-16 {
-    block-size: 4rem;
+    block-size: calc(var(--spacing) * 16);
   }
   .bs-24 {
-    block-size: 6rem;
+    block-size: calc(var(--spacing) * 24);
   }
   .bs-32 {
-    block-size: 8rem;
+    block-size: calc(var(--spacing) * 32);
   }
   .bs-36 {
-    block-size: 9rem;
+    block-size: calc(var(--spacing) * 36);
   }
   .bs-48 {
-    block-size: 12rem;
+    block-size: calc(var(--spacing) * 48);
   }
   .bs-64 {
-    block-size: 16rem;
+    block-size: calc(var(--spacing) * 64);
   }
   .bs-96 {
-    block-size: 24rem;
+    block-size: calc(var(--spacing) * 96);
   }
   .divide-b-reverse {
     & > :not(:last-child) {
@@ -841,22 +845,22 @@
     }
   }
   .is-1\/3 {
-    inline-size: 33.333333%;
+    inline-size: calc(var(--spacing) * 1 / 3);
   }
   .is-1\/4 {
-    inline-size: 25%;
+    inline-size: calc(var(--spacing) * 1 / 4);
   }
   .is-16 {
-    inline-size: 4rem;
+    inline-size: calc(var(--spacing) * 16);
   }
   .is-32 {
-    inline-size: 8rem;
+    inline-size: calc(var(--spacing) * 32);
   }
   .is-48 {
-    inline-size: 12rem;
+    inline-size: calc(var(--spacing) * 48);
   }
   .is-64 {
-    inline-size: 16rem;
+    inline-size: calc(var(--spacing) * 64);
   }
   .is-full {
     inline-size: 100%;
@@ -865,19 +869,19 @@
     max-block-size: 100%;
   }
   .max-is-7xl {
-    max-inline-size: 80rem;
+    max-inline-size: var(--container-7xl);
   }
   .max-is-lg {
-    max-inline-size: 32rem;
+    max-inline-size: var(--container-lg);
   }
   .max-is-md {
-    max-inline-size: 28rem;
+    max-inline-size: var(--container-md);
   }
   .max-is-prose {
-    max-inline-size: 65ch;
+    max-inline-size: calc(var(--spacing) * prose);
   }
   .max-is-sm {
-    max-inline-size: 24rem;
+    max-inline-size: var(--container-sm);
   }
   .mbe-2 {
     margin-block-end: calc(var(--spacing) * 2);
@@ -895,13 +899,13 @@
     margin-block-start: calc(var(--spacing) * 16);
   }
   .min-bs-0 {
-    min-block-size: 0px;
+    min-block-size: calc(var(--spacing) * 0);
   }
   .min-bs-full {
     min-block-size: 100%;
   }
   .min-is-0 {
-    min-inline-size: 0px;
+    min-inline-size: calc(var(--spacing) * 0);
   }
   .min-is-full {
     min-inline-size: 100%;
