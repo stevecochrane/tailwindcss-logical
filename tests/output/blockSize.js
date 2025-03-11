@@ -7,6 +7,7 @@ module.exports = `
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         "Liberation Mono", "Courier New", monospace;
+      --spacing: 0.25rem;
       --default-font-family: var(--font-sans);
       --default-font-feature-settings: var(--font-sans--font-feature-settings);
       --default-font-variation-settings: var(
@@ -233,151 +234,151 @@ module.exports = `
   }
   @layer utilities {
     .bs-0 {
-      block-size: 0px;
+      block-size: calc(var(--spacing) * 0);
     }
     .bs-0\\.5 {
-      block-size: 0.125rem;
+      block-size: calc(var(--spacing) * 0.5);
     }
     .bs-1 {
-      block-size: 0.25rem;
+      block-size: calc(var(--spacing) * 1);
     }
     .bs-1\\.5 {
-      block-size: 0.375rem;
+      block-size: calc(var(--spacing) * 1.5);
     }
     .bs-1\\/2 {
-      block-size: 50%;
+      block-size: calc(var(--spacing) * 1/2);
     }
     .bs-1\\/3 {
-      block-size: 33.333333%;
+      block-size: calc(var(--spacing) * 1/3);
     }
     .bs-1\\/4 {
-      block-size: 25%;
+      block-size: calc(var(--spacing) * 1/4);
     }
     .bs-1\\/5 {
-      block-size: 20%;
+      block-size: calc(var(--spacing) * 1/5);
     }
     .bs-1\\/6 {
-      block-size: 16.666667%;
+      block-size: calc(var(--spacing) * 1/6);
     }
     .bs-2 {
-      block-size: 0.5rem;
+      block-size: calc(var(--spacing) * 2);
     }
     .bs-2\\.5 {
-      block-size: 0.625rem;
+      block-size: calc(var(--spacing) * 2.5);
     }
     .bs-2\\/3 {
-      block-size: 66.666667%;
+      block-size: calc(var(--spacing) * 2/3);
     }
     .bs-2\\/4 {
-      block-size: 50%;
+      block-size: calc(var(--spacing) * 2/4);
     }
     .bs-2\\/5 {
-      block-size: 40%;
+      block-size: calc(var(--spacing) * 2/5);
     }
     .bs-2\\/6 {
-      block-size: 33.333333%;
+      block-size: calc(var(--spacing) * 2/6);
     }
     .bs-3 {
-      block-size: 0.75rem;
+      block-size: calc(var(--spacing) * 3);
     }
     .bs-3\\.5 {
-      block-size: 0.875rem;
+      block-size: calc(var(--spacing) * 3.5);
     }
     .bs-3\\/4 {
-      block-size: 75%;
+      block-size: calc(var(--spacing) * 3/4);
     }
     .bs-3\\/5 {
-      block-size: 60%;
+      block-size: calc(var(--spacing) * 3/5);
     }
     .bs-3\\/6 {
-      block-size: 50%;
+      block-size: calc(var(--spacing) * 3/6);
     }
     .bs-4 {
-      block-size: 1rem;
+      block-size: calc(var(--spacing) * 4);
     }
     .bs-4\\/5 {
-      block-size: 80%;
+      block-size: calc(var(--spacing) * 4/5);
     }
     .bs-4\\/6 {
-      block-size: 66.666667%;
+      block-size: calc(var(--spacing) * 4/6);
     }
     .bs-5 {
-      block-size: 1.25rem;
+      block-size: calc(var(--spacing) * 5);
     }
     .bs-5\\/6 {
-      block-size: 83.333333%;
+      block-size: calc(var(--spacing) * 5/6);
     }
     .bs-6 {
-      block-size: 1.5rem;
+      block-size: calc(var(--spacing) * 6);
     }
     .bs-7 {
-      block-size: 1.75rem;
+      block-size: calc(var(--spacing) * 7);
     }
     .bs-8 {
-      block-size: 2rem;
+      block-size: calc(var(--spacing) * 8);
     }
     .bs-9 {
-      block-size: 2.25rem;
+      block-size: calc(var(--spacing) * 9);
     }
     .bs-10 {
-      block-size: 2.5rem;
+      block-size: calc(var(--spacing) * 10);
     }
     .bs-11 {
-      block-size: 2.75rem;
+      block-size: calc(var(--spacing) * 11);
     }
     .bs-12 {
-      block-size: 3rem;
+      block-size: calc(var(--spacing) * 12);
     }
     .bs-14 {
-      block-size: 3.5rem;
+      block-size: calc(var(--spacing) * 14);
     }
     .bs-16 {
-      block-size: 4rem;
+      block-size: calc(var(--spacing) * 16);
     }
     .bs-20 {
-      block-size: 5rem;
+      block-size: calc(var(--spacing) * 20);
     }
     .bs-24 {
-      block-size: 6rem;
+      block-size: calc(var(--spacing) * 24);
     }
     .bs-28 {
-      block-size: 7rem;
+      block-size: calc(var(--spacing) * 28);
     }
     .bs-32 {
-      block-size: 8rem;
+      block-size: calc(var(--spacing) * 32);
     }
     .bs-36 {
-      block-size: 9rem;
+      block-size: calc(var(--spacing) * 36);
     }
     .bs-40 {
-      block-size: 10rem;
+      block-size: calc(var(--spacing) * 40);
     }
     .bs-44 {
-      block-size: 11rem;
+      block-size: calc(var(--spacing) * 44);
     }
     .bs-48 {
-      block-size: 12rem;
+      block-size: calc(var(--spacing) * 48);
     }
     .bs-52 {
-      block-size: 13rem;
+      block-size: calc(var(--spacing) * 52);
     }
     .bs-56 {
-      block-size: 14rem;
+      block-size: calc(var(--spacing) * 56);
     }
     .bs-60 {
-      block-size: 15rem;
+      block-size: calc(var(--spacing) * 60);
     }
     .bs-64 {
-      block-size: 16rem;
+      block-size: calc(var(--spacing) * 64);
     }
     .bs-72 {
-      block-size: 18rem;
+      block-size: calc(var(--spacing) * 72);
     }
     .bs-80 {
-      block-size: 20rem;
+      block-size: calc(var(--spacing) * 80);
     }
     .bs-96 {
-      block-size: 24rem;
+      block-size: calc(var(--spacing) * 96);
     }
     .bs-auto {
       block-size: auto;
