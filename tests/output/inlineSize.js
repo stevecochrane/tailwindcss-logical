@@ -259,22 +259,22 @@ module.exports = `
       inline-size: calc(var(--spacing) * 1.5);
     }
     .is-1\\/2 {
-      inline-size: calc(var(--spacing) * 1/2);
+      inline-size: calc(1/2 * 100%);
     }
     .is-1\\/3 {
-      inline-size: calc(var(--spacing) * 1/3);
+      inline-size: calc(1/3 * 100%);
     }
     .is-1\\/4 {
-      inline-size: calc(var(--spacing) * 1/4);
+      inline-size: calc(1/4 * 100%);
     }
     .is-1\\/5 {
-      inline-size: calc(var(--spacing) * 1/5);
+      inline-size: calc(1/5 * 100%);
     }
     .is-1\\/6 {
-      inline-size: calc(var(--spacing) * 1/6);
+      inline-size: calc(1/6 * 100%);
     }
     .is-1\\/12 {
-      inline-size: calc(var(--spacing) * 1/12);
+      inline-size: calc(1/12 * 100%);
     }
     .is-2 {
       inline-size: calc(var(--spacing) * 2);
@@ -283,19 +283,19 @@ module.exports = `
       inline-size: calc(var(--spacing) * 2.5);
     }
     .is-2\\/3 {
-      inline-size: calc(var(--spacing) * 2/3);
+      inline-size: calc(2/3 * 100%);
     }
     .is-2\\/4 {
-      inline-size: calc(var(--spacing) * 2/4);
+      inline-size: calc(2/4 * 100%);
     }
     .is-2\\/5 {
-      inline-size: calc(var(--spacing) * 2/5);
+      inline-size: calc(2/5 * 100%);
     }
     .is-2\\/6 {
-      inline-size: calc(var(--spacing) * 2/6);
+      inline-size: calc(2/6 * 100%);
     }
     .is-2\\/12 {
-      inline-size: calc(var(--spacing) * 2/12);
+      inline-size: calc(2/12 * 100%);
     }
     .is-2xl {
       inline-size: var(--container-2xl);
@@ -310,16 +310,16 @@ module.exports = `
       inline-size: calc(var(--spacing) * 3.5);
     }
     .is-3\\/4 {
-      inline-size: calc(var(--spacing) * 3/4);
+      inline-size: calc(3/4 * 100%);
     }
     .is-3\\/5 {
-      inline-size: calc(var(--spacing) * 3/5);
+      inline-size: calc(3/5 * 100%);
     }
     .is-3\\/6 {
-      inline-size: calc(var(--spacing) * 3/6);
+      inline-size: calc(3/6 * 100%);
     }
     .is-3\\/12 {
-      inline-size: calc(var(--spacing) * 3/12);
+      inline-size: calc(3/12 * 100%);
     }
     .is-3xl {
       inline-size: var(--container-3xl);
@@ -331,13 +331,13 @@ module.exports = `
       inline-size: calc(var(--spacing) * 4);
     }
     .is-4\\/5 {
-      inline-size: calc(var(--spacing) * 4/5);
+      inline-size: calc(4/5 * 100%);
     }
     .is-4\\/6 {
-      inline-size: calc(var(--spacing) * 4/6);
+      inline-size: calc(4/6 * 100%);
     }
     .is-4\\/12 {
-      inline-size: calc(var(--spacing) * 4/12);
+      inline-size: calc(4/12 * 100%);
     }
     .is-4xl {
       inline-size: var(--container-4xl);
@@ -346,10 +346,10 @@ module.exports = `
       inline-size: calc(var(--spacing) * 5);
     }
     .is-5\\/6 {
-      inline-size: calc(var(--spacing) * 5/6);
+      inline-size: calc(5/6 * 100%);
     }
     .is-5\\/12 {
-      inline-size: calc(var(--spacing) * 5/12);
+      inline-size: calc(5/12 * 100%);
     }
     .is-5xl {
       inline-size: var(--container-5xl);
@@ -358,7 +358,7 @@ module.exports = `
       inline-size: calc(var(--spacing) * 6);
     }
     .is-6\\/12 {
-      inline-size: calc(var(--spacing) * 6/12);
+      inline-size: calc(6/12 * 100%);
     }
     .is-6xl {
       inline-size: var(--container-6xl);
@@ -367,7 +367,7 @@ module.exports = `
       inline-size: calc(var(--spacing) * 7);
     }
     .is-7\\/12 {
-      inline-size: calc(var(--spacing) * 7/12);
+      inline-size: calc(7/12 * 100%);
     }
     .is-7xl {
       inline-size: var(--container-7xl);
@@ -376,25 +376,25 @@ module.exports = `
       inline-size: calc(var(--spacing) * 8);
     }
     .is-8\\/12 {
-      inline-size: calc(var(--spacing) * 8/12);
+      inline-size: calc(8/12 * 100%);
     }
     .is-9 {
       inline-size: calc(var(--spacing) * 9);
     }
     .is-9\\/12 {
-      inline-size: calc(var(--spacing) * 9/12);
+      inline-size: calc(9/12 * 100%);
     }
     .is-10 {
       inline-size: calc(var(--spacing) * 10);
     }
     .is-10\\/12 {
-      inline-size: calc(var(--spacing) * 10/12);
+      inline-size: calc(10/12 * 100%);
     }
     .is-11 {
       inline-size: calc(var(--spacing) * 11);
     }
     .is-11\\/12 {
-      inline-size: calc(var(--spacing) * 11/12);
+      inline-size: calc(11/12 * 100%);
     }
     .is-12 {
       inline-size: calc(var(--spacing) * 12);
