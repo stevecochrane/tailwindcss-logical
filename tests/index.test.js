@@ -96,7 +96,7 @@ describe("individual plugin tests", () => {
     test("default mode", () => testMinBlockSize());
   });
 
-  describe.skip("max-block-size", () => {
+  describe("max-block-size", () => {
     const testMaxBlockSize = () => {
       return generatePluginCss("maxBlockSize").then((css) => {
         expect(css).toMatchCss(maxBlockSizeStyles);
@@ -126,7 +126,7 @@ describe("individual plugin tests", () => {
     test("default mode", () => testMinInlineSize());
   });
 
-  describe("max-inline-size", () => {
+  describe.skip("max-inline-size", () => {
     const testMaxInlineSize = () => {
       return generatePluginCss("maxInlineSize").then((css) => {
         expect(css).toMatchCss(maxInlineSizeStyles);
