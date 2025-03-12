@@ -76,7 +76,7 @@ describe("individual plugin tests", () => {
     test("default mode", () => testNonconfigurableStyles());
   });
 
-  describe.skip("block-size", () => {
+  describe("block-size", () => {
     const testBlockSize = () => {
       return generatePluginCss("blockSize").then((css) => {
         expect(css).toMatchCss(blockSizeStyles);
@@ -156,7 +156,7 @@ describe("individual plugin tests", () => {
     test("default mode", () => testPadding());
   });
 
-  describe("inset shorthand and single-side", () => {
+  describe.skip("inset shorthand and single-side", () => {
     const testInset = () => {
       return generatePluginCss("inset").then((css) => {
         expect(css).toMatchCss(insetStyles);

@@ -246,19 +246,19 @@ module.exports = `
       block-size: calc(var(--spacing) * 1.5);
     }
     .bs-1\\/2 {
-      block-size: calc(var(--spacing) * 1/2);
+      block-size: calc(1/2 * 100%);
     }
     .bs-1\\/3 {
-      block-size: calc(var(--spacing) * 1/3);
+      block-size: calc(1/3 * 100%);
     }
     .bs-1\\/4 {
-      block-size: calc(var(--spacing) * 1/4);
+      block-size: calc(1/4 * 100%);
     }
     .bs-1\\/5 {
-      block-size: calc(var(--spacing) * 1/5);
+      block-size: calc(1/5 * 100%);
     }
     .bs-1\\/6 {
-      block-size: calc(var(--spacing) * 1/6);
+      block-size: calc(1/6 * 100%);
     }
     .bs-2 {
       block-size: calc(var(--spacing) * 2);
@@ -267,16 +267,16 @@ module.exports = `
       block-size: calc(var(--spacing) * 2.5);
     }
     .bs-2\\/3 {
-      block-size: calc(var(--spacing) * 2/3);
+      block-size: calc(2/3 * 100%);
     }
     .bs-2\\/4 {
-      block-size: calc(var(--spacing) * 2/4);
+      block-size: calc(2/4 * 100%);
     }
     .bs-2\\/5 {
-      block-size: calc(var(--spacing) * 2/5);
+      block-size: calc(2/5 * 100%);
     }
     .bs-2\\/6 {
-      block-size: calc(var(--spacing) * 2/6);
+      block-size: calc(2/6 * 100%);
     }
     .bs-3 {
       block-size: calc(var(--spacing) * 3);
@@ -285,28 +285,28 @@ module.exports = `
       block-size: calc(var(--spacing) * 3.5);
     }
     .bs-3\\/4 {
-      block-size: calc(var(--spacing) * 3/4);
+      block-size: calc(3/4 * 100%);
     }
     .bs-3\\/5 {
-      block-size: calc(var(--spacing) * 3/5);
+      block-size: calc(3/5 * 100%);
     }
     .bs-3\\/6 {
-      block-size: calc(var(--spacing) * 3/6);
+      block-size: calc(3/6 * 100%);
     }
     .bs-4 {
       block-size: calc(var(--spacing) * 4);
     }
     .bs-4\\/5 {
-      block-size: calc(var(--spacing) * 4/5);
+      block-size: calc(4/5 * 100%);
     }
     .bs-4\\/6 {
-      block-size: calc(var(--spacing) * 4/6);
+      block-size: calc(4/6 * 100%);
     }
     .bs-5 {
       block-size: calc(var(--spacing) * 5);
     }
     .bs-5\\/6 {
-      block-size: calc(var(--spacing) * 5/6);
+      block-size: calc(5/6 * 100%);
     }
     .bs-6 {
       block-size: calc(var(--spacing) * 6);
