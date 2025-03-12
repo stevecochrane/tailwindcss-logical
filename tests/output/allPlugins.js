@@ -341,13 +341,13 @@ module.exports = `
       inset-inline: calc(calc(var(--spacing) * 1.5) * -1);
     }
     .-inset-inline-1\\/2 {
-      inset-inline: calc(calc(var(--spacing) * 1/2) * -1);
+      inset-inline: calc(calc(1/2 * 100%) * -1);
     }
     .-inset-inline-1\\/3 {
-      inset-inline: calc(calc(var(--spacing) * 1/3) * -1);
+      inset-inline: calc(calc(1/3 * 100%) * -1);
     }
     .-inset-inline-1\\/4 {
-      inset-inline: calc(calc(var(--spacing) * 1/4) * -1);
+      inset-inline: calc(calc(1/4 * 100%) * -1);
     }
     .-inset-inline-2 {
       inset-inline: calc(calc(var(--spacing) * 2) * -1);
@@ -356,10 +356,10 @@ module.exports = `
       inset-inline: calc(calc(var(--spacing) * 2.5) * -1);
     }
     .-inset-inline-2\\/3 {
-      inset-inline: calc(calc(var(--spacing) * 2/3) * -1);
+      inset-inline: calc(calc(2/3 * 100%) * -1);
     }
     .-inset-inline-2\\/4 {
-      inset-inline: calc(calc(var(--spacing) * 2/4) * -1);
+      inset-inline: calc(calc(2/4 * 100%) * -1);
     }
     .-inset-inline-3 {
       inset-inline: calc(calc(var(--spacing) * 3) * -1);
@@ -368,7 +368,7 @@ module.exports = `
       inset-inline: calc(calc(var(--spacing) * 3.5) * -1);
     }
     .-inset-inline-3\\/4 {
-      inset-inline: calc(calc(var(--spacing) * 3/4) * -1);
+      inset-inline: calc(calc(3/4 * 100%) * -1);
     }
     .-inset-inline-4 {
       inset-inline: calc(calc(var(--spacing) * 4) * -1);
@@ -467,13 +467,13 @@ module.exports = `
       inset-inline: calc(var(--spacing) * 1.5);
     }
     .inset-inline-1\\/2 {
-      inset-inline: calc(var(--spacing) * 1/2);
+      inset-inline: calc(1/2 * 100%);
     }
     .inset-inline-1\\/3 {
-      inset-inline: calc(var(--spacing) * 1/3);
+      inset-inline: calc(1/3 * 100%);
     }
     .inset-inline-1\\/4 {
-      inset-inline: calc(var(--spacing) * 1/4);
+      inset-inline: calc(1/4 * 100%);
     }
     .inset-inline-2 {
       inset-inline: calc(var(--spacing) * 2);
@@ -482,10 +482,10 @@ module.exports = `
       inset-inline: calc(var(--spacing) * 2.5);
     }
     .inset-inline-2\\/3 {
-      inset-inline: calc(var(--spacing) * 2/3);
+      inset-inline: calc(2/3 * 100%);
     }
     .inset-inline-2\\/4 {
-      inset-inline: calc(var(--spacing) * 2/4);
+      inset-inline: calc(2/4 * 100%);
     }
     .inset-inline-3 {
       inset-inline: calc(var(--spacing) * 3);
@@ -494,7 +494,7 @@ module.exports = `
       inset-inline: calc(var(--spacing) * 3.5);
     }
     .inset-inline-3\\/4 {
-      inset-inline: calc(var(--spacing) * 3/4);
+      inset-inline: calc(3/4 * 100%);
     }
     .inset-inline-4 {
       inset-inline: calc(var(--spacing) * 4);
@@ -596,13 +596,13 @@ module.exports = `
       inset-block: calc(calc(var(--spacing) * 1.5) * -1);
     }
     .-inset-block-1\\/2 {
-      inset-block: calc(calc(var(--spacing) * 1/2) * -1);
+      inset-block: calc(calc(1/2 * 100%) * -1);
     }
     .-inset-block-1\\/3 {
-      inset-block: calc(calc(var(--spacing) * 1/3) * -1);
+      inset-block: calc(calc(1/3 * 100%) * -1);
     }
     .-inset-block-1\\/4 {
-      inset-block: calc(calc(var(--spacing) * 1/4) * -1);
+      inset-block: calc(calc(1/4 * 100%) * -1);
     }
     .-inset-block-2 {
       inset-block: calc(calc(var(--spacing) * 2) * -1);
@@ -611,10 +611,10 @@ module.exports = `
       inset-block: calc(calc(var(--spacing) * 2.5) * -1);
     }
     .-inset-block-2\\/3 {
-      inset-block: calc(calc(var(--spacing) * 2/3) * -1);
+      inset-block: calc(calc(2/3 * 100%) * -1);
     }
     .-inset-block-2\\/4 {
-      inset-block: calc(calc(var(--spacing) * 2/4) * -1);
+      inset-block: calc(calc(2/4 * 100%) * -1);
     }
     .-inset-block-3 {
       inset-block: calc(calc(var(--spacing) * 3) * -1);
@@ -623,7 +623,7 @@ module.exports = `
       inset-block: calc(calc(var(--spacing) * 3.5) * -1);
     }
     .-inset-block-3\\/4 {
-      inset-block: calc(calc(var(--spacing) * 3/4) * -1);
+      inset-block: calc(calc(3/4 * 100%) * -1);
     }
     .-inset-block-4 {
       inset-block: calc(calc(var(--spacing) * 4) * -1);
@@ -722,13 +722,13 @@ module.exports = `
       inset-block: calc(var(--spacing) * 1.5);
     }
     .inset-block-1\\/2 {
-      inset-block: calc(var(--spacing) * 1/2);
+      inset-block: calc(1/2 * 100%);
     }
     .inset-block-1\\/3 {
-      inset-block: calc(var(--spacing) * 1/3);
+      inset-block: calc(1/3 * 100%);
     }
     .inset-block-1\\/4 {
-      inset-block: calc(var(--spacing) * 1/4);
+      inset-block: calc(1/4 * 100%);
     }
     .inset-block-2 {
       inset-block: calc(var(--spacing) * 2);
@@ -737,10 +737,10 @@ module.exports = `
       inset-block: calc(var(--spacing) * 2.5);
     }
     .inset-block-2\\/3 {
-      inset-block: calc(var(--spacing) * 2/3);
+      inset-block: calc(2/3 * 100%);
     }
     .inset-block-2\\/4 {
-      inset-block: calc(var(--spacing) * 2/4);
+      inset-block: calc(2/4 * 100%);
     }
     .inset-block-3 {
       inset-block: calc(var(--spacing) * 3);
@@ -749,7 +749,7 @@ module.exports = `
       inset-block: calc(var(--spacing) * 3.5);
     }
     .inset-block-3\\/4 {
-      inset-block: calc(var(--spacing) * 3/4);
+      inset-block: calc(3/4 * 100%);
     }
     .inset-block-4 {
       inset-block: calc(var(--spacing) * 4);
@@ -851,13 +851,13 @@ module.exports = `
       inset-inline-start: calc(calc(var(--spacing) * 1.5) * -1);
     }
     .-inline-start-1\\/2 {
-      inset-inline-start: calc(calc(var(--spacing) * 1/2) * -1);
+      inset-inline-start: calc(calc(1/2 * 100%) * -1);
     }
     .-inline-start-1\\/3 {
-      inset-inline-start: calc(calc(var(--spacing) * 1/3) * -1);
+      inset-inline-start: calc(calc(1/3 * 100%) * -1);
     }
     .-inline-start-1\\/4 {
-      inset-inline-start: calc(calc(var(--spacing) * 1/4) * -1);
+      inset-inline-start: calc(calc(1/4 * 100%) * -1);
     }
     .-inline-start-2 {
       inset-inline-start: calc(calc(var(--spacing) * 2) * -1);
@@ -866,10 +866,10 @@ module.exports = `
       inset-inline-start: calc(calc(var(--spacing) * 2.5) * -1);
     }
     .-inline-start-2\\/3 {
-      inset-inline-start: calc(calc(var(--spacing) * 2/3) * -1);
+      inset-inline-start: calc(calc(2/3 * 100%) * -1);
     }
     .-inline-start-2\\/4 {
-      inset-inline-start: calc(calc(var(--spacing) * 2/4) * -1);
+      inset-inline-start: calc(calc(2/4 * 100%) * -1);
     }
     .-inline-start-3 {
       inset-inline-start: calc(calc(var(--spacing) * 3) * -1);
@@ -878,7 +878,7 @@ module.exports = `
       inset-inline-start: calc(calc(var(--spacing) * 3.5) * -1);
     }
     .-inline-start-3\\/4 {
-      inset-inline-start: calc(calc(var(--spacing) * 3/4) * -1);
+      inset-inline-start: calc(calc(3/4 * 100%) * -1);
     }
     .-inline-start-4 {
       inset-inline-start: calc(calc(var(--spacing) * 4) * -1);
@@ -977,13 +977,13 @@ module.exports = `
       inset-inline-start: calc(var(--spacing) * 1.5);
     }
     .inline-start-1\\/2 {
-      inset-inline-start: calc(var(--spacing) * 1/2);
+      inset-inline-start: calc(1/2 * 100%);
     }
     .inline-start-1\\/3 {
-      inset-inline-start: calc(var(--spacing) * 1/3);
+      inset-inline-start: calc(1/3 * 100%);
     }
     .inline-start-1\\/4 {
-      inset-inline-start: calc(var(--spacing) * 1/4);
+      inset-inline-start: calc(1/4 * 100%);
     }
     .inline-start-2 {
       inset-inline-start: calc(var(--spacing) * 2);
@@ -992,10 +992,10 @@ module.exports = `
       inset-inline-start: calc(var(--spacing) * 2.5);
     }
     .inline-start-2\\/3 {
-      inset-inline-start: calc(var(--spacing) * 2/3);
+      inset-inline-start: calc(2/3 * 100%);
     }
     .inline-start-2\\/4 {
-      inset-inline-start: calc(var(--spacing) * 2/4);
+      inset-inline-start: calc(2/4 * 100%);
     }
     .inline-start-3 {
       inset-inline-start: calc(var(--spacing) * 3);
@@ -1004,7 +1004,7 @@ module.exports = `
       inset-inline-start: calc(var(--spacing) * 3.5);
     }
     .inline-start-3\\/4 {
-      inset-inline-start: calc(var(--spacing) * 3/4);
+      inset-inline-start: calc(3/4 * 100%);
     }
     .inline-start-4 {
       inset-inline-start: calc(var(--spacing) * 4);
@@ -1106,13 +1106,13 @@ module.exports = `
       inset-inline-end: calc(calc(var(--spacing) * 1.5) * -1);
     }
     .-inline-end-1\\/2 {
-      inset-inline-end: calc(calc(var(--spacing) * 1/2) * -1);
+      inset-inline-end: calc(calc(1/2 * 100%) * -1);
     }
     .-inline-end-1\\/3 {
-      inset-inline-end: calc(calc(var(--spacing) * 1/3) * -1);
+      inset-inline-end: calc(calc(1/3 * 100%) * -1);
     }
     .-inline-end-1\\/4 {
-      inset-inline-end: calc(calc(var(--spacing) * 1/4) * -1);
+      inset-inline-end: calc(calc(1/4 * 100%) * -1);
     }
     .-inline-end-2 {
       inset-inline-end: calc(calc(var(--spacing) * 2) * -1);
@@ -1121,10 +1121,10 @@ module.exports = `
       inset-inline-end: calc(calc(var(--spacing) * 2.5) * -1);
     }
     .-inline-end-2\\/3 {
-      inset-inline-end: calc(calc(var(--spacing) * 2/3) * -1);
+      inset-inline-end: calc(calc(2/3 * 100%) * -1);
     }
     .-inline-end-2\\/4 {
-      inset-inline-end: calc(calc(var(--spacing) * 2/4) * -1);
+      inset-inline-end: calc(calc(2/4 * 100%) * -1);
     }
     .-inline-end-3 {
       inset-inline-end: calc(calc(var(--spacing) * 3) * -1);
@@ -1133,7 +1133,7 @@ module.exports = `
       inset-inline-end: calc(calc(var(--spacing) * 3.5) * -1);
     }
     .-inline-end-3\\/4 {
-      inset-inline-end: calc(calc(var(--spacing) * 3/4) * -1);
+      inset-inline-end: calc(calc(3/4 * 100%) * -1);
     }
     .-inline-end-4 {
       inset-inline-end: calc(calc(var(--spacing) * 4) * -1);
@@ -1232,13 +1232,13 @@ module.exports = `
       inset-inline-end: calc(var(--spacing) * 1.5);
     }
     .inline-end-1\\/2 {
-      inset-inline-end: calc(var(--spacing) * 1/2);
+      inset-inline-end: calc(1/2 * 100%);
     }
     .inline-end-1\\/3 {
-      inset-inline-end: calc(var(--spacing) * 1/3);
+      inset-inline-end: calc(1/3 * 100%);
     }
     .inline-end-1\\/4 {
-      inset-inline-end: calc(var(--spacing) * 1/4);
+      inset-inline-end: calc(1/4 * 100%);
     }
     .inline-end-2 {
       inset-inline-end: calc(var(--spacing) * 2);
@@ -1247,10 +1247,10 @@ module.exports = `
       inset-inline-end: calc(var(--spacing) * 2.5);
     }
     .inline-end-2\\/3 {
-      inset-inline-end: calc(var(--spacing) * 2/3);
+      inset-inline-end: calc(2/3 * 100%);
     }
     .inline-end-2\\/4 {
-      inset-inline-end: calc(var(--spacing) * 2/4);
+      inset-inline-end: calc(2/4 * 100%);
     }
     .inline-end-3 {
       inset-inline-end: calc(var(--spacing) * 3);
@@ -1259,7 +1259,7 @@ module.exports = `
       inset-inline-end: calc(var(--spacing) * 3.5);
     }
     .inline-end-3\\/4 {
-      inset-inline-end: calc(var(--spacing) * 3/4);
+      inset-inline-end: calc(3/4 * 100%);
     }
     .inline-end-4 {
       inset-inline-end: calc(var(--spacing) * 4);
@@ -4536,13 +4536,13 @@ module.exports = `
       inset-block-end: calc(calc(var(--spacing) * 1.5) * -1);
     }
     .-block-end-1\\/2 {
-      inset-block-end: calc(calc(var(--spacing) * 1/2) * -1);
+      inset-block-end: calc(calc(1/2 * 100%) * -1);
     }
     .-block-end-1\\/3 {
-      inset-block-end: calc(calc(var(--spacing) * 1/3) * -1);
+      inset-block-end: calc(calc(1/3 * 100%) * -1);
     }
     .-block-end-1\\/4 {
-      inset-block-end: calc(calc(var(--spacing) * 1/4) * -1);
+      inset-block-end: calc(calc(1/4 * 100%) * -1);
     }
     .-block-end-2 {
       inset-block-end: calc(calc(var(--spacing) * 2) * -1);
@@ -4551,10 +4551,10 @@ module.exports = `
       inset-block-end: calc(calc(var(--spacing) * 2.5) * -1);
     }
     .-block-end-2\\/3 {
-      inset-block-end: calc(calc(var(--spacing) * 2/3) * -1);
+      inset-block-end: calc(calc(2/3 * 100%) * -1);
     }
     .-block-end-2\\/4 {
-      inset-block-end: calc(calc(var(--spacing) * 2/4) * -1);
+      inset-block-end: calc(calc(2/4 * 100%) * -1);
     }
     .-block-end-3 {
       inset-block-end: calc(calc(var(--spacing) * 3) * -1);
@@ -4563,7 +4563,7 @@ module.exports = `
       inset-block-end: calc(calc(var(--spacing) * 3.5) * -1);
     }
     .-block-end-3\\/4 {
-      inset-block-end: calc(calc(var(--spacing) * 3/4) * -1);
+      inset-block-end: calc(calc(3/4 * 100%) * -1);
     }
     .-block-end-4 {
       inset-block-end: calc(calc(var(--spacing) * 4) * -1);
@@ -4662,13 +4662,13 @@ module.exports = `
       inset-block-start: calc(calc(var(--spacing) * 1.5) * -1);
     }
     .-block-start-1\\/2 {
-      inset-block-start: calc(calc(var(--spacing) * 1/2) * -1);
+      inset-block-start: calc(calc(1/2 * 100%) * -1);
     }
     .-block-start-1\\/3 {
-      inset-block-start: calc(calc(var(--spacing) * 1/3) * -1);
+      inset-block-start: calc(calc(1/3 * 100%) * -1);
     }
     .-block-start-1\\/4 {
-      inset-block-start: calc(calc(var(--spacing) * 1/4) * -1);
+      inset-block-start: calc(calc(1/4 * 100%) * -1);
     }
     .-block-start-2 {
       inset-block-start: calc(calc(var(--spacing) * 2) * -1);
@@ -4677,10 +4677,10 @@ module.exports = `
       inset-block-start: calc(calc(var(--spacing) * 2.5) * -1);
     }
     .-block-start-2\\/3 {
-      inset-block-start: calc(calc(var(--spacing) * 2/3) * -1);
+      inset-block-start: calc(calc(2/3 * 100%) * -1);
     }
     .-block-start-2\\/4 {
-      inset-block-start: calc(calc(var(--spacing) * 2/4) * -1);
+      inset-block-start: calc(calc(2/4 * 100%) * -1);
     }
     .-block-start-3 {
       inset-block-start: calc(calc(var(--spacing) * 3) * -1);
@@ -4689,7 +4689,7 @@ module.exports = `
       inset-block-start: calc(calc(var(--spacing) * 3.5) * -1);
     }
     .-block-start-3\\/4 {
-      inset-block-start: calc(calc(var(--spacing) * 3/4) * -1);
+      inset-block-start: calc(calc(3/4 * 100%) * -1);
     }
     .-block-start-4 {
       inset-block-start: calc(calc(var(--spacing) * 4) * -1);
@@ -4998,13 +4998,13 @@ module.exports = `
       inset-block-end: calc(var(--spacing) * 1.5);
     }
     .block-end-1\\/2 {
-      inset-block-end: calc(var(--spacing) * 1/2);
+      inset-block-end: calc(1/2 * 100%);
     }
     .block-end-1\\/3 {
-      inset-block-end: calc(var(--spacing) * 1/3);
+      inset-block-end: calc(1/3 * 100%);
     }
     .block-end-1\\/4 {
-      inset-block-end: calc(var(--spacing) * 1/4);
+      inset-block-end: calc(1/4 * 100%);
     }
     .block-end-2 {
       inset-block-end: calc(var(--spacing) * 2);
@@ -5013,10 +5013,10 @@ module.exports = `
       inset-block-end: calc(var(--spacing) * 2.5);
     }
     .block-end-2\\/3 {
-      inset-block-end: calc(var(--spacing) * 2/3);
+      inset-block-end: calc(2/3 * 100%);
     }
     .block-end-2\\/4 {
-      inset-block-end: calc(var(--spacing) * 2/4);
+      inset-block-end: calc(2/4 * 100%);
     }
     .block-end-3 {
       inset-block-end: calc(var(--spacing) * 3);
@@ -5025,7 +5025,7 @@ module.exports = `
       inset-block-end: calc(var(--spacing) * 3.5);
     }
     .block-end-3\\/4 {
-      inset-block-end: calc(var(--spacing) * 3/4);
+      inset-block-end: calc(3/4 * 100%);
     }
     .block-end-4 {
       inset-block-end: calc(var(--spacing) * 4);
@@ -5127,13 +5127,13 @@ module.exports = `
       inset-block-start: calc(var(--spacing) * 1.5);
     }
     .block-start-1\\/2 {
-      inset-block-start: calc(var(--spacing) * 1/2);
+      inset-block-start: calc(1/2 * 100%);
     }
     .block-start-1\\/3 {
-      inset-block-start: calc(var(--spacing) * 1/3);
+      inset-block-start: calc(1/3 * 100%);
     }
     .block-start-1\\/4 {
-      inset-block-start: calc(var(--spacing) * 1/4);
+      inset-block-start: calc(1/4 * 100%);
     }
     .block-start-2 {
       inset-block-start: calc(var(--spacing) * 2);
@@ -5142,10 +5142,10 @@ module.exports = `
       inset-block-start: calc(var(--spacing) * 2.5);
     }
     .block-start-2\\/3 {
-      inset-block-start: calc(var(--spacing) * 2/3);
+      inset-block-start: calc(2/3 * 100%);
     }
     .block-start-2\\/4 {
-      inset-block-start: calc(var(--spacing) * 2/4);
+      inset-block-start: calc(2/4 * 100%);
     }
     .block-start-3 {
       inset-block-start: calc(var(--spacing) * 3);
@@ -5154,7 +5154,7 @@ module.exports = `
       inset-block-start: calc(var(--spacing) * 3.5);
     }
     .block-start-3\\/4 {
-      inset-block-start: calc(var(--spacing) * 3/4);
+      inset-block-start: calc(3/4 * 100%);
     }
     .block-start-4 {
       inset-block-start: calc(var(--spacing) * 4);
@@ -5796,19 +5796,19 @@ module.exports = `
       block-size: calc(var(--spacing) * 1.5);
     }
     .bs-1\\/2 {
-      block-size: calc(var(--spacing) * 1/2);
+      block-size: calc(1/2 * 100%);
     }
     .bs-1\\/3 {
-      block-size: calc(var(--spacing) * 1/3);
+      block-size: calc(1/3 * 100%);
     }
     .bs-1\\/4 {
-      block-size: calc(var(--spacing) * 1/4);
+      block-size: calc(1/4 * 100%);
     }
     .bs-1\\/5 {
-      block-size: calc(var(--spacing) * 1/5);
+      block-size: calc(1/5 * 100%);
     }
     .bs-1\\/6 {
-      block-size: calc(var(--spacing) * 1/6);
+      block-size: calc(1/6 * 100%);
     }
     .bs-2 {
       block-size: calc(var(--spacing) * 2);
@@ -5817,16 +5817,16 @@ module.exports = `
       block-size: calc(var(--spacing) * 2.5);
     }
     .bs-2\\/3 {
-      block-size: calc(var(--spacing) * 2/3);
+      block-size: calc(2/3 * 100%);
     }
     .bs-2\\/4 {
-      block-size: calc(var(--spacing) * 2/4);
+      block-size: calc(2/4 * 100%);
     }
     .bs-2\\/5 {
-      block-size: calc(var(--spacing) * 2/5);
+      block-size: calc(2/5 * 100%);
     }
     .bs-2\\/6 {
-      block-size: calc(var(--spacing) * 2/6);
+      block-size: calc(2/6 * 100%);
     }
     .bs-3 {
       block-size: calc(var(--spacing) * 3);
@@ -5835,28 +5835,28 @@ module.exports = `
       block-size: calc(var(--spacing) * 3.5);
     }
     .bs-3\\/4 {
-      block-size: calc(var(--spacing) * 3/4);
+      block-size: calc(3/4 * 100%);
     }
     .bs-3\\/5 {
-      block-size: calc(var(--spacing) * 3/5);
+      block-size: calc(3/5 * 100%);
     }
     .bs-3\\/6 {
-      block-size: calc(var(--spacing) * 3/6);
+      block-size: calc(3/6 * 100%);
     }
     .bs-4 {
       block-size: calc(var(--spacing) * 4);
     }
     .bs-4\\/5 {
-      block-size: calc(var(--spacing) * 4/5);
+      block-size: calc(4/5 * 100%);
     }
     .bs-4\\/6 {
-      block-size: calc(var(--spacing) * 4/6);
+      block-size: calc(4/6 * 100%);
     }
     .bs-5 {
       block-size: calc(var(--spacing) * 5);
     }
     .bs-5\\/6 {
-      block-size: calc(var(--spacing) * 5/6);
+      block-size: calc(5/6 * 100%);
     }
     .bs-6 {
       block-size: calc(var(--spacing) * 6);
@@ -5983,22 +5983,22 @@ module.exports = `
       inline-size: calc(var(--spacing) * 1.5);
     }
     .is-1\\/2 {
-      inline-size: calc(var(--spacing) * 1/2);
+      inline-size: calc(1/2 * 100%);
     }
     .is-1\\/3 {
-      inline-size: calc(var(--spacing) * 1/3);
+      inline-size: calc(1/3 * 100%);
     }
     .is-1\\/4 {
-      inline-size: calc(var(--spacing) * 1/4);
+      inline-size: calc(1/4 * 100%);
     }
     .is-1\\/5 {
-      inline-size: calc(var(--spacing) * 1/5);
+      inline-size: calc(1/5 * 100%);
     }
     .is-1\\/6 {
-      inline-size: calc(var(--spacing) * 1/6);
+      inline-size: calc(1/6 * 100%);
     }
     .is-1\\/12 {
-      inline-size: calc(var(--spacing) * 1/12);
+      inline-size: calc(1/12 * 100%);
     }
     .is-2 {
       inline-size: calc(var(--spacing) * 2);
@@ -6007,19 +6007,19 @@ module.exports = `
       inline-size: calc(var(--spacing) * 2.5);
     }
     .is-2\\/3 {
-      inline-size: calc(var(--spacing) * 2/3);
+      inline-size: calc(2/3 * 100%);
     }
     .is-2\\/4 {
-      inline-size: calc(var(--spacing) * 2/4);
+      inline-size: calc(2/4 * 100%);
     }
     .is-2\\/5 {
-      inline-size: calc(var(--spacing) * 2/5);
+      inline-size: calc(2/5 * 100%);
     }
     .is-2\\/6 {
-      inline-size: calc(var(--spacing) * 2/6);
+      inline-size: calc(2/6 * 100%);
     }
     .is-2\\/12 {
-      inline-size: calc(var(--spacing) * 2/12);
+      inline-size: calc(2/12 * 100%);
     }
     .is-2xl {
       inline-size: var(--container-2xl);
@@ -6034,16 +6034,16 @@ module.exports = `
       inline-size: calc(var(--spacing) * 3.5);
     }
     .is-3\\/4 {
-      inline-size: calc(var(--spacing) * 3/4);
+      inline-size: calc(3/4 * 100%);
     }
     .is-3\\/5 {
-      inline-size: calc(var(--spacing) * 3/5);
+      inline-size: calc(3/5 * 100%);
     }
     .is-3\\/6 {
-      inline-size: calc(var(--spacing) * 3/6);
+      inline-size: calc(3/6 * 100%);
     }
     .is-3\\/12 {
-      inline-size: calc(var(--spacing) * 3/12);
+      inline-size: calc(3/12 * 100%);
     }
     .is-3xl {
       inline-size: var(--container-3xl);
@@ -6055,13 +6055,13 @@ module.exports = `
       inline-size: calc(var(--spacing) * 4);
     }
     .is-4\\/5 {
-      inline-size: calc(var(--spacing) * 4/5);
+      inline-size: calc(4/5 * 100%);
     }
     .is-4\\/6 {
-      inline-size: calc(var(--spacing) * 4/6);
+      inline-size: calc(4/6 * 100%);
     }
     .is-4\\/12 {
-      inline-size: calc(var(--spacing) * 4/12);
+      inline-size: calc(4/12 * 100%);
     }
     .is-4xl {
       inline-size: var(--container-4xl);
@@ -6070,10 +6070,10 @@ module.exports = `
       inline-size: calc(var(--spacing) * 5);
     }
     .is-5\\/6 {
-      inline-size: calc(var(--spacing) * 5/6);
+      inline-size: calc(5/6 * 100%);
     }
     .is-5\\/12 {
-      inline-size: calc(var(--spacing) * 5/12);
+      inline-size: calc(5/12 * 100%);
     }
     .is-5xl {
       inline-size: var(--container-5xl);
@@ -6082,7 +6082,7 @@ module.exports = `
       inline-size: calc(var(--spacing) * 6);
     }
     .is-6\\/12 {
-      inline-size: calc(var(--spacing) * 6/12);
+      inline-size: calc(6/12 * 100%);
     }
     .is-6xl {
       inline-size: var(--container-6xl);
@@ -6091,7 +6091,7 @@ module.exports = `
       inline-size: calc(var(--spacing) * 7);
     }
     .is-7\\/12 {
-      inline-size: calc(var(--spacing) * 7/12);
+      inline-size: calc(7/12 * 100%);
     }
     .is-7xl {
       inline-size: var(--container-7xl);
@@ -6100,25 +6100,25 @@ module.exports = `
       inline-size: calc(var(--spacing) * 8);
     }
     .is-8\\/12 {
-      inline-size: calc(var(--spacing) * 8/12);
+      inline-size: calc(8/12 * 100%);
     }
     .is-9 {
       inline-size: calc(var(--spacing) * 9);
     }
     .is-9\\/12 {
-      inline-size: calc(var(--spacing) * 9/12);
+      inline-size: calc(9/12 * 100%);
     }
     .is-10 {
       inline-size: calc(var(--spacing) * 10);
     }
     .is-10\\/12 {
-      inline-size: calc(var(--spacing) * 10/12);
+      inline-size: calc(10/12 * 100%);
     }
     .is-11 {
       inline-size: calc(var(--spacing) * 11);
     }
     .is-11\\/12 {
-      inline-size: calc(var(--spacing) * 11/12);
+      inline-size: calc(11/12 * 100%);
     }
     .is-12 {
       inline-size: calc(var(--spacing) * 12);
@@ -6723,14 +6723,101 @@ module.exports = `
     .min-bs-0\\.5 {
       min-block-size: calc(var(--spacing) * 0.5);
     }
+    .min-bs-1 {
+      min-block-size: calc(var(--spacing) * 1);
+    }
     .min-bs-1\\.5 {
       min-block-size: calc(var(--spacing) * 1.5);
+    }
+    .min-bs-2 {
+      min-block-size: calc(var(--spacing) * 2);
     }
     .min-bs-2\\.5 {
       min-block-size: calc(var(--spacing) * 2.5);
     }
+    .min-bs-3 {
+      min-block-size: calc(var(--spacing) * 3);
+    }
     .min-bs-3\\.5 {
       min-block-size: calc(var(--spacing) * 3.5);
+    }
+    .min-bs-4 {
+      min-block-size: calc(var(--spacing) * 4);
+    }
+    .min-bs-5 {
+      min-block-size: calc(var(--spacing) * 5);
+    }
+    .min-bs-6 {
+      min-block-size: calc(var(--spacing) * 6);
+    }
+    .min-bs-7 {
+      min-block-size: calc(var(--spacing) * 7);
+    }
+    .min-bs-8 {
+      min-block-size: calc(var(--spacing) * 8);
+    }
+    .min-bs-9 {
+      min-block-size: calc(var(--spacing) * 9);
+    }
+    .min-bs-10 {
+      min-block-size: calc(var(--spacing) * 10);
+    }
+    .min-bs-11 {
+      min-block-size: calc(var(--spacing) * 11);
+    }
+    .min-bs-12 {
+      min-block-size: calc(var(--spacing) * 12);
+    }
+    .min-bs-14 {
+      min-block-size: calc(var(--spacing) * 14);
+    }
+    .min-bs-16 {
+      min-block-size: calc(var(--spacing) * 16);
+    }
+    .min-bs-20 {
+      min-block-size: calc(var(--spacing) * 20);
+    }
+    .min-bs-24 {
+      min-block-size: calc(var(--spacing) * 24);
+    }
+    .min-bs-28 {
+      min-block-size: calc(var(--spacing) * 28);
+    }
+    .min-bs-32 {
+      min-block-size: calc(var(--spacing) * 32);
+    }
+    .min-bs-36 {
+      min-block-size: calc(var(--spacing) * 36);
+    }
+    .min-bs-40 {
+      min-block-size: calc(var(--spacing) * 40);
+    }
+    .min-bs-44 {
+      min-block-size: calc(var(--spacing) * 44);
+    }
+    .min-bs-48 {
+      min-block-size: calc(var(--spacing) * 48);
+    }
+    .min-bs-52 {
+      min-block-size: calc(var(--spacing) * 52);
+    }
+    .min-bs-56 {
+      min-block-size: calc(var(--spacing) * 56);
+    }
+    .min-bs-60 {
+      min-block-size: calc(var(--spacing) * 60);
+    }
+    .min-bs-64 {
+      min-block-size: calc(var(--spacing) * 64);
+    }
+    .min-bs-72 {
+      min-block-size: calc(var(--spacing) * 72);
+    }
+    .min-bs-80 {
+      min-block-size: calc(var(--spacing) * 80);
+    }
+    .min-bs-96 {
+      min-block-size: calc(var(--spacing) * 96);
     }
     .min-bs-dvh {
       min-block-size: 100dvh;
@@ -6749,6 +6836,9 @@ module.exports = `
     }
     .min-bs-min {
       min-block-size: min-content;
+    }
+    .min-bs-px {
+      min-block-size: 1px;
     }
     .min-bs-screen {
       min-block-size: 100vh;
