@@ -7,15 +7,10 @@
 [![License](https://img.shields.io/npm/l/tailwindcss-logical.svg)](https://github.com/stevecochrane/tailwindcss-logical/blob/main/LICENSE.txt)
 
 A [CSS Logical Properties and Values](https://www.w3.org/TR/css-logical-1/) plugin for
-[Tailwind CSS](https://tailwindcss.com), compatible with Tailwind v3. For compatibility with Tailwind v2 and v1.2.0+,
-please use version v2.0.0 of this plugin.
+[Tailwind CSS](https://tailwindcss.com), compatible with Tailwind v4. For compatibility with Tailwind v3, please use v3.0.1 of this plugin, and for Tailwind v2 and v1.2.0+, use version v2.0.0.
 
-**Update (January 25, 2025): This plugin is not yet compatible with Tailwind v4, but we are actively working on a
-solution. For status updates you can watch the
-[Tailwind v4 Support](https://github.com/stevecochrane/tailwindcss-logical/issues/59) issue thread.**
-
-Note: [Tailwind CSS now officially supports some of the most commonly-used Logical Properties and Values in v3.3.0.](https://tailwindcss.com/blog/tailwindcss-v3-3#simplified-rtl-support-with-logical-properties)
-We recommend trying the update to see if it is sufficient for your needs before using this plugin.
+**Note: Tailwind CSS now officially supports many of the most commonly-used Logical Properties and Values in v4.0.0.
+We recommend trying the update to see if it is sufficient for your needs before using this plugin.**
 
 ## Demo
 
@@ -30,17 +25,15 @@ Install [tailwindcss-logical](https://www.npmjs.com/package/tailwindcss-logical)
 npm install tailwindcss-logical --save-dev
 ```
 
-Register tailwindcss-logical in the `plugins` section of your Tailwind config file:
+Use the `@plugin` directive in your main CSS file to load it after importing Tailwind itself:
 
-```js
-// tailwind.config.js
-module.exports = {
-  plugins: [require("tailwindcss-logical")],
-};
+```css
+@import "tailwindcss";
+
+@plugin "tailwindcss-logical";
 ```
 
-Before Tailwind v3 it was necessary to add the variants you needed for tailwindcss-logical to `variants.logical` in
-your Tailwind config file, but now this is no longer necessary.
+Now you can start using the new classes in your templates!
 
 ## What are CSS Logical Properties and Values?
 
@@ -124,16 +117,16 @@ Utilities are generated for the `block-size`, `inline-size`, `min-block-size`, `
 
 ```css
 .bs-1 {
-  block-size: 0.25rem;
+  block-size: calc(var(--spacing) * 1);
 }
 .is-1 {
-  inline-size: 0.25rem;
+  inline-size: calc(var(--spacing) * 1);
 }
 .min-bs-0 {
-  min-block-size: 0;
+  min-block-size: calc(var(--spacing) * 0);
 }
 .min-is-0 {
-  min-inline-size: 0;
+  min-inline-size: calc(var(--spacing) * 0);
 }
 .max-bs-full {
   max-block-size: 100%;
@@ -151,22 +144,22 @@ the values in your `margin` config object.
 
 ```css
 .mlb-1 {
-  margin-block: 0.25rem;
+  margin-block: calc(var(--spacing) * 1);
 }
 .mli-1 {
-  margin-inline: 0.25rem;
+  margin-inline: calc(var(--spacing) * 1);
 }
 .mbs-1 {
-  margin-block-start: 0.25rem;
+  margin-block-start: calc(var(--spacing) * 1);
 }
 .mbe-1 {
-  margin-block-end: 0.25rem;
+  margin-block-end: calc(var(--spacing) * 1);
 }
 .mis-1 {
-  margin-inline-start: 0.25rem;
+  margin-inline-start: calc(var(--spacing) * 1);
 }
 .mie-1 {
-  margin-inline-end: 0.25rem;
+  margin-inline-end: calc(var(--spacing) * 1);
 }
 ```
 
@@ -178,22 +171,22 @@ the values in your `padding` config object.
 
 ```css
 .plb-1 {
-  padding-block: 0.25rem;
+  padding-block: calc(var(--spacing) * 1);
 }
 .pli-1 {
-  padding-inline: 0.25rem;
+  padding-inline: calc(var(--spacing) * 1);
 }
 .pbs-1 {
-  padding-block-start: 0.25rem;
+  padding-block-start: calc(var(--spacing) * 1);
 }
 .pbe-1 {
-  padding-block-end: 0.25rem;
+  padding-block-end: calc(var(--spacing) * 1);
 }
 .pis-1 {
-  padding-inline-start: 0.25rem;
+  padding-inline-start: calc(var(--spacing) * 1);
 }
 .pie-1 {
-  padding-inline-end: 0.25rem;
+  padding-inline-end: calc(var(--spacing) * 1);
 }
 ```
 
@@ -204,16 +197,20 @@ These match the values in your `space` config object. All of the usual positive 
 `.space-b-reverse` and `.space-i-reverse` utilities are generated.
 
 ```css
-.space-b-1 > :not([hidden]) ~ :not([hidden]) {
+.space-b-1 > :not(:last-child) {
   --tw-space-b-reverse: 0;
-  margin-block-start: calc(0.25rem * calc(1 - var(--tw-space-b-reverse)));
-  margin-block-end: calc(0.25rem * var(--tw-space-b-reverse));
+  margin-block-start: calc(
+    calc(var(--spacing) * 1) * calc(1 - var(--tw-space-b-reverse))
+  );
+  margin-block-end: calc(calc(var(--spacing) * 1) * var(--tw-space-b-reverse));
 }
 
-.space-i-1 > :not([hidden]) ~ :not([hidden]) {
+.space-i-1 > :not(:last-child) {
   --tw-space-i-reverse: 0;
-  margin-inline-start: calc(0.25rem * calc(1 - var(--tw-space-i-reverse)));
-  margin-inline-end: calc(0.25rem * var(--tw-space-i-reverse));
+  margin-inline-start: calc(
+    calc(var(--spacing) * 1) * calc(1 - var(--tw-space-i-reverse))
+  );
+  margin-inline-end: calc(calc(var(--spacing) * 1) * var(--tw-space-i-reverse));
 }
 ```
 
@@ -225,22 +222,22 @@ the values in your `inset` config object.
 
 ```css
 .inset-block-0 {
-  inset-block: 0;
+  inset-block: calc(var(--spacing) * 0);
 }
 .inset-inline-0 {
-  inset-inline: 0;
+  inset-inline: calc(var(--spacing) * 0);
 }
 .block-start-0 {
-  inset-block-start: 0;
+  inset-block-start: calc(var(--spacing) * 0);
 }
 .block-end-0 {
-  inset-block-end: 0;
+  inset-block-end: calc(var(--spacing) * 0);
 }
 .inline-start-0 {
-  inset-inline-start: 0;
+  inset-inline-start: calc(var(--spacing) * 0);
 }
 .inline-end-0 {
-  inset-inline-end: 0;
+  inset-inline-end: calc(var(--spacing) * 0);
 }
 ```
 
@@ -279,22 +276,22 @@ in your `borderColor` config object.
 
 ```css
 .border-lb-black {
-  border-block-color: #000;
+  border-block-color: var(--color-black);
 }
 .border-li-black {
-  border-inline-color: #000;
+  border-inline-color: var(--color-black);
 }
 .border-bs-black {
-  border-block-start-color: #000;
+  border-block-start-color: var(--color-black);
 }
 .border-be-black {
-  border-block-end-color: #000;
+  border-block-end-color: var(--color-black);
 }
 .border-is-black {
-  border-inline-start-color: #000;
+  border-inline-start-color: var(--color-black);
 }
 .border-ie-black {
-  border-inline-end-color: #000;
+  border-inline-end-color: var(--color-black);
 }
 ```
 
@@ -306,13 +303,13 @@ All of the usual values plus `.divide-b`, `.divide-i`, `.divide-b-reverse` and `
 generated.
 
 ```css
-.divide-b-2 > :not([hidden]) ~ :not([hidden]) {
+.divide-b-2 > :not(:last-child) {
   --tw-divide-b-reverse: 0;
   border-block-start-width: calc(2px * calc(1 - var(--tw-divide-b-reverse)));
   border-block-end-width: calc(2px * var(--tw-divide-b-reverse));
 }
 
-.divide-i-2 > :not([hidden]) ~ :not([hidden]) {
+.divide-i-2 > :not(:last-child) {
   --tw-divide-i-reverse: 0;
   border-inline-start-width: calc(2px * calc(1 - var(--tw-divide-i-reverse)));
   border-inline-end-width: calc(2px * var(--tw-divide-i-reverse));
@@ -352,7 +349,8 @@ While everything in the [CSS Logical Properties and Values Level 1](https://www.
 specification has been evaluated and most features are supported, this plugin does not generate utilities for
 everything. If something does not have a non-logical equivalent in Tailwind's defaults, it is not supported.
 
-- Logical Values for the `caption-side` property: Tailwind does not have `caption-side` utilities.
+- Logical Values for the `caption-side` property: I just noticed as I was wrapping up v4.0.0 that Tailwind added
+  support for `caption-side` in v4! I will add the logical equivalent in a future update.
 - Flow-relative Border Styles: Tailwind only has `border-style` utilities for all sides of an element at once.
 
 As for other logical properties and values from outside of the main specification:
@@ -402,30 +400,12 @@ values will be converted to attribute selectors that any browser can understand.
 }
 ```
 
-Here is how both approaches can be configured in your postcss.config.js file:
-
-```js
-// Using postcss-logical plus postcss-dir-pseudo-class:
-module.exports = {
-  plugins: [
-    require("tailwindcss"),
-    require("postcss-logical"),
-    require("postcss-dir-pseudo-class"),
-  ],
-};
-```
-
-```js
-// Using postcss-preset-env:
-module.exports = {
-  plugins: [require("tailwindcss"), require("postcss-preset-env")],
-};
-```
-
 ## Roadmap
 
 At this point I consider this plugin feature complete, but I will continue to monitor official specifications, as well
 as Tailwind itself, and update this plugin accordingly when anything changes.
+
+One thing I do plan to do is add support for `caption-side`, now that it is part of Tailwind itself.
 
 ## Contributing
 
