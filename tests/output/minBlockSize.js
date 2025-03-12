@@ -239,14 +239,101 @@ module.exports = `
     .min-bs-0\\.5 {
       min-block-size: calc(var(--spacing) * 0.5);
     }
+    .min-bs-1 {
+      min-block-size: calc(var(--spacing) * 1);
+    }
     .min-bs-1\\.5 {
       min-block-size: calc(var(--spacing) * 1.5);
+    }
+    .min-bs-2 {
+      min-block-size: calc(var(--spacing) * 2);
     }
     .min-bs-2\\.5 {
       min-block-size: calc(var(--spacing) * 2.5);
     }
+    .min-bs-3 {
+      min-block-size: calc(var(--spacing) * 3);
+    }
     .min-bs-3\\.5 {
       min-block-size: calc(var(--spacing) * 3.5);
+    }
+    .min-bs-4 {
+      min-block-size: calc(var(--spacing) * 4);
+    }
+    .min-bs-5 {
+      min-block-size: calc(var(--spacing) * 5);
+    }
+    .min-bs-6 {
+      min-block-size: calc(var(--spacing) * 6);
+    }
+    .min-bs-7 {
+      min-block-size: calc(var(--spacing) * 7);
+    }
+    .min-bs-8 {
+      min-block-size: calc(var(--spacing) * 8);
+    }
+    .min-bs-9 {
+      min-block-size: calc(var(--spacing) * 9);
+    }
+    .min-bs-10 {
+      min-block-size: calc(var(--spacing) * 10);
+    }
+    .min-bs-11 {
+      min-block-size: calc(var(--spacing) * 11);
+    }
+    .min-bs-12 {
+      min-block-size: calc(var(--spacing) * 12);
+    }
+    .min-bs-14 {
+      min-block-size: calc(var(--spacing) * 14);
+    }
+    .min-bs-16 {
+      min-block-size: calc(var(--spacing) * 16);
+    }
+    .min-bs-20 {
+      min-block-size: calc(var(--spacing) * 20);
+    }
+    .min-bs-24 {
+      min-block-size: calc(var(--spacing) * 24);
+    }
+    .min-bs-28 {
+      min-block-size: calc(var(--spacing) * 28);
+    }
+    .min-bs-32 {
+      min-block-size: calc(var(--spacing) * 32);
+    }
+    .min-bs-36 {
+      min-block-size: calc(var(--spacing) * 36);
+    }
+    .min-bs-40 {
+      min-block-size: calc(var(--spacing) * 40);
+    }
+    .min-bs-44 {
+      min-block-size: calc(var(--spacing) * 44);
+    }
+    .min-bs-48 {
+      min-block-size: calc(var(--spacing) * 48);
+    }
+    .min-bs-52 {
+      min-block-size: calc(var(--spacing) * 52);
+    }
+    .min-bs-56 {
+      min-block-size: calc(var(--spacing) * 56);
+    }
+    .min-bs-60 {
+      min-block-size: calc(var(--spacing) * 60);
+    }
+    .min-bs-64 {
+      min-block-size: calc(var(--spacing) * 64);
+    }
+    .min-bs-72 {
+      min-block-size: calc(var(--spacing) * 72);
+    }
+    .min-bs-80 {
+      min-block-size: calc(var(--spacing) * 80);
+    }
+    .min-bs-96 {
+      min-block-size: calc(var(--spacing) * 96);
     }
     .min-bs-dvh {
       min-block-size: 100dvh;
@@ -265,6 +352,9 @@ module.exports = `
     }
     .min-bs-min {
       min-block-size: min-content;
+    }
+    .min-bs-px {
+      min-block-size: 1px;
     }
     .min-bs-screen {
       min-block-size: 100vh;

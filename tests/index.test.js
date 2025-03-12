@@ -86,7 +86,7 @@ describe("individual plugin tests", () => {
     test("default mode", () => testBlockSize());
   });
 
-  describe.skip("min-block-size", () => {
+  describe("min-block-size", () => {
     const testMinBlockSize = () => {
       return generatePluginCss("minBlockSize").then((css) => {
         expect(css).toMatchCss(minBlockSizeStyles);
@@ -116,7 +116,7 @@ describe("individual plugin tests", () => {
     test("default mode", () => testInlineSize());
   });
 
-  describe("min-inline-size", () => {
+  describe.skip("min-inline-size", () => {
     const testMinInlineSize = () => {
       return generatePluginCss("minInlineSize").then((css) => {
         expect(css).toMatchCss(minInlineSizeStyles);
