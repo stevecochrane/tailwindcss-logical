@@ -31,7 +31,7 @@ const spaceBetweenStyles = require("./output/spaceBetween");
   plugin tests at a time to help narrow down where the issue is. I hope to fix
   this at some point but I don't have a solution yet.
 */
-describe("all plugins at once", () => {
+describe.skip("all plugins at once", () => {
   const generatePluginCss = () => {
     return postcss([postcssImport, tailwindcss()])
       .process(
@@ -54,7 +54,7 @@ describe("all plugins at once", () => {
   });
 });
 
-describe.skip("individual plugin tests", () => {
+describe("individual plugin tests", () => {
   const generatePluginCss = (templateDirectory) => {
     return postcss([postcssImport, tailwindcss()])
       .process(
@@ -156,7 +156,7 @@ describe.skip("individual plugin tests", () => {
     test("default mode", () => testPadding());
   });
 
-  describe.skip("inset shorthand and single-side", () => {
+  describe("inset shorthand and single-side", () => {
     const testInset = () => {
       return generatePluginCss("inset").then((css) => {
         expect(css).toMatchCss(insetStyles);

@@ -8,6 +8,8 @@ module.exports = function ({ matchUtilities, theme }) {
       calculatedValues[property] = "100%";
     } else if (property === "auto") {
       calculatedValues[property] = "auto";
+    } else if (property.includes("/")) {
+      calculatedValues[property] = `calc(${property} * 100%)`;
     } else {
       calculatedValues[property] = `calc(var(--spacing) * ${property})`;
     }

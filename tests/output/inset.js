@@ -246,13 +246,13 @@ module.exports = `
       inset-inline: calc(calc(var(--spacing) * 1.5) * -1);
     }
     .-inset-inline-1\\/2 {
-      inset-inline: calc(calc(var(--spacing) * 1/2) * -1);
+      inset-inline: calc(calc(1/2 * 100%) * -1);
     }
     .-inset-inline-1\\/3 {
-      inset-inline: calc(calc(var(--spacing) * 1/3) * -1);
+      inset-inline: calc(calc(1/3 * 100%) * -1);
     }
     .-inset-inline-1\\/4 {
-      inset-inline: calc(calc(var(--spacing) * 1/4) * -1);
+      inset-inline: calc(calc(1/4 * 100%) * -1);
     }
     .-inset-inline-2 {
       inset-inline: calc(calc(var(--spacing) * 2) * -1);
@@ -261,10 +261,10 @@ module.exports = `
       inset-inline: calc(calc(var(--spacing) * 2.5) * -1);
     }
     .-inset-inline-2\\/3 {
-      inset-inline: calc(calc(var(--spacing) * 2/3) * -1);
+      inset-inline: calc(calc(2/3 * 100%) * -1);
     }
     .-inset-inline-2\\/4 {
-      inset-inline: calc(calc(var(--spacing) * 2/4) * -1);
+      inset-inline: calc(calc(2/4 * 100%) * -1);
     }
     .-inset-inline-3 {
       inset-inline: calc(calc(var(--spacing) * 3) * -1);
@@ -273,7 +273,7 @@ module.exports = `
       inset-inline: calc(calc(var(--spacing) * 3.5) * -1);
     }
     .-inset-inline-3\\/4 {
-      inset-inline: calc(calc(var(--spacing) * 3/4) * -1);
+      inset-inline: calc(calc(3/4 * 100%) * -1);
     }
     .-inset-inline-4 {
       inset-inline: calc(calc(var(--spacing) * 4) * -1);
@@ -372,13 +372,13 @@ module.exports = `
       inset-inline: calc(var(--spacing) * 1.5);
     }
     .inset-inline-1\\/2 {
-      inset-inline: calc(var(--spacing) * 1/2);
+      inset-inline: calc(1/2 * 100%);
     }
     .inset-inline-1\\/3 {
-      inset-inline: calc(var(--spacing) * 1/3);
+      inset-inline: calc(1/3 * 100%);
     }
     .inset-inline-1\\/4 {
-      inset-inline: calc(var(--spacing) * 1/4);
+      inset-inline: calc(1/4 * 100%);
     }
     .inset-inline-2 {
       inset-inline: calc(var(--spacing) * 2);
@@ -387,10 +387,10 @@ module.exports = `
       inset-inline: calc(var(--spacing) * 2.5);
     }
     .inset-inline-2\\/3 {
-      inset-inline: calc(var(--spacing) * 2/3);
+      inset-inline: calc(2/3 * 100%);
     }
     .inset-inline-2\\/4 {
-      inset-inline: calc(var(--spacing) * 2/4);
+      inset-inline: calc(2/4 * 100%);
     }
     .inset-inline-3 {
       inset-inline: calc(var(--spacing) * 3);
@@ -399,7 +399,7 @@ module.exports = `
       inset-inline: calc(var(--spacing) * 3.5);
     }
     .inset-inline-3\\/4 {
-      inset-inline: calc(var(--spacing) * 3/4);
+      inset-inline: calc(3/4 * 100%);
     }
     .inset-inline-4 {
       inset-inline: calc(var(--spacing) * 4);
@@ -501,13 +501,13 @@ module.exports = `
       inset-block: calc(calc(var(--spacing) * 1.5) * -1);
     }
     .-inset-block-1\\/2 {
-      inset-block: calc(calc(var(--spacing) * 1/2) * -1);
+      inset-block: calc(calc(1/2 * 100%) * -1);
     }
     .-inset-block-1\\/3 {
-      inset-block: calc(calc(var(--spacing) * 1/3) * -1);
+      inset-block: calc(calc(1/3 * 100%) * -1);
     }
     .-inset-block-1\\/4 {
-      inset-block: calc(calc(var(--spacing) * 1/4) * -1);
+      inset-block: calc(calc(1/4 * 100%) * -1);
     }
     .-inset-block-2 {
       inset-block: calc(calc(var(--spacing) * 2) * -1);
@@ -516,10 +516,10 @@ module.exports = `
       inset-block: calc(calc(var(--spacing) * 2.5) * -1);
     }
     .-inset-block-2\\/3 {
-      inset-block: calc(calc(var(--spacing) * 2/3) * -1);
+      inset-block: calc(calc(2/3 * 100%) * -1);
     }
     .-inset-block-2\\/4 {
-      inset-block: calc(calc(var(--spacing) * 2/4) * -1);
+      inset-block: calc(calc(2/4 * 100%) * -1);
     }
     .-inset-block-3 {
       inset-block: calc(calc(var(--spacing) * 3) * -1);
@@ -528,7 +528,7 @@ module.exports = `
       inset-block: calc(calc(var(--spacing) * 3.5) * -1);
     }
     .-inset-block-3\\/4 {
-      inset-block: calc(calc(var(--spacing) * 3/4) * -1);
+      inset-block: calc(calc(3/4 * 100%) * -1);
     }
     .-inset-block-4 {
       inset-block: calc(calc(var(--spacing) * 4) * -1);
@@ -627,13 +627,13 @@ module.exports = `
       inset-block: calc(var(--spacing) * 1.5);
     }
     .inset-block-1\\/2 {
-      inset-block: calc(var(--spacing) * 1/2);
+      inset-block: calc(1/2 * 100%);
     }
     .inset-block-1\\/3 {
-      inset-block: calc(var(--spacing) * 1/3);
+      inset-block: calc(1/3 * 100%);
     }
     .inset-block-1\\/4 {
-      inset-block: calc(var(--spacing) * 1/4);
+      inset-block: calc(1/4 * 100%);
     }
     .inset-block-2 {
       inset-block: calc(var(--spacing) * 2);
@@ -642,10 +642,10 @@ module.exports = `
       inset-block: calc(var(--spacing) * 2.5);
     }
     .inset-block-2\\/3 {
-      inset-block: calc(var(--spacing) * 2/3);
+      inset-block: calc(2/3 * 100%);
     }
     .inset-block-2\\/4 {
-      inset-block: calc(var(--spacing) * 2/4);
+      inset-block: calc(2/4 * 100%);
     }
     .inset-block-3 {
       inset-block: calc(var(--spacing) * 3);
@@ -654,7 +654,7 @@ module.exports = `
       inset-block: calc(var(--spacing) * 3.5);
     }
     .inset-block-3\\/4 {
-      inset-block: calc(var(--spacing) * 3/4);
+      inset-block: calc(3/4 * 100%);
     }
     .inset-block-4 {
       inset-block: calc(var(--spacing) * 4);
@@ -756,13 +756,13 @@ module.exports = `
       inset-inline-start: calc(calc(var(--spacing) * 1.5) * -1);
     }
     .-inline-start-1\\/2 {
-      inset-inline-start: calc(calc(var(--spacing) * 1/2) * -1);
+      inset-inline-start: calc(calc(1/2 * 100%) * -1);
     }
     .-inline-start-1\\/3 {
-      inset-inline-start: calc(calc(var(--spacing) * 1/3) * -1);
+      inset-inline-start: calc(calc(1/3 * 100%) * -1);
     }
     .-inline-start-1\\/4 {
-      inset-inline-start: calc(calc(var(--spacing) * 1/4) * -1);
+      inset-inline-start: calc(calc(1/4 * 100%) * -1);
     }
     .-inline-start-2 {
       inset-inline-start: calc(calc(var(--spacing) * 2) * -1);
@@ -771,10 +771,10 @@ module.exports = `
       inset-inline-start: calc(calc(var(--spacing) * 2.5) * -1);
     }
     .-inline-start-2\\/3 {
-      inset-inline-start: calc(calc(var(--spacing) * 2/3) * -1);
+      inset-inline-start: calc(calc(2/3 * 100%) * -1);
     }
     .-inline-start-2\\/4 {
-      inset-inline-start: calc(calc(var(--spacing) * 2/4) * -1);
+      inset-inline-start: calc(calc(2/4 * 100%) * -1);
     }
     .-inline-start-3 {
       inset-inline-start: calc(calc(var(--spacing) * 3) * -1);
@@ -783,7 +783,7 @@ module.exports = `
       inset-inline-start: calc(calc(var(--spacing) * 3.5) * -1);
     }
     .-inline-start-3\\/4 {
-      inset-inline-start: calc(calc(var(--spacing) * 3/4) * -1);
+      inset-inline-start: calc(calc(3/4 * 100%) * -1);
     }
     .-inline-start-4 {
       inset-inline-start: calc(calc(var(--spacing) * 4) * -1);
@@ -882,13 +882,13 @@ module.exports = `
       inset-inline-start: calc(var(--spacing) * 1.5);
     }
     .inline-start-1\\/2 {
-      inset-inline-start: calc(var(--spacing) * 1/2);
+      inset-inline-start: calc(1/2 * 100%);
     }
     .inline-start-1\\/3 {
-      inset-inline-start: calc(var(--spacing) * 1/3);
+      inset-inline-start: calc(1/3 * 100%);
     }
     .inline-start-1\\/4 {
-      inset-inline-start: calc(var(--spacing) * 1/4);
+      inset-inline-start: calc(1/4 * 100%);
     }
     .inline-start-2 {
       inset-inline-start: calc(var(--spacing) * 2);
@@ -897,10 +897,10 @@ module.exports = `
       inset-inline-start: calc(var(--spacing) * 2.5);
     }
     .inline-start-2\\/3 {
-      inset-inline-start: calc(var(--spacing) * 2/3);
+      inset-inline-start: calc(2/3 * 100%);
     }
     .inline-start-2\\/4 {
-      inset-inline-start: calc(var(--spacing) * 2/4);
+      inset-inline-start: calc(2/4 * 100%);
     }
     .inline-start-3 {
       inset-inline-start: calc(var(--spacing) * 3);
@@ -909,7 +909,7 @@ module.exports = `
       inset-inline-start: calc(var(--spacing) * 3.5);
     }
     .inline-start-3\\/4 {
-      inset-inline-start: calc(var(--spacing) * 3/4);
+      inset-inline-start: calc(3/4 * 100%);
     }
     .inline-start-4 {
       inset-inline-start: calc(var(--spacing) * 4);
@@ -1011,13 +1011,13 @@ module.exports = `
       inset-inline-end: calc(calc(var(--spacing) * 1.5) * -1);
     }
     .-inline-end-1\\/2 {
-      inset-inline-end: calc(calc(var(--spacing) * 1/2) * -1);
+      inset-inline-end: calc(calc(1/2 * 100%) * -1);
     }
     .-inline-end-1\\/3 {
-      inset-inline-end: calc(calc(var(--spacing) * 1/3) * -1);
+      inset-inline-end: calc(calc(1/3 * 100%) * -1);
     }
     .-inline-end-1\\/4 {
-      inset-inline-end: calc(calc(var(--spacing) * 1/4) * -1);
+      inset-inline-end: calc(calc(1/4 * 100%) * -1);
     }
     .-inline-end-2 {
       inset-inline-end: calc(calc(var(--spacing) * 2) * -1);
@@ -1026,10 +1026,10 @@ module.exports = `
       inset-inline-end: calc(calc(var(--spacing) * 2.5) * -1);
     }
     .-inline-end-2\\/3 {
-      inset-inline-end: calc(calc(var(--spacing) * 2/3) * -1);
+      inset-inline-end: calc(calc(2/3 * 100%) * -1);
     }
     .-inline-end-2\\/4 {
-      inset-inline-end: calc(calc(var(--spacing) * 2/4) * -1);
+      inset-inline-end: calc(calc(2/4 * 100%) * -1);
     }
     .-inline-end-3 {
       inset-inline-end: calc(calc(var(--spacing) * 3) * -1);
@@ -1038,7 +1038,7 @@ module.exports = `
       inset-inline-end: calc(calc(var(--spacing) * 3.5) * -1);
     }
     .-inline-end-3\\/4 {
-      inset-inline-end: calc(calc(var(--spacing) * 3/4) * -1);
+      inset-inline-end: calc(calc(3/4 * 100%) * -1);
     }
     .-inline-end-4 {
       inset-inline-end: calc(calc(var(--spacing) * 4) * -1);
@@ -1137,13 +1137,13 @@ module.exports = `
       inset-inline-end: calc(var(--spacing) * 1.5);
     }
     .inline-end-1\\/2 {
-      inset-inline-end: calc(var(--spacing) * 1/2);
+      inset-inline-end: calc(1/2 * 100%);
     }
     .inline-end-1\\/3 {
-      inset-inline-end: calc(var(--spacing) * 1/3);
+      inset-inline-end: calc(1/3 * 100%);
     }
     .inline-end-1\\/4 {
-      inset-inline-end: calc(var(--spacing) * 1/4);
+      inset-inline-end: calc(1/4 * 100%);
     }
     .inline-end-2 {
       inset-inline-end: calc(var(--spacing) * 2);
@@ -1152,10 +1152,10 @@ module.exports = `
       inset-inline-end: calc(var(--spacing) * 2.5);
     }
     .inline-end-2\\/3 {
-      inset-inline-end: calc(var(--spacing) * 2/3);
+      inset-inline-end: calc(2/3 * 100%);
     }
     .inline-end-2\\/4 {
-      inset-inline-end: calc(var(--spacing) * 2/4);
+      inset-inline-end: calc(2/4 * 100%);
     }
     .inline-end-3 {
       inset-inline-end: calc(var(--spacing) * 3);
@@ -1164,7 +1164,7 @@ module.exports = `
       inset-inline-end: calc(var(--spacing) * 3.5);
     }
     .inline-end-3\\/4 {
-      inset-inline-end: calc(var(--spacing) * 3/4);
+      inset-inline-end: calc(3/4 * 100%);
     }
     .inline-end-4 {
       inset-inline-end: calc(var(--spacing) * 4);
@@ -1266,13 +1266,13 @@ module.exports = `
       inset-block-end: calc(calc(var(--spacing) * 1.5) * -1);
     }
     .-block-end-1\\/2 {
-      inset-block-end: calc(calc(var(--spacing) * 1/2) * -1);
+      inset-block-end: calc(calc(1/2 * 100%) * -1);
     }
     .-block-end-1\\/3 {
-      inset-block-end: calc(calc(var(--spacing) * 1/3) * -1);
+      inset-block-end: calc(calc(1/3 * 100%) * -1);
     }
     .-block-end-1\\/4 {
-      inset-block-end: calc(calc(var(--spacing) * 1/4) * -1);
+      inset-block-end: calc(calc(1/4 * 100%) * -1);
     }
     .-block-end-2 {
       inset-block-end: calc(calc(var(--spacing) * 2) * -1);
@@ -1281,10 +1281,10 @@ module.exports = `
       inset-block-end: calc(calc(var(--spacing) * 2.5) * -1);
     }
     .-block-end-2\\/3 {
-      inset-block-end: calc(calc(var(--spacing) * 2/3) * -1);
+      inset-block-end: calc(calc(2/3 * 100%) * -1);
     }
     .-block-end-2\\/4 {
-      inset-block-end: calc(calc(var(--spacing) * 2/4) * -1);
+      inset-block-end: calc(calc(2/4 * 100%) * -1);
     }
     .-block-end-3 {
       inset-block-end: calc(calc(var(--spacing) * 3) * -1);
@@ -1293,7 +1293,7 @@ module.exports = `
       inset-block-end: calc(calc(var(--spacing) * 3.5) * -1);
     }
     .-block-end-3\\/4 {
-      inset-block-end: calc(calc(var(--spacing) * 3/4) * -1);
+      inset-block-end: calc(calc(3/4 * 100%) * -1);
     }
     .-block-end-4 {
       inset-block-end: calc(calc(var(--spacing) * 4) * -1);
@@ -1392,13 +1392,13 @@ module.exports = `
       inset-block-start: calc(calc(var(--spacing) * 1.5) * -1);
     }
     .-block-start-1\\/2 {
-      inset-block-start: calc(calc(var(--spacing) * 1/2) * -1);
+      inset-block-start: calc(calc(1/2 * 100%) * -1);
     }
     .-block-start-1\\/3 {
-      inset-block-start: calc(calc(var(--spacing) * 1/3) * -1);
+      inset-block-start: calc(calc(1/3 * 100%) * -1);
     }
     .-block-start-1\\/4 {
-      inset-block-start: calc(calc(var(--spacing) * 1/4) * -1);
+      inset-block-start: calc(calc(1/4 * 100%) * -1);
     }
     .-block-start-2 {
       inset-block-start: calc(calc(var(--spacing) * 2) * -1);
@@ -1407,10 +1407,10 @@ module.exports = `
       inset-block-start: calc(calc(var(--spacing) * 2.5) * -1);
     }
     .-block-start-2\\/3 {
-      inset-block-start: calc(calc(var(--spacing) * 2/3) * -1);
+      inset-block-start: calc(calc(2/3 * 100%) * -1);
     }
     .-block-start-2\\/4 {
-      inset-block-start: calc(calc(var(--spacing) * 2/4) * -1);
+      inset-block-start: calc(calc(2/4 * 100%) * -1);
     }
     .-block-start-3 {
       inset-block-start: calc(calc(var(--spacing) * 3) * -1);
@@ -1419,7 +1419,7 @@ module.exports = `
       inset-block-start: calc(calc(var(--spacing) * 3.5) * -1);
     }
     .-block-start-3\\/4 {
-      inset-block-start: calc(calc(var(--spacing) * 3/4) * -1);
+      inset-block-start: calc(calc(3/4 * 100%) * -1);
     }
     .-block-start-4 {
       inset-block-start: calc(calc(var(--spacing) * 4) * -1);
@@ -1518,13 +1518,13 @@ module.exports = `
       inset-block-end: calc(var(--spacing) * 1.5);
     }
     .block-end-1\\/2 {
-      inset-block-end: calc(var(--spacing) * 1/2);
+      inset-block-end: calc(1/2 * 100%);
     }
     .block-end-1\\/3 {
-      inset-block-end: calc(var(--spacing) * 1/3);
+      inset-block-end: calc(1/3 * 100%);
     }
     .block-end-1\\/4 {
-      inset-block-end: calc(var(--spacing) * 1/4);
+      inset-block-end: calc(1/4 * 100%);
     }
     .block-end-2 {
       inset-block-end: calc(var(--spacing) * 2);
@@ -1533,10 +1533,10 @@ module.exports = `
       inset-block-end: calc(var(--spacing) * 2.5);
     }
     .block-end-2\\/3 {
-      inset-block-end: calc(var(--spacing) * 2/3);
+      inset-block-end: calc(2/3 * 100%);
     }
     .block-end-2\\/4 {
-      inset-block-end: calc(var(--spacing) * 2/4);
+      inset-block-end: calc(2/4 * 100%);
     }
     .block-end-3 {
       inset-block-end: calc(var(--spacing) * 3);
@@ -1545,7 +1545,7 @@ module.exports = `
       inset-block-end: calc(var(--spacing) * 3.5);
     }
     .block-end-3\\/4 {
-      inset-block-end: calc(var(--spacing) * 3/4);
+      inset-block-end: calc(3/4 * 100%);
     }
     .block-end-4 {
       inset-block-end: calc(var(--spacing) * 4);
@@ -1647,13 +1647,13 @@ module.exports = `
       inset-block-start: calc(var(--spacing) * 1.5);
     }
     .block-start-1\\/2 {
-      inset-block-start: calc(var(--spacing) * 1/2);
+      inset-block-start: calc(1/2 * 100%);
     }
     .block-start-1\\/3 {
-      inset-block-start: calc(var(--spacing) * 1/3);
+      inset-block-start: calc(1/3 * 100%);
     }
     .block-start-1\\/4 {
-      inset-block-start: calc(var(--spacing) * 1/4);
+      inset-block-start: calc(1/4 * 100%);
     }
     .block-start-2 {
       inset-block-start: calc(var(--spacing) * 2);
@@ -1662,10 +1662,10 @@ module.exports = `
       inset-block-start: calc(var(--spacing) * 2.5);
     }
     .block-start-2\\/3 {
-      inset-block-start: calc(var(--spacing) * 2/3);
+      inset-block-start: calc(2/3 * 100%);
     }
     .block-start-2\\/4 {
-      inset-block-start: calc(var(--spacing) * 2/4);
+      inset-block-start: calc(2/4 * 100%);
     }
     .block-start-3 {
       inset-block-start: calc(var(--spacing) * 3);
@@ -1674,7 +1674,7 @@ module.exports = `
       inset-block-start: calc(var(--spacing) * 3.5);
     }
     .block-start-3\\/4 {
-      inset-block-start: calc(var(--spacing) * 3/4);
+      inset-block-start: calc(3/4 * 100%);
     }
     .block-start-4 {
       inset-block-start: calc(var(--spacing) * 4);
