@@ -21,8 +21,6 @@ module.exports = function ({ matchUtilities, theme }) {
       calculatedValues[property] = values[property];
     } else if (property === "px") {
       calculatedValues[property] = "1px";
-    } else if (property.includes("/")) {
-      calculatedValues[property] = `calc(${property} * 100%)`;
     } else {
       calculatedValues[property] = `calc(var(--spacing) * ${property})`;
     }
