@@ -7,6 +7,12 @@ module.exports = `
         "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         "Liberation Mono", "Courier New", monospace;
+      --radius-sm: 0.25rem;
+      --radius-md: 0.375rem;
+      --radius-lg: 0.5rem;
+      --radius-xl: 0.75rem;
+      --radius-2xl: 1rem;
+      --radius-3xl: 1.5rem;
       --default-font-family: var(--font-sans);
       --default-font-feature-settings: var(--font-sans--font-feature-settings);
       --default-font-variation-settings: var(
@@ -232,149 +238,133 @@ module.exports = `
     }
   }
   @layer utilities {
-    .rounded-bs {
-      border-start-start-radius: 0.25rem;
-      border-start-end-radius: 0.25rem
-    }
     .rounded-bs-2xl {
-      border-start-start-radius: 1rem;
-      border-start-end-radius: 1rem
+      border-start-start-radius: var(--radius-2xl);
+      border-start-end-radius: var(--radius-2xl);
     }
     .rounded-bs-3xl {
-      border-start-start-radius: 1.5rem;
-      border-start-end-radius: 1.5rem
+      border-start-start-radius: var(--radius-3xl);
+      border-start-end-radius: var(--radius-3xl);
     }
     .rounded-bs-full {
-      border-start-start-radius: 9999px;
-      border-start-end-radius: 9999px
+      border-start-start-radius: calc(infinity * 1px);
+      border-start-end-radius: calc(infinity * 1px);
     }
     .rounded-bs-lg {
-      border-start-start-radius: 0.5rem;
-      border-start-end-radius: 0.5rem
+      border-start-start-radius: var(--radius-lg);
+      border-start-end-radius: var(--radius-lg);
     }
     .rounded-bs-md {
-      border-start-start-radius: 0.375rem;
-      border-start-end-radius: 0.375rem
+      border-start-start-radius: var(--radius-md);
+      border-start-end-radius: var(--radius-md);
     }
     .rounded-bs-none {
       border-start-start-radius: 0px;
-      border-start-end-radius: 0px
+      border-start-end-radius: 0px;
     }
     .rounded-bs-sm {
-      border-start-start-radius: 0.25rem;
-      border-start-end-radius: 0.25rem
+      border-start-start-radius: var(--radius-sm);
+      border-start-end-radius: var(--radius-sm);
     }
     .rounded-bs-xl {
-      border-start-start-radius: 0.75rem;
-      border-start-end-radius: 0.75rem
-    }
-    .rounded-is {
-      border-start-start-radius: 0.25rem;
-      border-end-start-radius: 0.25rem
+      border-start-start-radius: var(--radius-xl);
+      border-start-end-radius: var(--radius-xl);
     }
     .rounded-is-2xl {
-      border-start-start-radius: 1rem;
-      border-end-start-radius: 1rem
+      border-start-start-radius: var(--radius-2xl);
+      border-end-start-radius: var(--radius-2xl);
     }
     .rounded-is-3xl {
-      border-start-start-radius: 1.5rem;
-      border-end-start-radius: 1.5rem
+      border-start-start-radius: var(--radius-3xl);
+      border-end-start-radius: var(--radius-3xl);
     }
     .rounded-is-full {
-      border-start-start-radius: 9999px;
-      border-end-start-radius: 9999px
+      border-start-start-radius: calc(infinity * 1px);
+      border-end-start-radius: calc(infinity * 1px);
     }
     .rounded-is-lg {
-      border-start-start-radius: 0.5rem;
-      border-end-start-radius: 0.5rem
+      border-start-start-radius: var(--radius-lg);
+      border-end-start-radius: var(--radius-lg);
     }
     .rounded-is-md {
-      border-start-start-radius: 0.375rem;
-      border-end-start-radius: 0.375rem
+      border-start-start-radius: var(--radius-md);
+      border-end-start-radius: var(--radius-md);
     }
     .rounded-is-none {
       border-start-start-radius: 0px;
-      border-end-start-radius: 0px
+      border-end-start-radius: 0px;
     }
     .rounded-is-sm {
-      border-start-start-radius: 0.25rem;
-      border-end-start-radius: 0.25rem
+      border-start-start-radius: var(--radius-sm);
+      border-end-start-radius: var(--radius-sm);
     }
     .rounded-is-xl {
-      border-start-start-radius: 0.75rem;
-      border-end-start-radius: 0.75rem
-    }
-    .rounded-ie {
-      border-start-end-radius: 0.25rem;
-      border-end-end-radius: 0.25rem
+      border-start-start-radius: var(--radius-xl);
+      border-end-start-radius: var(--radius-xl);
     }
     .rounded-ie-2xl {
-      border-start-end-radius: 1rem;
-      border-end-end-radius: 1rem
+      border-start-end-radius: var(--radius-2xl);
+      border-end-end-radius: var(--radius-2xl);
     }
     .rounded-ie-3xl {
-      border-start-end-radius: 1.5rem;
-      border-end-end-radius: 1.5rem
+      border-start-end-radius: var(--radius-3xl);
+      border-end-end-radius: var(--radius-3xl);
     }
     .rounded-ie-full {
-      border-start-end-radius: 9999px;
-      border-end-end-radius: 9999px
+      border-start-end-radius: calc(infinity * 1px);
+      border-end-end-radius: calc(infinity * 1px);
     }
     .rounded-ie-lg {
-      border-start-end-radius: 0.5rem;
-      border-end-end-radius: 0.5rem
+      border-start-end-radius: var(--radius-lg);
+      border-end-end-radius: var(--radius-lg);
     }
     .rounded-ie-md {
-      border-start-end-radius: 0.375rem;
-      border-end-end-radius: 0.375rem
+      border-start-end-radius: var(--radius-md);
+      border-end-end-radius: var(--radius-md);
     }
     .rounded-ie-none {
       border-start-end-radius: 0px;
-      border-end-end-radius: 0px
+      border-end-end-radius: 0px;
     }
     .rounded-ie-sm {
-      border-start-end-radius: 0.25rem;
-      border-end-end-radius: 0.25rem
+      border-start-end-radius: var(--radius-sm);
+      border-end-end-radius: var(--radius-sm);
     }
     .rounded-ie-xl {
-      border-start-end-radius: 0.75rem;
-      border-end-end-radius: 0.75rem
-    }
-    .rounded-be {
-      border-end-start-radius: 0.25rem;
-      border-end-end-radius: 0.25rem
+      border-start-end-radius: var(--radius-xl);
+      border-end-end-radius: var(--radius-xl);
     }
     .rounded-be-2xl {
-      border-end-start-radius: 1rem;
-      border-end-end-radius: 1rem
+      border-end-start-radius: var(--radius-2xl);
+      border-end-end-radius: var(--radius-2xl);
     }
     .rounded-be-3xl {
-      border-end-start-radius: 1.5rem;
-      border-end-end-radius: 1.5rem
+      border-end-start-radius: var(--radius-3xl);
+      border-end-end-radius: var(--radius-3xl);
     }
     .rounded-be-full {
-      border-end-start-radius: 9999px;
-      border-end-end-radius: 9999px
+      border-end-start-radius: calc(infinity * 1px);
+      border-end-end-radius: calc(infinity * 1px);
     }
     .rounded-be-lg {
-      border-end-start-radius: 0.5rem;
-      border-end-end-radius: 0.5rem
+      border-end-start-radius: var(--radius-lg);
+      border-end-end-radius: var(--radius-lg);
     }
     .rounded-be-md {
-      border-end-start-radius: 0.375rem;
-      border-end-end-radius: 0.375rem
+      border-end-start-radius: var(--radius-md);
+      border-end-end-radius: var(--radius-md);
     }
     .rounded-be-none {
       border-end-start-radius: 0px;
-      border-end-end-radius: 0px
+      border-end-end-radius: 0px;
     }
     .rounded-be-sm {
-      border-end-start-radius: 0.25rem;
-      border-end-end-radius: 0.25rem
+      border-end-start-radius: var(--radius-sm);
+      border-end-end-radius: var(--radius-sm);
     }
     .rounded-be-xl {
-      border-end-start-radius: 0.75rem;
-      border-end-end-radius: 0.75rem
+      border-end-start-radius: var(--radius-xl);
+      border-end-end-radius: var(--radius-xl);
     }
   }
 `;

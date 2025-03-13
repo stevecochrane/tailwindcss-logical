@@ -1,4 +1,18 @@
 module.exports = function ({ matchUtilities, theme }) {
+  const values = theme("borderRadius");
+  const calculatedValues = {};
+  const sizes = ["xs", "sm", "md", "lg", "xl", "2xl", "3xl"];
+
+  for (const property in values) {
+    if (sizes.includes(property)) {
+      calculatedValues[property] = `var(--radius-${property})`;
+    } else if (property === "full") {
+      calculatedValues[property] = "calc(infinity * 1px)";
+    } else {
+      calculatedValues[property] = values[property];
+    }
+  }
+
   matchUtilities(
     {
       "rounded-bs": (value) => ({
@@ -18,6 +32,6 @@ module.exports = function ({ matchUtilities, theme }) {
         borderEndEndRadius: value,
       }),
     },
-    { values: theme("borderRadius") },
+    { values: calculatedValues },
   );
 };
