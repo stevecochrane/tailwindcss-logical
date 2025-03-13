@@ -1,40 +1,37 @@
-module.exports = function({ matchUtilities, theme }) {
+module.exports = function ({ matchUtilities, theme }) {
+  const values = theme("borderRadius");
+  const calculatedValues = {};
+  const sizes = ["xs", "sm", "md", "lg", "xl", "2xl", "3xl"];
+
+  for (const property in values) {
+    if (sizes.includes(property)) {
+      calculatedValues[property] = `var(--radius-${property})`;
+    } else if (property === "full") {
+      calculatedValues[property] = "calc(infinity * 1px)";
+    } else {
+      calculatedValues[property] = values[property];
+    }
+  }
+
   matchUtilities(
     {
-      'rounded-bs': (value) => ({
+      "rounded-bs": (value) => ({
         borderStartStartRadius: value,
-        borderStartEndRadius: value
-      }),
-      'rounded-be': (value) => ({
-        borderEndStartRadius: value,
-        borderEndEndRadius: value
-      }),
-      'rounded-is': (value) => ({
-        borderStartStartRadius: value,
-        borderEndStartRadius: value
-      }),
-      'rounded-ie': (value) => ({
         borderStartEndRadius: value,
-        borderEndEndRadius: value
-      })
+      }),
+      "rounded-be": (value) => ({
+        borderEndStartRadius: value,
+        borderEndEndRadius: value,
+      }),
+      "rounded-is": (value) => ({
+        borderStartStartRadius: value,
+        borderEndStartRadius: value,
+      }),
+      "rounded-ie": (value) => ({
+        borderStartEndRadius: value,
+        borderEndEndRadius: value,
+      }),
     },
-    { values: theme('borderRadius') }
-  );
-  matchUtilities(
-    {
-      'rounded-ss': (value) => ({
-        borderStartStartRadius: value
-      }),
-      'rounded-se': (value) => ({
-        borderStartEndRadius: value
-      }),
-      'rounded-es': (value) => ({
-        borderEndStartRadius: value
-      }),
-      'rounded-ee': (value) => ({
-        borderEndEndRadius: value
-      })
-    },
-    { values: theme('borderRadius') }
+    { values: calculatedValues },
   );
 };

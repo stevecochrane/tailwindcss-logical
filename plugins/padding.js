@@ -1,30 +1,40 @@
-module.exports = function({ matchUtilities, theme }) {
+module.exports = function ({ matchUtilities, theme }) {
+  const calculatedValues = {};
+
+  for (const property in theme("padding")) {
+    if (property === "px") {
+      calculatedValues[property] = "1px";
+    } else {
+      calculatedValues[property] = `calc(var(--spacing) * ${property})`;
+    }
+  }
+
   matchUtilities(
     {
-      'plb': (value) => ({
-        paddingBlock: value
+      plb: (value) => ({
+        paddingBlock: value,
       }),
-      'pli': (value) => ({
-        paddingInline: value
-      })
+      pli: (value) => ({
+        paddingInline: value,
+      }),
     },
-    { values: theme('padding') }
+    { values: calculatedValues },
   );
   matchUtilities(
     {
-      'pbs': (value) => ({
-        paddingBlockStart: value
+      pbs: (value) => ({
+        paddingBlockStart: value,
       }),
-      'pbe': (value) => ({
-        paddingBlockEnd: value
+      pbe: (value) => ({
+        paddingBlockEnd: value,
       }),
-      'pis': (value) => ({
-        paddingInlineStart: value
+      pis: (value) => ({
+        paddingInlineStart: value,
       }),
-      'pie': (value) => ({
-        paddingInlineEnd: value
-      })
+      pie: (value) => ({
+        paddingInlineEnd: value,
+      }),
     },
-    { values: theme('padding') }
+    { values: calculatedValues },
   );
 };

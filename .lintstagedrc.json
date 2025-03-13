@@ -1,0 +1,4 @@
+{
+  "**/*": ["prettier --write --ignore-unknown"],
+  "*.js": ["eslint", "jest --bail --coverage --findRelatedTests"]
+}

@@ -1,52 +1,316 @@
 module.exports = `
-  .divide-b > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-b-reverse: 0;
-    border-block-start-width: calc(1px * calc(1 - var(--tw-divide-b-reverse)));
-    border-block-end-width: calc(1px * var(--tw-divide-b-reverse))
+  /*! tailwindcss v4.0.9 | MIT License | https://tailwindcss.com */
+  @layer theme, base, components, utilities;
+  @layer theme {
+    :root, :host {
+      --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+      --default-font-family: var(--font-sans);
+      --default-font-feature-settings: var(--font-sans--font-feature-settings);
+      --default-font-variation-settings: var(
+        --font-sans--font-variation-settings
+      );
+      --default-mono-font-family: var(--font-mono);
+      --default-mono-font-feature-settings: var(
+        --font-mono--font-feature-settings
+      );
+      --default-mono-font-variation-settings: var(
+        --font-mono--font-variation-settings
+      );
+    }
   }
-  .divide-b-0 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-b-reverse: 0;
-    border-block-start-width: calc(0px * calc(1 - var(--tw-divide-b-reverse)));
-    border-block-end-width: calc(0px * var(--tw-divide-b-reverse))
+  @layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: 0 solid;
+    }
+    html,
+    :host {
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+      tab-size: 4;
+      font-family: var(
+        --default-font-family,
+        ui-sans-serif,
+        system-ui,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji"
+      );
+      font-feature-settings: var(--default-font-feature-settings, normal);
+      font-variation-settings: var(
+        --default-font-variation-settings,
+        normal
+      );
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      line-height: inherit;
+    }
+    hr {
+      height: 0;
+      color: inherit;
+      border-top-width: 1px;
+    }
+    abbr:where([title]) {
+      -webkit-text-decoration: underline dotted;
+      text-decoration: underline dotted;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+    a {
+      color: inherit;
+      -webkit-text-decoration: inherit;
+      text-decoration: inherit;
+    }
+    b,
+    strong {
+      font-weight: bolder;
+    }
+    code,
+    kbd,
+    samp,
+    pre {
+      font-family: var(
+        --default-mono-font-family,
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace
+      );
+      font-feature-settings: var(
+        --default-mono-font-feature-settings,
+        normal
+      );
+      font-variation-settings: var(
+        --default-mono-font-variation-settings,
+        normal
+      );
+      font-size: 1em;
+    }
+    small {
+      font-size: 80%;
+    }
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+    sub {
+      bottom: -0.25em;
+    }
+    sup {
+      top: -0.5em;
+    }
+    table {
+      text-indent: 0;
+      border-color: inherit;
+      border-collapse: collapse;
+    }
+    :-moz-focusring {
+      outline: auto;
+    }
+    progress {
+      vertical-align: baseline;
+    }
+    summary {
+      display: list-item;
+    }
+    ol,
+    ul,
+    menu {
+      list-style: none;
+    }
+    img,
+    svg,
+    video,
+    canvas,
+    audio,
+    iframe,
+    embed,
+    object {
+      display: block;
+      vertical-align: middle;
+    }
+    img,
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+    button,
+    input,
+    select,
+    optgroup,
+    textarea,
+    ::file-selector-button {
+      font: inherit;
+      font-feature-settings: inherit;
+      font-variation-settings: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+      border-radius: 0;
+      background-color: transparent;
+      opacity: 1;
+    }
+    :where(select:is([multiple], [size])) optgroup {
+      font-weight: bolder;
+    }
+    :where(select:is([multiple], [size])) optgroup option {
+      padding-inline-start: 20px;
+    }
+    ::file-selector-button {
+      margin-inline-end: 4px;
+    }
+    ::placeholder {
+      opacity: 1;
+      color: color-mix(in oklab, currentColor 50%, transparent);
+    }
+    textarea {
+      resize: vertical;
+    }
+    ::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+    ::-webkit-date-and-time-value {
+      min-height: 1lh;
+      text-align: inherit;
+    }
+    ::-webkit-datetime-edit {
+      display: inline-flex;
+    }
+    ::-webkit-datetime-edit-fields-wrapper {
+      padding: 0;
+    }
+    ::-webkit-datetime-edit,
+    ::-webkit-datetime-edit-year-field,
+    ::-webkit-datetime-edit-month-field,
+    ::-webkit-datetime-edit-day-field,
+    ::-webkit-datetime-edit-hour-field,
+    ::-webkit-datetime-edit-minute-field,
+    ::-webkit-datetime-edit-second-field,
+    ::-webkit-datetime-edit-millisecond-field,
+    ::-webkit-datetime-edit-meridiem-field {
+      padding-block: 0;
+    }
+    :-moz-ui-invalid {
+      box-shadow: none;
+    }
+    button,
+    input:where([type="button"], [type="reset"], [type="submit"]),
+    ::file-selector-button {
+      appearance: button;
+    }
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+      height: auto;
+    }
+    [hidden]:where(:not([hidden="until-found"])) {
+      display: none !important;
+    }
   }
-  .divide-b-2 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-b-reverse: 0;
-    border-block-start-width: calc(2px * calc(1 - var(--tw-divide-b-reverse)));
-    border-block-end-width: calc(2px * var(--tw-divide-b-reverse))
-  }
-  .divide-b-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-b-reverse: 0;
-    border-block-start-width: calc(4px * calc(1 - var(--tw-divide-b-reverse)));
-    border-block-end-width: calc(4px * var(--tw-divide-b-reverse))
-  }
-  .divide-b-8 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-b-reverse: 0;
-    border-block-start-width: calc(8px * calc(1 - var(--tw-divide-b-reverse)));
-    border-block-end-width: calc(8px * var(--tw-divide-b-reverse))
-  }
-  .divide-i > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-i-reverse: 0;
-    border-inline-start-width: calc(1px * calc(1 - var(--tw-divide-i-reverse)));
-    border-inline-end-width: calc(1px * var(--tw-divide-i-reverse))
-  }
-  .divide-i-0 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-i-reverse: 0;
-    border-inline-start-width: calc(0px * calc(1 - var(--tw-divide-i-reverse)));
-    border-inline-end-width: calc(0px * var(--tw-divide-i-reverse))
-  }
-  .divide-i-2 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-i-reverse: 0;
-    border-inline-start-width: calc(2px * calc(1 - var(--tw-divide-i-reverse)));
-    border-inline-end-width: calc(2px * var(--tw-divide-i-reverse))
-  }
-  .divide-i-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-i-reverse: 0;
-    border-inline-start-width: calc(4px * calc(1 - var(--tw-divide-i-reverse)));
-    border-inline-end-width: calc(4px * var(--tw-divide-i-reverse))
-  }
-  .divide-i-8 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-i-reverse: 0;
-    border-inline-start-width: calc(8px * calc(1 - var(--tw-divide-i-reverse)));
-    border-inline-end-width: calc(8px * var(--tw-divide-i-reverse))
+  @layer utilities {
+    .divide-i {
+      & > :not(:last-child) {
+        --tw-divide-i-reverse: 0;
+        border-inline-start-width: calc(1px * var(--tw-divide-i-reverse));
+        border-inline-end-width: calc(1px * calc(1 - var(--tw-divide-i-reverse)));
+      }
+    }
+    .divide-i-0 {
+      & > :not(:last-child) {
+        --tw-divide-i-reverse: 0;
+        border-inline-start-width: calc(0px * var(--tw-divide-i-reverse));
+        border-inline-end-width: calc(0px * calc(1 - var(--tw-divide-i-reverse)));
+      }
+    }
+    .divide-i-2 {
+      & > :not(:last-child) {
+        --tw-divide-i-reverse: 0;
+        border-inline-start-width: calc(2px * var(--tw-divide-i-reverse));
+        border-inline-end-width: calc(2px * calc(1 - var(--tw-divide-i-reverse)));
+      }
+    }
+    .divide-i-4 {
+      & > :not(:last-child) {
+        --tw-divide-i-reverse: 0;
+        border-inline-start-width: calc(4px * var(--tw-divide-i-reverse));
+        border-inline-end-width: calc(4px * calc(1 - var(--tw-divide-i-reverse)));
+      }
+    }
+    .divide-i-8 {
+      & > :not(:last-child) {
+        --tw-divide-i-reverse: 0;
+        border-inline-start-width: calc(8px * var(--tw-divide-i-reverse));
+        border-inline-end-width: calc(8px * calc(1 - var(--tw-divide-i-reverse)));
+      }
+    }
+    .divide-b {
+      & > :not(:last-child) {
+        --tw-divide-b-reverse: 0;
+        border-block-start-width: calc(1px * var(--tw-divide-b-reverse));
+        border-block-end-width: calc(1px * calc(1 - var(--tw-divide-b-reverse)));
+      }
+    }
+    .divide-b-0 {
+      & > :not(:last-child) {
+        --tw-divide-b-reverse: 0;
+        border-block-start-width: calc(0px * var(--tw-divide-b-reverse));
+        border-block-end-width: calc(0px * calc(1 - var(--tw-divide-b-reverse)));
+      }
+    }
+    .divide-b-2 {
+      & > :not(:last-child) {
+        --tw-divide-b-reverse: 0;
+        border-block-start-width: calc(2px * var(--tw-divide-b-reverse));
+        border-block-end-width: calc(2px * calc(1 - var(--tw-divide-b-reverse)));
+      }
+    }
+    .divide-b-4 {
+      & > :not(:last-child) {
+        --tw-divide-b-reverse: 0;
+        border-block-start-width: calc(4px * var(--tw-divide-b-reverse));
+        border-block-end-width: calc(4px * calc(1 - var(--tw-divide-b-reverse)));
+      }
+    }
+    .divide-b-8 {
+      & > :not(:last-child) {
+        --tw-divide-b-reverse: 0;
+        border-block-start-width: calc(8px * var(--tw-divide-b-reverse));
+        border-block-end-width: calc(8px * calc(1 - var(--tw-divide-b-reverse)));
+      }
+    }
+    .divide-b-reverse {
+      & > :not(:last-child) {
+        --tw-divide-b-reverse: 1;
+      }
+    }
+    .divide-i-reverse {
+      & > :not(:last-child) {
+        --tw-divide-i-reverse: 1;
+      }
+    }
   }
 `;
