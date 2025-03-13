@@ -112,8 +112,8 @@ El-Alfy.
 ### Logical Height and Logical Width
 
 Utilities are generated for the `block-size`, `inline-size`, `min-block-size`, `min-inline-size`, `max-block-size`, and
-`max-inline-size` properties. These match the values in your `height`, `width`, `min-height`, `min-width`,
-`max-height`, and `max-width` config objects, respectively.
+`max-inline-size` properties. These have the same range of values as `height`, `width`, `min-height`, `min-width`,
+`max-height`, and `max-width`, respectively.
 
 ```css
 .bs-1 {
@@ -139,8 +139,8 @@ Utilities are generated for the `block-size`, `inline-size`, `min-block-size`, `
 ### Flow-relative Margins
 
 Utilities are generated for the `margin-block-start`, `margin-block-end`, `margin-inline-start`, and
-`margin-inline-end` properties, as well as for the shorthand properties `margin-block` and `margin-inline`. These match
-the values in your `margin` config object.
+`margin-inline-end` properties, as well as for the shorthand properties `margin-block` and `margin-inline`. These have
+the same range of values as other `margin` utilities.
 
 ```css
 .mlb-1 {
@@ -166,8 +166,8 @@ the values in your `margin` config object.
 ### Flow-relative Padding
 
 Utilities are generated for the `padding-block-start`, `padding-block-end`, `padding-inline-start`, and
-`padding-inline-end` properties, as well as for the shorthand properties `padding-block` and `padding-end`. These match
-the values in your `padding` config object.
+`padding-inline-end` properties, as well as for the shorthand properties `padding-block` and `padding-end`. These have
+the same range of values as other `padding` utilities.
 
 ```css
 .plb-1 {
@@ -193,7 +193,7 @@ the values in your `padding` config object.
 ### Flow-relative Space Between
 
 Flow-relative utilities are generated for the Tailwind-specific [Space Between](https://tailwindcss.com/docs/space).
-These match the values in your `space` config object. All of the usual positive and negative values plus
+These have the same range of values as other `space` utilities. All of the usual positive and negative values plus
 `.space-b-reverse` and `.space-i-reverse` utilities are generated.
 
 ```css
@@ -217,8 +217,8 @@ These match the values in your `space` config object. All of the usual positive 
 ### Flow-relative Offsets (`top` / `right` / `bottom` / `left`)
 
 Utilities are generated for the `inset-block-start`, `inset-block-end`, `inset-inline-start`, and
-`inset-inline-end` properties, as well as for the shorthand properties `inset-block` and `inset-inline`. These match
-the values in your `inset` config object.
+`inset-inline-end` properties, as well as for the shorthand properties `inset-block` and `inset-inline`. These have the
+same range of values as other `inset` utilities.
 
 ```css
 .inset-block-0 {
@@ -244,8 +244,8 @@ the values in your `inset` config object.
 ### Flow-relative Border Widths
 
 Utilities are generated for the `border-block-width`, `border-inline-width`, `border-block-start-width`,
-`border-block-end-width`, `border-inline-start-width`, and `border-inline-end-width` properties. These match the values
-in your `borderWidth` config object.
+`border-block-end-width`, `border-inline-start-width`, and `border-inline-end-width` properties. These have the same
+range of values as other `borderWidth` utilities.
 
 ```css
 .border-lb-2 {
@@ -271,8 +271,8 @@ in your `borderWidth` config object.
 ### Flow-relative Border Colors
 
 Utilities are generated for the `border-block-color`, `border-inline-color`, `border-block-start-color`,
-`border-block-end-color`, `border-inline-start-color`, and `border-inline-end-color` properties. These match the values
-in your `borderColor` config object.
+`border-block-end-color`, `border-inline-start-color`, and `border-inline-end-color` properties. These have the same
+range of values as other `borderColor` utilities
 
 ```css
 .border-lb-black {
@@ -298,9 +298,9 @@ in your `borderColor` config object.
 ### Flow-relative Divide Width
 
 Flow-relative utilities are generated for the Tailwind-specific
-[Divide Width](https://tailwindcss.com/docs/divide-width). These match the values in your `divideWidth` config object.
-All of the usual values plus `.divide-b`, `.divide-i`, `.divide-b-reverse` and `.divide-i-reverse` utilities are
-generated.
+[Divide Width](https://tailwindcss.com/docs/divide-width). These have the same range of values as other `divide`
+utilities. All of the usual values plus `.divide-b`, `.divide-i`, `.divide-b-reverse` and `.divide-i-reverse` utilities
+are generated.
 
 ```css
 .divide-b-2 > :not(:last-child) {
@@ -319,27 +319,27 @@ generated.
 ### Flow-relative Corner Rounding (`border-radius`)
 
 Shorthand utility classes are generated for rounding each side of an element. Utility classes for each individual
-corner are already provided by Tailwind itself. These match the values in your `borderRadius` config object.
+corner are already provided by Tailwind itself. These have the same range of values as other `borderRadius` utilities.
 
 ```css
 .rounded-bs-md {
-  border-start-start-radius: 0.375rem;
-  border-start-end-radius: 0.375rem;
+  border-start-start-radius: var(--radius-md);
+  border-start-end-radius: var(--radius-md);
 }
 
 .rounded-be-md {
-  border-end-start-radius: 0.375rem;
-  border-end-end-radius: 0.375rem;
+  border-end-start-radius: var(--radius-md);
+  border-end-end-radius: var(--radius-md);
 }
 
 .rounded-is-md {
-  border-start-start-radius: 0.375rem;
-  border-end-start-radius: 0.375rem;
+  border-start-start-radius: var(--radius-md);
+  border-end-start-radius: var(--radius-md);
 }
 
 .rounded-ie-md {
-  border-start-end-radius: 0.375rem;
-  border-end-end-radius: 0.375rem;
+  border-start-end-radius: var(--radius-md);
+  border-end-end-radius: var(--radius-md);
 }
 ```
 
@@ -405,7 +405,9 @@ values will be converted to attribute selectors that any browser can understand.
 At this point I consider this plugin feature complete, but I will continue to monitor official specifications, as well
 as Tailwind itself, and update this plugin accordingly when anything changes.
 
-One thing I do plan to do is add support for `caption-side`, now that it is part of Tailwind itself.
+One thing I do plan to do is add support for `caption-side`, now that it is part of Tailwind itself. I will also
+consider dropping the legacy plugin API and building entirely with CSS in the Tailwind v4 way eventually, if there is
+enough value in doing so.
 
 ## Contributing
 
