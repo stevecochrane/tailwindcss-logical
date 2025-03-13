@@ -48,6 +48,7 @@
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --leading-loose: 2;
+    --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -468,20 +469,20 @@
     border-radius: 0.25rem;
   }
   .rounded-bs-xl {
-    border-start-start-radius: 0.75rem;
-    border-start-end-radius: 0.75rem;
+    border-start-start-radius: var(--radius-xl);
+    border-start-end-radius: var(--radius-xl);
   }
   .rounded-is-xl {
-    border-start-start-radius: 0.75rem;
-    border-end-start-radius: 0.75rem;
+    border-start-start-radius: var(--radius-xl);
+    border-end-start-radius: var(--radius-xl);
   }
   .rounded-ie-xl {
-    border-start-end-radius: 0.75rem;
-    border-end-end-radius: 0.75rem;
+    border-start-end-radius: var(--radius-xl);
+    border-end-end-radius: var(--radius-xl);
   }
   .rounded-be-xl {
-    border-end-start-radius: 0.75rem;
-    border-end-end-radius: 0.75rem;
+    border-end-start-radius: var(--radius-xl);
+    border-end-end-radius: var(--radius-xl);
   }
   .border-0 {
     border-style: var(--tw-border-style);
