@@ -14,7 +14,7 @@ We recommend trying the update to see if it is sufficient for your needs before 
 
 ## Demo
 
-View the [demo page](https://stevecochrane.github.io/tailwindcss-logical/) for a visual walkthrough, or read on to get
+View the [demo page](https://stevecochrane.com/tailwindcss-logical/) for a visual walkthrough, or read on to get
 started.
 
 ## Usage
@@ -373,7 +373,7 @@ Firefox, Chrome, Safari, Safari for iOS, Chrome for Android, and more.
 
 If some utilities don't seem to work correctly, you can refer to [Can I use...](https://caniuse.com/) to see if that
 property or value is supported by your browser. Relevant Can I use... links for each set of utilities are included in
-the [demo page](https://stevecochrane.github.io/tailwindcss-logical/).
+the [demo page](https://stevecochrane.com/tailwindcss-logical/).
 
 If better browser support for legacy browsers is required, you can use [PostCSS](https://postcss.org) to improve
 compatibility. Here are two possible solutions:
