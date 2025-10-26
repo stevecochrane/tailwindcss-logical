@@ -1,11 +1,18 @@
-module.exports = function ({ matchUtilities, theme }) {
-  const calculatedValues = {};
+const numberRegex = require("./util/numberRegex");
 
-  for (const property in theme("margin")) {
+module.exports = function ({ matchUtilities, theme }) {
+  const values = theme("margin");
+  const calculatedValues = {};
+  const keywords = ["auto"];
+
+  for (const property in values) {
     if (property === "px") {
       calculatedValues[property] = "1px";
-    } else if (property === "auto") {
-      calculatedValues[property] = "auto";
+    } else if (
+      keywords.includes(property) ||
+      (!numberRegex.test(property) && values[property])
+    ) {
+      calculatedValues[property] = values[property];
     } else {
       calculatedValues[property] = `calc(var(--spacing) * ${property})`;
     }
