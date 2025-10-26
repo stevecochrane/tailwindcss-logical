@@ -1,13 +1,20 @@
-module.exports = function ({ matchUtilities, theme }) {
-  const calculatedValues = {};
+const numberRegex = require("./util/numberRegex");
 
-  for (const property in theme("inset")) {
+module.exports = function ({ matchUtilities, theme }) {
+  const values = theme("inset");
+  const calculatedValues = {};
+  const keywords = ["auto"];
+
+  for (const property in values) {
     if (property === "px") {
       calculatedValues[property] = "1px";
     } else if (property === "full") {
       calculatedValues[property] = "100%";
-    } else if (property === "auto") {
-      calculatedValues[property] = "auto";
+    } else if (
+      keywords.includes(property) ||
+      (!numberRegex.test(property) && values[property])
+    ) {
+      calculatedValues[property] = values[property];
     } else if (property.includes("/")) {
       calculatedValues[property] = `calc(${property} * 100%)`;
     } else {
