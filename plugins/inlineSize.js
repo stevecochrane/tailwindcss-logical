@@ -34,11 +34,18 @@ module.exports = function ({ matchUtilities, theme }) {
     "7xl",
   ];
 
+  // Matches whole numbers such as "123", decimal numbers such as "12.3",
+  // and fractional numbers such as "12/3".
+  const numberRegex = /^\d+(?:[./]\d+)?$/;
+
   for (const property in values) {
-    if (keywords.includes(property)) {
-      calculatedValues[property] = values[property];
-    } else if (property === "px") {
+    if (property === "px") {
       calculatedValues[property] = "1px";
+    } else if (
+      keywords.includes(property) ||
+      (!numberRegex.test(property) && values[property])
+    ) {
+      calculatedValues[property] = values[property];
     } else if (property.includes("/")) {
       calculatedValues[property] = `calc(${property} * 100%)`;
     } else {
