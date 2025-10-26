@@ -1,3 +1,5 @@
+const numberRegex = require("./util/numberRegex");
+
 module.exports = function ({ matchUtilities, theme }) {
   const values = theme("width");
   const calculatedValues = {};
@@ -33,10 +35,6 @@ module.exports = function ({ matchUtilities, theme }) {
     "6xl",
     "7xl",
   ];
-
-  // Matches whole numbers such as "123", decimal numbers such as "12.3",
-  // and fractional numbers such as "12/3".
-  const numberRegex = /^\d+(?:[./]\d+)?$/;
 
   for (const property in values) {
     if (property === "px") {
