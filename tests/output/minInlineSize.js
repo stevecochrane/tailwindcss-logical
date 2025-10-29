@@ -396,6 +396,9 @@ module.exports = `
     .min-is-sm {
       min-inline-size: var(--container-sm);
     }
+    .min-is-theme-variable {
+      min-inline-size: calc(var(--spacing) * 35);
+    }
     .min-is-xl {
       min-inline-size: var(--container-xl);
     }
