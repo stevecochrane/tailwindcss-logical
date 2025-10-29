@@ -6347,6 +6347,9 @@ module.exports = `
     .max-bs-svh {
       max-block-size: 100svh;
     }
+    .max-bs-theme-variable {
+      max-block-size: calc(var(--spacing) * 35);
+    }
     .max-is-0\\.5 {
       max-inline-size: calc(var(--spacing) * 0.5);
     }
