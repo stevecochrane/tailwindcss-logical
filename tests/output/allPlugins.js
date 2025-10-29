@@ -6491,6 +6491,9 @@ module.exports = `
     .max-is-sm {
       max-inline-size: var(--container-sm);
     }
+    .max-is-theme-variable {
+      max-inline-size: calc(var(--spacing) * 35);
+    }
     .max-is-xl {
       max-inline-size: var(--container-xl);
     }
