@@ -6845,6 +6845,9 @@ module.exports = `
     .min-bs-svh {
       min-block-size: 100svh;
     }
+    .min-bs-theme-variable {
+      min-block-size: calc(var(--spacing) * 35);
+    }
     .min-is-0 {
       min-inline-size: calc(var(--spacing) * 0);
     }
