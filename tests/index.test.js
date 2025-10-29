@@ -38,7 +38,7 @@ describe("all plugins at once", () => {
         `
           @import "tailwindcss" source("./templates");
           @plugin "../index.js";
-          @theme { --spacing-custom-var: calc(var(--spacing) * 35); };
+          @theme { --spacing-theme-variable: calc(var(--spacing) * 35); };
         `,
         {
           from: "./tests/templates",
@@ -65,7 +65,7 @@ describe.skip("individual plugin tests", () => {
         `
           @import "tailwindcss" source("./templates/${templateDirectory}");
           @plugin "../index.js";
-          @theme { --spacing-custom-var: calc(var(--spacing) * 35); };
+          @theme { --spacing-theme-variable: calc(var(--spacing) * 35); };
         `,
         {
           from: "./tests/templates",
