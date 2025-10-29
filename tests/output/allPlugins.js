@@ -5950,6 +5950,9 @@ module.exports = `
     .bs-svh {
       block-size: 100svh;
     }
+    .bs-theme-variable {
+      block-size: calc(var(--spacing) * 35);
+    }
     .divide-b-reverse {
       & > :not(:last-child) {
         --tw-divide-b-reverse: 1;
