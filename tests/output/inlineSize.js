@@ -489,6 +489,9 @@ module.exports = `
     .is-svw {
       inline-size: 100svw;
     }
+    .is-theme-variable {
+      inline-size: calc(var(--spacing) * 35);
+    }
     .is-xl {
       inline-size: var(--container-xl);
     }
