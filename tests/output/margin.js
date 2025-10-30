@@ -338,6 +338,9 @@ module.exports = `
     .-mli-px {
       margin-inline: calc(1px * -1);
     }
+    .-mli-theme-variable {
+      margin-inline: calc(calc(var(--spacing) * 35) * -1);
+    }
     .mli-0 {
       margin-inline: calc(var(--spacing) * 0);
     }
@@ -446,6 +449,9 @@ module.exports = `
     .mli-px {
       margin-inline: 1px;
     }
+    .mli-theme-variable {
+      margin-inline: calc(var(--spacing) * 35);
+    }
     .-mlb-0 {
       margin-block: calc(calc(var(--spacing) * 0) * -1);
     }
@@ -550,6 +556,9 @@ module.exports = `
     }
     .-mlb-px {
       margin-block: calc(1px * -1);
+    }
+    .-mlb-theme-variable {
+      margin-block: calc(calc(var(--spacing) * 35) * -1);
     }
     .mlb-0 {
       margin-block: calc(var(--spacing) * 0);
@@ -659,6 +668,9 @@ module.exports = `
     .mlb-px {
       margin-block: 1px;
     }
+    .mlb-theme-variable {
+      margin-block: calc(var(--spacing) * 35);
+    }
     .-mis-0 {
       margin-inline-start: calc(calc(var(--spacing) * 0) * -1);
     }
@@ -763,6 +775,9 @@ module.exports = `
     }
     .-mis-px {
       margin-inline-start: calc(1px * -1);
+    }
+    .-mis-theme-variable {
+      margin-inline-start: calc(calc(var(--spacing) * 35) * -1);
     }
     .mis-0 {
       margin-inline-start: calc(var(--spacing) * 0);
@@ -872,6 +887,9 @@ module.exports = `
     .mis-px {
       margin-inline-start: 1px;
     }
+    .mis-theme-variable {
+      margin-inline-start: calc(var(--spacing) * 35);
+    }
     .-mie-0 {
       margin-inline-end: calc(calc(var(--spacing) * 0) * -1);
     }
@@ -976,6 +994,9 @@ module.exports = `
     }
     .-mie-px {
       margin-inline-end: calc(1px * -1);
+    }
+    .-mie-theme-variable {
+      margin-inline-end: calc(calc(var(--spacing) * 35) * -1);
     }
     .mie-0 {
       margin-inline-end: calc(var(--spacing) * 0);
@@ -1085,6 +1106,9 @@ module.exports = `
     .mie-px {
       margin-inline-end: 1px;
     }
+    .mie-theme-variable {
+      margin-inline-end: calc(var(--spacing) * 35);
+    }
     .-mbe-0 {
       margin-block-end: calc(calc(var(--spacing) * 0) * -1);
     }
@@ -1190,6 +1214,9 @@ module.exports = `
     .-mbe-px {
       margin-block-end: calc(1px * -1);
     }
+    .-mbe-theme-variable {
+      margin-block-end: calc(calc(var(--spacing) * 35) * -1);
+    }
     .-mbs-0 {
       margin-block-start: calc(calc(var(--spacing) * 0) * -1);
     }
@@ -1294,6 +1321,9 @@ module.exports = `
     }
     .-mbs-px {
       margin-block-start: calc(1px * -1);
+    }
+    .-mbs-theme-variable {
+      margin-block-start: calc(calc(var(--spacing) * 35) * -1);
     }
     .mbe-0 {
       margin-block-end: calc(var(--spacing) * 0);
@@ -1403,6 +1433,9 @@ module.exports = `
     .mbe-px {
       margin-block-end: 1px;
     }
+    .mbe-theme-variable {
+      margin-block-end: calc(var(--spacing) * 35);
+    }
     .mbs-0 {
       margin-block-start: calc(var(--spacing) * 0);
     }
@@ -1510,6 +1543,9 @@ module.exports = `
     }
     .mbs-px {
       margin-block-start: 1px;
+    }
+    .mbs-theme-variable {
+      margin-block-start: calc(var(--spacing) * 35);
     }
   }
 `;
