@@ -3614,6 +3614,9 @@ module.exports = `
     .pli-px {
       padding-inline: 1px;
     }
+    .pli-theme-variable {
+      padding-inline: calc(var(--spacing) * 35);
+    }
     .plb-0 {
       padding-block: calc(var(--spacing) * 0);
     }
@@ -3718,6 +3721,9 @@ module.exports = `
     }
     .plb-px {
       padding-block: 1px;
+    }
+    .plb-theme-variable {
+      padding-block: calc(var(--spacing) * 35);
     }
     .pis-0 {
       padding-inline-start: calc(var(--spacing) * 0);
@@ -3824,6 +3830,9 @@ module.exports = `
     .pis-px {
       padding-inline-start: 1px;
     }
+    .pis-theme-variable {
+      padding-inline-start: calc(var(--spacing) * 35);
+    }
     .pie-0 {
       padding-inline-end: calc(var(--spacing) * 0);
     }
@@ -3928,6 +3937,9 @@ module.exports = `
     }
     .pie-px {
       padding-inline-end: 1px;
+    }
+    .pie-theme-variable {
+      padding-inline-end: calc(var(--spacing) * 35);
     }
     .-space-b-0 {
       & > :not(:last-child) {
@@ -7169,6 +7181,9 @@ module.exports = `
     .pbe-px {
       padding-block-end: 1px;
     }
+    .pbe-theme-variable {
+      padding-block-end: calc(var(--spacing) * 35);
+    }
     .pbs-0 {
       padding-block-start: calc(var(--spacing) * 0);
     }
@@ -7273,6 +7288,9 @@ module.exports = `
     }
     .pbs-px {
       padding-block-start: 1px;
+    }
+    .pbs-theme-variable {
+      padding-block-start: calc(var(--spacing) * 35);
     }
     .space-b-reverse {
       & > :not(:last-child) {
