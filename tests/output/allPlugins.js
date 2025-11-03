@@ -2061,6 +2061,13 @@ module.exports = `
         margin-inline-end: calc(calc(1px * -1) * calc(1 - var(--tw-space-i-reverse)));
       }
     }
+    .-space-i-theme-variable {
+      & > :not(:last-child) {
+        --tw-space-i-reverse: 0;
+        margin-inline-start: calc(calc(calc(var(--spacing) * 35) * -1) * var(--tw-space-i-reverse));
+        margin-inline-end: calc(calc(calc(var(--spacing) * 35) * -1) * calc(1 - var(--tw-space-i-reverse)));
+      }
+    }
     .space-i-0 {
       & > :not(:last-child) {
         --tw-space-i-reverse: 0;
@@ -2304,6 +2311,13 @@ module.exports = `
         --tw-space-i-reverse: 0;
         margin-inline-start: calc(1px * var(--tw-space-i-reverse));
         margin-inline-end: calc(1px * calc(1 - var(--tw-space-i-reverse)));
+      }
+    }
+    .space-i-theme-variable {
+      & > :not(:last-child) {
+        --tw-space-i-reverse: 0;
+        margin-inline-start: calc(calc(var(--spacing) * 35) * var(--tw-space-i-reverse));
+        margin-inline-end: calc(calc(var(--spacing) * 35) * calc(1 - var(--tw-space-i-reverse)));
       }
     }
     .-mis-0 {
@@ -4210,6 +4224,13 @@ module.exports = `
         margin-block-end: calc(calc(1px * -1) * calc(1 - var(--tw-space-b-reverse)));
       }
     }
+    .-space-b-theme-variable {
+      & > :not(:last-child) {
+        --tw-space-b-reverse: 0;
+        margin-block-start: calc(calc(calc(var(--spacing) * 35) * -1) * var(--tw-space-b-reverse));
+        margin-block-end: calc(calc(calc(var(--spacing) * 35) * -1) * calc(1 - var(--tw-space-b-reverse)));
+      }
+    }
     .divide-b {
       & > :not(:last-child) {
         --tw-divide-b-reverse: 0;
@@ -4488,6 +4509,13 @@ module.exports = `
         --tw-space-b-reverse: 0;
         margin-block-start: calc(1px * var(--tw-space-b-reverse));
         margin-block-end: calc(1px * calc(1 - var(--tw-space-b-reverse)));
+      }
+    }
+    .space-b-theme-variable {
+      & > :not(:last-child) {
+        --tw-space-b-reverse: 0;
+        margin-block-start: calc(calc(var(--spacing) * 35) * var(--tw-space-b-reverse));
+        margin-block-end: calc(calc(var(--spacing) * 35) * calc(1 - var(--tw-space-b-reverse)));
       }
     }
     .border-lb {
