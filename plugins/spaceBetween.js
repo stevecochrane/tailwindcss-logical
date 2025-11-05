@@ -1,9 +1,14 @@
+const numberRegex = require("./util/numberRegex");
+
 module.exports = function ({ addUtilities, matchUtilities, theme }) {
+  const values = theme("margin");
   const calculatedValues = {};
 
-  for (const property in theme("margin")) {
+  for (const property in values) {
     if (property === "px") {
       calculatedValues[property] = "1px";
+    } else if (!numberRegex.test(property) && values[property]) {
+      calculatedValues[property] = values[property];
     } else {
       calculatedValues[property] = `calc(var(--spacing) * ${property})`;
     }

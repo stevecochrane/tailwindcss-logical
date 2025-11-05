@@ -365,5 +365,8 @@ module.exports = `
     .max-bs-svh {
       max-block-size: 100svh;
     }
+    .max-bs-theme-variable {
+      max-block-size: calc(var(--spacing) * 35);
+    }
   }
 `;

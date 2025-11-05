@@ -1,3 +1,5 @@
+const numberRegex = require("./util/numberRegex");
+
 module.exports = function ({ matchUtilities, theme }) {
   const values = theme("maxHeight");
   const calculatedValues = {};
@@ -17,10 +19,13 @@ module.exports = function ({ matchUtilities, theme }) {
   ];
 
   for (const property in values) {
-    if (keywords.includes(property)) {
-      calculatedValues[property] = values[property];
-    } else if (property === "px") {
+    if (property === "px") {
       calculatedValues[property] = "1px";
+    } else if (
+      keywords.includes(property) ||
+      (!numberRegex.test(property) && values[property])
+    ) {
+      calculatedValues[property] = values[property];
     } else {
       calculatedValues[property] = `calc(var(--spacing) * ${property})`;
     }

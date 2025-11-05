@@ -33,7 +33,9 @@ Use the `@plugin` directive in your main CSS file to load it after importing Tai
 @plugin "tailwindcss-logical";
 ```
 
-Now you can start using the new classes in your templates!
+Now you can start using the new classes in your templates! Also if you have `--spacing-*` variables defined with the
+`@theme` directive, this plugin will generate spacing utilities for those variables too.
+([More on theme variables](https://tailwindcss.com/docs/theme))
 
 ## What are CSS Logical Properties and Values?
 

@@ -410,5 +410,8 @@ module.exports = `
     .bs-svh {
       block-size: 100svh;
     }
+    .bs-theme-variable {
+      block-size: calc(var(--spacing) * 35);
+    }
   }
 `;

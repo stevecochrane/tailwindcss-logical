@@ -359,6 +359,9 @@ module.exports = `
     .-inset-inline-px {
       inset-inline: calc(1px * -1);
     }
+    .-inset-inline-theme-variable {
+      inset-inline: calc(calc(var(--spacing) * 35) * -1);
+    }
     .inset-inline-0 {
       inset-inline: calc(var(--spacing) * 0);
     }
@@ -488,6 +491,9 @@ module.exports = `
     .inset-inline-px {
       inset-inline: 1px;
     }
+    .inset-inline-theme-variable {
+      inset-inline: calc(var(--spacing) * 35);
+    }
     .-inset-block-0 {
       inset-block: calc(calc(var(--spacing) * 0) * -1);
     }
@@ -613,6 +619,9 @@ module.exports = `
     }
     .-inset-block-px {
       inset-block: calc(1px * -1);
+    }
+    .-inset-block-theme-variable {
+      inset-block: calc(calc(var(--spacing) * 35) * -1);
     }
     .inset-block-0 {
       inset-block: calc(var(--spacing) * 0);
@@ -743,6 +752,9 @@ module.exports = `
     .inset-block-px {
       inset-block: 1px;
     }
+    .inset-block-theme-variable {
+      inset-block: calc(var(--spacing) * 35);
+    }
     .-inline-start-0 {
       inset-inline-start: calc(calc(var(--spacing) * 0) * -1);
     }
@@ -868,6 +880,9 @@ module.exports = `
     }
     .-inline-start-px {
       inset-inline-start: calc(1px * -1);
+    }
+    .-inline-start-theme-variable {
+      inset-inline-start: calc(calc(var(--spacing) * 35) * -1);
     }
     .inline-start-0 {
       inset-inline-start: calc(var(--spacing) * 0);
@@ -998,6 +1013,9 @@ module.exports = `
     .inline-start-px {
       inset-inline-start: 1px;
     }
+    .inline-start-theme-variable {
+      inset-inline-start: calc(var(--spacing) * 35);
+    }
     .-inline-end-0 {
       inset-inline-end: calc(calc(var(--spacing) * 0) * -1);
     }
@@ -1123,6 +1141,9 @@ module.exports = `
     }
     .-inline-end-px {
       inset-inline-end: calc(1px * -1);
+    }
+    .-inline-end-theme-variable {
+      inset-inline-end: calc(calc(var(--spacing) * 35) * -1);
     }
     .inline-end-0 {
       inset-inline-end: calc(var(--spacing) * 0);
@@ -1253,6 +1274,9 @@ module.exports = `
     .inline-end-px {
       inset-inline-end: 1px;
     }
+    .inline-end-theme-variable {
+      inset-inline-end: calc(var(--spacing) * 35);
+    }
     .-block-end-0 {
       inset-block-end: calc(calc(var(--spacing) * 0) * -1);
     }
@@ -1379,6 +1403,9 @@ module.exports = `
     .-block-end-px {
       inset-block-end: calc(1px * -1);
     }
+    .-block-end-theme-variable {
+      inset-block-end: calc(calc(var(--spacing) * 35) * -1);
+    }
     .-block-start-0 {
       inset-block-start: calc(calc(var(--spacing) * 0) * -1);
     }
@@ -1504,6 +1531,9 @@ module.exports = `
     }
     .-block-start-px {
       inset-block-start: calc(1px * -1);
+    }
+    .-block-start-theme-variable {
+      inset-block-start: calc(calc(var(--spacing) * 35) * -1);
     }
     .block-end-0 {
       inset-block-end: calc(var(--spacing) * 0);
@@ -1634,6 +1664,9 @@ module.exports = `
     .block-end-px {
       inset-block-end: 1px;
     }
+    .block-end-theme-variable {
+      inset-block-end: calc(var(--spacing) * 35);
+    }
     .block-start-0 {
       inset-block-start: calc(var(--spacing) * 0);
     }
@@ -1762,6 +1795,9 @@ module.exports = `
     }
     .block-start-px {
       inset-block-start: 1px;
+    }
+    .block-start-theme-variable {
+      inset-block-start: calc(var(--spacing) * 35);
     }
   }
 `;

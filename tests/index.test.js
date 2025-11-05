@@ -35,7 +35,11 @@ describe("all plugins at once", () => {
   const generatePluginCss = () => {
     return postcss([postcssImport, tailwindcss()])
       .process(
-        `@import "tailwindcss" source("./templates"); @plugin "../index.js";`,
+        `
+          @import "tailwindcss" source("./templates");
+          @plugin "../index.js";
+          @theme { --spacing-theme-variable: calc(var(--spacing) * 35); };
+        `,
         {
           from: "./tests/templates",
         },
@@ -58,7 +62,11 @@ describe.skip("individual plugin tests", () => {
   const generatePluginCss = (templateDirectory) => {
     return postcss([postcssImport, tailwindcss()])
       .process(
-        `@import "tailwindcss" source("./templates/${templateDirectory}"); @plugin "../index.js";`,
+        `
+          @import "tailwindcss" source("./templates/${templateDirectory}");
+          @plugin "../index.js";
+          @theme { --spacing-theme-variable: calc(var(--spacing) * 35); };
+        `,
         {
           from: "./tests/templates",
         },
