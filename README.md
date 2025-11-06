@@ -352,7 +352,7 @@ specification has been evaluated and most features are supported, this plugin do
 everything. If something does not have a non-logical equivalent in Tailwind's defaults, it is not supported.
 
 - Logical Values for the `caption-side` property: Tailwind only has `caption-side` utilities for the vertical axis, and
-  according to the spec, `top` and `bottom` have been redefined as logical values already.
+  according to the spec, `top` and `bottom` qualify as logical values already.
 - Flow-relative Border Styles: Tailwind only has `border-style` utilities for all sides of an element at once.
 
 As for other logical properties and values from outside of the main specification:
