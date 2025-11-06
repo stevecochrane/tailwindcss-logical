@@ -351,8 +351,8 @@ While everything in the [CSS Logical Properties and Values Level 1](https://www.
 specification has been evaluated and most features are supported, this plugin does not generate utilities for
 everything. If something does not have a non-logical equivalent in Tailwind's defaults, it is not supported.
 
-- Logical Values for the `caption-side` property: I just noticed as I was wrapping up v4.0.0 that Tailwind added
-  support for `caption-side` in v4! I will add the logical equivalent in a future update.
+- Logical Values for the `caption-side` property: Tailwind only has `caption-side` utilities for the vertical axis, and
+  according to the spec, `top` and `bottom` have been redefined as logical values already.
 - Flow-relative Border Styles: Tailwind only has `border-style` utilities for all sides of an element at once.
 
 As for other logical properties and values from outside of the main specification:
@@ -407,9 +407,7 @@ values will be converted to attribute selectors that any browser can understand.
 At this point I consider this plugin feature complete, but I will continue to monitor official specifications, as well
 as Tailwind itself, and update this plugin accordingly when anything changes.
 
-One thing I do plan to do is add support for `caption-side`, now that it is part of Tailwind itself. I will also
-consider dropping the legacy plugin API and building entirely with CSS in the Tailwind v4 way eventually, if there is
-enough value in doing so.
+I've tried dropping the legacy plugin API and building entirely with CSS the Tailwind v4 way, though the documentation isn't enough for my needs and all of the official Tailwind plugins still use the legacy API, so I haven't seen any functional examples. I might try again at some point if more examples appear and if there's enough value in doing so.
 
 ## Contributing
 
