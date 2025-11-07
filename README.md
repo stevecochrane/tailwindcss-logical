@@ -357,12 +357,10 @@ everything. If something does not have a non-logical equivalent in Tailwind's de
 
 As for other logical properties and values from outside of the main specification:
 
-- Flow-relative Overflow properties `overflow-block` and `overflow-inline`: while Tailwind does support `overflow`,
-  this plugin does not support `overflow-block` or `overflow-inline` yet, due to a lack of browser support and
-  polyfills. As of June 2024,
-  [only Firefox supports them](https://caniuse.com/mdn-css_properties_overflow-block), and as far as I can
-  tell there are no polyfills available. (Neither postcss-preset-env nor postcss-logical apply any transformations on
-  these properties.)
+- Flow-relative Overflow properties `overflow-block` and `overflow-inline`: for several years these were only supported
+  by Firefox, but now they are considered Baseline 2025 and are
+  [supported by all major browsers](https://caniuse.com/mdn-css_properties_overflow-block). I aim to add support for
+  these in the near future.
 
 If there are any notable omissions that you think should be supported, please
 [file an issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
