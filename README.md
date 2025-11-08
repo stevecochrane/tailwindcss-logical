@@ -412,11 +412,22 @@ I've tried dropping the legacy plugin API and building entirely with CSS the Tai
 If you would like to contribute, pull requests are totally welcome, though I recommend starting by
 [filing an issue](https://github.com/stevecochrane/tailwindcss-logical/issues).
 
+Updating the unit tests is a real pain and I would not wish that upon anybody, especially someone kind enough to
+contribute to this project, so if you contribute an update to the plugin, I can handle the tests.
+
 1. Fork the project
 2. Check out a feature branch (e.g. `git checkout -b feature-foo-bar`)
 3. Commit changes (e.g. `git commit -am 'Add foo bar'`)
 4. Push the branch (e.g. `git push origin feature-foo-bar`)
 5. Create a new Pull Request
+
+## Thanks
+
+Mona Uppenkamp ([@MUppenkamp on GitHub](https://github.com/MUppenkamp)) for contributing support for custom spacing
+variables.
+
+Mohamed Ashraf (سعدني, [@sa3dany on GitHub](https://github.com/sa3dany)) for making the demo more prominent in the
+README.
 
 ## Contact
 
