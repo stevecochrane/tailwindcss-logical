@@ -351,18 +351,16 @@ While everything in the [CSS Logical Properties and Values Level 1](https://www.
 specification has been evaluated and most features are supported, this plugin does not generate utilities for
 everything. If something does not have a non-logical equivalent in Tailwind's defaults, it is not supported.
 
-- Logical Values for the `caption-side` property: I just noticed as I was wrapping up v4.0.0 that Tailwind added
-  support for `caption-side` in v4! I will add the logical equivalent in a future update.
+- Logical Values for the `caption-side` property: Tailwind only has `caption-side` utilities for the vertical axis, and
+  according to the spec, `top` and `bottom` qualify as logical values already.
 - Flow-relative Border Styles: Tailwind only has `border-style` utilities for all sides of an element at once.
 
 As for other logical properties and values from outside of the main specification:
 
-- Flow-relative Overflow properties `overflow-block` and `overflow-inline`: while Tailwind does support `overflow`,
-  this plugin does not support `overflow-block` or `overflow-inline` yet, due to a lack of browser support and
-  polyfills. As of June 2024,
-  [only Firefox supports them](https://caniuse.com/mdn-css_properties_overflow-block), and as far as I can
-  tell there are no polyfills available. (Neither postcss-preset-env nor postcss-logical apply any transformations on
-  these properties.)
+- Flow-relative Overflow properties `overflow-block` and `overflow-inline`: for several years these were only supported
+  by Firefox, but now they are considered Baseline 2025 and are
+  [supported by all major browsers](https://caniuse.com/mdn-css_properties_overflow-block). I aim to add support for
+  these in the near future.
 
 If there are any notable omissions that you think should be supported, please
 [file an issue](https://github.com/stevecochrane/tailwindcss-logical/issues) and let me know.
@@ -407,20 +405,29 @@ values will be converted to attribute selectors that any browser can understand.
 At this point I consider this plugin feature complete, but I will continue to monitor official specifications, as well
 as Tailwind itself, and update this plugin accordingly when anything changes.
 
-One thing I do plan to do is add support for `caption-side`, now that it is part of Tailwind itself. I will also
-consider dropping the legacy plugin API and building entirely with CSS in the Tailwind v4 way eventually, if there is
-enough value in doing so.
+I've tried dropping the legacy plugin API and building entirely with CSS the Tailwind v4 way, though the documentation isn't enough for my needs and all of the official Tailwind plugins still use the legacy API, so I haven't seen any functional examples. I might try again at some point if more examples appear and if there's enough value in doing so.
 
 ## Contributing
 
 If you would like to contribute, pull requests are totally welcome, though I recommend starting by
 [filing an issue](https://github.com/stevecochrane/tailwindcss-logical/issues).
 
+Updating the unit tests is a real pain and I would not wish that upon anybody, especially someone kind enough to
+contribute to this project, so if you contribute an update to the plugin, I can handle the tests.
+
 1. Fork the project
 2. Check out a feature branch (e.g. `git checkout -b feature-foo-bar`)
 3. Commit changes (e.g. `git commit -am 'Add foo bar'`)
 4. Push the branch (e.g. `git push origin feature-foo-bar`)
 5. Create a new Pull Request
+
+## Thanks
+
+Mona Uppenkamp ([@MUppenkamp on GitHub](https://github.com/MUppenkamp)) for contributing support for custom spacing
+variables.
+
+Mohamed Ashraf (سعدني, [@sa3dany on GitHub](https://github.com/sa3dany)) for making the demo more prominent in the
+README.
 
 ## Contact
 
